@@ -62,7 +62,7 @@
                     <input type="text" class="only-view" id="edtDesc" maxlength="80" disabled>
                 </div>
                 <div class="inline">
-                    <label for="edtCodFW">Código FW</label>
+                    <label for="edtCodFW">Código</label>
                     <input type="text" class="only-view" id="edtCodFW" maxlength="20" disabled>
                     <label for="edtCodForn">Código Forn.</label>
                     <input type="text" class="only-view" id="edtCodForn" maxlength="20" disabled>
@@ -175,15 +175,15 @@
             pageScreen.querySelector('#up_file').disabled = 1
         }else{
             pageScreen.querySelector('#edtDesc').value = pageData.descricao
-            pageScreen.querySelector('#edtCodFW').value = pageData.cod
-            pageScreen.querySelector('#edtCodForn').value = pageData.cod_cli
+            pageScreen.querySelector('#edtCodFW').value = pageData.cod_int
+            pageScreen.querySelector('#edtCodForn').value = pageData.cod_forn
             pageScreen.querySelector('#edtCodBar').value = pageData.cod_bar
-            pageScreen.querySelector('#cmdUnd').value = pageData.unidade
+            pageScreen.querySelector('#cmdUnd').value = pageData.und
             pageScreen.querySelector('#edtEtq').value = pageData.estoque
-            pageScreen.querySelector('#edtEtqMin').value = pageData.etq_min
+            pageScreen.querySelector('#edtEtqMin').value = pageData.estq_min
             pageScreen.querySelector('#cmbCons').value = pageData.consumo
-            pageScreen.querySelector('#edtCusto').value = pageData.preco_comp
-            pageScreen.querySelector('#edtMarkup').value = pageData.margem
+            pageScreen.querySelector('#edtCusto').value = pageData.custo
+            pageScreen.querySelector('#edtMarkup').value = pageData.markup
             pageScreen.querySelector('#edtLocal').value = pageData.local
             pageScreen.querySelector('#edtNCM').value = pageData.ncm
             pageScreen.querySelector('#btnEdit').disabled = 0
@@ -271,7 +271,7 @@
 
     pageScreen.querySelector('#up_file').addEventListener('change',()=>{        
         showFile()
-        const up = uploadImage('up_file','assets/prod/',`prod_${pageData.id}`)
+        const up = uploadImage('up_file','assets/prod/',`prod_${pageData.id}.jpg`)
         up.then((resp)=>{
             setLog(` Imagem Alterada -> Produto: ${pageData.descricao}`)
         })

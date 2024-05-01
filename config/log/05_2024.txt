@@ -1,0 +1,41 @@
+01/05/2024 17:26 admin@pesqueirodourado.com.br : Menu Deletado (RAIZera)
+01/05/2024 17:26 admin@pesqueirodourado.com.br : Menu Deletado (RAIZera)
+01/05/2024 17:26 admin@pesqueirodourado.com.br : Menu Deletado (Ferramentas)
+01/05/2024 17:27 admin@pesqueirodourado.com.br : Menu Deletado (Parametros)
+01/05/2024 17:27 admin@pesqueirodourado.com.br : Menu Deletado (Parametros)
+01/05/2024 17:27 admin@pesqueirodourado.com.br : Menu Deletado (Parametros)
+01/05/2024 17:28 admin@pesqueirodourado.com.br : Menu Alterado (Fornecedores, adm_empresas.html, pop-up, Empresas)
+01/05/2024 17:28 admin@pesqueirodourado.com.br : Menu Deletado (RAIZera)
+01/05/2024 19:01 admin@pesqueirodourado.com.br : Menu Alterado (Administracao, none, pop-up, )
+01/05/2024 19:23 admin@pesqueirodourado.com.br : Inclusao de novo Perfil de usuario (CAIXA)
+01/05/2024 19:23 admin@pesqueirodourado.com.br : Inclusao de novo Perfil de usuario (ADMINISTRADOR)
+01/05/2024 19:24 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Sistema, Acesso:[[0,1,9]])
+01/05/2024 19:24 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Administracao, Acesso:[[0,2,8]])
+01/05/2024 19:24 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Cadastros, Acesso:[[0,2,8]])
+01/05/2024 19:24 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Parametros, Acesso:[[0]])
+01/05/2024 19:25 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Administracao, Acesso:[[0,2]])
+01/05/2024 19:25 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Sistema, Acesso:[[0,1,9]])
+01/05/2024 19:25 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Cadastros, Acesso:[[0,2]])
+01/05/2024 19:25 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Parametros, Acesso:[[0]])
+01/05/2024 19:25 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Sistema, Acesso:[[0,1,9]])
+01/05/2024 19:25 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Administracao, Acesso:[[0,2]])
+01/05/2024 19:25 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Cadastros, Acesso:[[0,2]])
+01/05/2024 19:25 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Parametros, Acesso:[[0]])
+01/05/2024 19:26 admin@pesqueirodourado.com.br : Menu Incluido (Caixa)
+01/05/2024 19:26 admin@pesqueirodourado.com.br : Menu Incluido (Frente de Caixa)
+01/05/2024 19:30 admin@pesqueirodourado.com.br : Inclusao de Unidade (Porcao)
+01/05/2024 19:30 admin@pesqueirodourado.com.br : Inclusao de Unidade (Porcao)
+01/05/2024 19:34 admin@pesqueirodourado.com.br : Inclusao de Unidade (Porcao)
+01/05/2024 19:38 admin@pesqueirodourado.com.br : Produto Cadastrado  -> 1
+01/05/2024 19:42 admin@pesqueirodourado.com.br : Produto Cadastrado  -> Porcao de fritas
+01/05/2024 19:49 admin@pesqueirodourado.com.br : Produto Cadastrado  -> Porcao de Fritas
+01/05/2024 19:51 admin@pesqueirodourado.com.br : Produto Cadastrado  -> Porcao de Fritas
+01/05/2024 19:53 admin@pesqueirodourado.com.br : Produto Cadastrado  -> Fritas Grande
+01/05/2024 20:17 admin@pesqueirodourado.com.br : Produto Editado Porcao de fritas -> Porcao de fritas
+01/05/2024 20:24 admin@pesqueirodourado.com.br : Produto Editado Porcao de fritas -> Porcao de fritas
+01/05/2024 20:26 admin@pesqueirodourado.com.br :  Imagem Alterada -> Produto: Porcao de fritas
+01/05/2024 20:26 admin@pesqueirodourado.com.br :  Imagem Alterada -> Produto: Porcao de fritas
+01/05/2024 20:26 admin@pesqueirodourado.com.br : Produto Editado Porcao de fritas -> Porcao de fritas
+01/05/2024 20:29 admin@pesqueirodourado.com.br :  Imagem Alterada -> Produto: Porcao de fritas
+01/05/2024 20:29 admin@pesqueirodourado.com.br : Produto Editado Porcao de fritas -> Porcao de fritas
+01/05/2024 20:34 admin@pesqueirodourado.com.br :  Imagem Alterada -> Produto: Porcao de fritas
