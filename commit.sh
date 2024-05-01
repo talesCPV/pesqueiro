@@ -1,7 +1,7 @@
 #!/bin/bash
-# Upload files to Github - git@github.com:talesCPV/siflex2.git
+# Upload files to Github - git@github.com:talesCPV/pesqueiro.git
 
-read -p "Are you sure to commit Siflex2 to GitHub ? (Y/n)" -n 1 -r
+read -p "Are you sure to commit Pesqueiro to GitHub ? (Y/n)" -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
@@ -17,13 +17,12 @@ then
     git add templates/
     git add index.html
     git add commit.sh
-    git add teste.html
 
     git commit -m "by_script"
 
-#    git branch -M main
-#    git remote add origin git@github.com:talesCPV/siflex2.git
-    git remote set-url origin git@github.com:talesCPV/siflex2.git
+    git branch -M main
+    git remote add origin git@github.com:talesCPV/pesqueiro.git
+    git remote set-url origin git@github.com:talesCPV/pesqueiro.git
 
     git push -u -f origin main
 
