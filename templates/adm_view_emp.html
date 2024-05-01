@@ -25,8 +25,8 @@
         <input type="text" class="only-view" id="edtFant" maxlength="40" disabled>
             <label for="cmbTipo">Tipo</label>
             <select id="cmbTipo" class="only-view" style="width: 150px;" disabled>
-                <option value="CLI">Cliente</option>
-                <option value="FOR">Fornecedor</option>
+                <option value="1">Cliente</option>
+                <option value="0">Fornecedor</option>
             </select>
         </div>
         <div class="inline">
@@ -120,18 +120,18 @@
             pageScreen.querySelector('#btnDel').disabled = 1
             pageScreen.querySelector('#btnEdit').disabled = 1
         }else{
-            pageScreen.querySelector('#edtRazSoc').value = pageData.nome
+            pageScreen.querySelector('#edtRazSoc').value = pageData.razao_social
             pageScreen.querySelector('#edtFant').value = pageData.fantasia
             pageScreen.querySelector('#edtCNPJ').value = getCNPJ(pageData.cnpj)
             pageScreen.querySelector('#edtIncEst').value = getIE(pageData.ie)
             pageScreen.querySelector('#edtInscMun').value = pageData.im
-            pageScreen.querySelector('#cmbTipo').value = pageData.tipo
+            pageScreen.querySelector('#cmbTipo').value = pageData.cliente
             pageScreen.querySelector('#edtRamo').value = pageData.ramo
-            pageScreen.querySelector('#edtEnd').value = pageData.endereco
+            pageScreen.querySelector('#edtEnd').value = pageData.end
             pageScreen.querySelector('#edtNum').value = pageData.num
             pageScreen.querySelector('#edtComp').value = pageData.comp
             pageScreen.querySelector('#edtCidade').value = pageData.cidade
-            pageScreen.querySelector('#cmbUF').value = pageData.estado
+            pageScreen.querySelector('#cmbUF').value = pageData.uf
             pageScreen.querySelector('#edtBairro').value = pageData.bairro
             pageScreen.querySelector('#edtCEP').value = pageData.cep
             pageScreen.querySelector('#edtTel').value = pageData.tel

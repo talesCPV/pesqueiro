@@ -10,7 +10,7 @@
                 <label for="edtBusca">por:</label>
                 <select id="cmbBusca">
                     <option value="id" signal="IN">Código</option>
-                    <option value="nome" signal="LIKE" selected>Razão Social</option>
+                    <option value="razao_social" signal="LIKE" selected>Razão Social</option>
                     <option value="fantasia" signal="LIKE">Nome Fantasia</option>
                     <option value="cnpj" signal="LIKE" >CNPJ</option>
                     <option value="ie" signal="LIKE">Insc. Estadual</option>
@@ -48,7 +48,7 @@
             tbl.style.display = json.length > 0 ? 'inline-table' : 'none'
             tbl.head('Razao Social,CNPJ,Tipo')
             for(let i=0; i<json.length;i++){
-                tbl.plot(json[i],'nome,cnpj,tipo','Upp,cnp,cha CLI=CLIENTE FOR=FORN. ')
+                tbl.plot(json[i],'razao_social,cnpj,tipo','Upp,cnp,cha 1=CLIENTE 0=FORN.')
             }         
         });
     }
@@ -62,14 +62,15 @@
     })
 
     pageScreen.querySelector('#tblEmp').addEventListener('click',(e)=>{
+
         try{
             if(main_data.hasOwnProperty('adm_view_emp')){
                 closeModal('adm_view_emp')
             }
             data = e.target.parentNode.data
-            data != undefined ? openHTML('adm_view_emp.html','pop-up',`Edição de dados - ${data.nome.toUpperCase()}`,data) : null
+            data != undefined ? openHTML('adm_view_emp.html','pop-up',`Edição de dados - ${data.razao_social.toUpperCase()}`,data) : null
        }catch{
-
+            console.error('no')
         }
     })
 

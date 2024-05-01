@@ -39,3 +39,6 @@
 01/05/2024 20:29 admin@pesqueirodourado.com.br :  Imagem Alterada -> Produto: Porcao de fritas
 01/05/2024 20:29 admin@pesqueirodourado.com.br : Produto Editado Porcao de fritas -> Porcao de fritas
 01/05/2024 20:34 admin@pesqueirodourado.com.br :  Imagem Alterada -> Produto: Porcao de fritas
+02/05/2024 00:44 admin@pesqueirodourado.com.br : Empresa Cadastrada  -> Supermercado Shibata
+02/05/2024 01:25 admin@pesqueirodourado.com.br : Empresa Cadastrada  -> Supermercado Shibata
+02/05/2024 01:43 admin@pesqueirodourado.com.br : Menu Alterado (Fornecedores, adm_empresas.html, pop-up, Empresas)
