@@ -79,6 +79,8 @@
         "COT-4" => 'CALL sp_del_cot(@access,@hash,x00);', // ID_PED
         "COT-5" => 'CALL sp_change_cot(@access,@hash,x00,"x01");', // ID_PED,STATUS
 
+        /* CAIXA */
+        "CXA-0" => 'CALL sp_view_comandas(@access,@hash,"x00","x01","x02","x03","x04","x05");', // FIELD,SIGNAL, VALUE, EXEC, DT_INI, DT_FIN
     );
 
 ?>

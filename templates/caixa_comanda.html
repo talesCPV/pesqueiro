@@ -1,0 +1,64 @@
+<template>
+    <style>
+
+     
+    </style>
+    <div class="frm-comandas">
+        <fieldset>
+            <legend>Filtro</legend>
+            <div class="inline">
+                <select id="cmbBusca">
+                    <option value="nome" signal="LIKE">Nome</option>
+                    <option value="cpf" signal="LIKE" selected>CPF</option>
+                </select>
+                <input type="text" id="edtBusca" onkeypress="return getEnter(event, 'btnBusca-com')">
+                <button id="btnBusca-com" class="btn-round" ><span class="mdi mdi-magnify"></span></button>
+                <button id="btnNovo" class="btn-round"><span class="mdi mdi-plus-thick"></span></button>            
+
+            </div>
+        </fieldset>
+        <table id="tblComandas"></table>
+
+    </div>
+
+
+</template>
+<script>
+    const pageData = main_data.caixa_comanda.data
+    const pageFunc = main_data.caixa_comanda.func
+    const pageScreen = document.querySelector('#card-caixa_comanda')
+//    pageScreen.classList.add('fullscreen')
+
+
+    pageFunc.fillComanda = ()=>{
+        const tbl = pageScreen.querySelector('#tblComandas')
+        tbl.innerHTML = ''
+//        const query = getVal('emp')
+        const params = new Object;
+            params.field = 'aberta'
+            params.signal = '='
+            params.value = '1'
+            params.dt_ini = '2000-01-01'
+            params.dt_fin = '2100-12-31'
+        const myPromisse = queryDB(params,'CXA-0');
+        myPromisse.then((resolve)=>{
+            const json = JSON.parse(resolve)
+            tbl.style.display = json.length > 0 ? 'inline-table' : 'none'
+console.log(json)            
+/*            
+            tbl.head('Razao Social,CNPJ,Tipo')
+            for(let i=0; i<json.length;i++){
+                tbl.plot(json[i],'razao_social,cnpj,tipo','Upp,cnp,cha 1=CLIENTE 0=FORN.')
+            }
+*/            
+        });
+    }
+
+    pageScreen.querySelector('#btnNovo').addEventListener('click',()=>{
+        openHTML('caixa_new_com.html','pop-up','Nova Comanda',{},500)
+    })
+
+
+    pageFunc.fillComanda()
+
+</script>

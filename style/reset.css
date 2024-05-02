@@ -5,9 +5,9 @@
 
 
     :root{
-        --top-bar : #8CC03FF1;
+        --top-bar : rgba(225, 98, 98, 0.9);
         --top-bar-font : #000000FF;
-        --top-bar-hover : #5f832bF1;
+        --top-bar-hover : rgba(202, 52, 52, 0.9);
     
         --win-back : #f0fbe5F1;
         --win-font : #202c2aFF;

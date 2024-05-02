@@ -42,3 +42,6 @@
 02/05/2024 00:44 admin@pesqueirodourado.com.br : Empresa Cadastrada  -> Supermercado Shibata
 02/05/2024 01:25 admin@pesqueirodourado.com.br : Empresa Cadastrada  -> Supermercado Shibata
 02/05/2024 01:43 admin@pesqueirodourado.com.br : Menu Alterado (Fornecedores, adm_empresas.html, pop-up, Empresas)
+02/05/2024 15:03 admin@pesqueirodourado.com.br : Menu Incluido (Comandas)
+02/05/2024 15:04 admin@pesqueirodourado.com.br : Empresa Cadastrada  -> Carrefour
+02/05/2024 15:12 admin@pesqueirodourado.com.br : Menu Alterado (Comandas, caixa_comanda.html, pop-up, Comandas)

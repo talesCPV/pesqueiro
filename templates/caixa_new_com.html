@@ -1,0 +1,41 @@
+<template>
+    <style>
+
+     
+    </style>
+    <fieldset>
+
+        <div class="inline">
+            <label for="edtCPF">CPF</label>
+            <div class="edtbtn">
+                <input type="text" id="edtCPF" onkeyup="valCPF(this)" maxlength="14">
+                <button id="btnCliente" class="btn-round"><span class="mdi mdi-magnify"></span></button>
+            </div>
+        </div>
+
+        <div class="inline">
+            <label for="edtNome">Nome</label>
+            <input type="text" id="edtNome">
+        </div>
+
+        <div class="inline">
+            <label for="edtCel">Celular</label>
+            <input type="text" id="edtCel" onkeyup="valTel(this)" maxlength="15">
+        </div>
+
+        <div class="line">
+            <button id="btnNovo"><span class="mdi mdi-list-box-outline"></span> Criar Comanda</button>
+        </div>
+    </fieldset>
+
+
+</template>
+<script>
+
+    const pageData = main_data.caixa_new_com.data
+    const pageFunc = main_data.caixa_new_com.func
+    const pageScreen = document.querySelector('#card-caixa_new_com')
+
+
+
+</script>

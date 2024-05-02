@@ -26,7 +26,7 @@
             <label for="cmbTipo">Tipo</label>
             <select id="cmbTipo" class="only-view" style="width: 150px;" disabled>
                 <option value="1">Cliente</option>
-                <option value="0">Fornecedor</option>
+                <option value="0" selected>Fornecedor</option>
             </select>
         </div>
         <div class="inline">
@@ -90,7 +90,7 @@
             <label for="edtCEP">CEP</label>
             <input type="text" class="only-view" id="edtCEP" maxlength="10" onkeyup="valCEP(this)" style="width: 200px;" disabled>
             <label for="edtTel">Tel</label>
-            <input type="text" class="only-view" id="edtTel" onkeyup="phone(this)" maxlength="15" style="width: 200px;" disabled>            
+            <input type="text" class="only-view" id="edtTel" onkeyup="valTel(this)" maxlength="15" style="width: 200px;" disabled>            
         </div>
         <div class="inline">
             <label for="edtMail">Email</label>

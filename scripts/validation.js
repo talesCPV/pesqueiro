@@ -84,7 +84,9 @@ function valPlaca(edt){
     edt.value = getPlaca(edt.value)
 }
 
-
+function valTel(edt){ 
+    edt.value = getFone(edt.value)
+}
 
 function getFloat(text,dec=2){
     const ok_chr = ['1','2','3','4','5','6','7','8','9','0']
@@ -343,10 +345,6 @@ function horario(edt){
     }
 
     edt.value = out;
-}
-
-function phone(param){ 
-    param.value = getFone(param.value)
 }
 
 function hideOrig(){
