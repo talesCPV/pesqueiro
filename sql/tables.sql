@@ -160,3 +160,43 @@ CREATE TABLE tb_prod_reserva(
     FOREIGN KEY (id_user) REFERENCES tb_usuario(id),
     PRIMARY KEY (id_prod,id_proj)
 ) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
+
+/* PESQUEIRO */ 
+
+
+DROP TABLE IF EXISTS tb_cliente;
+CREATE TABLE tb_cliente (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  nome varchar(50) NOT NULL,
+  cpf varchar(12) DEFAULT NULL,
+  cel varchar(15) DEFAULT NULL,
+  saldo double NOT NULL DEFAULT 0,
+  obs varchar(255) DEFAULT NULL,
+  PRIMARY KEY (id)
+) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS tb_comanda;
+CREATE TABLE tb_comanda (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  entrada datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  aberta boolean NOT NULL DEFAULT 1,
+  id_cliente INT(11) NOT NULL,
+  valor varchar(300) DEFAULT NULL,
+  FOREIGN KEY (id_cliente) REFERENCES tb_cliente(id),
+  PRIMARY KEY (id)
+) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS tb_item_comanda;
+CREATE TABLE tb_item_comanda (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  id_comanda INT(11) NOT NULL,
+  registro datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  id_garcom INT(11) NOT NULL,
+  id_produto INT(11) NOT NULL,
+  qtd double NOT NULL,
+  pago boolean DEFAULT 0,
+  FOREIGN KEY (id_comanda) REFERENCES tb_comanda(id),
+  FOREIGN KEY (id_produto) REFERENCES tb_produto(id),
+  FOREIGN KEY (id_garcom) REFERENCES tb_usuario(id),
+  PRIMARY KEY (id)
+) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;

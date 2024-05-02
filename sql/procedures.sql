@@ -1007,3 +1007,33 @@ BEGIN
         END IF;
 	END $$
 	DELIMITER ;
+
+
+/* PESQUEIRO */
+
+ /* CAIXA */
+ DROP PROCEDURE sp_view_comandas;
+DELIMITER $$
+	CREATE PROCEDURE sp_view_comandas(
+		IN Iallow varchar(80),
+		IN Ihash varchar(64),
+		IN Ifield varchar(30),
+        IN Isignal varchar(4),
+		IN Ivalue varchar(50),
+        IN Idt_ini date,
+        IN Idt_fin date
+    )
+	BEGIN
+		CALL sp_allow(Iallow,Ihash);
+		IF(@allow)THEN
+			SET @quer =CONCAT('SELECT COT.*
+								FROM tb_comanda AS COT
+                                WHERE ',Ifield,' ',Isignal,' ',Ivalue,'
+                                AND entrada BETWEEN "',Idt_ini,'"
+                                AND "',Idt_fin,'"
+                                ORDER BY entrada DESC;');
+			PREPARE stmt1 FROM @quer;
+			EXECUTE stmt1;
+        END IF;
+	END $$
+	DELIMITER ;    
