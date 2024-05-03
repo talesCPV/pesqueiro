@@ -45,3 +45,14 @@
 02/05/2024 15:03 admin@pesqueirodourado.com.br : Menu Incluido (Comandas)
 02/05/2024 15:04 admin@pesqueirodourado.com.br : Empresa Cadastrada  -> Carrefour
 02/05/2024 15:12 admin@pesqueirodourado.com.br : Menu Alterado (Comandas, caixa_comanda.html, pop-up, Comandas)
+03/05/2024 20:14 admin@pesqueirodourado.com.br : Novo Cliente  -> Tales Cembraneli Dantas,  -> 26687200879,  -> 12997113793
+03/05/2024 20:16 admin@pesqueirodourado.com.br : Novo Cliente  -> Tales Cembraneli Dantas,  -> 26687200879,  -> 12997113793
+03/05/2024 20:22 admin@pesqueirodourado.com.br : Novo Cliente  -> Tales,  -> 26687200879,  -> 12997113793
+03/05/2024 20:23 admin@pesqueirodourado.com.br : Novo Cliente  -> Tales,  -> 26687200879,  -> 12997113793
+03/05/2024 20:26 admin@pesqueirodourado.com.br : Novo Cliente  -> Tales Cembraneli Dantas,  -> 26687200879,  -> 12997113793
+03/05/2024 20:27 admin@pesqueirodourado.com.br : Novo Cliente  -> ahsjh,  -> 26687200879,  -> 32156465321
+03/05/2024 20:45 admin@pesqueirodourado.com.br : Novo Cliente  -> Teste,  -> 12345678912,  -> 123456789123
+03/05/2024 20:47 admin@pesqueirodourado.com.br : Novo Cliente  -> as,  -> 12345678912,  -> 123456789456
+03/05/2024 20:48 admin@pesqueirodourado.com.br : Novo Cliente  -> 123456789,  -> 12345678912,  -> 12345678912
+03/05/2024 20:48 admin@pesqueirodourado.com.br : Novo Cliente  -> 123,  -> 12345678912,  -> 123456789123
+03/05/2024 20:49 admin@pesqueirodourado.com.br : Novo Cliente  -> 123456,  -> 12345678912,  -> 12345678912

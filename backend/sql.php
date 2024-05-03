@@ -81,6 +81,9 @@
 
         /* CAIXA */
         "CXA-0" => 'CALL sp_view_comandas(@access,@hash,"x00","x01","x02","x03","x04","x05");', // FIELD,SIGNAL, VALUE, EXEC, DT_INI, DT_FIN
+        "CXA-1" => 'CALL sp_view_cliente(@access,@hash,"x00","x01","x02");', // FIELD, SIGNAL, VALUE
+        "CXA-2" => 'CALL sp_set_cliente(@access,@hash,"x00","x01","x02","x03","x04","x05");', //  ID,NOME,CPF,CEL.SALDO,OBS
+
     );
 
 ?>

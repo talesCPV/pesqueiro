@@ -13,64 +13,65 @@
         <div class="inline">
             <label for="edtBusca">por:</label>
             <select id="cmbBusca">
-                <option value="cod_int" signal="IN">Código</option>
-                <option value="descricao" signal="LIKE" selected>Descrição</option>
-                <option value="cod_forn" signal="LIKE">Código Forn.</option>
-                <option value="cod_bar" signal="LIKE" >Código de Barras</option>
-                <option value="consumo" signal="=" val="1">Consumo</option>
-                <option value="estoque" signal="<=" val="estq_min">Estoque Baixo</option>
-                <option value="ramo" signal="LIKE" >Fornecedor</option>
+                <option value="nome" signal="LIKE" selected>Nome</option>
+                <option value="cpf" signal="LIKE">CPF</option>
+                <option value="cel" signal="LIKE" >Celular</option>
             </select>
-            <input type="text" id="edtBusca" onkeypress="return getEnter(event, 'btnBusca-prod')">
-            <button id="btnBusca-prod" class="btn-round" ><span class="mdi mdi-magnify"></span></button>
+            <input type="text" id="edtBusca" onkeypress="return getEnter(event, 'btnBusca-cli')">
+            <button id="btnBusca-cli" class="btn-round" ><span class="mdi mdi-magnify"></span></button>
+            <button id="btnNovo" class="btn-round"><span class="mdi mdi-plus-thick"></span></button>   
         </div>
 
         
     </fieldset>  
     <div class="resp-busca">
-        <table id="tblProd"></table>
+        <table id="tblCli"></table>
     </div>
 </template>
 <script>
 
-    const pageData = main_data.busca_prod.data
-    const pageFunc = main_data.busca_prod.func
-    const pageScreen = document.querySelector('#card-busca_prod')
+    const pageData = main_data.busca_cliente.data
+    const pageFunc = main_data.busca_cliente.func
+    const pageScreen = document.querySelector('#card-busca_cliente')
 
-    pageFunc.fillProd = ()=>{      
-        const tbl = pageScreen.querySelector('#tblProd')
+    pageFunc.fillClient = ()=>{
+        const tbl = pageScreen.querySelector('#tblCli')
         tbl.innerHTML = ''
-        const query = getVal('prod')
+        const query = getVal('cliente')
         const params = new Object;
             params.field = query[0]
             params.signal = query[1]
             params.value = query[2]
-        const myPromisse = queryDB(params,'PROD-0');
+        const myPromisse = queryDB(params,'CXA-1')
         myPromisse.then((resolve)=>{
             const json = JSON.parse(resolve)
             tbl.style.display = json.length > 0 ? 'inline-table' : 'none'
-            tbl.head('Descrição|w70,Und.,Estq.,Reserv.,Disp.')
+            tbl.head('Nome,CPF,Cel')
             for(let i=0; i<json.length;i++){
-                tbl.plot(json[i],'descricao,unidade,estoque,reserva,disponivel','Upp,Upp,str,str,str')
+                tbl.plot(json[i],'nome,cpf,cel','Upp,cpf,tel')
             }         
         });
     }
 
-    pageScreen.querySelector('#btnBusca-prod').addEventListener('click',()=>{
-        pageFunc.fillProd()
+    pageScreen.querySelector('#btnBusca-cli').addEventListener('click',()=>{
+        pageFunc.fillClient()
     })
 
-    pageScreen.querySelector('#tblProd').addEventListener('click',(e)=>{
+    pageScreen.querySelector('#tblCli').addEventListener('click',(e)=>{
         try{            
             if(main_data.hasOwnProperty(pageData.org)){
                 data = e.target.parentNode.data
                 data != undefined ?  main_data[pageData.org].func.buscaProd(data) : null
             }
-            closeModal('busca_prod')
+            closeModal('busca_cliente')
        }catch{
 
         }
         
+    })
+
+    pageScreen.querySelector('#btnNovo').addEventListener('click',()=>{
+        openHTML('caixa_new_client.html','pop-up','Novo Cliente',{},500)
     })
 
 </script>

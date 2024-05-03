@@ -205,7 +205,13 @@ HTMLTableElement.prototype.plot = function(obj, fields,type='',file=false, mark=
                     break;
                 case 'ie.': // Formata Insc. Estadual
                     html = obj[arr[0]] != null ? getIE(obj[arr[0]].trim()) : ''
-                    break;                    
+                    break; 
+                case 'cpf': // Formata CPF
+                    html = obj[arr[0]] != null ? getCPF(obj[arr[0]].trim()) : ''
+                    break;
+                case 'tel': // Formata Cel
+                    html = obj[arr[0]] != null ? getFone(obj[arr[0]].trim()) : ''
+                    break;
                 case 'btn': // Adiciona Botão
                     op = type[i].split(' ')
                     op = op.length > 1 ? op[1] : 'OK'                

@@ -1,0 +1,67 @@
+<template>
+    <style>
+
+        span{
+            font-size: 1.5em;
+        }
+     
+    </style>
+    <fieldset>
+
+        <div class="inline">
+            <label for="edtNome">Nome</label>
+            <input type="text" id="edtNome">
+        </div>
+
+        <div class="inline">
+            <label for="edtCPF">CPF</label>
+            <div class="edtbtn">
+                <input type="text" id="edtCPF" onkeyup="valCPF(this)" maxlength="14">
+            </div>
+        </div>
+
+        <div class="inline">
+            <label for="edtCel">Celular</label>
+            <input type="text" id="edtCel" onkeyup="valTel(this)" maxlength="15">
+        </div>
+
+        <div class="line">
+            <button id="btnSave"><span class="mdi mdi-content-save-outline"></span> Salvar</button>
+        </div>
+    </fieldset>
+
+
+</template>
+<script>
+
+    const pageData = main_data.caixa_new_client.data
+    const pageFunc = main_data.caixa_new_client.func
+    const pageScreen = document.querySelector('#card-caixa_new_client')
+    const newCli = Object.keys(pageData).length == 0
+
+    document.querySelector('#btnSave').addEventListener('click',()=>{
+        const params = new Object;
+            params.id = newCli ? 0 : pageData.id
+            params.nome = pageScreen.querySelector('#edtNome').value.trim()
+            params.cpf = getNum(pageScreen.querySelector('#edtCPF').value.trim())
+            params.cel = getNum(pageScreen.querySelector('#edtCel').value.trim())
+            params.saldo = 0
+            params.obs = null
+          
+        const myPromisse = queryDB(params,'CXA-2');
+        myPromisse.then((resolve)=>{
+            setLog(`${newCli?'Novo Cliente':'Edição de Cliente'} ${ !newCli ? pageData.nome :''} -> ${params.nome}, ${ !newCli ? pageData.cpf :''} -> ${params.cpf}, ${ !newCli ? pageData.cel :''} -> ${params.cel}`)
+            try{
+                main_data.busca_cliente.func.fillClient()
+            }catch{
+                console.error('Tela fechada pelo usuário!')
+            }
+            const resp = JSON.parse(resolve)[0].MESSAGE
+            alert(resp)
+            closeModal('caixa_new_client')
+        })
+
+    })
+
+
+</script>
