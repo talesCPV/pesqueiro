@@ -8,8 +8,8 @@
             <legend>Filtro</legend>
             <div class="inline">
                 <select id="cmbBusca">
-                    <option value="nome" signal="LIKE">Nome</option>
-                    <option value="cpf" signal="LIKE" selected>CPF</option>
+                    <option value="nome" signal="LIKE" selected>Nome</option>
+                    <option value="cpf" signal="LIKE">CPF</option>
                 </select>
                 <input type="text" id="edtBusca" onkeypress="return getEnter(event, 'btnBusca-com')">
                 <button id="btnBusca-com" class="btn-round" ><span class="mdi mdi-magnify"></span></button>
@@ -45,19 +45,38 @@
             const json = JSON.parse(resolve)
             tbl.style.display = json.length > 0 ? 'inline-table' : 'none'
 console.log(json)            
-/*            
-            tbl.head('Razao Social,CNPJ,Tipo')
+            
+            tbl.head('Data, Hora,Cliente')
             for(let i=0; i<json.length;i++){
-                tbl.plot(json[i],'razao_social,cnpj,tipo','Upp,cnp,cha 1=CLIENTE 0=FORN.')
+                tbl.plot(json[i],'entrada,entrada,id_cliente','dat,hra,str')
             }
-*/            
-        });
+            
+        })
+    }
+
+    pageFunc.novaComanda = (id,id_cliente,obs)=>{
+
+    }
+
+    pageFunc.buscaCliente = (cliente)=>{
+        console.log(cliente)
+        const params = new Object;
+            params.id = 0
+            params.id_cliente = cliente.id
+            params.obs = ''
+        const myPromisse = queryDB(params,'CXA-3');
+        myPromisse.then((resolve)=>{
+            const json = JSON.parse(resolve)
+        })        
     }
 
     pageScreen.querySelector('#btnNovo').addEventListener('click',()=>{
-        openHTML('busca_cliente.html','pop-up','Cliente',{},800)
+        openHTML('busca_cliente.html','pop-up','Selecione o Cliente',{'org':'caixa_comanda'},800)
     })
 
+    pageScreen.querySelector('#btnBusca-com').addEventListener('click',()=>{
+        pageFunc.fillComanda()
+    })
 
     pageFunc.fillComanda()
 

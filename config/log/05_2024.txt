@@ -56,3 +56,26 @@
 03/05/2024 20:48 admin@pesqueirodourado.com.br : Novo Cliente  -> 123456789,  -> 12345678912,  -> 12345678912
 03/05/2024 20:48 admin@pesqueirodourado.com.br : Novo Cliente  -> 123,  -> 12345678912,  -> 123456789123
 03/05/2024 20:49 admin@pesqueirodourado.com.br : Novo Cliente  -> 123456,  -> 12345678912,  -> 12345678912
+04/05/2024 03:21 admin@pesqueirodourado.com.br : Edicao de Cliente Nome: Teste, CPF: 12345678912, Cel: 123456789123, Saldo: 0, Obs: teste 2
+04/05/2024 03:22 admin@pesqueirodourado.com.br : Edicao de Cliente Nome: Teste 2, CPF: 12345678912, Cel: 123456789123, Saldo: 0, Obs: 
+04/05/2024 03:22 admin@pesqueirodourado.com.br : Edicao de Cliente Nome: Teste 2, CPF: 12345678912, Cel: 123456789123, Saldo: 0, Obs: teste
+04/05/2024 03:26 admin@pesqueirodourado.com.br : Edicao de Cliente Nome: Teste 2, CPF: 12345678912, Cel: 123456789123, Saldo: 0, Obs: teste
+04/05/2024 03:28 admin@pesqueirodourado.com.br : Edicao de Cliente Nome: Teste 2, CPF: 12345678912, Cel: 123456789123, Saldo: 0, Obs: teste
+04/05/2024 03:29 admin@pesqueirodourado.com.br : Edicao de Cliente Nome: Teste 2, CPF: 12345678912, Cel: 123456789123, Saldo: 0, Obs: teste
+04/05/2024 03:30 admin@pesqueirodourado.com.br : Edicao de Cliente Nome: Teste 2, CPF: 12345678912, Cel: 123456789123, Saldo: 0, Obs: teste
+04/05/2024 03:30 admin@pesqueirodourado.com.br : Edicao de Cliente Nome: Teste 2, CPF: 12345678912, Cel: 123456789123, Saldo: 0, Obs: teste
+04/05/2024 03:31 admin@pesqueirodourado.com.br : Edicao de Cliente Nome: Teste 2, CPF: 12345678912, Cel: 123456789123, Saldo: 0, Obs: teste
+04/05/2024 03:31 admin@pesqueirodourado.com.br : Edicao de Cliente Nome: Teste 2, CPF: 12345678912, Cel: 123456789123, Saldo: 0, Obs: teste
+04/05/2024 03:32 admin@pesqueirodourado.com.br : Edicao de Cliente Nome: Teste 2, CPF: 12345678912, Cel: 123456789123, Saldo: 0, Obs: teste
+04/05/2024 03:34 admin@pesqueirodourado.com.br : Edicao de Cliente Nome: Teste 2, CPF: 12345678912, Cel: 123456789123, Saldo: 0, Obs: teste
+04/05/2024 03:34 admin@pesqueirodourado.com.br : Edicao de Cliente Nome: Teste 2, CPF: 12345678912, Cel: 123456789123, Saldo: 0, Obs: teste
+04/05/2024 03:36 admin@pesqueirodourado.com.br : Edicao de Cliente Nome: Teste 2, CPF: 12345678912, Cel: 123456789123, Saldo: 0, Obs: teste
+04/05/2024 03:37 admin@pesqueirodourado.com.br : Edicao de Cliente Nome: Teste 2, CPF: 12345678912, Cel: 123456789123, Saldo: 0, Obs: teste
+04/05/2024 03:38 admin@pesqueirodourado.com.br : Edicao de Cliente Nome: Teste 2, CPF: 12345678912, Cel: 123456789123, Saldo: 0, Obs: teste
+04/05/2024 03:43 admin@pesqueirodourado.com.br : Edicao de Cliente Nome: Teste 2, CPF: 12345678912, Cel: 123456789123, Saldo: 0, Obs: teste
+04/05/2024 03:56 admin@pesqueirodourado.com.br : Novo Cliente Nome: teste 3, CPF: 98765432100, Cel: 32164854752, Saldo: 0, Obs: 
+04/05/2024 04:02 admin@pesqueirodourado.com.br : Novo Cliente Nome: 1, CPF: 1, Cel: 1, Saldo: 0, Obs: 1
+04/05/2024 04:35 admin@pesqueirodourado.com.br : Inclusao de Unidade (Quilo)
+04/05/2024 04:35 admin@pesqueirodourado.com.br : Inclusao de Unidade (Unidade)
+04/05/2024 04:36 admin@pesqueirodourado.com.br : Inclusao de Unidade (Garrafa)
+04/05/2024 04:36 admin@pesqueirodourado.com.br : Inclusao de Unidade (Lata)

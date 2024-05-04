@@ -13,8 +13,8 @@
         <div class="inline">
             <label for="edtBusca">por:</label>
             <select id="cmbBusca">
-                <option value="nome" signal="LIKE" selected>Nome</option>
-                <option value="cpf" signal="LIKE">CPF</option>
+                <option value="nome" signal="LIKE">Nome</option>
+                <option value="cpf" signal="LIKE" selected>CPF</option>
                 <option value="cel" signal="LIKE" >Celular</option>
             </select>
             <input type="text" id="edtBusca" onkeypress="return getEnter(event, 'btnBusca-cli')">
@@ -53,25 +53,41 @@
         });
     }
 
+    function callback(data){
+        if(main_data.hasOwnProperty(pageData.org)){
+            main_data[pageData.org].func.buscaCliente(data)
+        }else{
+            console.error('Tela fechada pelo usuário!')
+        }
+        closeModal('busca_cliente')
+    }
+
+    pageFunc.newClient = (data)=>{
+        const ok = Object.keys(data).length
+        if(ok){
+            callback(data)
+        }
+        
+    }
+
     pageScreen.querySelector('#btnBusca-cli').addEventListener('click',()=>{
         pageFunc.fillClient()
     })
 
-    pageScreen.querySelector('#tblCli').addEventListener('click',(e)=>{
-        try{            
-            if(main_data.hasOwnProperty(pageData.org)){
-                data = e.target.parentNode.data
-                data != undefined ?  main_data[pageData.org].func.buscaProd(data) : null
-            }
-            closeModal('busca_cliente')
-       }catch{
-
+    pageScreen.querySelector('#tblCli').addEventListener('dblclick',(e)=>{
+        if(confirm('Editar dados do cliente?')){
+            const data = e.target.parentNode.data
+            data.org = 'busca_cliente'
+            openHTML('caixa_new_client.html','pop-up','Novo Cliente',data,500)
         }
-        
+    })
+
+    pageScreen.querySelector('#tblCli').addEventListener('click',(e)=>{
+        callback(e.target.parentNode.data)
     })
 
     pageScreen.querySelector('#btnNovo').addEventListener('click',()=>{
-        openHTML('caixa_new_client.html','pop-up','Novo Cliente',{},500)
+        openHTML('caixa_new_client.html','pop-up','Novo Cliente',{'org':'busca_cliente'},500)
     })
 
 </script>

@@ -1,16 +1,12 @@
 <template>
     <style>
-
-        span{
-            font-size: 1.5em;
-        }
      
     </style>
     <fieldset>
 
         <div class="inline">
             <label for="edtNome">Nome</label>
-            <input type="text" id="edtNome">
+            <input type="text" id="edtNome" maxlength="50">
         </div>
 
         <div class="inline">
@@ -25,6 +21,16 @@
             <input type="text" id="edtCel" onkeyup="valTel(this)" maxlength="15">
         </div>
 
+        <div class="inline">
+            <label for="edtSaldo">Saldo</label>
+            <input type="text" id="edtSaldo" onkeyup="valFloat(this)" value="0">
+        </div>
+
+        <div class="inline">
+            <label for="edtObs">Obs</label>
+            <textarea id="edtObs" cols="30" rows="10" maxlength="255"></textarea>
+        </div>        
+
         <div class="line">
             <button id="btnSave"><span class="mdi mdi-content-save-outline"></span> Salvar</button>
         </div>
@@ -37,7 +43,19 @@
     const pageData = main_data.caixa_new_client.data
     const pageFunc = main_data.caixa_new_client.func
     const pageScreen = document.querySelector('#card-caixa_new_client')
-    const newCli = Object.keys(pageData).length == 0
+    const newCli = Object.keys(pageData).length <= 1
+
+    pageFunc.start = ()=>{
+        if(!newCli){
+            pageScreen.querySelector('#edtNome').value = pageData.nome
+            pageScreen.querySelector('#edtCPF').value = getCPF(pageData.cpf)
+            pageScreen.querySelector('#edtCel').value = getFone(pageData.cel)
+            pageScreen.querySelector('#edtSaldo').value = pageData.saldo
+            pageScreen.querySelector('#edtObs').value = pageData.obs
+        }else{
+            pageScreen.querySelector('#edtSaldo').disabled = true
+        }
+    }
 
     document.querySelector('#btnSave').addEventListener('click',()=>{
         const params = new Object;
@@ -45,23 +63,27 @@
             params.nome = pageScreen.querySelector('#edtNome').value.trim()
             params.cpf = getNum(pageScreen.querySelector('#edtCPF').value.trim())
             params.cel = getNum(pageScreen.querySelector('#edtCel').value.trim())
-            params.saldo = 0
-            params.obs = null
+            params.saldo = pageScreen.querySelector('#edtSaldo').value.trim()
+            params.obs = pageScreen.querySelector('#edtObs').value.trim()
           
         const myPromisse = queryDB(params,'CXA-2');
         myPromisse.then((resolve)=>{
-            setLog(`${newCli?'Novo Cliente':'Edição de Cliente'} ${ !newCli ? pageData.nome :''} -> ${params.nome}, ${ !newCli ? pageData.cpf :''} -> ${params.cpf}, ${ !newCli ? pageData.cel :''} -> ${params.cel}`)
-            try{
-                main_data.busca_cliente.func.fillClient()
-            }catch{
-                console.error('Tela fechada pelo usuário!')
-            }
-            const resp = JSON.parse(resolve)[0].MESSAGE
-            alert(resp)
+            const resp = JSON.parse(resolve)[0]
+            setLog(`${newCli?'Novo Cliente':'Edição de Cliente'} Nome: ${params.nome}, CPF: ${params.cpf}, Cel: ${params.cel}, Saldo: ${params.saldo}, Obs: ${params.obs}`)
+
+                if(main_data.hasOwnProperty(pageData.org)){
+                    params.id = resp.id_cliente
+                    main_data[pageData.org].func.newClient(params)
+                }else{
+                    console.error('Tela fechada pelo usuário!')
+                }
+
+            alert(resp.MESSAGE)
             closeModal('caixa_new_client')
         })
 
     })
 
+    pageFunc.start()
 
 </script>
