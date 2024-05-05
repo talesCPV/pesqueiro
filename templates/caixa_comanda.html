@@ -1,10 +1,13 @@
 <template>
     <style>
 
+        .w70{
+            width: 70% !important;
+        }
      
     </style>
     <div class="frm-comandas">
-        <fieldset>
+        <fieldset class="fds-busca caixa">
             <legend>Filtro</legend>
             <div class="inline">
                 <select id="cmbBusca">
@@ -33,22 +36,20 @@
     pageFunc.fillComanda = ()=>{
         const tbl = pageScreen.querySelector('#tblComandas')
         tbl.innerHTML = ''
-//        const query = getVal('emp')
+        const query = getVal('caixa')
         const params = new Object;
-            params.field = 'aberta'
-            params.signal = '='
-            params.value = '1'
+            params.field = query[0]
+            params.signal = query[1]
+            params.value = query[2]
             params.dt_ini = '2000-01-01'
             params.dt_fin = '2100-12-31'
         const myPromisse = queryDB(params,'CXA-0');
         myPromisse.then((resolve)=>{
             const json = JSON.parse(resolve)
             tbl.style.display = json.length > 0 ? 'inline-table' : 'none'
-console.log(json)            
-            
-            tbl.head('Data, Hora,Cliente')
+            tbl.head('Data, Hora,Cliente|w70,Valor')
             for(let i=0; i<json.length;i++){
-                tbl.plot(json[i],'entrada,entrada,id_cliente','dat,hra,str')
+                tbl.plot(json[i],'data,hora,nome,total','str,str,Upp,R$.')
             }
             
         })
@@ -76,6 +77,13 @@ console.log(json)
 
     pageScreen.querySelector('#btnBusca-com').addEventListener('click',()=>{
         pageFunc.fillComanda()
+    })
+
+    pageScreen.querySelector('#tblComandas').addEventListener('click',(e)=>{
+
+        const data = e.target.parentNode.data
+        openHTML('caixa_view_comanda.html','pop-up',`Comanda - ${data.id.padStart(8,0)} - ${data.nome.toUpperCase()}`,data)
+
     })
 
     pageFunc.fillComanda()

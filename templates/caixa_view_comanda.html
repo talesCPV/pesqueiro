@@ -1,0 +1,90 @@
+<template>
+    <style>
+        .fds-itens{
+            display: flex;
+            padding: 10px;
+            flex-wrap: wrap;
+            gap: 15px;
+
+        }
+     
+    </style>
+  
+    <fieldset>
+        <legend>Cliente</legend>
+        <table id="tblCliente"></table>
+    </fieldset>
+    <fieldset class="fds-itens">
+        <legend>Ítens</legend>
+        <table id="tblItens"></table>
+        <div class="line">
+            <button id="btnNovo" ><span class="mdi mdi-plus-thick"></span> Adicionar Produto</button> 
+        </div>
+    </fieldset>
+
+</template>
+<script>
+    const pageData = main_data.caixa_view_comanda.data
+    const pageFunc = main_data.caixa_view_comanda.func
+    const pageScreen = document.querySelector('#card-caixa_view_comanda')
+
+    pageFunc.start = ()=>{
+        pageFunc.fillItemComanda()
+        const tbl = pageScreen.querySelector('#tblCliente')
+        tbl.head('Nome,CPF,Telefone,Saldo')
+        tbl.plot(pageData,'nome,cpf,cel,saldo|edtSaldo','Upp,cpf,tel,R$.')
+
+    }
+
+    pageFunc.fillItemComanda = ()=>{
+        const tbl = pageScreen.querySelector('#tblItens')
+        tbl.innerHTML = ''
+        const params = new Object;
+            params.id_comanda = pageData.id
+        const myPromisse = queryDB(params,'CXA-5');
+        myPromisse.then((resolve)=>{
+            const json = JSON.parse(resolve)
+           
+            tbl.style.display = json.length > 0 ? 'inline-table' : 'none'
+            tbl.head('Descrição, Und.,Qtd.,Preço Unt.,Sub_total,PG')
+            let tot = 0
+            for(let i=0; i<json.length;i++){
+                tbl.plot(json[i],'descricao,und,qtd,preco,sub_total,pago','Upp,Upp,str,R$.,R$.,ico 0=mdi-close-thick 1-mdi-check-bold ')
+                tot += parseFloat(json[i].sub_total)
+            }
+            const tr = document.createElement('tr')
+            tr.innerHTML = `<td colspan="3"></td><th>Total</th><td>R$${getFloat(tot.toFixed(2))}</td><td></td>`
+            tbl.appendChild(tr)
+        })
+    }
+
+
+    pageFunc.buscaProd = (prod)=>{
+        prod.qtd = prompt('Quantidade:',1)
+
+        const params = new Object;
+            params.id = 0
+            params.id_comanda = pageData.id
+            params.id_prod = prod.id
+            params.qtd = prod.qtd
+            params.pg = 0
+          
+        const myPromisse = queryDB(params,'CXA-4');
+        myPromisse.then((resolve)=>{
+            pageFunc.fillItemComanda()
+            main_data.caixa_comanda.func.fillComanda()
+        })
+    }
+
+
+
+
+    pageScreen.querySelector('#btnNovo').addEventListener('click',()=>{
+        pageData.org = 'caixa_view_comanda'
+        openHTML('busca_prod.html','pop-up',`Adicionar produto`,pageData,600)
+    })
+
+
+    pageFunc.start()
+
+</script>

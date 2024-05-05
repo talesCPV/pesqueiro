@@ -79,3 +79,10 @@
 04/05/2024 04:35 admin@pesqueirodourado.com.br : Inclusao de Unidade (Unidade)
 04/05/2024 04:36 admin@pesqueirodourado.com.br : Inclusao de Unidade (Garrafa)
 04/05/2024 04:36 admin@pesqueirodourado.com.br : Inclusao de Unidade (Lata)
+05/05/2024 03:48 admin@pesqueirodourado.com.br : Edicao de Unidade (Porcao -> Porcao, porcao -> porc)
+05/05/2024 04:26 admin@pesqueirodourado.com.br : Inclusao de Unidade (Copo)
+05/05/2024 04:27 admin@pesqueirodourado.com.br : Produto Cadastrado  -> Suco de Laranja
+05/05/2024 04:27 admin@pesqueirodourado.com.br : Produto Editado Suco de Laranja -> Suco de Laranja
+05/05/2024 04:39 admin@pesqueirodourado.com.br : Produto Cadastrado  -> Cerveja Bhrama
+05/05/2024 04:39 admin@pesqueirodourado.com.br : Produto Editado Cerveja Bhrama -> Cerveja Bhrama
+05/05/2024 04:41 admin@pesqueirodourado.com.br : Produto Editado Porcao de fritas -> Porcao de fritas

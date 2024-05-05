@@ -84,7 +84,8 @@
         "CXA-1" => 'CALL sp_view_cliente(@access,@hash,"x00","x01","x02");', // FIELD, SIGNAL, VALUE
         "CXA-2" => 'CALL sp_set_cliente(@access,@hash,"x00","x01","x02","x03","x04","x05");', //  ID,NOME,CPF,CEL.SALDO,OBS
         "CXA-3" => 'CALL sp_set_comanda(@access,@hash,x00,x01,"x02");', //  ID,ID_CLIENTE,OBS
-
+        "CXA-4" => 'CALL sp_set_item_comanda(@access,@hash,x00,x01,x02,"x03","x04");', //ID,ID_COMANDA,ID_PRODUTO,QTD,PAGO
+        "CXA-5" => 'CALL sp_view_item_comanda(@access,@hash,x00);', //ID_COMANDA
     );
 
 ?>
