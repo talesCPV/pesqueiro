@@ -46,6 +46,25 @@
         color: #16a083;
         background-color: #ffffff;
       }
+/*  CHECKBOX */
+
+
+    .line-ckb{
+        display: flex;
+        margin: 0;
+        flex-direction: row;
+        align-items: center;
+        min-width: unset !important;
+    }
+
+    .line-ckb input[type=checkbox]{
+        height: fit-content;
+    }
+
+    .line-ckb label{
+        padding: 0 !important;
+    }
+
 /* Edit + Button */
 
       .edtbtn{

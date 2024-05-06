@@ -5,6 +5,16 @@
             width: 70% !important;
         }
         
+        .line-btn{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+
+        .line-btn button{
+            margin: 0;
+        }
+
         /*  MOBILE  */
 
         @media all and (max-width : 768px) {
@@ -13,8 +23,7 @@
             }
 
             #card-caixa_comanda #cmbBusca{
- 
-                width: 40%;
+                width: calc(100% - 130px);
             }
 
             #card-caixa_comanda #edtBusca{
@@ -28,13 +37,21 @@
         <fieldset class="fds-busca caixa">
             <legend>Filtro</legend>
             <div class="inline">
+<!--                
+                <div class="line-ckb">
+                    <label for="ckbAberta">Aberta</label>
+                    <input type="checkbox" id="ckbAberta" checked>
+                </div>
+-->                
                 <select id="cmbBusca">
                     <option value="nome" signal="LIKE" selected>Nome</option>
                     <option value="cpf" signal="LIKE">CPF</option>
                 </select>
                 <input type="text" id="edtBusca" onkeypress="return getEnter(event, 'btnBusca-com')">
-                <button id="btnBusca-com" class="btn-round" ><span class="mdi mdi-magnify"></span></button>
-                <button id="btnNovo" class="btn-round"><span class="mdi mdi-plus-thick"></span></button>            
+                <div class="line-btn">
+                    <button id="btnBusca-com" class="btn-round" ><span class="mdi mdi-magnify"></span></button>
+                    <button id="btnNovo" class="btn-round"><span class="mdi mdi-plus-thick"></span></button>                
+                </div>
 
             </div>
         </fieldset>
@@ -61,6 +78,7 @@
             params.value = query[2]
             params.dt_ini = '2000-01-01'
             params.dt_fin = '2100-12-31'
+            params.aberta = 1
         const myPromisse = queryDB(params,'CXA-0');
         myPromisse.then((resolve)=>{
             const json = JSON.parse(resolve)

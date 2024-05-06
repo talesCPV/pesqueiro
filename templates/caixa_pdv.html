@@ -1,0 +1,69 @@
+<template>
+    <style>
+
+        .frm-pdv{
+            display: flex;
+            flex-direction: row-reverse;
+            gap: 15px;
+            width: 100%;
+            height: 88%;
+        }
+
+        .fds-cupom, .fds-controle{
+            width: 100%;
+            height: 100%;
+        }
+
+        .fds-cliente{
+            height: 20%;
+        }
+
+        .fds-comanda{
+            height: 78.3%;
+        }
+
+        .frm-encerra{
+            margin: 5px;
+            padding: 5px;
+            display: flex;
+            justify-content: end;
+        }
+
+    </style>
+  
+    <div class="frm-pdv">
+        <div class="fds-cupom">
+            
+
+            <fieldset class="fds-cliente">
+                <legend>Cliente</legend>
+                <table id="tblCliente"></table>
+            </fieldset>
+            <fieldset class="fds-comanda">
+                <legend>Comanda</legend>
+                <table id="tblComanda"></table>
+            </fieldset>
+
+        </div>
+        <fieldset class="fds-controle">
+            <legend>Controle</legend>
+            <div class="line">
+                <button id="btnVenda">Venda Direta</button>
+                <button id="btnComanda">Comandas</button>
+            </div>
+        </fieldset>
+
+    </div>
+    <div class="frm-encerra">
+        <button>Finalizar</button>
+    </div>
+
+</template>
+<script>
+    const pageData = main_data.caixa_pdv.data
+    const pageFunc = main_data.caixa_pdv.func
+    const pageScreen = document.querySelector('#card-caixa_pdv')
+    pageScreen.classList.add('fullscreen')
+
+
+</script>
