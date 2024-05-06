@@ -86,3 +86,13 @@
 05/05/2024 04:39 admin@pesqueirodourado.com.br : Produto Cadastrado  -> Cerveja Bhrama
 05/05/2024 04:39 admin@pesqueirodourado.com.br : Produto Editado Cerveja Bhrama -> Cerveja Bhrama
 05/05/2024 04:41 admin@pesqueirodourado.com.br : Produto Editado Porcao de fritas -> Porcao de fritas
+05/05/2024 04:49 admin@pesqueirodourado.com.br : Produto Editado Cerveja Bhrama -> Cerveja Brahma 600ml
+06/05/2024 03:02 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:1, Prod:2, Qtd.:3
+06/05/2024 03:04 admin@pesqueirodourado.com.br : Item Deletado -> Comanda:1, Prod:undefined, Qtd.:undefined
+06/05/2024 03:05 admin@pesqueirodourado.com.br : Item Deletado -> Comanda:1, Prod:undefined, Qtd.:undefined
+06/05/2024 03:06 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:1, Prod:Porcao de fritas, Qtd.:2
+06/05/2024 03:20 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:2, Prod:1, Qtd.:2
+06/05/2024 03:22 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:1, Prod:Cerveja Brahma 600ml, Qtd.:null
+06/05/2024 03:23 admin@pesqueirodourado.com.br : Menu Alterado (PDV, menu, pop-up, PDV - Frente de Caixa)
+06/05/2024 03:35 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:1, Prod:Cerveja Brahma 600ml, Qtd.:2
+06/05/2024 03:36 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:1, Prod:3, Qtd.:1

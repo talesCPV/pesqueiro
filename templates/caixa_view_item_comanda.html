@@ -1,0 +1,74 @@
+<template>
+    <style>
+
+     
+    </style>
+  
+    <fieldset>
+        <legend id="fds-legend"></legend>
+        <div class="inline">
+            <label for="edtQtd">Qtd</label>
+            <input type="text" id="edtQtd" onkeyup="valFloat(this)" inputmode="decimal">
+        </div>
+        <div class="line">
+            <button id="btnSave">Salvar</button>
+            <button id="btnDel">Deletar</button>
+        </div>
+    </fieldset>
+
+
+</template>
+<script>
+    const pageData = main_data.caixa_view_item_comanda.data
+    const pageFunc = main_data.caixa_view_item_comanda.func
+    const pageScreen = document.querySelector('#card-caixa_view_item_comanda')
+
+    pageFunc.start = ()=>{
+        pageScreen.querySelector('#fds-legend').innerHTML = pageData.descricao
+        pageScreen.querySelector('#edtQtd').value = pageData.qtd
+    }
+
+    pageScreen.querySelector('#btnSave').addEventListener('click',()=>{
+        const params = new Object;
+            params.id = pageData.id
+            params.id_comanda = pageData.id_comanda
+            params.id_prod = pageData.id_produto
+            params.qtd = pageScreen.querySelector('#edtQtd').value
+            params.pg = 0
+          
+        const myPromisse = queryDB(params,'CXA-4');
+        myPromisse.then((resolve)=>{
+            setLog(`Item Alterado -> Comanda:${params.id_comanda}, Prod:${params.id_prod}, Qtd.:${params.qtd}`)
+            try{
+                main_data.caixa_view_comanda.func.fillItemComanda()
+                main_data.caixa_comanda.func.fillComanda()
+            }catch{
+                console.error('Pagina fechada pelo usuário!')
+            }
+            closeModal('caixa_view_item_comanda')
+        })
+    })
+
+    pageScreen.querySelector('#btnDel').addEventListener('click',()=>{
+        if(confirm('Deseja realmente deletar este ítem desta comanda?')){
+            const params = new Object;
+                params.id = pageData.id
+                params.id_comanda = pageData.id_comanda
+            
+            const myPromisse = queryDB(params,'CXA-6');
+            myPromisse.then((resolve)=>{
+                setLog(`Item Deletado -> Comanda:${params.id_comanda}, Prod:${params.id_prod}, Qtd.:${params.qtd}`)
+                try{
+                    main_data.caixa_view_comanda.func.fillItemComanda()
+                    main_data.caixa_comanda.func.fillComanda()
+                }catch{
+                    console.error('Pagina fechada pelo usuário!')
+                }   
+            })
+        }
+        closeModal('caixa_view_item_comanda')
+    })
+
+    pageFunc.start()
+
+</script>

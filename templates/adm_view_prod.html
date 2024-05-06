@@ -71,24 +71,24 @@
                     <label for="cmbCons">Consumo</label>
                     <select id="cmbCons" class="only-view" disabled>
                         <option value="1">SIM</option>
-                        <option value="0">NÃO</option>
+                        <option value="0" selected>NÃO</option>
                     </select>
                     <label for="edtCodBar">Código de Barras</label>
-                    <input type="text" class="only-view" id="edtCodBar" maxlength="20" disabled>        
+                    <input type="text" class="only-view" id="edtCodBar" maxlength="20" inputmode="numeric" disabled>        
                 </div>
                 <div class="inline">
                     <label for="cmdUnd">Unidade</label>
                     <select id="cmdUnd" class="only-view" disabled></select>
                     <label for="edtEtq">Estoque</label>
-                    <input type="text" class="only-view" id="edtEtq" maxlength="10" onkeyup="valFloat(this)" disabled>
+                    <input type="text" class="only-view" id="edtEtq" maxlength="10" onkeyup="valFloat(this)" inputmode="numeric" disabled>
                     <label for="edtEtqMin">Estq. Min.</label>
-                    <input type="text" class="only-view" id="edtEtqMin" maxlength="10" onkeyup="valFloat(this)" disabled>              
+                    <input type="text" class="only-view" id="edtEtqMin" maxlength="10" onkeyup="valFloat(this)" inputmode="numeric" disabled>              
                 </div>
                 <div class="inline">
                     <label for="edtCusto">Custo (R$)</label>
-                    <input type="text" class="only-view" id="edtCusto" onkeyup="valFloat(this)" disabled>
+                    <input type="text" class="only-view" id="edtCusto" onkeyup="valFloat(this)" inputmode="numeric" disabled>
                     <label for="edtMarkup">Markup (%)</label>
-                    <input type="text" class="only-view" id="edtMarkup" onkeyup="valFloat(this)" disabled>    
+                    <input type="text" class="only-view" id="edtMarkup" onkeyup="valFloat(this)" inputmode="numeric" disabled>    
                 </div>
         
             </div>
@@ -99,7 +99,7 @@
             <label for="edtLocal">Local Estoque</label>
             <input type="text" class="only-view" id="edtLocal" maxlength="20" disabled>
             <label for="edtNCM">NCM</label>
-            <input type="text" class="only-view" id="edtNCM" maxlength="8" onkeyup="valInt(this)" disabled>
+            <input type="text" class="only-view" id="edtNCM" maxlength="8" onkeyup="valInt(this)" inputmode="numeric" disabled>
         </div>
         <div class="inline">
             <label for="cmbForn">Fornecedor</label>

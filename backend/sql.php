@@ -86,6 +86,7 @@
         "CXA-3" => 'CALL sp_set_comanda(@access,@hash,x00,x01,"x02");', //  ID,ID_CLIENTE,OBS
         "CXA-4" => 'CALL sp_set_item_comanda(@access,@hash,x00,x01,x02,"x03","x04");', //ID,ID_COMANDA,ID_PRODUTO,QTD,PAGO
         "CXA-5" => 'CALL sp_view_item_comanda(@access,@hash,x00);', //ID_COMANDA
+        "CXA-6" => 'CALL sp_del_item_comanda(@access,@hash,x00,x01);', // ID_ITEM, ID_COMANDA 
     );
 
 ?>

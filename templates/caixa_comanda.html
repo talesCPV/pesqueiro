@@ -4,7 +4,25 @@
         .w70{
             width: 70% !important;
         }
-     
+        
+        /*  MOBILE  */
+
+        @media all and (max-width : 768px) {
+            .mobiHide{
+                display: none;
+            }
+
+            #card-caixa_comanda #cmbBusca{
+ 
+                width: 40%;
+            }
+
+            #card-caixa_comanda #edtBusca{
+                order: 7;
+                width: 100%;
+            }
+        }
+
     </style>
     <div class="frm-comandas">
         <fieldset class="fds-busca caixa">
@@ -47,9 +65,9 @@
         myPromisse.then((resolve)=>{
             const json = JSON.parse(resolve)
             tbl.style.display = json.length > 0 ? 'inline-table' : 'none'
-            tbl.head('Data, Hora,Cliente|w70,Valor')
+            tbl.head('Data|mobiHide,Hora|mobiHide,Cliente|w70,Valor')
             for(let i=0; i<json.length;i++){
-                tbl.plot(json[i],'data,hora,nome,total','str,str,Upp,R$.')
+                tbl.plot(json[i],'data|mobiHide,hora|mobiHide,nome,total','str,str,Upp,R$.')
             }
             
         })
@@ -67,6 +85,7 @@
             params.obs = ''
         const myPromisse = queryDB(params,'CXA-3');
         myPromisse.then((resolve)=>{
+            setLog(`Nova Comanda -> Cliente:${cliente.nome}, CPF:${cliente.cpf}`)
             const json = JSON.parse(resolve)
         })        
     }
@@ -80,10 +99,8 @@
     })
 
     pageScreen.querySelector('#tblComandas').addEventListener('click',(e)=>{
-
         const data = e.target.parentNode.data
         openHTML('caixa_view_comanda.html','pop-up',`Comanda - ${data.id.padStart(8,0)} - ${data.nome.toUpperCase()}`,data)
-
     })
 
     pageFunc.fillComanda()

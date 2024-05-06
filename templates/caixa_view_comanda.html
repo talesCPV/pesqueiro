@@ -31,8 +31,8 @@
     pageFunc.start = ()=>{
         pageFunc.fillItemComanda()
         const tbl = pageScreen.querySelector('#tblCliente')
-        tbl.head('Nome,CPF,Telefone,Saldo')
-        tbl.plot(pageData,'nome,cpf,cel,saldo|edtSaldo','Upp,cpf,tel,R$.')
+        tbl.head('Nome,CPF|mobiHide,Telefone,Saldo')
+        tbl.plot(pageData,'nome,cpf|mobiHide,cel|,saldo|edtSaldo','Upp,cpf,tel,R$.')
 
     }
 
@@ -46,14 +46,14 @@
             const json = JSON.parse(resolve)
            
             tbl.style.display = json.length > 0 ? 'inline-table' : 'none'
-            tbl.head('Descrição, Und.,Qtd.,Preço Unt.,Sub_total,PG')
+            tbl.head('Descrição|w70, Und.|mobiHide,Qtd.,Preço Unt.|mobiHide,Sub_total,PG|mobiHide')
             let tot = 0
             for(let i=0; i<json.length;i++){
-                tbl.plot(json[i],'descricao,und,qtd,preco,sub_total,pago','Upp,Upp,str,R$.,R$.,ico 0=mdi-close-thick 1-mdi-check-bold ')
+                tbl.plot(json[i],'descricao|w70,und|mobiHide,qtd,preco|mobiHide,sub_total,pago|mobiHide','Upp,Upp,str,R$.,R$.,ico 0=mdi-close-thick 1-mdi-check-bold ')
                 tot += parseFloat(json[i].sub_total)
             }
             const tr = document.createElement('tr')
-            tr.innerHTML = `<td colspan="3"></td><th>Total</th><td>R$${getFloat(tot.toFixed(2))}</td><td></td>`
+            tr.innerHTML = `<th colspan="2" class="mobiHide"></th><th></th><th>Total</th><th>R$${getFloat(tot.toFixed(2))}</th><th class="mobiHide"></th>`
             tbl.appendChild(tr)
         })
     }
@@ -71,17 +71,20 @@
           
         const myPromisse = queryDB(params,'CXA-4');
         myPromisse.then((resolve)=>{
+            setLog(`Item Adicionado -> Comanda:${params.id_comanda}, Prod:${prod.descricao}, Qtd.:${prod.qtd}`)
             pageFunc.fillItemComanda()
             main_data.caixa_comanda.func.fillComanda()
         })
     }
 
-
-
-
     pageScreen.querySelector('#btnNovo').addEventListener('click',()=>{
         pageData.org = 'caixa_view_comanda'
         openHTML('busca_prod.html','pop-up',`Adicionar produto`,pageData,600)
+    })
+
+    pageScreen.querySelector('#tblItens').addEventListener('click',(e)=>{
+        const data = e.target.parentNode.data
+        openHTML('caixa_view_item_comanda.html','pop-up',`Comanda - ${pageData.id.padStart(8,0)} - ${pageData.nome.toUpperCase()}`,data,450)
     })
 
 
