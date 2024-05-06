@@ -98,3 +98,5 @@
 06/05/2024 03:36 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:1, Prod:3, Qtd.:1
 06/05/2024 16:32 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:4, Prod:Porcao de fritas, Qtd.:1
 06/05/2024 16:33 admin@pesqueirodourado.com.br : Menu Alterado (PDV, caixa_pdv.html, pop-up, PDV - Frente de Caixa)
+06/05/2024 21:44 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:1, Prod:3, Qtd.:5
+06/05/2024 21:59  : Item Alterado -> Comanda:1, Prod:3, Qtd.:4

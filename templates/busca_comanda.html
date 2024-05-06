@@ -1,0 +1,72 @@
+<template>
+    <style>
+        .resp-busca{
+            width: 100%;
+            max-height: 400px;
+            overflow-y: scroll;
+        }
+
+    </style>
+
+    <fieldset class="fds-busca comanda">
+        <legend>Filtro</legend>
+        <div class="inline">               
+            <select id="cmbBusca">
+                <option value="nome" signal="LIKE" selected>Nome</option>
+                <option value="cpf" signal="LIKE">CPF</option>
+            </select>
+            <input type="text" id="edtBusca" onkeypress="return getEnter(event, 'btnBusca-comanda')">
+            <button id="btnBusca-comanda" class="btn-round" ><span class="mdi mdi-magnify"></span></button>
+            <button id="btnNovo" class="btn-round"><span class="mdi mdi-plus-thick"></span></button>                
+
+        </div>
+    </fieldset>
+    <table id="tblComandas"></table>
+
+</template>
+<script>
+
+    const pageData = main_data.busca_comanda.data
+    const pageFunc = main_data.busca_comanda.func
+    const pageScreen = document.querySelector('#card-busca_comanda')
+
+    pageFunc.fillComanda = ()=>{
+        const tbl = pageScreen.querySelector('#tblComandas')
+        tbl.innerHTML = ''
+        const query = getVal('comanda')
+        const params = new Object;
+            params.field = query[0]
+            params.signal = query[1]
+            params.value = query[2]
+            params.dt_ini = '2000-01-01'
+            params.dt_fin = '2100-12-31'
+            params.aberta = 1
+        const myPromisse = queryDB(params,'CXA-0');
+        myPromisse.then((resolve)=>{
+            const json = JSON.parse(resolve)
+            tbl.style.display = json.length > 0 ? 'inline-table' : 'none'
+            tbl.head('Data|mobiHide,Hora|mobiHide,Cliente|w70,Valor')
+            for(let i=0; i<json.length;i++){
+                tbl.plot(json[i],'data|mobiHide,hora|mobiHide,nome,total','str,str,Upp,R$.')
+            }
+            
+        })
+    }
+    pageScreen.querySelector('#btnBusca-comanda').addEventListener('click',()=>{
+        pageFunc.fillComanda()
+    })
+
+    pageScreen.querySelector('#tblComandas').addEventListener('click',(e)=>{
+        try{            
+            if(main_data.hasOwnProperty(pageData.org)){
+                data = e.target.parentNode.data
+                data != undefined ?  main_data[pageData.org].func.buscaComanda(data) : null
+            }
+            closeModal('busca_comanda')
+       }catch{
+
+        }
+        
+    })
+
+</script>
