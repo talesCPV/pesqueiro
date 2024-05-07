@@ -62,15 +62,14 @@
     })
 
     pageScreen.querySelector('#tblEmp').addEventListener('click',(e)=>{
-
-        try{
-            if(main_data.hasOwnProperty('adm_view_emp')){
+        const row = e.target.parentNode
+        if(row.rowIndex > 0 && row.tagName == 'TR'){
+            try{
                 closeModal('adm_view_emp')
+                row.data != undefined ? openHTML('adm_view_emp.html','pop-up',`Edição de dados - ${row.data.razao_social.toUpperCase()}`,row.data) : null
+            }catch{
+                console.error('no')
             }
-            data = e.target.parentNode.data
-            data != undefined ? openHTML('adm_view_emp.html','pop-up',`Edição de dados - ${data.razao_social.toUpperCase()}`,data) : null
-       }catch{
-            console.error('no')
         }
     })
 

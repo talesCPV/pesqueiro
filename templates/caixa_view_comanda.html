@@ -33,7 +33,6 @@
         const tbl = pageScreen.querySelector('#tblCliente')
         tbl.head('Nome,CPF|mobiHide,Telefone,Saldo')
         tbl.plot(pageData,'nome,cpf|mobiHide,cel|,saldo|edtSaldo','Upp,cpf,tel,R$.')
-
     }
 
     pageFunc.fillItemComanda = ()=>{
@@ -57,7 +56,6 @@
             tbl.appendChild(tr)
         })
     }
-
 
     pageFunc.buscaProd = (prod)=>{
         prod.qtd = prompt('Quantidade:',1)
@@ -83,10 +81,11 @@
     })
 
     pageScreen.querySelector('#tblItens').addEventListener('click',(e)=>{
-        const data = e.target.parentNode.data
-        openHTML('caixa_view_item_comanda.html','pop-up',`Comanda - ${pageData.id.padStart(8,0)} - ${pageData.nome.toUpperCase()}`,data,450)
+        const row = e.target.parentNode
+        if(row.rowIndex > 0 && row.tagName == 'TR'){
+            openHTML('caixa_view_item_comanda.html','pop-up',`Comanda - ${pageData.id.padStart(8,0)} - ${pageData.nome.toUpperCase()}`,row.data,450)
+        }
     })
-
 
     pageFunc.start()
 

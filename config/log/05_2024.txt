@@ -100,3 +100,27 @@
 06/05/2024 16:33 admin@pesqueirodourado.com.br : Menu Alterado (PDV, caixa_pdv.html, pop-up, PDV - Frente de Caixa)
 06/05/2024 21:44 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:1, Prod:3, Qtd.:5
 06/05/2024 21:59  : Item Alterado -> Comanda:1, Prod:3, Qtd.:4
+07/05/2024 01:41 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:1, Prod:3, Qtd.:1
+07/05/2024 03:05 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:undefined, Prod:undefined, Qtd.:undefined
+07/05/2024 03:39 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:undefined, Prod:Cerveja Brahma 600ml, Qtd.:1
+07/05/2024 03:41 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:undefined, Prod:Porcao de fritas, Qtd.:1
+07/05/2024 03:41 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:1, Prod:1, Qtd.:1
+07/05/2024 03:41 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:undefined, Prod:Porcao de fritas, Qtd.:22
+07/05/2024 03:42 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:undefined, Prod:Cerveja Brahma 600ml, Qtd.:2
+07/05/2024 03:44 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:2, Prod:Cerveja Brahma 600ml, Qtd.:1
+07/05/2024 03:57 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:1, Prod:3, Qtd.:5
+07/05/2024 04:04 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:1, Prod:3, Qtd.:3
+07/05/2024 04:04 admin@pesqueirodourado.com.br : Item Deletado -> Comanda:1, Prod:undefined, Qtd.:undefined
+07/05/2024 04:04 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:1, Prod:2, Qtd.:2
+07/05/2024 04:05 admin@pesqueirodourado.com.br : Item Deletado -> Comanda:1, Prod:undefined, Qtd.:undefined
+07/05/2024 04:05 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:1, Prod:Suco de Laranja, Qtd.:2
+07/05/2024 04:06 admin@pesqueirodourado.com.br : Novo Cliente Nome: Joao, CPF: 123, Cel: 123, Saldo: 0, Obs: teste Joao
+07/05/2024 04:06 admin@pesqueirodourado.com.br : Nova Comanda -> Cliente:Joao, CPF:123
+07/05/2024 04:07 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:5, Prod:Cerveja Brahma 600ml, Qtd.:1
+07/05/2024 04:17 admin@pesqueirodourado.com.br : Nova Comanda -> Cliente:1, CPF:1
+07/05/2024 04:18 admin@pesqueirodourado.com.br : Novo Cliente Nome: 2, CPF: 2, Cel: 2, Saldo: 0, Obs: 2
+07/05/2024 04:18 admin@pesqueirodourado.com.br : Nova Comanda -> Cliente:2, CPF:2
+07/05/2024 04:18 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:7, Prod:Porcao de fritas, Qtd.:1
+07/05/2024 04:20 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:6, Prod:Suco de Laranja, Qtd.:1
+07/05/2024 04:20 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:6, Prod:2, Qtd.:2
+07/05/2024 04:38 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:4, Prod:1, Qtd.:2

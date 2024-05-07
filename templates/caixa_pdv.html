@@ -15,9 +15,13 @@
             height: 100%;
         }
 
-        .fds-cupom, .fds-controle{
-            width: 100%;
-            height: 100%;
+        .sider, .fds-controle{
+/*            width: 100%;*/
+            height: calc(100% - 50px);
+        }
+
+        .left{
+            min-width: 60%;
         }
 
         .fds-cliente{
@@ -25,71 +29,87 @@
         }
 
         .fds-comanda{
-            height: calc(100% - 140px);
+            height: calc(100% - 190px);
         }
 
-        .just-end{            
-            padding: 5px;
+        .fds-button{
             display: flex;
-            justify-content: end;
+            justify-content: center;
+        }
+
+        .fds-button *{
+            min-width: 150px;
+
         }
 
         .itens-comanda{
             overflow-y: scroll;
-            max-height: 80%;
+            max-height: 100%;
         }
 
         #edtTotal{
             font-size: 3em;
+            text-align: center;
+        }
+
+        #edtValRec, #edtTroco{
+            font-size: 2em;
+            text-align: center;
+        } 
+
+        #tblComanda, #tblCliente{
+            font-size: 0.8em;
+        }
+
+        #card-caixa_pdv table{
+            margin-top: -20px;
         }
 
     </style>
   
     <div class="frm-pdv">
         <div class="frm-main">
-            <fieldset class="fds-controle">
-                <legend>Controle</legend>
-                <div class="inline">
-                    <label for="edtTotal">Total</label>
-                    <input type="text" id="edtTotal" disabled>
-                </div>
-                <div class="inline">
-                    <label for="edtValRec">Valor Recebido</label>
-                    <input type="text" id="edtValRec" >
-                </div>
-                <div class="inline">
-                    <label for="edtTroco">Troco</label>
-                    <input type="text" id="edtTroco">
-                </div>
-
-
-                <div class="line">
-                    <button id="btnVenda">Venda Direta</button>
-                    <button id="btnComanda">Comandas</button>
-                </div>
-            </fieldset>
-            <div class="fds-cupom">
+            <div class="sider left">
                 <fieldset class="fds-cliente">
                     <legend>Cliente</legend>
                     <table id="tblCliente"></table>
                 </fieldset>
                 <fieldset class="fds-comanda">
                     <legend>Comanda</legend>
-                    <div class="just-end">
-                        <button id="btnBusca-com" class="btn-round" ><span class="mdi mdi-magnify"></span></button>
-                    </div>
                     <div class="itens-comanda">
                         <table id="tblComanda"></table>
                     </div>
                 </fieldset>
-    
+                <fieldset class="fds-button">
+                    <button id="btnAddItem" disabled><span class="mdi mdi-plus-thick"></span>Adicionar Ítem</button>
+                    <button id="btnComanda"><span class="mdi mdi-magnify"></span> Comandas</button>            
+                </fieldset>                
             </div>
-    
+            <div class="sider">
+                <fieldset class="sider">
+                    <legend>Controle</legend>
+                    <div class="inline">
+                        <label for="edtTotal">Total</label>
+                        <input type="text" id="edtTotal" value="R$0,00" disabled>
+                    </div>
+                    <div class="inline">
+                        <label for="edtValRec">Valor Recebido</label>
+                        <input type="text" id="edtValRec" onfocus="this.select();" onkeyup="valFloat(this)" onkeypress="return event.which== 13 ? troco('edtTotal','edtValRec','edtTroco') : null" inputmode="decimal" value="0">
+                    </div>
+                    <div class="inline">
+                        <label for="edtTroco">Troco</label>
+                        <input type="text" id="edtTroco" value="R$0,00" disabled>
+                    </div>
+                </fieldset >
+
+                <fieldset class="fds-button">
+                    <button><span class="mdi mdi-check-bold"></span>Finalizar</button>
+                </fieldset> 
+            </div>            
+   
         </div>
 
-        <fieldset class="just-end">
-            <button>Finalizar</button>
-        </fieldset>
+
     </div>
 
 
@@ -100,59 +120,77 @@
     const pageScreen = document.querySelector('#card-caixa_pdv')
     pageScreen.classList.add('fullscreen')
 
-
     pageFunc.fillItemComanda = ()=>{
-            const params = new Object;
-                params.id_comanda = pageData.comanda.id
-            const myPromisse = queryDB(params,'CXA-5');
-            myPromisse.then((resolve)=>{
-                const json = JSON.parse(resolve)
-                const tbl = pageScreen.querySelector('#tblComanda')
-                tbl.innerHTML = ''
 
-                tbl.style.display = json.length > 0 ? 'inline-table' : 'none'
-                tbl.head('Descrição|w70, Und.|mobiHide,Qtd.,Preço|mobiHide,Sub_total,PG|mobiHide')
-                let tot = 0
-                for(let i=0; i<json.length;i++){
-                    tbl.plot(json[i],'descricao|w70,und|mobiHide,qtd,preco|mobiHide,sub_total,pago|mobiHide','Upp,Upp,str,R$.,R$.,ico 0=mdi-close-thick 1-mdi-check-bold ')
-                    tot += parseFloat(json[i].sub_total)
-                }
+        const params = new Object;
+            params.id_comanda = pageData.comanda.id
+        const myPromisse = queryDB(params,'CXA-5');
+        myPromisse.then((resolve)=>{
+            const json = JSON.parse(resolve)
+            pageData.comanda.itens = json
+            const tbl = pageScreen.querySelector('#tblComanda')
+            tbl.style.display = json.length > 0 ? 'inline-table' : 'none'
+            tbl.head('Descrição|w70, Und.|mobiHide,Qtd.,Preço|mobiHide,Sub_total,PG|mobiHide')
+            let tot = 0
+            for(let i=0; i<json.length;i++){
+                tbl.plot(json[i],'descricao|w70,und|mobiHide,qtd,preco|mobiHide,sub_total,pago|mobiHide','Upp,Upp,str,R$.,R$.,ico 0=mdi-close-thick 1-mdi-check-bold ')
+                tot += parseFloat(json[i].sub_total)
+            }
+            pageScreen.querySelector('#edtTotal').value = 'R$'+tot.toFixed(2)
+        })
 
-                pageScreen.querySelector('#edtTotal').value = tot.toFixed(2)
-/*
-                const tr = document.createElement('tr')                
-                tr.innerHTML = `<th colspan="2" class="mobiHide"></th><th></th><th>Total</th><th>R$${getFloat(tot.toFixed(2))}</th><th class="mobiHide"></th>`
-                tbl.appendChild(tr)
-*/                
-            })
-        }
-
-
+                      
+    }
 
     pageFunc.buscaComanda = (data)=>{
 
         pageData.comanda = data
         const tbl_cli = pageScreen.querySelector('#tblCliente')
-        tbl_cli.innerHTML = ''
+        tbl_cli.head('Nome,CPF,Tel,Saldo')
+        tbl_cli.plot(data,'nome,cpf,cel,saldo','Upp,cpf,tel,R$.')
 
-//        tbl_cli.head('Nome,CPF,Tel')
-        tbl_cli.plot(data,'nome,cpf,cel','Upp,cpf,tel')
-
-
+        pageScreen.querySelector('#edtValRec').value = '0'
+        pageScreen.querySelector('#edtValRec').focus()
+        pageScreen.querySelector('#edtTroco').value = 'R$0,00'
+        pageScreen.querySelector('#btnAddItem').disabled = false
+        
 
         pageFunc.fillItemComanda()
-        console.log(data)
+    }
+
+    pageFunc.buscaProd = (prod)=>{
+        prod.qtd = prompt('Quantidade:',1)
+        const params = new Object;
+            params.id = 0
+            params.id_comanda = pageData.comanda.id
+            params.id_prod = prod.id
+            params.qtd = prod.qtd
+            params.pg = 0
+          
+        const myPromisse = queryDB(params,'CXA-4');
+        myPromisse.then((resolve)=>{
+            setLog(`Item Adicionado -> Comanda:${params.id_comanda}, Prod:${prod.descricao}, Qtd.:${prod.qtd}`)
+            pageFunc.fillItemComanda()
+        })
     }
 
 
-    pageScreen.querySelector('#btnBusca-com').addEventListener('click',()=>{
+    pageScreen.querySelector('#btnComanda').addEventListener('click',()=>{
         closeModal('busca_comanda')
         openHTML('busca_comanda.html','pop-up','Selecione a Comanda',{'org':'caixa_pdv'},800)
     })
 
+    pageScreen.querySelector('#btnAddItem').addEventListener('click',()=>{
+        pageData.org = 'caixa_pdv'
+        openHTML('busca_prod.html','pop-up',`Adicionar produto`,pageData,600)
+    })
+
     pageScreen.querySelector('#tblComanda').addEventListener('click',(e)=>{
-        const data = e.target.parentNode.data
-        openHTML('caixa_view_item_comanda.html','pop-up',`Comanda - ${pageData.comanda.id.padStart(8,0)} - ${pageData.comanda.nome.toUpperCase()}`,data,450)
+        const row = e.target.parentNode
+        if(row.rowIndex > 0 && row.tagName == 'TR'){
+            const data = row.data
+            openHTML('caixa_view_item_comanda.html','pop-up',`Comanda - ${pageData.comanda.id.padStart(8,0)} - ${pageData.comanda.nome.toUpperCase()}`,data,450)
+        }
     })
 
 </script>

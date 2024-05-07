@@ -8,7 +8,7 @@
         <legend id="fds-legend"></legend>
         <div class="inline">
             <label for="edtQtd">Qtd</label>
-            <input type="text" id="edtQtd" onkeyup="valFloat(this)" inputmode="decimal">
+            <input type="text" id="edtQtd" onkeyup="valFloat(this)" onfocus="this.select();" onkeypress="return getEnter(event, 'btnSave')"inputmode="decimal">
         </div>
         <div class="line">
             <button id="btnSave">Salvar</button>
@@ -26,6 +26,19 @@
     pageFunc.start = ()=>{
         pageScreen.querySelector('#fds-legend').innerHTML = pageData.descricao
         pageScreen.querySelector('#edtQtd').value = pageData.qtd
+        pageScreen.querySelector('#edtQtd').focus()
+    }
+
+    pageFunc.end = ()=>{
+        if(main_data.hasOwnProperty('caixa_view_comanda')){
+            main_data.caixa_view_comanda.func.fillItemComanda()
+        }
+        if(main_data.hasOwnProperty('caixa_comanda')){
+            main_data.caixa_comanda.func.fillComanda()
+        }
+        if(main_data.hasOwnProperty('caixa_pdv')){
+            main_data.caixa_pdv.func.fillItemComanda()
+        }
     }
 
     pageScreen.querySelector('#btnSave').addEventListener('click',()=>{
@@ -39,12 +52,7 @@
         const myPromisse = queryDB(params,'CXA-4');
         myPromisse.then((resolve)=>{
             setLog(`Item Alterado -> Comanda:${params.id_comanda}, Prod:${params.id_prod}, Qtd.:${params.qtd}`)
-            try{
-                main_data.caixa_view_comanda.func.fillItemComanda()
-                main_data.caixa_comanda.func.fillComanda()
-            }catch{
-                console.error('Pagina fechada pelo usuário!')
-            }
+            pageFunc.end()
             closeModal('caixa_view_item_comanda')
         })
     })
@@ -58,12 +66,7 @@
             const myPromisse = queryDB(params,'CXA-6');
             myPromisse.then((resolve)=>{
                 setLog(`Item Deletado -> Comanda:${params.id_comanda}, Prod:${params.id_prod}, Qtd.:${params.qtd}`)
-                try{
-                    main_data.caixa_view_comanda.func.fillItemComanda()
-                    main_data.caixa_comanda.func.fillComanda()
-                }catch{
-                    console.error('Pagina fechada pelo usuário!')
-                }   
+                pageFunc.end()
             })
         }
         closeModal('caixa_view_item_comanda')

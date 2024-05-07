@@ -60,10 +60,10 @@
     })
 
     pageScreen.querySelector('#tblBuscaEmp').addEventListener('click',(e)=>{
+        const row = e.target.parentNode
         try{            
-            if(main_data.hasOwnProperty(pageData.org)){
-                data = e.target.parentNode.data
-                data != undefined ?  main_data[pageData.org].func.buscaEmp(data) : null               
+            if(main_data.hasOwnProperty(pageData.org) && row.rowIndex > 0 && row.tagName == 'TR'){
+                row.data != undefined ?  main_data[pageData.org].func.buscaEmp(row.data) : null               
             }
             closeModal('busca_emp')
        }catch{

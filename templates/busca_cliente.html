@@ -76,14 +76,19 @@
 
     pageScreen.querySelector('#tblCli').addEventListener('dblclick',(e)=>{
         if(confirm('Editar dados do cliente?')){
-            const data = e.target.parentNode.data
-            data.org = 'busca_cliente'
-            openHTML('caixa_new_client.html','pop-up','Novo Cliente',data,500)
+            const row = e.target.parentNode
+            if(row.rowIndex > 0 && row.tagName == 'TR'){
+                row.data.org = 'busca_cliente'
+                openHTML('caixa_new_client.html','pop-up','Novo Cliente',row.data,500)            
+            }
         }
     })
 
     pageScreen.querySelector('#tblCli').addEventListener('click',(e)=>{
-        callback(e.target.parentNode.data)
+        const row = e.target.parentNode
+        if(row.rowIndex > 0 && row.tagName == 'TR'){        
+            callback(row.data)
+        }
     })
 
     pageScreen.querySelector('#btnNovo').addEventListener('click',()=>{

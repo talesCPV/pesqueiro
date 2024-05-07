@@ -30,6 +30,8 @@
     const pageFunc = main_data.busca_comanda.func
     const pageScreen = document.querySelector('#card-busca_comanda')
 
+    pageScreen.querySelector('#edtBusca').focus()
+
     pageFunc.fillComanda = ()=>{
         const tbl = pageScreen.querySelector('#tblComandas')
         tbl.innerHTML = ''
@@ -56,17 +58,34 @@
         pageFunc.fillComanda()
     })
 
+    pageFunc.buscaCliente = (cliente)=>{
+        const params = new Object;
+            params.id = 0
+            params.id_cliente = cliente.id
+            params.obs = ''
+        const myPromisse = queryDB(params,'CXA-3');
+        myPromisse.then((resolve)=>{
+            setLog(`Nova Comanda -> Cliente:${cliente.nome}, CPF:${cliente.cpf}`)
+            const json = JSON.parse(resolve)
+            pageFunc.fillComanda()
+        })        
+    }
+
+    pageScreen.querySelector('#btnNovo').addEventListener('click',()=>{
+        openHTML('busca_cliente.html','pop-up','Selecione o Cliente',{'org':'busca_comanda'},800)
+    })
+
     pageScreen.querySelector('#tblComandas').addEventListener('click',(e)=>{
         try{            
             if(main_data.hasOwnProperty(pageData.org)){
                 data = e.target.parentNode.data
                 data != undefined ?  main_data[pageData.org].func.buscaComanda(data) : null
             }
-            closeModal('busca_comanda')
+            
        }catch{
 
         }
-        
+        closeModal('busca_comanda')
     })
 
 </script>

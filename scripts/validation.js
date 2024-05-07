@@ -16,6 +16,12 @@ function getEnter(e, button = '',screen=''){
     }
 }
 
+function troco(tot,din,troco){
+    const total = parseFloat(getFloat(document.getElementById(tot).value))
+    const dinheiro = parseFloat(getFloat(document.getElementById(din).value))
+    document.getElementById(troco).value = 'R$'+(dinheiro - total).toFixed(2)
+}
+
 function checkField(fields){
     
     for(let i=0; i< fields.length; i++){

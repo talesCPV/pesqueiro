@@ -84,12 +84,7 @@
         })
     }
 
-    pageFunc.novaComanda = (id,id_cliente,obs)=>{
-
-    }
-
     pageFunc.buscaCliente = (cliente)=>{
-        console.log(cliente)
         const params = new Object;
             params.id = 0
             params.id_cliente = cliente.id
@@ -110,8 +105,10 @@
     })
 
     pageScreen.querySelector('#tblComandas').addEventListener('click',(e)=>{
-        const data = e.target.parentNode.data
-        openHTML('caixa_view_comanda.html','pop-up',`Comanda - ${data.id.padStart(8,0)} - ${data.nome.toUpperCase()}`,data)
+        const row = e.target.parentNode
+        if(row.rowIndex > 0 && row.tagName == 'TR'){
+            openHTML('caixa_view_comanda.html','pop-up',`Comanda - ${row.data.id.padStart(8,0)} - ${row.data.nome.toUpperCase()}`,row.data)
+        }
     })
 
     pageFunc.fillComanda()

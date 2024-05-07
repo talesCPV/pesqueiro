@@ -63,27 +63,25 @@
         openHTML('adm_view_prod.html','pop-up','Cadastro de Produtos')
     })
 
-    pageScreen.querySelector('#tblProd').addEventListener('click',(e)=>{        
-        try{
-            if(main_data.hasOwnProperty('adm_view_prod')){
-                closeModal('adm_view_prod')
-            }
-            data = e.target.parentNode.data
-            data != undefined ? openHTML('adm_view_prod.html','pop-up',`Edição de Produtos - ${data.descricao.toUpperCase()}`,data) : null
-        }catch{}
+    pageScreen.querySelector('#tblProd').addEventListener('click',(e)=>{   
+        const row = e.target.parentNode     
+        if(row.rowIndex > 0 && row.tagName == 'TR'){
+            closeModal('adm_view_prod')
+            openHTML('adm_view_prod.html','pop-up',`Edição de Produtos - ${row.data.descricao.toUpperCase()}`,row.data)
+        }
     })
 
     pageScreen.querySelector('#tblProd').addEventListener('contextmenu',(e)=>{
         e.preventDefault();
+        const row = e.target.parentNode 
         try{
-            data = e.target.parentNode.data
             const val = prompt('Quantidade a ser reservada? (qtd,projeto,pago)','0,1')
             const reserva = parseInt(val.split(',')[0])
             const proj = val.split(',')[1] == undefined ? 1 : val.split(',')[1].trim()
             const pago = val.split(',')[2] == undefined ? 0 : val.split(',')[2].trim() == '0' ? 0 : 1
             if(reserva > 0){
                 const params = new Object;
-                    params.id_prod = data.id
+                    params.id_prod = row.data.id
                     params.id_proj = proj
                     params.id_user = localStorage.getItem('id_user')
                     params.qtd = reserva
@@ -92,7 +90,7 @@
                 const myPromisse = queryDB(params,'PROD-3');
                 myPromisse.then((resolve)=>{
                     pageFunc.fillProd()
-                    setLog(`Produto RESERVADO -> ${data.descricao} : ${reserva} ${data.und}`)
+                    setLog(`Produto RESERVADO -> ${row.data.descricao} : ${reserva} ${row.data.und}`)
                     alert('Produto RESERVADO!')
                 })
             }
