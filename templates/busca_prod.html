@@ -62,15 +62,10 @@
 
     pageScreen.querySelector('#tblProd').addEventListener('click',(e)=>{
         const row = e.target.parentNode
-        try{            
-            if(main_data.hasOwnProperty(pageData.org) && row.rowIndex > 0 && row.tagName == 'TR'){
-                row.data != undefined ?  main_data[pageData.org].func.buscaProd(row.data) : null              
-            }
-            closeModal('busca_prod')
-       }catch{
-
+        if(main_data.hasOwnProperty(pageData.org) && row.rowIndex > 0 && row.tagName == 'TR'){
+            row.data != undefined ?  main_data[pageData.org].func.buscaProd(row.data) : null              
         }
-        
+        closeModal('busca_prod')        
     })
 
 </script>

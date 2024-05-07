@@ -623,4 +623,59 @@ DELIMITER $$
 			END IF;
         END IF;
 	END $$
+	DELIMITER ;
+
+	   
+     DROP PROCEDURE sp_fecha_comanda;
+DELIMITER $$
+	CREATE PROCEDURE sp_fecha_comanda(
+		IN Iallow varchar(80),
+		IN Ihash varchar(64),
+		IN Iid_comanda INT(11),
+        IN Imodo varchar(30),
+        IN Ivalor double
+    )
+	BEGIN
+		CALL sp_allow(Iallow,Ihash);
+		IF(@allow)THEN
+			SET @aberta = 0;
+			SET @id_cliente = 0;
+			SET @total = 0;
+			SELECT aberta,id_cliente,total INTO @aberta,@id_cliente, @total FROM vw_comanda WHERE id=Iid_comanda;
+            IF(@aberta)THEN
+				UPDATE tb_comanda SET aberta = 0 WHERE id=Iid_comanda;
+				
+                CALL sp_set_lancamento(Iallow,Ihash,0,@total,CONCAT("Lançamento comanda ",Iid_comanda),Imodo,1);
+                
+				DELETE FROM tb_item_comanda WHERE id=Iid AND id_comanda=Iid_comanda;
+				SELECT 1 AS ok;
+            ELSE
+				SELECT 0 AS ok;
+			END IF;
+        END IF;
+	END $$
 	DELIMITER ;      
+    
+/* Financeiro */
+
+     DROP PROCEDURE sp_set_lancamento;
+DELIMITER $$
+	CREATE PROCEDURE sp_set_lancamento(
+		IN Iallow varchar(80),
+		IN Ihash varchar(64),
+        IN Iid int(11),
+		IN Ivalor double,
+		IN Idescricao varchar(60),
+		IN Imodo varchar(30),
+		IN Ientrada boolean
+    )
+	BEGIN
+		CALL sp_allow(Iallow,Ihash);
+		IF(@allow)THEN
+			SET @id = (SELECT IF(COUNT(id)=0,"DEFAULT",id) FROM tb_lancamento WHERE id=Iid);
+			INSERT INTO tb_lancamento (id,valor,descricao,modo,entrada)
+            VALUES (@id,Ivalor,Idescricao,Imodo,Ientrada)
+            ON DUPLICATE KEY UPDATE descricao=Idescricao, modo=Imodo, entrada=Ientrada;
+        END IF;
+	END $$
+	DELIMITER ;

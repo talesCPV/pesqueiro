@@ -103,7 +103,7 @@
                 </fieldset >
 
                 <fieldset class="fds-button">
-                    <button><span class="mdi mdi-check-bold"></span>Finalizar</button>
+                    <button id="btnFinaliza" disabled><span class="mdi mdi-check-bold"></span>Finalizar</button>
                 </fieldset> 
             </div>            
    
@@ -136,11 +136,15 @@
                 tbl.plot(json[i],'descricao|w70,und|mobiHide,qtd,preco|mobiHide,sub_total,pago|mobiHide','Upp,Upp,str,R$.,R$.,ico 0=mdi-close-thick 1-mdi-check-bold ')
                 tot += parseFloat(json[i].sub_total)
             }
+            tot > 0 ? pageScreen.querySelector('#btnFinaliza').disabled = false : null
             pageScreen.querySelector('#edtTotal').value = 'R$'+tot.toFixed(2)
-        })
-
-                      
+        })  
     }
+
+    pageFunc.finaliza = ()=>{
+        
+    }
+
 
     pageFunc.buscaComanda = (data)=>{
 
@@ -191,6 +195,10 @@
             const data = row.data
             openHTML('caixa_view_item_comanda.html','pop-up',`Comanda - ${pageData.comanda.id.padStart(8,0)} - ${pageData.comanda.nome.toUpperCase()}`,data,450)
         }
+    })
+
+    pageScreen.querySelector('#btnFinaliza').addEventListener('click',()=>{
+        pageFunc.finaliza()
     })
 
 </script>

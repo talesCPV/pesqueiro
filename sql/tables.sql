@@ -148,3 +148,17 @@ CREATE TABLE tb_item_comanda (
   FOREIGN KEY (id_garcom) REFERENCES tb_usuario(id),
   PRIMARY KEY (id)
 ) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
+
+
+/* FINANCEIRO */
+
+DROP TABLE IF EXISTS tb_lancamento;
+CREATE TABLE tb_lancamento (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  data datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  valor double NOT NULL,
+  descricao varchar(60),
+  modo varchar(30) DEFAULT "Cartão de Débito",
+  entrada boolean DEFAULT 1,
+  PRIMARY KEY (id)
+) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;

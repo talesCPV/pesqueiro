@@ -124,3 +124,10 @@
 07/05/2024 04:20 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:6, Prod:Suco de Laranja, Qtd.:1
 07/05/2024 04:20 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:6, Prod:2, Qtd.:2
 07/05/2024 04:38 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:4, Prod:1, Qtd.:2
+07/05/2024 15:33 admin@pesqueirodourado.com.br : Novo Cliente Nome: 3, CPF: 3, Cel: 3, Saldo: 0, Obs: 
+07/05/2024 15:33 admin@pesqueirodourado.com.br : Nova Comanda -> Cliente:3, CPF:3
+07/05/2024 15:33 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:8, Prod:Porcao de fritas, Qtd.:1
+07/05/2024 15:34 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:4, Prod:porcao de Tilapia, Qtd.:null
+07/05/2024 15:34 admin@pesqueirodourado.com.br : Item Deletado -> Comanda:4, Prod:undefined, Qtd.:undefined
+07/05/2024 15:34 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:4, Prod:Porcao de fritas, Qtd.:null
+07/05/2024 17:00 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:7, Prod:1, Qtd.:2

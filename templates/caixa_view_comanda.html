@@ -60,19 +60,21 @@
     pageFunc.buscaProd = (prod)=>{
         prod.qtd = prompt('Quantidade:',1)
 
-        const params = new Object;
-            params.id = 0
-            params.id_comanda = pageData.id
-            params.id_prod = prod.id
-            params.qtd = prod.qtd
-            params.pg = 0
-          
-        const myPromisse = queryDB(params,'CXA-4');
-        myPromisse.then((resolve)=>{
-            setLog(`Item Adicionado -> Comanda:${params.id_comanda}, Prod:${prod.descricao}, Qtd.:${prod.qtd}`)
-            pageFunc.fillItemComanda()
-            main_data.caixa_comanda.func.fillComanda()
-        })
+        if(prod.qtd > 0){
+            const params = new Object;
+                params.id = 0
+                params.id_comanda = pageData.id
+                params.id_prod = prod.id
+                params.qtd = prod.qtd
+                params.pg = 0
+            
+            const myPromisse = queryDB(params,'CXA-4');
+            myPromisse.then((resolve)=>{
+                setLog(`Item Adicionado -> Comanda:${params.id_comanda}, Prod:${prod.descricao}, Qtd.:${prod.qtd}`)
+                pageFunc.fillItemComanda()
+                main_data.caixa_comanda.func.fillComanda()
+            })
+        }
     }
 
     pageScreen.querySelector('#btnNovo').addEventListener('click',()=>{
