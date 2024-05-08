@@ -151,18 +151,14 @@ function openMenu(){
         fetch(myRequest)
         .then(function (response){        
             if (response.status === 200) { 
-/*                
-                document.querySelector('#lbl-user').innerHTML = '<span id="mail-badge-lbl" class="badge"></span> @'+localStorage.getItem('nome').toLowerCase()
-                document.querySelector('#usr-name').innerHTML = '<span id="mail-badge" class="badge"></span> @'+localStorage.getItem('nome').toLowerCase()
-  */              resolve(response.text())
+                resolve(response.text())
             } else {
                 reject(new Error("Houve algum erro na comunicação com o servidor"))
             }
         })
     })
 
-    myPromisse.then((resolve)=>{
-//console.log(resolve)        
+    myPromisse.then((resolve)=>{      
         const menu_data = JSON.parse(resolve)
         const menu = document.querySelector('.menu')
         menu.innerHTML = ''//usr_menu
@@ -230,6 +226,7 @@ function openMenu(){
                             const json = response != '' ? JSON.parse(JSON.parse(response)) : []
                             const shortcut = new Object
                             shortcut.name = obj[i].modulo 
+                            shortcut.access = obj[i].access
                             shortcut.link = obj[i].link
                             shortcut.icone = obj[i].icone
                             shortcut.janela = obj[i].janela
@@ -304,6 +301,7 @@ function addShortcut(){
 
                     /* icon click */
                     if(!move && e.button == 0){
+                        main_data.dashboard.data.access = json[i].access 
                         openHTML(json[i].link,json[i].janela,json[i].label,{},json[i].width)
                     }
 
