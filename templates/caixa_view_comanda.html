@@ -48,7 +48,7 @@
             tbl.head('Descrição|w70, Und.|mobiHide,Qtd.,Preço Unt.|mobiHide,Sub_total,PG|mobiHide')
             let tot = 0
             for(let i=0; i<json.length;i++){
-                tbl.plot(json[i],'descricao|w70,und|mobiHide,qtd,preco|mobiHide,sub_total,pago|mobiHide','Upp,Upp,str,R$.,R$.,ico 0=mdi-close-thick 1-mdi-check-bold ')
+                tbl.plot(json[i],'descricao|w70,und|mobiHide,qtd,preco|mobiHide,sub_total,pago|mobiHide','Upp,Upp,str,R$.,R$.,ico 0=mdi-close-thick 1=mdi-check-bold ')
                 tot += parseFloat(json[i].sub_total)
             }
             const tr = document.createElement('tr')
@@ -85,6 +85,7 @@
     pageScreen.querySelector('#tblItens').addEventListener('click',(e)=>{
         const row = e.target.parentNode
         if(row.rowIndex > 0 && row.tagName == 'TR'){
+            row.data.org = 'caixa_view_comanda'
             openHTML('caixa_view_item_comanda.html','pop-up',`Comanda - ${pageData.id.padStart(8,0)} - ${pageData.nome.toUpperCase()}`,row.data,450)
         }
     })

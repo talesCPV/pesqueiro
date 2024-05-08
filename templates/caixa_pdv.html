@@ -1,6 +1,10 @@
 <template>
     <style>
 
+        .w70{
+            width: 70% !important;
+        }
+
         .frm-pdv{
             display: flex;
             flex-direction: column;
@@ -17,9 +21,7 @@
         }
 
         .sider{
-/*            width: 100%;*/
             height: calc(100% - 50px);
-/*            overflow-y: scroll;*/
         }
 
         .left{
@@ -104,7 +106,7 @@
             </div>
             <div class="sider">
                 <fieldset class="sider fds-controle">
-                    <legend>Controle</legend>
+                    <legend>Caixa</legend>
                     <div class="inline">
                         <label for="edtTotal">Total</label>
                         <input type="text" id="edtTotal" value="R$0,00" disabled>
@@ -170,8 +172,8 @@
             tbl.head('Descrição|w70, Und.|mobiHide,Qtd.,Preço|mobiHide,Sub_total,PG|mobiHide')
             let tot = 0
             for(let i=0; i<json.length;i++){
-                tbl.plot(json[i],'descricao|w70,und|mobiHide,qtd,preco|mobiHide,sub_total,pago|mobiHide','Upp,Upp,str,R$.,R$.,ico 0=mdi-close-thick 1-mdi-check-bold ')
-                tot += parseFloat(json[i].sub_total)
+                tbl.plot(json[i],'descricao|w70,und|mobiHide,qtd,preco|mobiHide,sub_total,pago|mobiHide','Upp,Upp,str,R$.,R$.,ico 0=mdi-close-thick 1=mdi-check-bold ')
+                tot += !Number(json[i].pago) ? parseFloat(json[i].sub_total) : 0
             }
             tot > 0 ? pageScreen.querySelector('#btnFinaliza').disabled = false : null
             pageScreen.querySelector('#edtTotal').value = 'R$'+tot.toFixed(2)
@@ -238,8 +240,8 @@
     pageScreen.querySelector('#tblComanda').addEventListener('click',(e)=>{
         const row = e.target.parentNode
         if(row.rowIndex > 0 && row.tagName == 'TR'){
-            const data = row.data
-            openHTML('caixa_view_item_comanda.html','pop-up',`Comanda - ${pageData.comanda.id.padStart(8,0)} - ${pageData.comanda.nome.toUpperCase()}`,data,450)
+            row.data.org = 'caixa_pdv'
+            openHTML('caixa_view_item_comanda.html','pop-up',`Comanda - ${pageData.comanda.id.padStart(8,0)} - ${pageData.comanda.nome.toUpperCase()}`,row.data,600)
         }
     })
 

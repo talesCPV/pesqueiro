@@ -40,9 +40,9 @@
 </template>
 <script>
 
-    const pageData = main_data.caixa_new_client.data
-    const pageFunc = main_data.caixa_new_client.func
-    const pageScreen = document.querySelector('#card-caixa_new_client')
+    const pageData = main_data.adm_new_client.data
+    const pageFunc = main_data.adm_new_client.func
+    const pageScreen = document.querySelector('#card-adm_new_client')
     const newCli = Object.keys(pageData).length <= 1
 
     pageFunc.start = ()=>{
@@ -80,7 +80,7 @@
                     }
 
                 alert(resp.MESSAGE)
-                closeModal('caixa_new_client')
+                closeModal('adm_new_client')
             })
         }
     })

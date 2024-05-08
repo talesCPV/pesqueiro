@@ -139,3 +139,72 @@
 08/05/2024 04:49 admin@pesqueirodourado.com.br : Nova Comanda -> Cliente:Tales, CPF:26687200879
 08/05/2024 04:49 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:9, Prod:Cerveja Brahma 600ml, Qtd.:3
 08/05/2024 04:50 admin@pesqueirodourado.com.br : Venda lancada -> Comanda:9, Valor:50.00
+08/05/2024 15:08 admin@pesqueirodourado.com.br : Venda lancada -> Comanda:2, Valor:63.00
+08/05/2024 16:03 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:1, Prod:3, Qtd.:3
+08/05/2024 16:06 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:1, Prod:2, Qtd.:5
+08/05/2024 16:10 admin@pesqueirodourado.com.br : Venda lancada -> Comanda:1, Valor:84.00
+08/05/2024 16:11 admin@pesqueirodourado.com.br : Menu Incluido (Clientes)
+08/05/2024 16:12 admin@pesqueirodourado.com.br : Menu Alterado (Clientes, menu, pop-up, Cadastro de Clientes)
+08/05/2024 16:17 admin@pesqueirodourado.com.br : Nova Comanda -> Cliente:Joao, CPF:123
+08/05/2024 16:18 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:10, Prod:porcao de Tilapia, Qtd.:1
+08/05/2024 16:18 admin@pesqueirodourado.com.br : Menu Alterado (Clientes, busca_cliente.html, pop-up, Cadastro de Clientes)
+08/05/2024 16:28 admin@pesqueirodourado.com.br : Edicao de Cliente Nome: 1, CPF: 11111111111, Cel: 11111111111, Saldo: 0, Obs: Obs 1
+08/05/2024 16:28 admin@pesqueirodourado.com.br : Edicao de Cliente Nome: 11, CPF: 12, Cel: 1, Saldo: 1, Obs: 1
+08/05/2024 16:29 admin@pesqueirodourado.com.br : Novo Cliente Nome: 4, CPF: 4, Cel: 4, Saldo: 0, Obs: 4
+08/05/2024 16:29 admin@pesqueirodourado.com.br : Nova Comanda -> Cliente:4, CPF:4
+08/05/2024 16:29 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:11, Prod:Cerveja Brahma 600ml, Qtd.:1
+08/05/2024 16:37 admin@pesqueirodourado.com.br : Novo Cliente Nome: sclkjds, CPF: 111, Cel: 233, Saldo: 0, Obs: 23233
+08/05/2024 16:38 admin@pesqueirodourado.com.br : Edicao de Cliente Nome: 22, CPF: 2222, Cel: 2, Saldo: 0, Obs: 2
+08/05/2024 16:40 admin@pesqueirodourado.com.br : Edicao de Cliente Nome: ABC, CPF: 2222, Cel: 2, Saldo: 0, Obs: 2
+08/05/2024 16:42 admin@pesqueirodourado.com.br : Edicao de Cliente Nome: 111, CPF: 111, Cel: 11111111111, Saldo: 11, Obs: 1111
+08/05/2024 16:50 admin@pesqueirodourado.com.br : Edicao de Cliente Nome: 433, CPF: 43, Cel: 4, Saldo: 0, Obs: 4
+08/05/2024 16:51 admin@pesqueirodourado.com.br : Nova Comanda -> Cliente:Tales, CPF:26687200879
+08/05/2024 16:54 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:12, Prod:Suco de Laranja, Qtd.:2
+08/05/2024 16:55 admin@pesqueirodourado.com.br : Inclusao de novo Perfil de usuario (GARCOM)
+08/05/2024 16:56 admin@pesqueirodourado.com.br : Insercao de novo usuarios, email:undefined -> roger@pesqueirodourado.com.br, acesso:undefined -> 1
+08/05/2024 16:56 admin@pesqueirodourado.com.br : Insercao de novo usuarios, email:undefined -> celso@pesqueirodourado.com.br, acesso:undefined -> 3
+08/05/2024 16:58 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Sistema, Acesso:[[0,1,9]])
+08/05/2024 16:58 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Administracao, Acesso:[[0,2]])
+08/05/2024 16:58 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Cadastros, Acesso:[[0,2]])
+08/05/2024 16:58 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Parametros, Acesso:[[0]])
+08/05/2024 16:58 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Caixa, Acesso:[[0,1,2]])
+08/05/2024 16:58 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Sistema, Acesso:[[0,1,9]])
+08/05/2024 16:58 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Administracao, Acesso:[[0,2]])
+08/05/2024 16:58 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Cadastros, Acesso:[[0,2]])
+08/05/2024 16:58 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Parametros, Acesso:[[0]])
+08/05/2024 16:58 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Caixa, Acesso:[[0,1,2,3]])
+08/05/2024 16:58 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Sistema, Acesso:[[0,1,9]])
+08/05/2024 16:58 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Administracao, Acesso:[[0,1,2,3]])
+08/05/2024 16:58 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Cadastros, Acesso:[[0,1,2,3]])
+08/05/2024 16:58 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Parametros, Acesso:[[0]])
+08/05/2024 16:58 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Caixa, Acesso:[[0,1,2,3]])
+08/05/2024 16:59 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Sistema, Acesso:[[0,1,9]])
+08/05/2024 16:59 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Administracao, Acesso:[[0,1,2,3]])
+08/05/2024 16:59 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Cadastros, Acesso:[[0,1,2,3]])
+08/05/2024 16:59 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Parametros, Acesso:[[0,2]])
+08/05/2024 16:59 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Caixa, Acesso:[[0,1,2,3]])
+08/05/2024 16:59 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Sistema, Acesso:[[0,2]])
+08/05/2024 16:59 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Administracao, Acesso:[[0,1,2,3]])
+08/05/2024 16:59 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Parametros, Acesso:[[0,2]])
+08/05/2024 16:59 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Cadastros, Acesso:[[0,1,2,3]])
+08/05/2024 16:59 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Caixa, Acesso:[[0,1,2,3]])
+08/05/2024 16:59 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Sistema, Acesso:[[0,2]])
+08/05/2024 16:59 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Administracao, Acesso:[[0,1,2,3]])
+08/05/2024 16:59 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Cadastros, Acesso:[[0,1,2,3]])
+08/05/2024 16:59 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Parametros, Acesso:[[0,2]])
+08/05/2024 16:59 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Caixa, Acesso:[[0,1,2,3]])
+08/05/2024 17:02 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Sistema, Acesso:[[0,2]])
+08/05/2024 17:02 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Administracao, Acesso:[[0,1,2]])
+08/05/2024 17:02 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Cadastros, Acesso:[[0,1,2]])
+08/05/2024 17:02 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Parametros, Acesso:[[0,2]])
+08/05/2024 17:02 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Caixa, Acesso:[[0,1,2,3]])
+08/05/2024 17:04 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Sistema, Acesso:[[0,2]])
+08/05/2024 17:04 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Administracao, Acesso:[[0,1,2]])
+08/05/2024 17:04 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Cadastros, Acesso:[[0,1,2]])
+08/05/2024 17:04 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Caixa, Acesso:[[0,1,2,3]])
+08/05/2024 17:04 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Parametros, Acesso:[[0,2]])
+08/05/2024 17:04 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Sistema, Acesso:[[0,2]])
+08/05/2024 17:04 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Administracao, Acesso:[[0,1,2]])
+08/05/2024 17:04 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Cadastros, Acesso:[[0,1,2]])
+08/05/2024 17:04 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Parametros, Acesso:[[0,2]])
+08/05/2024 17:04 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Caixa, Acesso:[[0,1,2,3]])

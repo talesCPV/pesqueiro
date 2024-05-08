@@ -1,6 +1,10 @@
 <template>
     <style>
 
+        #btnPgto{
+            display: none;
+        }
+
      
     </style>
   
@@ -13,6 +17,7 @@
         <div class="line">
             <button id="btnSave">Salvar</button>
             <button id="btnDel">Deletar</button>
+            <button id="btnPgto">Baixar</button>
         </div>
     </fieldset>
 
@@ -27,6 +32,7 @@
         pageScreen.querySelector('#fds-legend').innerHTML = pageData.descricao
         pageScreen.querySelector('#edtQtd').value = pageData.qtd
         pageScreen.querySelector('#edtQtd').focus()
+        pageScreen.querySelector('#btnPgto').style.display = pageData.org == 'caixa_pdv' ? 'block' : 'none'
     }
 
     pageFunc.end = ()=>{
@@ -41,20 +47,25 @@
         }
     }
 
-    pageScreen.querySelector('#btnSave').addEventListener('click',()=>{
+    pageFunc.save = (pgto)=>{
         const params = new Object;
             params.id = pageData.id
             params.id_comanda = pageData.id_comanda
             params.id_prod = pageData.id_produto
             params.qtd = pageScreen.querySelector('#edtQtd').value
-            params.pg = 0
+            params.pg = pgto
           
         const myPromisse = queryDB(params,'CXA-4');
         myPromisse.then((resolve)=>{
-            setLog(`Item Alterado -> Comanda:${params.id_comanda}, Prod:${params.id_prod}, Qtd.:${params.qtd}`)
+            setLog(`Item ${pgto ? 'Alterado' : 'Baixado'} -> Comanda:${params.id_comanda}, Prod:${params.id_prod}, Qtd.:${params.qtd}`)
             pageFunc.end()
             closeModal('caixa_view_item_comanda')
         })
+    }
+
+
+    pageScreen.querySelector('#btnSave').addEventListener('click',()=>{
+        pageFunc.save(0)
     })
 
     pageScreen.querySelector('#btnDel').addEventListener('click',()=>{
@@ -70,6 +81,12 @@
             })
         }
         closeModal('caixa_view_item_comanda')
+    })
+
+    pageScreen.querySelector('#btnPgto').addEventListener('click',()=>{
+        if(confirm('Receber este ítem separado?')){
+            pageFunc.save(1)
+        }
     })
 
     pageFunc.start()

@@ -598,10 +598,14 @@ DELIMITER $$
 				INSERT INTO tb_item_comanda (id,id_comanda,id_garcom,id_produto,qtd,pago)
 					VALUES (@id,Iid_comanda,@call_id,Iid_produto,Iqtd,Ipago)
 					ON DUPLICATE KEY UPDATE id_garcom=@call_id, qtd=Iqtd, pago=Ipago;
+				IF(Ipago > 0)THEN
+					SET @val = (SELECT sub_total FROM vw_item_comanda WHERE id=Iid);
+					CALL sp_set_lancamento(Iallow,Ihash,0,@val,CONCAT("Item Recebido (comanda:",Iid_comanda,", ítem:",Iid_produto),"Recebido pelo Caixa",1);
+                END IF;
 			END IF;
         END IF;
 	END $$
-	DELIMITER ;    
+	DELIMITER ;      
     
      DROP PROCEDURE sp_del_item_comanda;
 DELIMITER $$

@@ -63,36 +63,34 @@
     }
 
     pageFunc.newClient = (data)=>{
+        console.log(data)
         const ok = Object.keys(data).length
-        if(ok){
+
+        if(ok && main_data.busca_cliente.data.hasOwnProperty('org')){
             callback(data)
+        }else{
+            pageFunc.fillClient()
         }
-        
     }
 
     pageScreen.querySelector('#btnBusca-cli').addEventListener('click',()=>{
         pageFunc.fillClient()
     })
 
-    pageScreen.querySelector('#tblCli').addEventListener('dblclick',(e)=>{
-        if(confirm('Editar dados do cliente?')){
-            const row = e.target.parentNode
-            if(row.rowIndex > 0 && row.tagName == 'TR'){
-                row.data.org = 'busca_cliente'
-                openHTML('caixa_new_client.html','pop-up','Novo Cliente',row.data,500)            
-            }
-        }
-    })
-
     pageScreen.querySelector('#tblCli').addEventListener('click',(e)=>{
         const row = e.target.parentNode
-        if(row.rowIndex > 0 && row.tagName == 'TR'){        
-            callback(row.data)
-        }
+        if(row.rowIndex > 0 && row.tagName == 'TR'){
+            if(main_data.hasOwnProperty(pageData.org)){
+                callback(row.data)
+            }else{
+                row.data.org = 'busca_cliente'
+                openHTML('adm_new_client.html','pop-up','Edição de Cliente',row.data,500)
+            }
+        }            
     })
 
     pageScreen.querySelector('#btnNovo').addEventListener('click',()=>{
-        openHTML('caixa_new_client.html','pop-up','Novo Cliente',{'org':'busca_cliente'},500)
+        openHTML('adm_new_client.html','pop-up','Novo Cliente',{'org':'busca_cliente'},500)
     })
 
 </script>
