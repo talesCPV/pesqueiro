@@ -131,3 +131,11 @@
 07/05/2024 15:34 admin@pesqueirodourado.com.br : Item Deletado -> Comanda:4, Prod:undefined, Qtd.:undefined
 07/05/2024 15:34 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:4, Prod:Porcao de fritas, Qtd.:null
 07/05/2024 17:00 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:7, Prod:1, Qtd.:2
+08/05/2024 04:32 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:4, Prod:Cerveja Brahma 600ml, Qtd.:1
+08/05/2024 04:33 admin@pesqueirodourado.com.br : Venda lancada -> Comanda:4, Valor:100.00
+08/05/2024 04:34 admin@pesqueirodourado.com.br : Venda lancada -> Comanda:3, Valor:42.50
+08/05/2024 04:47 admin@pesqueirodourado.com.br : Venda lancada -> Comanda:4, Valor:26.00
+08/05/2024 04:48 admin@pesqueirodourado.com.br : Venda lancada -> Comanda:5, Valor:40.00
+08/05/2024 04:49 admin@pesqueirodourado.com.br : Nova Comanda -> Cliente:Tales, CPF:26687200879
+08/05/2024 04:49 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:9, Prod:Cerveja Brahma 600ml, Qtd.:3
+08/05/2024 04:50 admin@pesqueirodourado.com.br : Venda lancada -> Comanda:9, Valor:50.00

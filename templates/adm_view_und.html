@@ -63,7 +63,7 @@
             params.nome = pageScreen.querySelector('#edtUnd').value.trim()
             params.sigla = pageScreen.querySelector('#edtSigla').value.trim()
 
-        const myPromisse = queryDB(params,'ADM-4');
+        const myPromisse = queryDB(params,'ADM-0');
         myPromisse.then((resolve)=>{
             if(params.id == '0'){
                 setLog(`Inclusão de Unidade (${params.nome})`)

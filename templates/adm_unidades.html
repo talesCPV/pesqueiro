@@ -43,7 +43,7 @@
             params.field = query[0]
             params.signal = query[1]
             params.value = query[2]
-        const myPromisse = queryDB(params,'ADM-5');
+        const myPromisse = queryDB(params,'ADM-1');
         myPromisse.then((resolve)=>{
             const json = JSON.parse(resolve)
             pageScreen.querySelector('#fdsUND').style.display = json.length > 0 ? 'block' : 'none'

@@ -16,10 +16,12 @@ function getEnter(e, button = '',screen=''){
     }
 }
 
-function troco(tot,din,troco){
+function troco(tot,din,troco,ckb){
     const total = parseFloat(getFloat(document.getElementById(tot).value))
     const dinheiro = parseFloat(getFloat(document.getElementById(din).value))
-    document.getElementById(troco).value = 'R$'+(dinheiro - total).toFixed(2)
+    const troco_dev = (dinheiro - total)
+    document.getElementById(troco).value = 'R$'+troco_dev.toFixed(2)
+    return (document.getElementById(ckb).checked && total < dinheiro)? total.toFixed(2) : dinheiro.toFixed(2)
 }
 
 function checkField(fields){

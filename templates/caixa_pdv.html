@@ -7,6 +7,7 @@
             gap: 15px;
             width: 100%;
             height: 100%;
+            overflow-y: scroll;
         }
 
         .frm-main{
@@ -15,9 +16,10 @@
             height: 100%;
         }
 
-        .sider, .fds-controle{
+        .sider{
 /*            width: 100%;*/
             height: calc(100% - 50px);
+/*            overflow-y: scroll;*/
         }
 
         .left{
@@ -26,6 +28,10 @@
 
         .fds-cliente{
             height: 130px;
+        }
+
+        .fds-controle{
+            overflow-y: scroll;
         }
 
         .fds-comanda{
@@ -48,6 +54,7 @@
         }
 
         #edtTotal{
+            margin-top: -12px;
             font-size: 3em;
             text-align: center;
         }
@@ -63,6 +70,16 @@
 
         #card-caixa_pdv table{
             margin-top: -20px;
+        }
+
+        /* Media Queries */
+
+        @media all and (max-width : 768px) {
+            .frm-main{
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+
         }
 
     </style>
@@ -86,7 +103,7 @@
                 </fieldset>                
             </div>
             <div class="sider">
-                <fieldset class="sider">
+                <fieldset class="sider fds-controle">
                     <legend>Controle</legend>
                     <div class="inline">
                         <label for="edtTotal">Total</label>
@@ -94,11 +111,23 @@
                     </div>
                     <div class="inline">
                         <label for="edtValRec">Valor Recebido</label>
-                        <input type="text" id="edtValRec" onfocus="this.select();" onkeyup="valFloat(this)" onkeypress="return event.which== 13 ? troco('edtTotal','edtValRec','edtTroco') : null" inputmode="decimal" value="0">
+                        <input type="text" id="edtValRec" onfocus="this.select();" onkeyup="valFloat(this)" onkeypress="return event.which== 13 ? troco('edtTotal','edtValRec','edtTroco','ckbTroco') : null" inputmode="decimal" value="0">
                     </div>
                     <div class="inline">
                         <label for="edtTroco">Troco</label>
                         <input type="text" id="edtTroco" value="R$0,00" disabled>
+                        <input type="checkbox" id="ckbTroco" title="Troco devolvido para o cliente" checked>
+                    </div>
+                    <div class="inline">
+                        <select id="cmbModoPgto">
+                            <option value="Dinheiro" selected>Dinheiro</option>
+                            <option value="Cartão de Débito">Cartão de Débito</option>
+                            <option value="Cartão de Crédito">Cartão de Crédito</option>
+                            <option value="Pix">Pix</option>
+                            <option value="Cheque">Cheque</option>
+                            <option value="Vale Refeição">Vale Refeição</option>
+                            <option value="Saldo Cliente">Saldo Cliente</option>
+                        </select>
                     </div>
                 </fieldset >
 
@@ -106,10 +135,7 @@
                     <button id="btnFinaliza" disabled><span class="mdi mdi-check-bold"></span>Finalizar</button>
                 </fieldset> 
             </div>            
-   
         </div>
-
-
     </div>
 
 
@@ -119,6 +145,17 @@
     const pageFunc = main_data.caixa_pdv.func
     const pageScreen = document.querySelector('#card-caixa_pdv')
     pageScreen.classList.add('fullscreen')
+
+    pageFunc.clear =()=>{
+        pageScreen.querySelector('#btnFinaliza').disabled = 1
+        pageScreen.querySelector('#btnAddItem').disabled = 1
+        pageScreen.querySelector('#ckbTroco').checked = 1
+        pageScreen.querySelector('#edtTotal').value = 'R$0,00'
+        pageScreen.querySelector('#edtValRec').value = '0'
+        pageScreen.querySelector('#edtTroco').value = 'R$0,00'
+        pageScreen.querySelector('#tblCliente').innerHTML = ''
+        pageScreen.querySelector('#tblComanda').innerHTML = ''
+    }
 
     pageFunc.fillItemComanda = ()=>{
 
@@ -138,13 +175,25 @@
             }
             tot > 0 ? pageScreen.querySelector('#btnFinaliza').disabled = false : null
             pageScreen.querySelector('#edtTotal').value = 'R$'+tot.toFixed(2)
+            pageScreen.querySelector('#edtValRec').value = tot.toFixed(2)
+            pageScreen.querySelector('#edtValRec').focus()
+
         })  
     }
 
     pageFunc.finaliza = ()=>{
-        
-    }
 
+        const meu_troco = troco('edtTotal','edtValRec','edtTroco','ckbTroco')
+        const params = new Object;
+            params.id_comanda = pageData.comanda.id
+            params.modo_pgto = pageScreen.querySelector('#cmbModoPgto').value
+            params.valor_pgto = meu_troco
+        const myPromisse = queryDB(params,'CXA-7');
+        myPromisse.then((resolve)=>{
+            setLog(`Venda lançada -> Comanda:${params.id_comanda}, Valor:${params.valor_pgto}`)
+            pageFunc.clear()
+        })
+    }
 
     pageFunc.buscaComanda = (data)=>{
 
@@ -153,12 +202,9 @@
         tbl_cli.head('Nome,CPF,Tel,Saldo')
         tbl_cli.plot(data,'nome,cpf,cel,saldo','Upp,cpf,tel,R$.')
 
-        pageScreen.querySelector('#edtValRec').value = '0'
-        pageScreen.querySelector('#edtValRec').focus()
         pageScreen.querySelector('#edtTroco').value = 'R$0,00'
         pageScreen.querySelector('#btnAddItem').disabled = false
         
-
         pageFunc.fillItemComanda()
     }
 
@@ -198,7 +244,11 @@
     })
 
     pageScreen.querySelector('#btnFinaliza').addEventListener('click',()=>{
-        pageFunc.finaliza()
+        if(confirm('Finalizar Comanda?')){
+            pageFunc.finaliza()
+        }
     })
+
+    pageFunc.clear()
 
 </script>
