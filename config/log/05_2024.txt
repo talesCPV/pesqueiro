@@ -208,3 +208,4 @@
 08/05/2024 17:04 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Cadastros, Acesso:[[0,1,2]])
 08/05/2024 17:04 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Parametros, Acesso:[[0,2]])
 08/05/2024 17:04 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Caixa, Acesso:[[0,1,2,3]])
+09/05/2024 02:37 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:10, Prod:Cerveja Brahma 600ml, Qtd.:1

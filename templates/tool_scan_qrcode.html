@@ -1,0 +1,45 @@
+<template>
+    <style>
+
+     
+    </style>
+
+    <div id="reader"></div>
+    <div id="qr-reader" style="width: 300px;"></div>
+
+    <audio id="beep">
+        <source src="../assets/sounds/beep.wav" type="audio/wav">
+    </audio>
+
+    <!-- 
+    <input type="file" id="qr-input-file" accept="image/*">
+
+        Or add captured if you only want to enable smartphone camera, PC browsers will ignore it.
+
+    <input type="file" id="qr-input-file" accept="image/*" capture>
+
+    -->
+    
+
+
+
+</template>
+<script>
+    const beep =  new Audio('assets/sounds/beep.wav')
+    
+
+    function onScanSuccess(decodedText, decodedResult) {
+        beep.play()
+        console.log(decodedText)
+        closeModal('tool_scan_qrcode')
+        qr.clear()
+    }
+
+    const qr = new Html5QrcodeScanner("reader", {fps: 10, qrbox: 250})
+    qr.render(onScanSuccess)
+
+
+
+
+
+</script>

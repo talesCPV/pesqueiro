@@ -8,6 +8,17 @@
 
         }
      
+        #qr_code{
+            border: solid 2px #000000;
+            cursor: pointer;
+            padding: 3px;
+        }
+
+        #qr_code:hover{
+            border: solid 2px #FF0000;
+            
+        }
+
     </style>
   
     <fieldset>
@@ -15,7 +26,6 @@
         <table id="tblCliente"></table>
         <div class="line">
             <div id="qr_code"></div>
-            <button id="btnPrint">Imprimir Comanda Virtual</button>
         </div>
     </fieldset>
     <fieldset class="fds-itens">
@@ -39,14 +49,14 @@
         tbl.plot(pageData,'nome,cpf|mobiHide,cel|,saldo|edtSaldo','Upp,cpf,tel,R$.')
 
         const qrcode = new QRCode("qr_code", {
-	    text:`{"id":${pageData.id},"cliente":"${pageData.nome}"}`,
-	    width: 128,
-	    height: 128,
-	    colorDark : "#000000",
-	    colorLight : "#ffffff",
-	    correctLevel : QRCode.CorrectLevel.H
-	});
-    console.log(pageData)
+            text:pageData.id.padStart(10,0),
+            width: 60,
+            height: 60,
+            colorDark : "#000000",
+            colorLight : "#ffffff",
+            correctLevel : QRCode.CorrectLevel.H
+        });
+
     }
 
     pageFunc.fillItemComanda = ()=>{
@@ -91,8 +101,8 @@
         }
     }
 
-    pageScreen.querySelector('#btnPrint').addEventListener('click',()=>{
-        comanda_virual()
+    pageScreen.querySelector('#qr_code').addEventListener('click',()=>{
+        comanda_virual(pageData)
     })
 
     pageScreen.querySelector('#btnNovo').addEventListener('click',()=>{
