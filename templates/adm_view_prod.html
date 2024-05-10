@@ -148,7 +148,7 @@
             params.field = 'id'
             params.signal = '>='
             params.value = '1'
-        const myPromisse = queryDB(params,'ADM-5');
+        const myPromisse = queryDB(params,'ADM-1');
         myPromisse.then((resolve)=>{
             const json = JSON.parse(resolve)
             const cmb = pageScreen.querySelector('#cmdUnd')

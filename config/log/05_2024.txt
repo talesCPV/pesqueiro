@@ -209,3 +209,22 @@
 08/05/2024 17:04 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Parametros, Acesso:[[0,2]])
 08/05/2024 17:04 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Caixa, Acesso:[[0,1,2,3]])
 09/05/2024 02:37 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:10, Prod:Cerveja Brahma 600ml, Qtd.:1
+10/05/2024 04:46 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Sistema, Acesso:[[0,2]])
+10/05/2024 04:46 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Cadastros, Acesso:[[0,1,2]])
+10/05/2024 04:46 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Administracao, Acesso:[[0,1,2]])
+10/05/2024 04:46 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Caixa, Acesso:[[0,1,2,3]])
+10/05/2024 04:46 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Parametros, Acesso:[[0,2]])
+10/05/2024 04:46 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Sistema, Acesso:[[0,2]])
+10/05/2024 04:46 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Cadastros, Acesso:[[0,1,2]])
+10/05/2024 04:46 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Administracao, Acesso:[[0,1,2]])
+10/05/2024 04:46 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Caixa, Acesso:[[0,1,2,3]])
+10/05/2024 04:46 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Parametros, Acesso:[[0,2]])
+10/05/2024 04:47 admin@pesqueirodourado.com.br : Novo Cliente Nome: ssd, CPF: 111, Cel: 333, Saldo: 0, Obs: 
+10/05/2024 04:48  : roger@pesqueirodourado.com.br -> Senha alterada pelo usuario
+10/05/2024 04:52 admin@pesqueirodourado.com.br : Menu Alterado (Produtos, adm_produtos.html, pop-up, Produtos)
+10/05/2024 04:52 admin@pesqueirodourado.com.br : Menu Alterado (Fornecedores, adm_empresas.html, pop-up, Empresas)
+10/05/2024 04:57 admin@pesqueirodourado.com.br : Edicao de Unidade (Garrafa -> Garrafa, Garrafa -> GRFA)
+10/05/2024 04:58 admin@pesqueirodourado.com.br : Produto Editado Cerveja Brahma 600ml -> Cerveja Brahma 600ml
+10/05/2024 04:58 admin@pesqueirodourado.com.br : Produto Editado Cerveja Brahma 600ml -> Cerveja Brahma 600ml
+10/05/2024 04:59 admin@pesqueirodourado.com.br : Produto Editado Porcao de fritas -> Porcao de fritas
+10/05/2024 04:59 admin@pesqueirodourado.com.br : Produto Editado porcao de Tilapia -> porcao de Tilapia
