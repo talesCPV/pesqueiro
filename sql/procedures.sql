@@ -229,7 +229,7 @@ DELIMITER $$
 	BEGIN    
 		SET @id_call = (SELECT IFNULL(id,0) FROM tb_usuario WHERE hash COLLATE utf8_general_ci = Ihash COLLATE utf8_general_ci LIMIT 1);
         IF(@id_call >0)THEN
-			INSERT INTO tb_mail (de,para,txt) VALUES (@id_call,Iid_to,Imessage);
+			INSERT INTO tb_mail (id_from,id_to,message) VALUES (@id_call,Iid_to,Imessage);
         END IF;
 	END $$
 DELIMITER ;
@@ -247,12 +247,12 @@ DELIMITER $$
 				SELECT MAIL.*, USR.email AS mail_from
 					FROM tb_mail AS MAIL 
 					INNER JOIN tb_usuario AS USR
-					ON MAIL.de = USR.id AND para = @id_call;            
+					ON MAIL.id_from = USR.id AND id_to = @id_call;            
             ELSE
 				SELECT MAIL.*, USR.email AS mail_to
 					FROM tb_mail AS MAIL 
 					INNER JOIN tb_usuario AS USR
-					ON MAIL.para = USR.id AND de = @id_call;            
+					ON MAIL.id_to = USR.id AND id_from = @id_call;            
             END IF;
         END IF;
 	END $$
@@ -269,7 +269,7 @@ DELIMITER $$
 	BEGIN        
 		SET @id_call = (SELECT IFNULL(id,0) FROM tb_usuario WHERE hash COLLATE utf8_general_ci = Ihash COLLATE utf8_general_ci LIMIT 1);
 		IF(@id_call = Iid_to OR @id_call = Iid_from)THEN
-			DELETE FROM tb_mail WHERE data = Idata AND de = Iid_from AND para = Iid_to;
+			DELETE FROM tb_mail WHERE data = Idata AND id_from = Iid_from AND id_to = Iid_to;
         END IF;
 	END $$
 DELIMITER ;
@@ -471,17 +471,30 @@ DELIMITER $$
         IN Isignal varchar(4),
 		IN Ivalue varchar(50),
         IN Idt_ini date,
-        IN Idt_fin date
+        IN Idt_fin date,
+        IN Iaberta boolean
     )
-	BEGIN
+BEGIN
 		CALL sp_allow(Iallow,Ihash);
 		IF(@allow)THEN
-			SET @quer =CONCAT('SELECT *
-								FROM vw_comanda_aberta
-                                WHERE ',Ifield,' ',Isignal,' ',Ivalue,'
-                                AND entrada BETWEEN "',Idt_ini,'"
-                                AND "',Idt_fin,'"
-                                ORDER BY entrada DESC;');
+			
+            IF(Iaberta)THEN
+				SET @quer =CONCAT('SELECT *
+					FROM vw_comanda
+					WHERE ',Ifield,' ',Isignal,' ',Ivalue,'
+					AND entrada BETWEEN "',Idt_ini,'"
+					AND "',Idt_fin,'"
+					AND aberta = ',Iaberta,'
+					ORDER BY entrada DESC;');
+            ELSE
+				SET @quer =CONCAT('SELECT *
+					FROM vw_comanda
+					WHERE ',Ifield,' ',Isignal,' ',Ivalue,'
+					AND entrada BETWEEN "',Idt_ini,'"
+					AND "',Idt_fin,'"
+					ORDER BY entrada DESC;');            
+            END IF;
+            
 			PREPARE stmt1 FROM @quer;
 			EXECUTE stmt1;
         END IF;
@@ -598,14 +611,10 @@ DELIMITER $$
 				INSERT INTO tb_item_comanda (id,id_comanda,id_garcom,id_produto,qtd,pago)
 					VALUES (@id,Iid_comanda,@call_id,Iid_produto,Iqtd,Ipago)
 					ON DUPLICATE KEY UPDATE id_garcom=@call_id, qtd=Iqtd, pago=Ipago;
-				IF(Ipago > 0)THEN
-					SET @val = (SELECT sub_total FROM vw_item_comanda WHERE id=Iid);
-					CALL sp_set_lancamento(Iallow,Ihash,0,@val,CONCAT("Item Recebido (comanda:",Iid_comanda,", ítem:",Iid_produto),"Recebido pelo Caixa",1);
-                END IF;
 			END IF;
         END IF;
 	END $$
-	DELIMITER ;      
+	DELIMITER ;    
     
      DROP PROCEDURE sp_del_item_comanda;
 DELIMITER $$
@@ -628,6 +637,7 @@ DELIMITER $$
         END IF;
 	END $$
 	DELIMITER ;
+    
 
 	   
      DROP PROCEDURE sp_fecha_comanda;
@@ -636,7 +646,7 @@ DELIMITER $$
 		IN Iallow varchar(80),
 		IN Ihash varchar(64),
 		IN Iid_comanda INT(11),
-        IN Imodo varchar(30),
+        IN Imodo_pgto varchar(30),
         IN Ivalor double
     )
 	BEGIN
@@ -648,13 +658,8 @@ DELIMITER $$
 			SELECT aberta,id_cliente,total INTO @aberta,@id_cliente, @total FROM vw_comanda WHERE id=Iid_comanda;
             IF(@aberta)THEN
 				UPDATE tb_comanda SET aberta = 0 WHERE id=Iid_comanda;
-				
-                CALL sp_set_lancamento(Iallow,Ihash,0,@total,CONCAT("Lançamento comanda ",Iid_comanda),Imodo,1);
-                
-				DELETE FROM tb_item_comanda WHERE id=Iid AND id_comanda=Iid_comanda;
-				SELECT 1 AS ok;
-            ELSE
-				SELECT 0 AS ok;
+				UPDATE tb_cliente SET saldo = saldo + (Ivalor - @total) WHERE id = @id_cliente;
+                CALL sp_set_lancamento(Iallow,Ihash,0,Ivalor,CONCAT("Venda: comanda ",Iid_comanda),Imodo_pgto,1);
 			END IF;
         END IF;
 	END $$
@@ -682,4 +687,4 @@ DELIMITER $$
             ON DUPLICATE KEY UPDATE descricao=Idescricao, modo=Imodo, entrada=Ientrada;
         END IF;
 	END $$
-	DELIMITER ;
+	DELIMITER ;    

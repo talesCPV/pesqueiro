@@ -156,15 +156,15 @@
         const cmb = send ? pageScreen.querySelector('#cmbEntrada') : pageScreen.querySelector('#cmbSaida')
         const txt = send ? pageScreen.querySelector('#edtViewEntrada') : pageScreen.querySelector('#edtViewSaida')
         if(cmb.selectedIndex >= 0){
-            const data = cmb.options[cmb.selectedIndex].data
-            txt.value = data.txt
+            const data = cmb.options[cmb.selectedIndex].data          
+            txt.value = data.message
 
-            if(data.nao_lida == '1' && send){
+            if(data.looked == '0' && send){
 
                 const params = new Object;
                     params.data = data.data
-                    params.id_from = data.de
-                    params.id_to = data.para
+                    params.id_from = data.id_from
+                    params.id_to = data.id_to
 
                 const myPromisse = queryDB(params,'MAIL-4');
                 myPromisse.then((resolve)=>{
@@ -189,7 +189,7 @@
                 const opt = document.createElement('option')
                 opt.data = json[i]       
                 opt.style["font-weight"] = json[i].nao_lida=='0' ? 'lighter' : 'bold'
-                opt.innerHTML = json[i].data.date()+' '+json[i].data.time()+' '+(send ? json[i].mail_from : json[i].mail_to) + ' - ' + json[i].txt.substring(0,60)
+                opt.innerHTML = json[i].data.date()+' '+json[i].data.time()+' '+(send ? json[i].mail_from : json[i].mail_to) + ' - ' + json[i].message.substring(0,60)
                 mail.appendChild(opt)
             }
             send ? checkUserMail() : null
@@ -254,8 +254,8 @@
                 const data = cmb.options[cmb.selectedIndex].data
                 const params = new Object;
                     params.data = data.data
-                    params.id_from = data.de
-                    params.id_to = data.para
+                    params.id_from = data.id_from
+                    params.id_to = data.id_to
 
                 const myPromisse = queryDB(params,'MAIL-3');
                 myPromisse.then((resolve)=>{
