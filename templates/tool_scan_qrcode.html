@@ -11,25 +11,12 @@
         <source src="../assets/sounds/beep.wav" type="audio/wav">
     </audio>
 
-    <!-- 
-    <input type="file" id="qr-input-file" accept="image/*">
-
-        Or add captured if you only want to enable smartphone camera, PC browsers will ignore it.
-
-    <input type="file" id="qr-input-file" accept="image/*" capture>
-
-    -->
-    
-
-
-
 </template>
 <script>
 
     const pageData = main_data.tool_scan_qrcode.data
     const pageFunc = main_data.tool_scan_qrcode.func
     const pageScreen = document.querySelector('#card-tool_scan_qrcode')
-
     const beep =  new Audio('assets/sounds/beep.wav')
     
     pageFunc.fillComanda = (id)=>{
@@ -49,14 +36,9 @@
             }else{
                 alert('Comanda inválida')
             }
-
-
-console.log(json)            
-
-            
+console.log(json)
         })
     }
-
 
     function onScanSuccess(decodedText, decodedResult) {
         beep.play()
@@ -66,11 +48,21 @@ console.log(json)
         qr.clear()
     }
 
-    const qr = new Html5QrcodeScanner("reader", {fps: 10, qrbox: 250})
+    function onScanError(errorMessage) {
+        alert('Erro de leitura, tente novamente!')
+    }
+
+    const qr = new Html5QrcodeScanner("reader", {fps: 10, qrbox: 250,rememberLastUsedCamera: 0})
     qr.render(onScanSuccess)
+    console.log(pageScreen.querySelector('.close'))
 
+    pageScreen.querySelector('.close').removeEventListener('click',close)
 
+//    
 
-
+pageScreen.querySelector('.close').addEventListener('click',()=>{
+    pageScreen.querySelector('#html5-qrcode-button-camera-stop').click()
+    closeModal('tool_scan_qrcode')
+})
 
 </script>

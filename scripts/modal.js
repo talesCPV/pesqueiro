@@ -146,7 +146,7 @@ function newModal(title, content, width, id){
     const span = document.createElement('span')
     span.classList = 'close'
     span.innerHTML = '&times;'
-    span.addEventListener('click',()=>{
+    span.addEventListener('click',close = ()=>{
         closeModal(id)
     })
     mod_title.appendChild(span)

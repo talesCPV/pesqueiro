@@ -13,11 +13,12 @@
 
     <!-- JS-PDF -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
-    <script src="scripts/scan_qrcode.js"></script>
 
     <!-- QR-CODE -->
     <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
-    <script src="https://raw.githubusercontent.com/mebjas/html5-qrcode/master/minified/html5-qrcode.min.js"></script>
+<!--    <script src="https://raw.githubusercontent.com/mebjas/html5-qrcode/master/minified/html5-qrcode.min.js"></script> -->
+    <script src="scripts/scan_qrcode.js"></script>
+
 
     <!-- WEB CAM -->
     <script src="scripts/webcam.js"></script>
@@ -41,12 +42,19 @@
 </body>
 <script>
 
-//    forceHTTPS()
+    forceHTTPS()
 
     if(localStorage.getItem('hash') != null){
         openHTML('dashboard.html','main-screen')
     }else{
-        openHTML('login.html','main-screen')
+        localStorage.clear()
+        comanda = new URLSearchParams(window.location.search).get('comanda')
+        if(comanda == null){
+            openHTML('login.html','main-screen')
+        }else{
+            openHTML('cli_comanda.html','main-screen')
+        }
+
     }
 
 </script>

@@ -12,6 +12,7 @@
             border: solid 2px #000000;
             cursor: pointer;
             padding: 3px;
+            display: none;
         }
 
         #qr_code:hover{
@@ -26,6 +27,7 @@
         <table id="tblCliente"></table>
         <div class="line">
             <div id="qr_code"></div>
+            <button id="btnPrint"><span class="mdi mdi-printer-outline"></span> Comanda</button>
         </div>
     </fieldset>
     <fieldset class="fds-itens">
@@ -50,13 +52,15 @@
         
         pageScreen.querySelector('#btnNovo').disabled = !Number(pageData.aberta)
 
+
         const qrcode = new QRCode("qr_code", {
-            text:pageData.id.padStart(10,0),
-            width: 60,
-            height: 60,
+            text:pageData.id,
+            width: 256,
+            height: 256,
             colorDark : "#000000",
             colorLight : "#ffffff",
-            correctLevel : QRCode.CorrectLevel.H
+            correctLevel : QRCode.CorrectLevel.H,
+            size : 300
         });
 
     }
@@ -106,6 +110,11 @@
     pageScreen.querySelector('#qr_code').addEventListener('click',()=>{
         comanda_virual(pageData)
     })
+
+    pageScreen.querySelector('#btnPrint').addEventListener('click',()=>{
+        comanda_virual(pageData)
+    })
+
 
     pageScreen.querySelector('#btnNovo').addEventListener('click',()=>{
         pageData.org = 'caixa_view_comanda'
