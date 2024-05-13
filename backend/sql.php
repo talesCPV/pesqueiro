@@ -51,6 +51,8 @@
         "CXA-6" => 'CALL sp_del_item_comanda(@access,@hash,x00,x01);', // ID_ITEM, ID_COMANDA 
         "CXA-7" => 'CALL sp_fecha_comanda(@access,@hash,x00,"x01","x02");', // ID_COMANDA, MODO_PGTO, VALOR
 
+        /* CLIENTE */
+        "CLI-0" => 'CALL sp_comanda_cliente("x00");',
 
     );
 

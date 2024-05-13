@@ -228,3 +228,9 @@
 10/05/2024 04:58 admin@pesqueirodourado.com.br : Produto Editado Cerveja Brahma 600ml -> Cerveja Brahma 600ml
 10/05/2024 04:59 admin@pesqueirodourado.com.br : Produto Editado Porcao de fritas -> Porcao de fritas
 10/05/2024 04:59 admin@pesqueirodourado.com.br : Produto Editado porcao de Tilapia -> porcao de Tilapia
+12/05/2024 16:27 admin@pesqueirodourado.com.br : Edicao de Cliente Nome: Felipinho da Silva, CPF: 43213213211, Cel: 12985634853, Saldo: 0, Obs: antigo 4
+12/05/2024 16:27 admin@pesqueirodourado.com.br : Edicao de Cliente Nome: Joaquim Barbosa, CPF: 33221144556, Cel: 11871168469, Saldo: 0, Obs: Antigo 3
+13/05/2024 02:56 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:11, Prod:Porcao de fritas, Qtd.:2
+13/05/2024 02:56 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:11, Prod:porcao de Tilapia, Qtd.:1
+13/05/2024 02:56 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:11, Prod:Suco de Laranja, Qtd.:3
+13/05/2024 02:56 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:11, Prod:Cerveja Brahma 600ml, Qtd.:2

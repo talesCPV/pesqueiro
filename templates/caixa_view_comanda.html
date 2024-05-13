@@ -54,7 +54,7 @@
 
 
         const qrcode = new QRCode("qr_code", {
-            text:pageData.id,
+            text:`https://www.flexibus.com.br/pesqueiro/index.html?comanda=${pageData.hash_}`,
             width: 256,
             height: 256,
             colorDark : "#000000",
@@ -62,6 +62,8 @@
             correctLevel : QRCode.CorrectLevel.H,
             size : 300
         });
+
+//        qrcode.makeCode(`https://www.flexibus.com.br/pesqueiro/index.html?comanda=${pageData.hash_}`)
 
     }
 

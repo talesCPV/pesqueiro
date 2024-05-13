@@ -19,25 +19,32 @@
     const pageScreen = document.querySelector('#card-tool_scan_qrcode')
     const beep =  new Audio('assets/sounds/beep.wav')
     
-    pageFunc.fillComanda = (id)=>{
-        const params = new Object;
-            params.field = 'id'
-            params.signal = '='
-            params.value = id
-            params.dt_ini = '2000-01-01'
-            params.dt_fin = '2100-12-31'
-            params.aberta = 0
-        const myPromisse = queryDB(params,'CXA-0');
-        myPromisse.then((resolve)=>{
-            const json = JSON.parse(resolve)
-            if(json.length == 1){
-                closeModal('caixa_view_comanda')
-                openHTML('caixa_view_comanda.html','pop-up',`Comanda - ${json[0].id.padStart(8,0)} - ${json[0].nome.toUpperCase()}`,json[0])
-            }else{
-                alert('Comanda inválida')
-            }
-console.log(json)
-        })
+    pageFunc.fillComanda = (scan)=>{
+
+        const hash = scan.split('=')[1]
+
+        if(hash != undefined){
+            const params = new Object;
+                params.field = 'hash_'
+                params.signal = 'LIKE'
+                params.value = `'%${hash}%'`
+                params.dt_ini = '2000-01-01'
+                params.dt_fin = '2100-12-31'
+                params.aberta = 0
+            const myPromisse = queryDB(params,'CXA-0');
+            myPromisse.then((resolve)=>{
+                const json = JSON.parse(resolve)
+                if(json.length == 1){
+                    closeModal('caixa_view_comanda')
+                    openHTML('caixa_view_comanda.html','pop-up',`Comanda - ${json[0].id.padStart(8,0)} - ${json[0].nome.toUpperCase()}`,json[0])
+                }else{
+                    alert('Comanda não registrada!')
+                }
+            })
+        }else{
+            alert('Código inválido, tente novamente.')
+        }
+
     }
 
     function onScanSuccess(decodedText, decodedResult) {
