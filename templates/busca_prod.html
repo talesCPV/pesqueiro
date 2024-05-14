@@ -6,6 +6,13 @@
             overflow-y: scroll;
         }
 
+        @container busca (max-width: 500px) {
+            #edtBusca {
+                width: calc(100% - 80px) !important;
+            }
+
+        }
+
     </style>
 
     <fieldset class="fds-busca prod">
@@ -67,5 +74,7 @@
         }
         closeModal('busca_prod')        
     })
+
+    pageFunc.fillProd()
 
 </script>

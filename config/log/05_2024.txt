@@ -234,3 +234,13 @@
 13/05/2024 02:56 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:11, Prod:porcao de Tilapia, Qtd.:1
 13/05/2024 02:56 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:11, Prod:Suco de Laranja, Qtd.:3
 13/05/2024 02:56 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:11, Prod:Cerveja Brahma 600ml, Qtd.:2
+13/05/2024 15:17 admin@pesqueirodourado.com.br : Menu Incluido (Financeiro)
+13/05/2024 15:17 admin@pesqueirodourado.com.br : Menu Incluido (Fluxo de Caixa)
+13/05/2024 15:19 admin@pesqueirodourado.com.br : Menu Incluido (Compras)
+13/05/2024 15:23 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:14, Prod:Cerveja Brahma 600ml, Qtd.:2
+13/05/2024 15:25 celso@pesqueirodourado.com.br : Item Adicionado -> Comanda:13, Prod:porcao de Tilapia, Qtd.:1
+13/05/2024 15:30 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:13, Prod:1, Qtd.:1
+14/05/2024 15:28  : admin@pesqueirodourado.com.br -> Senha alterada pelo usuario
+14/05/2024 21:42 admin@pesqueirodourado.com.br : Edicao de Cliente Nome: Tales Cembraneli Dantas, CPF: 26687200879, Cel: 12997113793, Saldo: 0, Obs: 
+14/05/2024 21:44 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:12, Prod:3, Qtd.:1
+14/05/2024 21:47 admin@pesqueirodourado.com.br : Venda lancada -> Comanda:12, Valor:38.00

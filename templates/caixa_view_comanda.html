@@ -81,7 +81,7 @@
             let tot = 0
             for(let i=0; i<json.length;i++){
                 tbl.plot(json[i],'descricao|w70,und|mobiHide,qtd,preco|mobiHide,sub_total,pago|mobiHide','Upp,Upp,str,R$.,R$.,ico 0=mdi-close-thick 1=mdi-check-bold ')
-                tot += parseFloat(json[i].sub_total)
+                tot += json[i].pago == '0' ? parseFloat(json[i].sub_total) : 0
             }
             const tr = document.createElement('tr')
             tr.innerHTML = `<th colspan="2" class="mobiHide"></th><th></th><th>Total</th><th>R$${getFloat(tot.toFixed(2))}</th><th class="mobiHide"></th>`

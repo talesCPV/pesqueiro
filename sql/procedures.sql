@@ -638,15 +638,13 @@ DELIMITER $$
 	END $$
 	DELIMITER ;
     
-
-	   
-     DROP PROCEDURE sp_fecha_comanda;
+    DROP PROCEDURE sp_fecha_comanda;
 DELIMITER $$
 	CREATE PROCEDURE sp_fecha_comanda(
 		IN Iallow varchar(80),
 		IN Ihash varchar(64),
 		IN Iid_comanda INT(11),
-        IN Imodo_pgto varchar(30),
+        IN Imodo varchar(30),
         IN Ivalor double
     )
 	BEGIN
@@ -658,8 +656,20 @@ DELIMITER $$
 			SELECT aberta,id_cliente,total INTO @aberta,@id_cliente, @total FROM vw_comanda WHERE id=Iid_comanda;
             IF(@aberta)THEN
 				UPDATE tb_comanda SET aberta = 0 WHERE id=Iid_comanda;
-				UPDATE tb_cliente SET saldo = saldo + (Ivalor - @total) WHERE id = @id_cliente;
-                CALL sp_set_lancamento(Iallow,Ihash,0,Ivalor,CONCAT("Venda: comanda ",Iid_comanda),Imodo_pgto,1);
+				
+                UPDATE tb_produto AS PROD
+					INNER JOIN tb_item_comanda AS ITN
+					ON ITN.id_produto = PROD.id
+					SET PROD.estoque = PROD.estoque - ITN.qtd  
+					WHERE  ITN.id_comanda = Iid_comanda
+                    AND ITN.pago = 0;
+                
+                CALL sp_set_lancamento(Iallow,Ihash,0,@total,CONCAT("Lançamento comanda ",Iid_comanda),Imodo,1);
+                
+				DELETE FROM tb_item_comanda WHERE id=Iid AND id_comanda=Iid_comanda;
+				SELECT 1 AS ok;
+            ELSE
+				SELECT 0 AS ok;
 			END IF;
         END IF;
 	END $$
