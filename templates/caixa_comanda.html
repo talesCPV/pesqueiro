@@ -105,8 +105,14 @@
             params.obs = ''
         const myPromisse = queryDB(params,'CXA-3');
         myPromisse.then((resolve)=>{
-            setLog(`Nova Comanda -> Cliente:${cliente.nome}, CPF:${cliente.cpf}`)
-            const json = JSON.parse(resolve)
+            const resp = JSON.parse(resolve)[0].message
+
+            if(resp=='SUCESSO!'){
+                setLog(`Nova Comanda -> Cliente:${cliente.nome}, CPF:${cliente.cpf}`)
+                pageFunc.fillComanda()
+            }else{
+                alert(resp)
+            }
         })        
     }
 

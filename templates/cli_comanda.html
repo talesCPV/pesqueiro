@@ -57,7 +57,7 @@
 </template>
 <script>
 
-    const comanda = new URLSearchParams(window.location.search).get('comanda')
+    const comanda = new URLSearchParams(window.location.search).get('token')
      
     fillComanda()
 
@@ -69,6 +69,7 @@
             const myPromisse = queryDB(params,'CLI-0');
             myPromisse.then((resolve)=>{
                 const json = JSON.parse(resolve)
+                const tbl = document.querySelector('#tblItens')
                 if(json.length >0){
                     document.querySelector('#cli-nome').innerHTML = 'Nome: '+json[0].nome.toUpperCase()
                     document.querySelector('#cli-cel').innerHTML = 'Cel: '+getFone(json[0].cel)
@@ -78,7 +79,6 @@
                     document.querySelector('#com-data').innerHTML = 'Data: '+json[0].data+' '+json[0].hora
                     document.querySelector('#com-aberta').innerHTML = 'Status: '+ (json[0].aberta == '1' ? 'Aberta' : 'Fechada')
 
-                    const tbl = document.querySelector('#tblItens')
                     tbl.head('Desc.,Qtd.,Unit.,Tot.')
                     for(let i=0; i<json.length; i++){
                         tbl.plot(json[i],'descricao,qtd,preco,sub_total','Upp,str,R$.,R$.')
@@ -88,7 +88,7 @@
                     tbl.appendChild(tr)
 
                 }else{
-                    alert('COMANDA INVÁLIDA OU VAZIA!')
+                    tbl.head('COMANDA VAZIA!!!')
                 }
             })
         }else{

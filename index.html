@@ -48,7 +48,7 @@
         openHTML('dashboard.html','main-screen')
     }else{
         localStorage.clear()
-        comanda = new URLSearchParams(window.location.search).get('comanda')
+        comanda = new URLSearchParams(window.location.search).get('token')
         if(comanda == null){
             openHTML('login.html','main-screen')
         }else{

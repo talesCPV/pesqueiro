@@ -282,3 +282,8 @@
 15/05/2024 04:49 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Caixa, Acesso:[[0,1,2,3]])
 15/05/2024 04:49 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Cadastros, Acesso:[[0,1,2]])
 15/05/2024 04:49 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Financeiro, Acesso:[[0]])
+15/05/2024 16:33 admin@pesqueirodourado.com.br : Nova Comanda -> Cliente:Roger Cembraneli Dantas, CPF:07237386801
+15/05/2024 16:33 admin@pesqueirodourado.com.br : Nova Comanda -> Cliente:Joaquim Barbosa, CPF:33221144556
+15/05/2024 16:35 admin@pesqueirodourado.com.br : Nova Comanda -> Cliente:ABC, CPF:2222
+15/05/2024 16:40 admin@pesqueirodourado.com.br : Venda lancada -> Comanda:20, Valor:0.00
+15/05/2024 16:40 admin@pesqueirodourado.com.br : Venda lancada -> Comanda:19, Valor:0.00

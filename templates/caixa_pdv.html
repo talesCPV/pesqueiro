@@ -175,7 +175,6 @@
                 tbl.plot(json[i],'descricao|w70,und|mobiHide,qtd,preco|mobiHide,sub_total,pago|mobiHide','Upp,Upp,str,R$.,R$.,ico 0=mdi-close-thick 1=mdi-check-bold ')
                 tot += !Number(json[i].pago) ? parseFloat(json[i].sub_total) : 0
             }
-            tot > 0 ? pageScreen.querySelector('#btnFinaliza').disabled = false : null
             pageScreen.querySelector('#edtTotal').value = 'R$'+tot.toFixed(2)
             pageScreen.querySelector('#edtValRec').value = tot.toFixed(2)
             pageScreen.querySelector('#edtValRec').focus()
@@ -203,6 +202,8 @@
         const tbl_cli = pageScreen.querySelector('#tblCliente')
         tbl_cli.head('Nome,CPF,Tel,Saldo')
         tbl_cli.plot(data,'nome,cpf,cel,saldo','Upp,cpf,tel,R$.')
+
+        data.aberta == '1' ? pageScreen.querySelector('#btnFinaliza').disabled = false : null
 
         pageScreen.querySelector('#edtTroco').value = 'R$0,00'
         pageScreen.querySelector('#btnAddItem').disabled = false

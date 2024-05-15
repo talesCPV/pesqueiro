@@ -44,7 +44,7 @@
         <legend>Filtro</legend>
         <div class="inline">               
             <select id="cmbBusca">
-                <option value="id" signal="=">Comanda</option>
+                <option value="id" signal="IN">Comanda</option>
                 <option value="nome" signal="LIKE" selected>Nome do Cliente</option>
                 <option value="cpf" signal="LIKE">CPF</option>
                 <option value="aberta" signal="=" val="1">Abertas</option>
@@ -101,5 +101,49 @@
     pageScreen.querySelector('#btnBusca-com').addEventListener('click',()=>{
         pageFunc.fillComanda()
     })
+
+    pageScreen.querySelector('#tblComandas').addEventListener('click',(e)=>{
+        const data = e.target.parentNode.data
+        data.org = 'adm_comandas'
+        openHTML('caixa_view_comanda.html','pop-up','Itens da Comanda',data)
+    })
+
+    function fillComanda(token){
+
+        if(token){
+            const params = new Object;
+                params.comanda = token
+            const myPromisse = queryDB(params,'CLI-0');
+            myPromisse.then((resolve)=>{
+                const json = JSON.parse(resolve)
+                if(json.length >0){
+                    document.querySelector('#cli-nome').innerHTML = 'Nome: '+json[0].nome.toUpperCase()
+                    document.querySelector('#cli-cel').innerHTML = 'Cel: '+getFone(json[0].cel)
+                    document.querySelector('#cli-saldo').innerHTML = 'Saldo: R$'+parseFloat(json[0].saldo).toFixed(2)
+
+                    document.querySelector('#com-num').innerHTML = 'Num.: '+json[0].id.padStart(10,0)
+                    document.querySelector('#com-data').innerHTML = 'Data: '+json[0].data+' '+json[0].hora
+                    document.querySelector('#com-aberta').innerHTML = 'Status: '+ (json[0].aberta == '1' ? 'Aberta' : 'Fechada')
+
+                    const tbl = document.querySelector('#tblItens')
+                    tbl.head('Desc.,Qtd.,Unit.,Tot.')
+                    for(let i=0; i<json.length; i++){
+                        tbl.plot(json[i],'descricao,qtd,preco,sub_total','Upp,str,R$.,R$.')
+                    }
+                    const tr = document.createElement('tr')
+                    tr.innerHTML = `<th colspan="2"></th><th>Total</th><th>R$${json[0].total}</th>`
+                    tbl.appendChild(tr)
+
+                }else{
+                    alert('COMANDA INVÁLIDA OU VAZIA!')
+                }
+            })
+        }else{
+            alert('Código inválido, tente novamente.')
+        }
+
+    }
+
+
 
 </script>

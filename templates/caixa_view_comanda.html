@@ -50,11 +50,10 @@
         tbl.head('Nome,CPF|mobiHide,Telefone,Saldo')
         tbl.plot(pageData,'nome,cpf|mobiHide,cel|,saldo|edtSaldo','Upp,cpf,tel,R$.')
         
-        pageScreen.querySelector('#btnNovo').disabled = !Number(pageData.aberta)
-
+        pageScreen.querySelector('#btnNovo').disabled = pageData.org=='adm_comandas' ? 1 : !Number(pageData.aberta)
 
         const qrcode = new QRCode("qr_code", {
-            text:`https://www.flexibus.com.br/pesqueiro/index.html?comanda=${pageData.hash_}`,
+            text:`https://www.flexibus.com.br/pesqueiro/index.html?token=${pageData.token}`,
             width: 256,
             height: 256,
             colorDark : "#000000",
@@ -63,7 +62,9 @@
             size : 300
         });
 
-//        qrcode.makeCode(`https://www.flexibus.com.br/pesqueiro/index.html?comanda=${pageData.hash_}`)
+alert(`https://www.flexibus.com.br/pesqueiro/index.html?token=${pageData.token}`)
+
+//        qrcode.makeCode(`https://www.flexibus.com.br/pesqueiro/index.html?comanda=${pageData.token}`)
 
     }
 
@@ -125,7 +126,7 @@
 
     pageScreen.querySelector('#tblItens').addEventListener('click',(e)=>{
         const row = e.target.parentNode
-        if(row.rowIndex > 0 && row.tagName == 'TR' && pageData.aberta == '1'){
+        if(row.rowIndex > 0 && row.tagName == 'TR' && pageData.aberta == '1' && pageData.org!='adm_comandas'){
             row.data.org = 'caixa_view_comanda'
             openHTML('caixa_view_item_comanda.html','pop-up',`Comanda - ${pageData.id.padStart(8,0)} - ${pageData.nome.toUpperCase()}`,row.data,450)
         }
