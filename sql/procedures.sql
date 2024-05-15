@@ -745,7 +745,20 @@ DELIMITER $$
 	END $$
 	DELIMITER ;      
     
-
+     DROP PROCEDURE sp_comanda_cliente;
+DELIMITER $$
+	CREATE PROCEDURE sp_comanda_cliente(    
+		IN Itoken varchar(64)
+    )
+	BEGIN
+		SELECT COM.id,COM.aberta,COM.data, COM.hora, COM.obs_comanda AS obs, COM.nome, COM.cel, COM.saldo, ROUND(COM.total,2) AS total, 
+			ITN.id AS id_item, ITN.registro, ITN.qtd, ITN.pago, ROUND(ITN.preco,2) AS preco, ROUND(ITN.sub_total,2) AS sub_total, ITN.descricao,ITN.und
+			FROM vw_comanda AS COM 
+			INNER JOIN vw_item_comanda AS ITN
+			ON ITN.id_comanda = COM.id
+			WHERE token LIKE CONCAT(Itoken,'%');
+	END $$
+	DELIMITER ;  
 	
 /* Financeiro */
 

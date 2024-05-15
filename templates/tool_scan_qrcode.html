@@ -21,13 +21,12 @@
     
     pageFunc.fillComanda = (scan)=>{
 
-        const hash = scan.split('=')[1]
-
-        if(hash != undefined){
+        const token = scan.split('=')[1]
+        if(token != undefined){
             const params = new Object;
-                params.field = 'hash_'
+                params.field = 'token'
                 params.signal = 'LIKE'
-                params.value = `'%${hash}%'`
+                params.value = `'${token}%'`
                 params.dt_ini = '2000-01-01'
                 params.dt_fin = '2100-12-31'
                 params.aberta = 0
