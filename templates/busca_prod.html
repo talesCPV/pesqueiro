@@ -6,6 +6,10 @@
             overflow-y: scroll;
         }
 
+        #btnNovo{
+            display: none;
+        }
+
         @container busca (max-width: 500px) {
             #edtBusca {
                 width: calc(100% - 80px) !important;
@@ -30,6 +34,7 @@
             </select>
             <input type="text" id="edtBusca" onkeypress="return getEnter(event, 'btnBusca-prod')">
             <button id="btnBusca-prod" class="btn-round" ><span class="mdi mdi-magnify"></span></button>
+            <button id="btnNovo" class="btn-round"><span class="mdi mdi-plus-thick"></span></button>            
         </div>
 
         
@@ -43,6 +48,10 @@
     const pageData = main_data.busca_prod.data
     const pageFunc = main_data.busca_prod.func
     const pageScreen = document.querySelector('#card-busca_prod')
+
+    pageFunc.start = ()=>{
+        pageScreen.querySelector('#btnNovo').style.display = pageData.org=='adm_compras' ? 'flex' : 'none'
+    }
 
     pageFunc.fillProd = ()=>{      
         const tbl = pageScreen.querySelector('#tblProd')
@@ -75,6 +84,11 @@
         closeModal('busca_prod')        
     })
 
+    pageScreen.querySelector('#btnNovo').addEventListener('click',()=>{
+        openHTML('adm_view_prod.html','pop-up','Cadastro de Produto')
+    })
+
+    pageFunc.start()
     pageFunc.fillProd()
 
 </script>

@@ -78,10 +78,14 @@
         margin: 0;
       }
 
+      .edtbtn input[type="text"]{
+        width: 100%;
+      }
+
       .edtbtn button{
 /*        font-size: 1.8em;*/
         padding: 0;
-        width: 45px;
+/*        width: 45px;*/
       }
 
 /* FIELDSET BUSCA */

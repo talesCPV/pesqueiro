@@ -1,0 +1,30 @@
+<template>
+    <style>
+
+     
+    </style>
+  
+    <fieldset>
+        <legend>Produto</legend>
+        <div class="edtbtn">
+            <input type="text" id="edtBuscaProd" readonly>
+            <button id="btnBuscaProd" class="btn-round"><span class="mdi mdi-magnify"></span></button>
+        </div>
+    </fieldset>
+
+</template>
+<script>
+
+    const pageData = main_data.adm_compras.data
+    const pageFunc = main_data.adm_compras.func
+    const pageScreen = document.querySelector('#card-adm_compras')
+     
+    pageScreen.querySelector('#btnBuscaProd').addEventListener('click',()=>{
+        openHTML('busca_prod.html','pop-up','Selecione o Produto',{'org':'adm_compras'})
+    })
+
+    pageFunc.buscaProd = (data)=>{
+        console.log(data)
+    }
+
+</script>

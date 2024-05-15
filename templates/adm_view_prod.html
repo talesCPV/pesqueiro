@@ -80,15 +80,15 @@
                     <label for="cmdUnd">Unidade</label>
                     <select id="cmdUnd" class="only-view" disabled></select>
                     <label for="edtEtq">Estoque</label>
-                    <input type="text" class="only-view" id="edtEtq" maxlength="10" onkeyup="valFloat(this)" inputmode="numeric" disabled>
+                    <input type="text" class="only-view" id="edtEtq" maxlength="10" onkeyup="valFloat(this)" inputmode="decimal" disabled>
                     <label for="edtEtqMin">Estq. Min.</label>
-                    <input type="text" class="only-view" id="edtEtqMin" maxlength="10" onkeyup="valFloat(this)" inputmode="numeric" disabled>              
+                    <input type="text" class="only-view" id="edtEtqMin" maxlength="10" onkeyup="valFloat(this)" inputmode="decimal" disabled>              
                 </div>
                 <div class="inline">
                     <label for="edtCusto">Custo (R$)</label>
-                    <input type="text" class="only-view" id="edtCusto" onkeyup="valFloat(this)" inputmode="numeric" disabled>
+                    <input type="text" class="only-view" id="edtCusto" onkeyup="valFloat(this)" onfocus="this.select();" value="0" inputmode="decimal" disabled>
                     <label for="edtMarkup">Markup (%)</label>
-                    <input type="text" class="only-view" id="edtMarkup" onkeyup="valFloat(this)" inputmode="numeric" disabled>    
+                    <input type="text" class="only-view" id="edtMarkup" onkeyup="valFloat(this)" onfocus="this.select();" value="0" inputmode="decimal" disabled>    
                 </div>
         
             </div>

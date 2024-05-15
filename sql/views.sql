@@ -40,7 +40,7 @@ SELECT * FROM vw_prod;
 
 SELECT * FROM vw_prod_reserva;
 
-/* CAIXA */    
+/* CAIXA */
 
 -- DROP VIEW vw_item_comanda;
 -- CREATE VIEW vw_item_comanda AS  
@@ -51,24 +51,24 @@ SELECT * FROM vw_prod_reserva;
 
 	SELECT * FROM vw_item_comanda;
 
- DROP VIEW vw_comanda;
- CREATE VIEW vw_comanda AS
+ DROP VIEW vw_comanda_valor;
+-- CREATE VIEW vw_comanda_valor AS
 	SELECT COM.*, IFNULL(SUM(ITN.sub_total),0) AS total 
     FROM tb_comanda AS COM
     LEFT JOIN vw_item_comanda AS ITN
     ON ITN.id_comanda = COM.id
     GROUP BY COM.id;
 
-SELECT * FROM vw_comanda;
+SELECT * FROM vw_comanda_valor;
 
- DROP VIEW vw_comanda_aberta;
--- CREATE VIEW vw_comanda_aberta AS     
+ DROP VIEW vw_comanda;
+ CREATE VIEW vw_comanda AS     
 	SELECT COM.id,COM.aberta,COM.entrada,DATE_FORMAT(COM.entrada,"%d/%m/%Y") AS data,DATE_FORMAT(COM.entrada,"%H:%i:%S") AS hora,COM.obs AS obs_comanda, COM.total,
-		CLI.id AS id_cliente, CLI.nome,CLI.cpf, CLI.cel, CLI.saldo, CLI.obs AS obs_cliente
-		FROM vw_comanda AS COM
+		CLI.id AS id_cliente, CLI.nome,CLI.cpf, CLI.cel, CLI.saldo, CLI.obs AS obs_cliente,
+        SHA2(COM.id, 256) AS hash_
+		FROM vw_comanda_valor AS COM
         INNER JOIN tb_cliente AS CLI
         ON COM.id_cliente = CLI.id
-		WHERE aberta = 1
 		ORDER BY entrada DESC;
         
-SELECT * FROM vw_comanda_aberta;
+SELECT * FROM vw_comanda;        

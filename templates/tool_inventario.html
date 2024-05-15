@@ -42,14 +42,10 @@
     const pageScreen = document.querySelector('#card-tool_inventario')
 
     pageFunc.addItem = (data)=>{
-
         const opt = document.createElement('option')
-            opt.setAttribute('qtd',data.qtd) 
-            opt.setAttribute('id_prod',data.id) 
-            opt.setAttribute('oper',data.radio) 
-
+            opt.data = data
             const radio = data.radio=='add' ? 'ADICIONAR' : data.radio=='sub' ? 'RETIRAR' : 'RESERVAR'
-            opt.innerHTML = `${radio} ${Math.abs(data.qtd)} ${data.unidade}(s) (${data.descricao})` 
+            opt.innerHTML = `${radio} ${Math.abs(data.qtd)} ${data.und}(s) (${data.descricao})` 
 
         pageScreen.querySelector('#lbxItens').appendChild(opt)
         pageScreen.querySelector('#tbl_prod_inv').innerHTML = ''
@@ -100,15 +96,15 @@
     pageScreen.querySelector('#btnProc').addEventListener('click',()=>{
         if(confirm('Processar este inventário?')) {
             const opt = pageScreen.querySelector('#lbxItens').querySelectorAll('option')
-            for(let i=0; i<opt.length; i++){
+            for(let i=0; i<opt.length; i++){                              
                 const params = new Object;
-                    params.id = opt[i].getAttribute('id_prod')
-                    params.qtd = parseInt(opt[i].getAttribute('qtd'))
-                    params.oper = opt[i].getAttribute('oper')
+                    params.id = opt[i].data.id
+                    params.qtd = parseInt(opt[i].data.qtd)
+                    params.oper = opt[i].data.radio
 
                 const myPromisse = queryDB(params,'PROD-4');
                 myPromisse.then(()=>{
-
+                    setLog(`INVENTÁRIO: ${opt[i].data.radio=='add'?'ADICIONADO':(opt[i].data.radio=='sub'?'RETIRADO':'RESEVADO')} ${opt[i].data.qtd} ${opt[i].data.descricao}`)
                 })
             }
             alert('Inventário lançado com sucesso.')

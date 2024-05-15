@@ -1,0 +1,105 @@
+<template>
+    <style>
+
+        .w70{
+            width: 70% !important;
+        }
+        
+        .line-btn{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+
+        .line-btn button{
+            margin: 0;
+        }
+
+
+        /*  MOBILE  */
+
+        @media all and (max-width : 768px) {
+            .mobiHide{
+                display: none;
+            }
+
+            #card-caixa_comanda #cmbBusca{
+                width: 100%;
+            }
+
+            #card-caixa_comanda #edtBusca{
+                width: 100%;
+            }
+
+            #card-caixa_comanda .line-btn{
+                order: 5;
+                gap: 20px;
+            }
+        }
+
+     
+    </style>
+  
+    <fieldset class="fds-busca caixa">
+        <legend>Filtro</legend>
+        <div class="inline">               
+            <select id="cmbBusca">
+                <option value="id" signal="=">Comanda</option>
+                <option value="nome" signal="LIKE" selected>Nome do Cliente</option>
+                <option value="cpf" signal="LIKE">CPF</option>
+                <option value="aberta" signal="=" val="1">Abertas</option>
+                <option value="aberta" signal="=" val="0">Fechadas</option>
+            </select>
+            <input type="text" id="edtBusca" onkeypress="return getEnter(event, 'btnBusca-com')">
+            <div class="line-btn">
+                <button id="btnBusca-com" class="btn-round" ><span class="mdi mdi-magnify"></span></button>
+                <button id="btnScanner" class="btn-round"><span class="mdi mdi-qrcode-scan"></span></button>      
+            </div>
+        </div>
+        <div class="inline fdata">
+            <label for="ckbData">entre:</label>
+            <input type="checkbox" id="ckbData" checked>
+            <input type="date" id="edtIni" onkeypress="return getEnter(event, 'btnBusca-com')">
+            <input type="date" id="edtFin" onkeypress="return getEnter(event, 'btnBusca-com')">
+        </div>        
+    </fieldset>   
+    <table id="tblComandas"></table>
+
+</template>
+<script>
+
+
+    const pageData = main_data.adm_comandas.data
+    const pageFunc = main_data.adm_comandas.func
+    const pageScreen = document.querySelector('#card-adm_comandas')
+  
+    pageScreen.querySelector('#edtIni').value = today.getFormatDate()
+    pageScreen.querySelector('#edtFin').value = today.getFormatDate()
+
+    pageFunc.fillComanda = ()=>{
+        const tbl = pageScreen.querySelector('#tblComandas')
+        tbl.innerHTML = ''
+        const query = getVal('caixa')    
+        const params = new Object;
+            params.field = query[0]
+            params.signal = query[1]
+            params.value = query[2]
+            params.ini = pageScreen.querySelector('#ckbData').checked ? pageScreen.querySelector('#edtIni').value : '0000-00-00'
+            params.fin = pageScreen.querySelector('#ckbData').checked ? pageScreen.querySelector('#edtFin').value : '9999-12-31'
+            params.aberta = 0
+        const myPromisse = queryDB(params,'CXA-0');
+        myPromisse.then((resolve)=>{
+            const json = JSON.parse(resolve)
+            tbl.style.display = json.length > 0 ? 'inline-table' : 'none'
+            tbl.head('Cod.,Data|mobiHide,Hora|mobiHide,Cliente|w70,Status,Valor')
+            for(let i=0; i<json.length;i++){
+                tbl.plot(json[i],'id,data|mobiHide,hora|mobiHide,nome,aberta,total','str,str,str,Upp,cha 1=ABERTA 0=FECHADA,R$.')
+            }
+        })
+    }
+
+    pageScreen.querySelector('#btnBusca-com').addEventListener('click',()=>{
+        pageFunc.fillComanda()
+    })
+
+</script>

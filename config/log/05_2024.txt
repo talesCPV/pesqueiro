@@ -244,3 +244,41 @@
 14/05/2024 21:42 admin@pesqueirodourado.com.br : Edicao de Cliente Nome: Tales Cembraneli Dantas, CPF: 26687200879, Cel: 12997113793, Saldo: 0, Obs: 
 14/05/2024 21:44 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:12, Prod:3, Qtd.:1
 14/05/2024 21:47 admin@pesqueirodourado.com.br : Venda lancada -> Comanda:12, Valor:38.00
+15/05/2024 02:53 admin@pesqueirodourado.com.br : INVENTARIO: RESEVADO undefined undefined
+15/05/2024 02:53 admin@pesqueirodourado.com.br : INVENTARIO: RESEVADO undefined undefined
+15/05/2024 02:53 admin@pesqueirodourado.com.br : INVENTARIO: RESEVADO undefined undefined
+15/05/2024 02:53 admin@pesqueirodourado.com.br : INVENTARIO: RESEVADO undefined undefined
+15/05/2024 02:55 admin@pesqueirodourado.com.br : INVENTARIO: RESEVADO undefined undefined
+15/05/2024 02:56 admin@pesqueirodourado.com.br : INVENTARIO: RESEVADO undefined undefined
+15/05/2024 02:56 admin@pesqueirodourado.com.br : INVENTARIO: RESEVADO undefined undefined
+15/05/2024 02:57 admin@pesqueirodourado.com.br : INVENTARIO: RESEVADO undefined undefined
+15/05/2024 02:57 admin@pesqueirodourado.com.br : INVENTARIO: RESEVADO undefined undefined
+15/05/2024 02:57 admin@pesqueirodourado.com.br : INVENTARIO: RESEVADO undefined undefined
+15/05/2024 03:00 admin@pesqueirodourado.com.br : INVENTARIO: ADICIONADO 15 Suco de Laranja
+15/05/2024 03:00 admin@pesqueirodourado.com.br : INVENTARIO: ADICIONADO 5 porcao de Tilapia
+15/05/2024 03:01 admin@pesqueirodourado.com.br : INVENTARIO: RETIRADO 10 porcao de Tilapia
+15/05/2024 03:01 admin@pesqueirodourado.com.br : INVENTARIO: RESEVADO 5 porcao de Tilapia
+15/05/2024 03:04 admin@pesqueirodourado.com.br : INVENTARIO: RESEVADO 5 porcao de Tilapia
+15/05/2024 03:08 admin@pesqueirodourado.com.br : INVENTARIO: RESEVADO 0 porcao de Tilapia
+15/05/2024 03:08 admin@pesqueirodourado.com.br : INVENTARIO: RESEVADO 15 porcao de Tilapia
+15/05/2024 03:09 admin@pesqueirodourado.com.br : Edicao de Cliente Nome: Jacy Dantas, CPF: 21634505891, Cel: 12997198837, Saldo: 0, Obs: 
+15/05/2024 03:11 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Sistema, Acesso:[[0,2]])
+15/05/2024 03:11 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Administracao, Acesso:[[0,1,2]])
+15/05/2024 03:11 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Parametros, Acesso:[[0,2]])
+15/05/2024 03:11 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Cadastros, Acesso:[[0,1,2]])
+15/05/2024 03:11 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Caixa, Acesso:[[0,1,2,3]])
+15/05/2024 03:11 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Financeiro, Acesso:[[0]])
+15/05/2024 03:18 admin@pesqueirodourado.com.br : Menu Alterado (Compras, adm_compras.html, pop-up, Compras)
+15/05/2024 03:41 admin@pesqueirodourado.com.br : Produto Cadastrado  -> teste
+15/05/2024 03:48 admin@pesqueirodourado.com.br : Produto Deletado -> teste
+15/05/2024 03:48 admin@pesqueirodourado.com.br : Produto Deletado -> teste
+15/05/2024 03:51 admin@pesqueirodourado.com.br : Produto Deletado -> teste
+15/05/2024 03:54 admin@pesqueirodourado.com.br : Menu Alterado (Comandas, adm_comandas.html, pop-up, Comandas)
+15/05/2024 03:55 admin@pesqueirodourado.com.br : Menu Alterado (Ver Comandas, adm_comandas.html, pop-up, Consulta de Comandas)
+15/05/2024 03:56 admin@pesqueirodourado.com.br : Menu Alterado (Ver Comandas, adm_comandas.html, pop-up, Consulta de Comandas)
+15/05/2024 04:49 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Sistema, Acesso:[[0,2]])
+15/05/2024 04:49 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Administracao, Acesso:[[0,1,2]])
+15/05/2024 04:49 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Parametros, Acesso:[[0,2]])
+15/05/2024 04:49 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Caixa, Acesso:[[0,1,2,3]])
+15/05/2024 04:49 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Cadastros, Acesso:[[0,1,2]])
+15/05/2024 04:49 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Financeiro, Acesso:[[0]])

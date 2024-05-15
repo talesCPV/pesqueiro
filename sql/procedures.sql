@@ -403,6 +403,76 @@ DELIMITER $$
 	END $$
 DELIMITER ;
 
+
+ DROP PROCEDURE sp_inventario;
+DELIMITER $$
+	CREATE PROCEDURE sp_inventario(	
+		IN Iallow varchar(80),
+		IN Ihash varchar(64),
+        IN Iid_prod int(11),
+		IN Iqtd double,
+		IN Ioper varchar(4)
+    )
+	BEGIN		
+		CALL sp_allow(Iallow,Ihash);
+		IF(@allow)THEN
+			IF(Ioper='add')THEN
+				UPDATE tb_produto SET estoque = estoque+Iqtd WHERE id=Iid_prod;
+            END IF;
+			IF(Ioper='sub')THEN
+				UPDATE tb_produto SET estoque = estoque-Iqtd WHERE id=Iid_prod;
+            END IF;
+			IF(Ioper='res')THEN
+				CALL sp_set_reserv_prod(Iallow,Ihash,Iid_prod,1,Iqtd,0);
+            END IF;			
+        END IF;
+	END $$
+DELIMITER ;
+
+ DROP PROCEDURE sp_set_reserv_prod;
+DELIMITER $$
+	CREATE PROCEDURE sp_set_reserv_prod(	
+		IN Iallow varchar(80),
+		IN Ihash varchar(64),
+        IN Iid_prod int(11),
+		IN Iid_proj int(11),
+		IN Iqtd double,
+		IN Ipago BOOLEAN
+    )
+	BEGIN
+		CALL sp_allow(Iallow,Ihash);
+		IF(@allow)THEN
+			SET @id_user = (SELECT id FROM tb_usuario WHERE hash COLLATE utf8_general_ci = Ihash COLLATE utf8_general_ci LIMIT 1);
+			INSERT INTO tb_prod_reserva (id_prod,id_proj,id_user,qtd,pago)
+				VALUES (Iid_prod,Iid_proj,@id_user,Iqtd,Ipago)
+				ON DUPLICATE KEY UPDATE
+				qtd=Iqtd, pago=Ipago;
+			IF(Ipago = 1)THEN
+				UPDATE tb_produto SET estoque = estoque-Iqtd WHERE id=Iid_prod;
+            END IF;
+        END IF;
+	END $$
+DELIMITER ;
+
+ DROP PROCEDURE sp_del_prod;
+DELIMITER $$
+	CREATE PROCEDURE sp_del_prod(	
+		IN Iallow varchar(80),
+		IN Ihash varchar(64),
+		IN Iid int(11)
+    )
+	BEGIN    
+		CALL sp_allow(Iallow,Ihash);
+		IF(@allow)THEN
+			DELETE FROM tb_prod_reserva WHERE id_prod = Iid;
+			DELETE FROM tb_produto WHERE id=Iid;
+            SELECT 1 AS ok;
+		ELSE 
+			SELECT 0 AS ok;
+        END IF;	
+	END $$
+DELIMITER ;
+
 /* EMPRESA */
 
  DROP PROCEDURE sp_set_emp;
@@ -482,16 +552,16 @@ BEGIN
 				SET @quer =CONCAT('SELECT *
 					FROM vw_comanda
 					WHERE ',Ifield,' ',Isignal,' ',Ivalue,'
-					AND entrada BETWEEN "',Idt_ini,'"
-					AND "',Idt_fin,'"
+					AND entrada >= "',Idt_ini,'"
+					AND entrada <="',Idt_fin,'"
 					AND aberta = ',Iaberta,'
 					ORDER BY entrada DESC;');
             ELSE
 				SET @quer =CONCAT('SELECT *
 					FROM vw_comanda
 					WHERE ',Ifield,' ',Isignal,' ',Ivalue,'
-					AND entrada BETWEEN "',Idt_ini,'"
-					AND "',Idt_fin,'"
+					AND entrada >= "',Idt_ini,' 00:00:00"
+					AND entrada <= "',Idt_fin,' 23:59:59"
 					ORDER BY entrada DESC;');            
             END IF;
             
@@ -499,7 +569,7 @@ BEGIN
 			EXECUTE stmt1;
         END IF;
 	END $$
-	DELIMITER ;    
+	DELIMITER ;   
 
  DROP PROCEDURE sp_view_item_comanda;
 DELIMITER $$
@@ -675,6 +745,8 @@ DELIMITER $$
 	END $$
 	DELIMITER ;      
     
+
+	
 /* Financeiro */
 
      DROP PROCEDURE sp_set_lancamento;
