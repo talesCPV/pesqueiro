@@ -1,13 +1,12 @@
 <?php   
 
         function getEmail(){
-echo 1;                
                 include_once "connect.php";
 
                 $hash = $_POST["hash"];
                 $rows = array();
-                $query = 'SELECT email FROM tb_usuario WHERE hash COLLATE utf8_general_ci = "'.$hash.'" COLLATE utf8_general_ci LIMIT 1;';
-                
+                $query = 'SELECT email FROM tb_usuario WHERE hash = "'.$hash.'" LIMIT 1;';
+
                 $result = mysqli_query($conexao, $query);
                 if(is_object($result)){
                         if($result->num_rows > 0){			
@@ -20,7 +19,7 @@ echo 1;
                 
                 $out = '';
                 foreach($result as $row) {
-                        return$row['email'];
+                        return $row['email'];
                 }
         }
 
