@@ -34,3 +34,15 @@
 16/05/2024 16:55 admin@pesqueirodourado.com.br : COMPRA  :  Prod:CERVEJA BRAHMA 600ML, Qtd:5, Custo Unit..:10
 16/05/2024 16:55 admin@pesqueirodourado.com.br : COMPRA  :  Prod:CERVEJA BRAHMA 600ML, Qtd:5, Custo Unit..:7
 16/05/2024 16:56 admin@pesqueirodourado.com.br : COMPRA  :  Prod:CERVEJA BRAHMA 600ML, Qtd:5, Custo Unit..:15
+16/05/2024 21:26 admin@pesqueirodourado.com.br : Delecao de usuario, email:jackson@teste.com.br -> , acesso:2 -> 2
+16/05/2024 21:26 admin@pesqueirodourado.com.br : Delecao de usuario, email:jackson@teste.com.br -> , acesso:2 -> 2
+16/05/2024 21:28 admin@pesqueirodourado.com.br : Delecao de usuario, email:jackson@teste.com.br -> , acesso:2 -> 2
+16/05/2024 21:31 admin@pesqueirodourado.com.br : Delecao de usuario, email:jackson@teste.com.br -> , acesso:2 -> 2
+16/05/2024 21:43 admin@pesqueirodourado.com.br : Insercao de novo usuarios, email:undefined -> teste@, acesso:undefined -> 2
+16/05/2024 21:43 admin@pesqueirodourado.com.br : Delecao de usuario, email:teste@ -> , acesso:2 -> 2
+16/05/2024 21:44 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Sistema, Acesso:[[0,1,2]])
+16/05/2024 21:44 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Administracao, Acesso:[[0,1,2]])
+16/05/2024 21:44 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Parametros, Acesso:[[0,2]])
+16/05/2024 21:44 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Caixa, Acesso:[[0,1,2,3]])
+16/05/2024 21:44 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Cadastros, Acesso:[[0,1,2]])
+16/05/2024 21:44 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Financeiro, Acesso:[[0]])

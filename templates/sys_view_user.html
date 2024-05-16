@@ -138,7 +138,9 @@
     })
 
     pageScreen.querySelector('#btnDelUser').addEventListener('click',()=>{
-        if(confirm(`Deseja deletar o usuário ${pageData.email}?`)){
+        if(pageData.access == '0'){
+            alert('Você não pode deletar o usuário ROOT!')
+        }else if(confirm(`Deseja deletar o usuário ${pageData.email}?`)){
             const id = parseInt(pageData.id)
             pageFunc.setUser(id,'')
         }        

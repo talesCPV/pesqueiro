@@ -58,7 +58,7 @@ DELIMITER $$
 		CALL sp_allow(Iallow,Ihash);
 		IF(@allow)THEN
 			IF(Iemail="")THEN
-				DELETE FROM tb_mail WHERE de=Iid OR para=Iid;
+				DELETE FROM tb_mail WHERE id_from=Iid OR id_to=Iid;
 				DELETE FROM tb_usuario WHERE id=Iid;
             ELSE			
 				IF(Iid=0)THEN
