@@ -54,6 +54,9 @@
         /* CLIENTE */
         "CLI-0" => 'CALL sp_comanda_cliente("x00");',
 
+        /* FINANCEIRO */
+        "FIN-0" => 'CALL sp_set_compra(@access,@hash,x00,x01,"x02","x03");', // ID, ID_PROD,QTD,CUSTO_UNIT
+
     );
 
 ?>

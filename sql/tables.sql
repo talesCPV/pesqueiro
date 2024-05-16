@@ -59,6 +59,7 @@ CREATE TABLE tb_produto(
     custo double DEFAULT 0,
     markup double DEFAULT 0,
     local varchar(20),
+    disp boolean DEFAULT 1,
     UNIQUE KEY (descricao),
     FOREIGN KEY (id_emp) REFERENCES tb_empresa(id),
     PRIMARY KEY (id)
@@ -160,5 +161,15 @@ CREATE TABLE tb_lancamento (
   descricao varchar(60),
   modo varchar(30) DEFAULT "Cartão de Débito",
   entrada boolean DEFAULT 1,
+  PRIMARY KEY (id)
+) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS tb_compra;
+CREATE TABLE tb_compra (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  id_prod int(11) NOT NULL,
+  data datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  custo_unit double NOT NULL,
+  qtd double DEFAULT 1,
   PRIMARY KEY (id)
 ) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;

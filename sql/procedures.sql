@@ -783,3 +783,35 @@ DELIMITER $$
         END IF;
 	END $$
 	DELIMITER ;    
+
+	    
+     DROP PROCEDURE sp_set_compra;
+DELIMITER $$
+	CREATE PROCEDURE sp_set_compra(
+		IN Iallow varchar(80),
+		IN Ihash varchar(64),
+        IN Iid int(11),
+        IN Iid_prod int(11),
+		IN Iqtd double,
+		IN Icusto_unit double
+    )
+	BEGIN
+		CALL sp_allow(Iallow,Ihash);
+		IF(@allow)THEN
+			IF(Iqtd>0)THEN
+            
+				SET @preco = (SELECT (custo * (markup/100 + 1)) FROM tb_produto WHERE id=Iid_prod);
+				SET @markup = ROUND((@preco/Icusto_unit -1)*100,2);
+				            
+				UPDATE tb_produto SET estoque=estoque+Iqtd, custo=Icusto_unit, markup=@markup WHERE id=Iid_prod ;
+            
+				SET @id = (SELECT IF(COUNT(id)=0,"DEFAULT",id) FROM tb_compra WHERE id=Iid);
+				INSERT INTO tb_compra (id,id_prod,custo_unit,qtd)
+				VALUES (@id,Iid_prod,Icusto_unit,Iqtd)
+				ON DUPLICATE KEY UPDATE custo_unit=Icusto_unit, qtd=Iqtd;
+			ELSE
+				DELETE FROM tb_compra WHERE id=Iid;
+            END IF;
+        END IF;
+	END $$
+	DELIMITER ;     

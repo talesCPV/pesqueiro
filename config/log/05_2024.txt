@@ -25,3 +25,12 @@
 15/05/2024 15:08 roger@pesqueirodourado.com.br : Produto Editado porcao de Tilapia -> porcao de Tilapia
 15/05/2024 15:08 roger@pesqueirodourado.com.br : Produto Cadastrado  -> Cerfveja Budweiser lomng neck
 15/05/2024 15:40 roger@pesqueirodourado.com.br : Produto Cadastrado  -> Cerveja Ecobier Chopp
+16/05/2024 15:36 admin@pesqueirodourado.com.br : COMPRA  :  Prod:CERVEJA BRAHMA 600ML, Qtd:20, Custo Unit..:10
+16/05/2024 15:38 admin@pesqueirodourado.com.br : COMPRA  :  Prod:CERVEJA BRAHMA 600ML, Qtd:10, Custo Unit..:10
+16/05/2024 15:39 admin@pesqueirodourado.com.br : COMPRA  :  Prod:CERVEJA BRAHMA 600ML, Qtd:10, Custo Unit..:10
+16/05/2024 16:51 admin@pesqueirodourado.com.br : COMPRA  :  Prod:CERVEJA BRAHMA 600ML, Qtd:10, Custo Unit..:7
+16/05/2024 16:52 admin@pesqueirodourado.com.br : COMPRA  :  Prod:CERVEJA BRAHMA 600ML, Qtd:5, Custo Unit..:7
+16/05/2024 16:54 admin@pesqueirodourado.com.br : COMPRA  :  Prod:CERVEJA BRAHMA 600ML, Qtd:5, Custo Unit..:6.5
+16/05/2024 16:55 admin@pesqueirodourado.com.br : COMPRA  :  Prod:CERVEJA BRAHMA 600ML, Qtd:5, Custo Unit..:10
+16/05/2024 16:55 admin@pesqueirodourado.com.br : COMPRA  :  Prod:CERVEJA BRAHMA 600ML, Qtd:5, Custo Unit..:7
+16/05/2024 16:56 admin@pesqueirodourado.com.br : COMPRA  :  Prod:CERVEJA BRAHMA 600ML, Qtd:5, Custo Unit..:15

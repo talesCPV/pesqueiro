@@ -7,7 +7,7 @@
     <fieldset>
         <legend>Produto</legend>
         <div class="inline">
-            <label for="btnBuscaProd">Descrição: </label>
+            <label for="btnBuscaProd">Descrição:* </label>
             <div class="edtbtn">
                 <input type="text" id="edtBuscaProd" readonly>
                 <button id="btnBuscaProd" class="btn-round"><span class="mdi mdi-magnify"></span></button>
@@ -34,15 +34,40 @@
     const pageData = main_data.adm_compras.data
     const pageFunc = main_data.adm_compras.func
     const pageScreen = document.querySelector('#card-adm_compras')
-     
+    const newComp = Object.keys(pageData).length == 0 
+
+    pageFunc.start = ()=>{
+        pageData.id = newComp ? 0 : pageData.id
+    }
+
+
     pageScreen.querySelector('#btnBuscaProd').addEventListener('click',()=>{
         openHTML('busca_prod.html','pop-up','Selecione o Produto',{'org':'adm_compras'})
     })
 
     pageFunc.buscaProd = (data)=>{
         const edt = pageScreen.querySelector('#edtBuscaProd')
+        edt.data = data
         edt.value = data.descricao.toUpperCase()
-//        console.log(data)
     }
+// ID, ID_PROD,QTD,CUSTO_UNIT
+    pageScreen.querySelector('#btnAdd').addEventListener('click',()=>{
+        if(checkField(['edtBuscaProd','edtQtd','edtCusto'])){
+            const params = new Object;
+                params.id = pageData.id
+                params.id_prod = pageScreen.querySelector('#edtBuscaProd').data.id
+                params.qtd = pageScreen.querySelector('#edtQtd').value
+                params.custo_unit = pageScreen.querySelector('#edtCusto').value
+            
+            const myPromisse = queryDB(params,'FIN-0');
+            myPromisse.then((resolve)=>{
+                setLog(`COMPRA  ${newComp ? '' : 'Editada'}:  Prod:${pageScreen.querySelector('#edtBuscaProd').value}, Qtd:${params.qtd}, Custo Unit..:${params.custo_unit}`)
+                closeModal('adm_compras')
+            })
+
+        }
+    })
+
+    pageFunc.start()
 
 </script>
