@@ -58,8 +58,11 @@ DELIMITER $$
 		CALL sp_allow(Iallow,Ihash);
 		IF(@allow)THEN
 			IF(Iemail="")THEN
-				DELETE FROM tb_mail WHERE id_from=Iid OR id_to=Iid;
-				DELETE FROM tb_usuario WHERE id=Iid;
+				SET @access = (SELECT access FROM tb_usuario WHERE id=Iid);
+				IF(@access > 0)THEN
+					DELETE FROM tb_mail WHERE id_from=Iid OR id_to=Iid;
+					DELETE FROM tb_usuario WHERE id=Iid;
+                END IF;
             ELSE			
 				IF(Iid=0)THEN
 					INSERT INTO tb_usuario (email,hash,access)VALUES(Iemail,SHA2(CONCAT(Iemail, Isenha), 256),Iaccess);            
@@ -783,8 +786,24 @@ DELIMITER $$
         END IF;
 	END $$
 	DELIMITER ;    
-
-	    
+    
+     DROP PROCEDURE sp_view_fluxo_caixa;
+DELIMITER $$
+	CREATE PROCEDURE sp_view_fluxo_caixa(
+		IN Iallow varchar(80),
+		IN Ihash varchar(64),
+        IN IdtIn date,
+        IN IdtOut date
+    )
+	BEGIN
+		CALL sp_allow(Iallow,Ihash);
+		IF(@allow)THEN
+			SELECT * FROM tb_lancamento WHERE data >= CONCAT(IdtIn," 00:00:00") AND data <= CONCAT(IdtOut,"23:59:59");
+        END IF;
+	END $$
+	DELIMITER ;       
+    
+    
      DROP PROCEDURE sp_set_compra;
 DELIMITER $$
 	CREATE PROCEDURE sp_set_compra(
@@ -814,4 +833,4 @@ DELIMITER $$
             END IF;
         END IF;
 	END $$
-	DELIMITER ;     
+	DELIMITER ;      

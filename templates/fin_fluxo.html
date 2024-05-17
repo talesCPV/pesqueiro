@@ -1,0 +1,51 @@
+<template>
+    <style>
+
+     
+    </style>
+  
+    <fieldset>
+        <legend>Período</legend>
+        <div class="inline">
+            <label for="edtDtIni">de</label>
+            <input type="date" id="edtDtIni">
+            <label for="edtDtFin">até</label>
+            <input type="date" id="edtDtFin">
+            <button class="btn-round" id="btnBusca"><span class="mdi mdi-magnify"></span></button>
+        </div>
+    </fieldset>
+
+    <table id="tblFluxo"></table>
+
+</template>
+<script>
+
+    const pageData = main_data.fin_fluxo.data
+    const pageFunc = main_data.fin_fluxo.func
+    const pageScreen = document.querySelector('#card-fin_fluxo')
+
+    
+
+    pageFunc.fillFluxo = ()=>{
+        const params = new Object;
+                params.dt_in = pageScreen.querySelector('#edtDtIni').value
+                params.dt_out = pageScreen.querySelector('#edtDtFin').value
+            
+            const myPromisse = queryDB(params,'FIN-1');
+            myPromisse.then((resolve)=>{
+                const json = JSON.parse(resolve)
+                const tbl = pageScreen.querySelector('#tblFluxo')
+                tbl.head('Data,Descrição,Modo,Fluxo,Valor')
+                for(i=0; i<json.length; i++){
+                    tbl.plot(json[i],'data,descricao,modo,entrada,valor','dat,Upp,Upp,cha 1=ENTRADA 0=SAIDA,R$.')
+                }
+            })  
+
+    }
+
+    pageScreen.querySelector('#btnBusca').addEventListener('click',()=>{
+        pageFunc.fillFluxo()
+    })
+
+
+</script>

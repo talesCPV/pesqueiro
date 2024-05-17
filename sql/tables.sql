@@ -159,7 +159,7 @@ CREATE TABLE tb_lancamento (
   data datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   valor double NOT NULL,
   descricao varchar(60),
-  modo varchar(30) DEFAULT "Cartão de Débito",
+  modo varchar(3) DEFAULT "DEB",
   entrada boolean DEFAULT 1,
   PRIMARY KEY (id)
 ) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;

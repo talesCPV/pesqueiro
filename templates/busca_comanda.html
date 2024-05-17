@@ -12,6 +12,7 @@
         <legend>Filtro</legend>
         <div class="inline">               
             <select id="cmbBusca">
+                <option value="id" signal="=">Comanda</option>
                 <option value="nome" signal="LIKE" selected>Nome</option>
                 <option value="cpf" signal="LIKE">CPF</option>
             </select>
@@ -47,9 +48,9 @@
         myPromisse.then((resolve)=>{
             const json = JSON.parse(resolve)
             tbl.style.display = json.length > 0 ? 'inline-table' : 'none'
-            tbl.head('Data|mobiHide,Hora|mobiHide,Cliente|w70,Valor')
+            tbl.head('CMD.,Data|mobiHide,Hora|mobiHide,Cliente|w70,Valor')
             for(let i=0; i<json.length;i++){
-                tbl.plot(json[i],'data|mobiHide,hora|mobiHide,nome,total','str,str,Upp,R$.')
+                tbl.plot(json[i],'id,data|mobiHide,hora|mobiHide,nome,total','str,str,str,Upp,R$.')
             }
             
         })
