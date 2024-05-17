@@ -80,11 +80,11 @@ Date.prototype.addMin = function(N=1){
 }
 
 Date.prototype.iniMonth = function(){
-    return new Date(`${this.getFullYear()}-${this.getMonth()+1}-02`).getFormatDate()
+    return this.overday(-1*(this,this.getDate())+1)
 }
 
 Date.prototype.finMonth = function(){
-    return new Date(`${this.getFullYear()}-${this.getMonth()+2}-01`).getFormatDate()
+    return new Date(this.getFullYear() ,this.getMonth()+1,0).getFormatDate()
 }
 
 Date.prototype.getFormatDate = function(N=''){

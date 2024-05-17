@@ -48,3 +48,5 @@
 16/05/2024 21:44 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Financeiro, Acesso:[[0]])
 17/05/2024 15:02 admin@pesqueirodourado.com.br : Menu Alterado (Compras, adm_compras.html, pop-up, Compras)
 17/05/2024 15:05 admin@pesqueirodourado.com.br : Menu Alterado (Fluxo de Caixa, fin_fluxo.html, pop-up, Fluxo de Caixa)
+17/05/2024 20:24 admin@pesqueirodourado.com.br : COMPRA  :  Prod:CERVEJA BRAHMA 600ML, Qtd:5, Custo Unit..:12
+17/05/2024 20:26 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:14, Prod:3, Qtd.:2
