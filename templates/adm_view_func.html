@@ -70,10 +70,8 @@
                     <input type="text" id="edtCPF" maxlength="14" onkeyup="return valCPF(this)" class="only-view" disabled>
                 </div>
                 <div class="inline">
-                    <label for="cmbCargo">Cargo</label>
-                    <select id="cmbCargo" class="only-view" disabled></select>      
-                    <label for="cmbSetor">Setor</label>
-                    <select id="cmbSetor" class="only-view" disabled></select>      
+                    <label for="edtCargo">Cargo</label>
+                    <input type="text" id="edtCargo" maxlength="30" class="only-view" disabled>
                     <label for="cmbAtivo">Status</label>
                     <select id="cmbAtivo" class="only-view" disabled>
                         <option value="1">Ativo</option>
@@ -179,21 +177,22 @@
             pageScreen.querySelector('#up_file').disabled = 1
         }else{
             pageScreen.querySelector('#edtNome').value = pageData.nome
-            pageScreen.querySelector('#edtNasc').value = pageData.data_nasc
+            pageScreen.querySelector('#edtNasc').value = pageData.nasc
             pageScreen.querySelector('#edtRG').value = getRG(pageData.rg)
             pageScreen.querySelector('#edtCPF').value = getCPF(pageData.cpf)
             pageScreen.querySelector('#edtPIS').value = pageData.pis
-            pageScreen.querySelector('#edtEnd').value = pageData.endereco
+            pageScreen.querySelector('#edtEnd').value = pageData.end
             pageScreen.querySelector('#edtNum').value = pageData.num
             pageScreen.querySelector('#edtCidade').value = pageData.cidade
             pageScreen.querySelector('#edtBairro').value = pageData.bairro
-            pageScreen.querySelector('#cmbUF').value = pageData.estado
+            pageScreen.querySelector('#cmbUF').value = pageData.uf
             pageScreen.querySelector('#edtCEP').value = pageData.cep
             pageScreen.querySelector('#edtAdm').value = pageData.data_adm
             pageScreen.querySelector('#edtDem').value = pageData.data_dem
+            pageScreen.querySelector('#edtCargo').value = pageData.cargo
             pageScreen.querySelector('#edtFone').value = pageData.tel
             pageScreen.querySelector('#edtCel').value = pageData.cel
-            pageScreen.querySelector('#cmbAtivo').value = pageData.status=='ATIVO' ? 1 : 0
+            pageScreen.querySelector('#cmbAtivo').value = pageData.ativo
             pageScreen.querySelector('#edtObs').value = pageData.obs
             pageScreen.querySelector('#btnEdit').disabled = 0
 
@@ -221,8 +220,7 @@
             params.cep = pageScreen.querySelector('#edtCEP').value.trim()
             params.data_adm = pageScreen.querySelector('#edtAdm').value.trim()
             params.data_dem = pageScreen.querySelector('#edtDem').value.trim()
-            params.id_cargo = pageScreen.querySelector('#cmbCargo').value.trim()
-            params.id_setor = pageScreen.querySelector('#cmbSetor').value.trim()
+            params.cargo = pageScreen.querySelector('#edtCargo').value.trim()
             params.tel = pageScreen.querySelector('#edtFone').value.trim()
             params.cel = pageScreen.querySelector('#edtCel').value.trim()
             params.ativo = pageScreen.querySelector('#cmbAtivo').value.trim()
@@ -241,78 +239,6 @@
         })
     }
 
-    pageFunc.delFun = ()=>{
-        if(confirm('Deseja realmente deletar este registro?')){
-            const params = new Object;
-                params.id = pageData.id
-            
-            const myPromisse = queryDB(params,'FUN-2');
-            myPromisse.then((resolve)=>{
-                setLog(`Funcionário Deletado -> ${pageData.nome}`)
-                try{
-                    main_data.adm_funcionarios.func.fillFunc()
-                }catch{
-                    console.error('Tela fechada pelo usuário!')
-                }                  
-                closeModal('adm_view_func')
-            })
-        }
-    }
-
-    pageFunc.fillCargo = ()=>{
-        const params = new Object;
-            params.field = 'cargo'
-            params.signal = 'LIKE'
-            params.value = "'%%'"
-        const myPromisse = queryDB(params,'ADM-3');
-        myPromisse.then((resolve)=>{
-            const json = JSON.parse(resolve)
-            const cmb = pageScreen.querySelector('#cmbCargo')
-            cmb.innerHTML=''
-            let achou = 0
-            for(let i=0; i<json.length; i++){
-                const opt = document.createElement('option')
-                opt.value = json[i].id
-                opt.innerHTML = json[i].cargo
-                if(!newFunc){
-                    opt.selected =  json[i].id == pageData.id_cargo ? 1 : 0
-                    achou = opt.selected || achou ? 1 : 0
-                }
-                cmb.appendChild(opt)
-            }
-            if(!achou){
-                cmb.value = 0
-            }
-        });
-    }
-
-    pageFunc.fillSetor = ()=>{
-        const params = new Object;
-            params.field = 'nome'
-            params.signal = 'LIKE'
-            params.value = "'%%'"
-        const myPromisse = queryDB(params,'ADM-1');
-        myPromisse.then((resolve)=>{
-            const json = JSON.parse(resolve)
-            const cmb = pageScreen.querySelector('#cmbSetor')
-            cmb.innerHTML=''
-            let achou = 0
-            for(let i=0; i<json.length; i++){
-                const opt = document.createElement('option')
-                opt.value = json[i].id
-                opt.innerHTML = json[i].nome
-                if(!newFunc){
-                    opt.selected =  json[i].id == pageData.id_setor ? 1 : 0
-                    achou = opt.selected || achou ? 1 : 0
-                }
-                cmb.appendChild(opt)
-            }
-            if(!achou){
-                cmb.value = 0
-            }
-        });
-    }
-
     pageScreen.querySelector('#up_file').addEventListener('change',()=>{        
         showFile()
         const up = uploadImage('up_file',`assets/func/${pageData.id}/`,'foto')
@@ -327,7 +253,10 @@
     })
 
     pageScreen.querySelector('#btnDel').addEventListener('click',()=>{
-        pageFunc.delFun()
+        if(confirm('Deseja realmente deletar este registro?')){
+            pageScreen.querySelector('edtNome').value = ''
+            pageFunc.setFun()
+        }
     })
 
     pageScreen.querySelector('#btnEdit').addEventListener('click',()=>{
@@ -340,8 +269,6 @@
         }
     })
 
-    pageFunc.fillCargo()
-    pageFunc.fillSetor()
     startPage()
 
 </script>

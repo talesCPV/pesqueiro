@@ -36,7 +36,7 @@
             myPromisse.then((resolve)=>{
                 const json = JSON.parse(resolve)
                 const tbl = pageScreen.querySelector('#tblFluxo')
-                tbl.head('Data,Descrição,Modo,Fluxo,Valor')
+                tbl.head('Data,Descrição,Espécie,Fluxo,Valor')
                 const total = [0,0]
                 for(i=0; i<json.length; i++){
                     tbl.plot(json[i],'data,descricao,modo,entrada,valor','dat,Upp,Upp,cha 1=ENTRADA 0=SAIDA,R$.')

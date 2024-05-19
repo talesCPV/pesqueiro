@@ -79,3 +79,13 @@
 19/05/2024 15:14 admin@pesqueirodourado.com.br : Item Deletado -> Comanda:1, Prod:undefined, Qtd.:undefined
 19/05/2024 16:30 dantas@flexibus.com.br : Alteracao de usuario, email:dantas@flexibus.com.br -> dantas@flexibus.com.br, acesso:2 -> 2
 19/05/2024 16:31  : Alteracao de usuario, email:admin@pesqueirodourado.com.br -> admin@pesqueirodourado.com.br, acesso:0 -> 0
+19/05/2024 22:58 admin@pesqueirodourado.com.br : Menu Incluido (Funcionarios)
+19/05/2024 22:59 admin@pesqueirodourado.com.br : Menu Alterado (Funcionarios, adm_funcionarios.html, pop-up, Funcionarios)
+19/05/2024 23:18 admin@pesqueirodourado.com.br : Funcionario Cadastrado  -> Roger Cembraneli Dantas
+19/05/2024 23:19 admin@pesqueirodourado.com.br : Funcionario Cadastrado  -> Roger
+19/05/2024 23:24 admin@pesqueirodourado.com.br : Funcionario Editado Roger -> Roger Cembraneli Dantas
+19/05/2024 23:25 admin@pesqueirodourado.com.br : Funcionario Editado Roger Cembraneli Dantas -> Roger Cembraneli Dantas
+19/05/2024 23:29 admin@pesqueirodourado.com.br : Funcionario Editado Roger Cembraneli Dantas -> Roger Cembraneli Dantas
+19/05/2024 23:30 admin@pesqueirodourado.com.br : Funcionario Editado Roger Cembraneli Dantas -> Roger Cembraneli Dantas
+19/05/2024 23:30 admin@pesqueirodourado.com.br : Funcionario Editado Roger Cembraneli Dantas -> Roger Cembraneli Dantas
+19/05/2024 23:35 admin@pesqueirodourado.com.br : Produto Editado Porcao de Tillapia - File -> Porcao de Tilapia - File

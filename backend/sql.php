@@ -58,6 +58,9 @@
         "FIN-0" => 'CALL sp_set_compra(@access,@hash,x00,x01,"x02","x03");', // ID, ID_PROD,QTD,CUSTO_UNIT
         "FIN-1" => 'CALL sp_view_fluxo_caixa(@access,@hash,"x00","x01");', // DT_INICIO, DT_FINAL
 
+        /* FUNCIONÁRIO*/
+        "FUN-0" => 'CALL sp_view_func(@access,@hash,"x00","x01","x02");', // FIELD, SIGNAL, VALUE',
+        "FUN-1" => 'CALL sp_set_func(@access,@hash,x00,"x01","x02","x03","x04","x05","x06","x07","x08","x09","x10","x11","x12","x13","x14","x15","x16",x17,"x18");',// id,nome,nasc,rg,cpf,pis,end,num,cidade,bairro,uf,cep,data_adm,data_dem,cargo,tel,cel,ativo,obs
     );
 
 ?>

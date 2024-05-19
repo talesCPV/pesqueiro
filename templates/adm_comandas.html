@@ -92,9 +92,14 @@
             const json = JSON.parse(resolve)
             tbl.style.display = json.length > 0 ? 'inline-table' : 'none'
             tbl.head('Cod.,Data|mobiHide,Hora|mobiHide,Cliente|w70,Status,Valor')
+            let tot=0
             for(let i=0; i<json.length;i++){
                 tbl.plot(json[i],'id,data|mobiHide,hora|mobiHide,nome,aberta,total','str,str,str,Upp,cha 1=ABERTA 0=FECHADA,R$.')
+                tot += parseFloat(json[i].total)
             }
+            const tr = document.createElement('tr')
+            tr.innerHTML = `<th colspan="4"></th><th>Total</th><th>R$${tot.toFixed(2)}</th>`
+            tbl.appendChild(tr)
         })
     }
 

@@ -75,7 +75,7 @@
         styleSheet.setProperty('--win-back', main_data.dashboard.data.colors.win_back_color);
         styleSheet.setProperty('--win-font', main_data.dashboard.data.colors.win_font_color);
     }
-
+/*
     document.querySelector('#imgLogo').addEventListener('click',()=>{
         document.querySelector('#content-screen').innerHTML = ''
         const obj = Object.keys(main_data)
@@ -83,10 +83,17 @@
             obj[i] != 'dashboard' ? delete main_data[obj[i]] : null
         }
     })
-
+*/
     document.querySelector('body').addEventListener('keyup',(event)=>{
         if(main_data.dashboard.up_page == 'card-usr_calc'){
             main_data.usr_calc.func.type(event.keyCode)
+        }
+    })
+
+    document.querySelector('#logo').addEventListener('click',()=>{
+        if(window.innerWidth <= 768){
+            const ckb_drop = document.querySelector('#drop')
+            ckb_drop.checked = !ckb_drop.checked 
         }
     })
 
