@@ -57,7 +57,7 @@
           
         const myPromisse = queryDB(params,'CXA-4');
         myPromisse.then((resolve)=>{
-            setLog(`Item ${pgto ? 'Alterado' : 'Baixado'} -> Comanda:${params.id_comanda}, Prod:${params.id_prod}, Qtd.:${params.qtd}`)
+            setLog(`Item ${pgto == 0? 'Alterado' : 'Baixado'} -> Comanda:${params.id_comanda}, Prod:${pageData.descricao}, Qtd.:${params.qtd}`)
             pageFunc.end()
             closeModal('caixa_view_item_comanda')
         })
@@ -76,7 +76,7 @@
             
             const myPromisse = queryDB(params,'CXA-6');
             myPromisse.then((resolve)=>{
-                setLog(`Item Deletado -> Comanda:${params.id_comanda}, Prod:${params.id_prod}, Qtd.:${params.qtd}`)
+                setLog(`Item Deletado -> Comanda:${params.id_comanda}, Prod:${pageData.descricao}, Qtd.:${pageData.qtd}`)
                 pageFunc.end()
             })
         }

@@ -81,16 +81,21 @@
             params.pass = pageScreen.querySelector('#edtPass').value.trim()
             params.acesso = pageScreen.querySelector('#cmbPerfil').value
         
-        const myPromisse = queryDB(params,'USR-1');
-        myPromisse.then((resolve)=>{
-            setLog(`${message}, email:${pageData.email} -> ${params.email}, acesso:${pageData.access} -> ${params.acesso}`)                
-            try{
-                main_data.sys_usuarios.func.fillUser()
-            }catch{
-                console.error('Tela fechada pelo usuário!')
-            }
-            closeModal('sys_view_user')
-        })
+        if(pageData.access == '0' && localStorage.getItem('access') != '0'){
+            alert('Você não tem autorização para editar o usuário ROOT do sistema!')
+        }else{
+            const myPromisse = queryDB(params,'USR-1');
+            myPromisse.then((resolve)=>{
+                setLog(`${message}, email:${pageData.email} -> ${params.email}, acesso:${pageData.access} -> ${params.acesso}`)                
+                try{
+                    main_data.sys_usuarios.func.fillUser()
+                }catch{
+                    console.error('Tela fechada pelo usuário!')
+                }
+                closeModal('sys_view_user')
+            })
+        }
+
     }
 
     pageFunc.fillPerm = ()=>{
@@ -123,7 +128,7 @@
         });
     }
 
-    pageScreen.querySelector('#btnSaveUser').addEventListener('click',()=>{
+    pageScreen.querySelector('#btnSaveUser').addEventListener('click',()=>{        
         if(checkField(['edtEmail']) && checkRepass(['edtPass','edtRepass'])){
             const id = parseInt(pageData.id)
             const email = pageScreen.querySelector('#edtEmail').value.trim().toLowerCase()
@@ -132,6 +137,7 @@
                 alert('Favor digitar uma senha válida!')
                 pass.focus()
             }else{
+
                 pageFunc.setUser(id, email)
             }
         }

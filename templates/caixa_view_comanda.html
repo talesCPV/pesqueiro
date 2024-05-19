@@ -89,7 +89,7 @@
     }
 
     pageFunc.buscaProd = (prod)=>{
-        prod.qtd = prompt('Quantidade:',1)
+        prod.qtd = getFloat(prompt('Quantidade:',1),2)
 
         if(prod.qtd > 0){
             const params = new Object;

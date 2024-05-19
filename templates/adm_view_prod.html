@@ -44,6 +44,15 @@
                 padding: 0;
                 margin: 0;
             }
+
+            .line-ckb{
+                width: 100%;
+                margin-top: 15px;
+            }
+
+            .line-ckb label{
+                width: auto;
+            }
         }
 
     </style>
@@ -100,6 +109,10 @@
             <input type="text" class="only-view" id="edtLocal" maxlength="20" disabled>
             <label for="edtNCM">NCM</label>
             <input type="text" class="only-view" id="edtNCM" maxlength="8" onkeyup="valInt(this)" inputmode="numeric" disabled>
+            <div class="line-ckb">
+                <label for="ckbDisp">Disponível</label>
+                <input type="checkbox" id="ckbDisp" class="only-view" disabled>
+            </div>
         </div>
         <div class="inline">
             <label for="cmbForn">Fornecedor</label>
@@ -186,6 +199,7 @@
             pageScreen.querySelector('#edtMarkup').value = pageData.markup
             pageScreen.querySelector('#edtLocal').value = pageData.local
             pageScreen.querySelector('#edtNCM').value = pageData.ncm
+            pageScreen.querySelector('#ckbDisp').checked = parseInt(pageData.disp)
             pageScreen.querySelector('#btnEdit').disabled = 0
 
             const back = backFunc({'filename':`../assets/prod/prod_${pageData.id}.jpg`},1)
@@ -219,6 +233,7 @@
             params.custo = pageScreen.querySelector('#edtCusto').value.trim()
             params.markup = pageScreen.querySelector('#edtMarkup').value.trim()
             params.local = pageScreen.querySelector('#edtLocal').value.trim()
+            params.disp = pageScreen.querySelector('#ckbDisp').checked
           
         const myPromisse = queryDB(params,'PROD-1');
         myPromisse.then((resolve)=>{            

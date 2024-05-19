@@ -50,3 +50,32 @@
 17/05/2024 15:05 admin@pesqueirodourado.com.br : Menu Alterado (Fluxo de Caixa, fin_fluxo.html, pop-up, Fluxo de Caixa)
 17/05/2024 20:24 admin@pesqueirodourado.com.br : COMPRA  :  Prod:CERVEJA BRAHMA 600ML, Qtd:5, Custo Unit..:12
 17/05/2024 20:26 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:14, Prod:3, Qtd.:2
+19/05/2024 13:55 admin@pesqueirodourado.com.br : Alteracao de usuario, email:silmara@pesqueirodourado.com.br -> silmara@pesqueirodourado.com.br, acesso:0 -> 3
+19/05/2024 13:59 admin@pesqueirodourado.com.br : Edicao de Cliente Nome: Alexandre Luis Vargas, CPF: 07132278851, Cel: 1291045456, Saldo: 0, Obs: 
+19/05/2024 14:00 admin@pesqueirodourado.com.br : Empresa Deletada -> teste
+19/05/2024 14:01 admin@pesqueirodourado.com.br : Empresa Deletada -> teste
+19/05/2024 14:05 admin@pesqueirodourado.com.br : Empresa Deletada -> teste
+19/05/2024 14:31 admin@pesqueirodourado.com.br : Produto Editado Cerveja Brahma 600ml -> Cerveja Brahma 600ml
+19/05/2024 15:00 admin@pesqueirodourado.com.br : Produto Cadastrado  -> Pesque Pag - Tilapia
+19/05/2024 15:01 admin@pesqueirodourado.com.br : Produto Cadastrado  -> Pesque Pag - Tilapia Limpa
+19/05/2024 15:02 admin@pesqueirodourado.com.br : Produto Cadastrado  -> Pesque Pague - Pacu
+19/05/2024 15:02 admin@pesqueirodourado.com.br : Produto Editado Pesque Pag - Tilapia -> Pesque Pague - Tilapia
+19/05/2024 15:02 admin@pesqueirodourado.com.br : Produto Editado Pesque Pag - Tilapia Limpa -> Pesque Pague - Tilapia Limpa
+19/05/2024 15:03 admin@pesqueirodourado.com.br : Produto Cadastrado  -> Pesque Pague - Pacu (limpo)
+19/05/2024 15:03 admin@pesqueirodourado.com.br : Produto Editado Pesque Pague - Pacu -> Pesque Pague - Pacu
+19/05/2024 15:03 admin@pesqueirodourado.com.br : Produto Editado Pesque Pague - Tilapia Limpa -> Pesque Pague - Tilapia Limpa
+19/05/2024 15:04 admin@pesqueirodourado.com.br : Produto Editado Pesque Pague - Tilapia Limpa -> Pesque Pague - Tilapia (Limpa)
+19/05/2024 15:05 admin@pesqueirodourado.com.br : Produto Cadastrado  -> Pesque Pague - Tambaqui
+19/05/2024 15:05 admin@pesqueirodourado.com.br : Produto Cadastrado  -> Pesque Pague - Tambaqui (limpo)
+19/05/2024 15:06 admin@pesqueirodourado.com.br : Produto Editado Pesque Pague - Pacu (limpo) -> Pesque Pague - Pacu (limpo)
+19/05/2024 15:06 admin@pesqueirodourado.com.br : Produto Editado Pesque Pague - Tambaqui -> Pesque Pague - Tambaqui
+19/05/2024 15:06 admin@pesqueirodourado.com.br : Produto Editado Pesque Pague - Tilapia -> Pesque Pague - Tilapia
+19/05/2024 15:06 admin@pesqueirodourado.com.br : Produto Editado Pesque Pague - Tilapia (Limpa) -> Pesque Pague - Tilapia (Limpa)
+19/05/2024 15:09 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:1, Prod:Pesque Pague - Pacu, Qtd.:3.5
+19/05/2024 15:09 admin@pesqueirodourado.com.br : Item Deletado -> Comanda:1, Prod:undefined, Qtd.:undefined
+19/05/2024 15:13 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:1, Prod:Pesque Pague - Tambaqui, Qtd.:3.5
+19/05/2024 15:13 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:1, Prod:Pesque Pague - Tilapia, Qtd.:6.87
+19/05/2024 15:14 admin@pesqueirodourado.com.br : Item Deletado -> Comanda:1, Prod:undefined, Qtd.:undefined
+19/05/2024 15:14 admin@pesqueirodourado.com.br : Item Deletado -> Comanda:1, Prod:undefined, Qtd.:undefined
+19/05/2024 16:30 dantas@flexibus.com.br : Alteracao de usuario, email:dantas@flexibus.com.br -> dantas@flexibus.com.br, acesso:2 -> 2
+19/05/2024 16:31  : Alteracao de usuario, email:admin@pesqueirodourado.com.br -> admin@pesqueirodourado.com.br, acesso:0 -> 0
