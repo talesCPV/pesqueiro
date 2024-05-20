@@ -684,6 +684,10 @@ DELIMITER $$
 				INSERT INTO tb_item_comanda (id,id_comanda,id_garcom,id_produto,qtd,pago)
 					VALUES (@id,Iid_comanda,@call_id,Iid_produto,Iqtd,Ipago)
 					ON DUPLICATE KEY UPDATE id_garcom=@call_id, qtd=Iqtd, pago=Ipago;
+				IF(Ipago = 1)THEN
+					SET @preco = (SELECT (custo * (markup/100 + 1)) * Iqtd FROM tb_produto WHERE id=Iid_produto);
+					CALL sp_set_lancamento(Iallow,Ihash,0,@preco,CONCAT("Pgto Item comanda ",Iid_comanda),"PIX",1);
+                END IF;
 			END IF;
         END IF;
 	END $$
@@ -779,10 +783,14 @@ DELIMITER $$
 	BEGIN
 		CALL sp_allow(Iallow,Ihash);
 		IF(@allow)THEN
-			SET @id = (SELECT IF(COUNT(id)=0,"DEFAULT",id) FROM tb_lancamento WHERE id=Iid);
-			INSERT INTO tb_lancamento (id,valor,descricao,modo,entrada)
-            VALUES (@id,Ivalor,Idescricao,Imodo,Ientrada)
-            ON DUPLICATE KEY UPDATE descricao=Idescricao, modo=Imodo, entrada=Ientrada;
+			IF(TRIM(Idescricao)="")THEN
+				DELETE FROM tb_lancamento WHERE id=Iid;
+            ELSE
+				SET @id = (SELECT IF(COUNT(id)=0,"DEFAULT",id) FROM tb_lancamento WHERE id=Iid);              
+					INSERT INTO tb_lancamento (id,valor,descricao,modo,entrada)
+					VALUES (@id,Ivalor,Idescricao,Imodo,Ientrada)
+					ON DUPLICATE KEY UPDATE descricao=Idescricao, modo=Imodo, entrada=Ientrada, valor=Ivalor;
+            END IF;
         END IF;
 	END $$
 	DELIMITER ;    
@@ -823,6 +831,9 @@ DELIMITER $$
 				SET @markup = ROUND((@preco/Icusto_unit -1)*100,2);
 				            
 				UPDATE tb_produto SET estoque=estoque+Iqtd, custo=Icusto_unit, markup=@markup WHERE id=Iid_prod ;
+            
+				SET @prod_name = (SELECT descricao FROM tb_produto WHERE id=Iid_prod);
+				CALL sp_set_lancamento(Iallow,Ihash,0,ROUND(Icusto_unit * Iqtd,2),CONCAT("Compra ",@prod_name),"PGT",0);
             
 				SET @id = (SELECT IF(COUNT(id)=0,"DEFAULT",id) FROM tb_compra WHERE id=Iid);
 				INSERT INTO tb_compra (id,id_prod,custo_unit,qtd)
