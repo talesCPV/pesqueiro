@@ -1,0 +1,84 @@
+<template>
+    <style>
+
+     
+    </style>
+  
+    <fieldset>
+        <legend>Pagamento</legend>
+        <div class="inline">
+            <label for="edtDesc">Descrição</label>
+            <input type="text" id="edtDesc" maxlength="60">
+        </div>
+        <div class="inline">
+            <label for="cmbEntrada">Fluxo</label>
+            <select id="cmbEntrada">
+                <option value="1">RECEBÍVEL</option>
+                <option value="0">PAGAMENTO</option>
+            </select>
+        </div> 
+        <div class="inline">
+            <label for="cmbModoPgto">Modo de pgto</label>
+            <select id="cmbModoPgto">
+                <option value="DIN" selected>Dinheiro</option>
+                <option value="DEB">Cartão de Débito</option>
+                <option value="CRD">Cartão de Crédito</option>
+                <option value="PIX">Pix</option>
+                <option value="CHK">Cheque</option>
+                <option value="VRF">Vale Refeição</option>
+                <option value="SLD">Saldo Cliente</option>
+            </select>
+        </div> 
+        <div class="inline">
+            <label for="edtValor">Valor R$</label>
+            <input type="text" id="edtValor" onkeyup="valFloat(this)" onfocus="this.select()" onkeypress="return getEnter(event, 'btnSave')"inputmode="decimal" value="0">
+        </div>
+        <div class="line">
+            <button id="btnSave">Salvar</button>
+            <button id="btnDel">Deletar</button>
+        </div>        
+    </fieldset>
+
+
+</template>
+<script>
+    const pageData = main_data.fin_view_fluxo.data
+    const pageFunc = main_data.fin_view_fluxo.func
+    const pageScreen = document.querySelector('#card-fin_view_fluxo')
+     
+
+    pageFunc.start = ()=>{
+        pageScreen.querySelector('#edtDesc').value = pageData.descricao
+        pageScreen.querySelector('#cmbModoPgto').value = pageData.modo
+        pageScreen.querySelector('#cmbEntrada').value = pageData.entrada
+        pageScreen.querySelector('#edtValor').value = pageData.valor
+    }    
+
+    function save(del){
+        const params = new Object;
+            params.id = pageData.id
+            params.valor = pageScreen.querySelector('#edtValor').value
+            params.descricao = del ? '' : pageScreen.querySelector('#edtDesc').value
+            params.modo = pageScreen.querySelector('#cmbModoPgto').value
+            params.entrada = pageScreen.querySelector('#cmbEntrada').value
+        const myPromisse = queryDB(params,'FIN-2');
+        myPromisse.then((resolve)=>{
+            setLog(`Fluxo de Caixa ${del?'DELETADO':'EDITADO'}: ${pageScreen.querySelector('#edtDesc').value}, valor:${params.valor}, Modo.:${params.modo}, Fluxo:${pageScreen.querySelector('#cmbEntrada').value=='1'?'ENTRADA':'SAÍDA'}`)
+            main_data.fin_fluxo.func.fillFluxo()
+            closeModal('fin_view_fluxo')
+        });
+    }
+
+    pageScreen.querySelector('#btnSave').addEventListener('click',()=>{
+        save(0)
+    })
+
+    pageScreen.querySelector('#btnDel').addEventListener('click',()=>{
+        if(confirm('Deseja exluir este registro?')){
+            save(1)
+        }
+    })
+
+    pageFunc.start()
+
+</script>

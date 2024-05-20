@@ -57,6 +57,7 @@
         /* FINANCEIRO */
         "FIN-0" => 'CALL sp_set_compra(@access,@hash,x00,x01,"x02","x03");', // ID, ID_PROD,QTD,CUSTO_UNIT
         "FIN-1" => 'CALL sp_view_fluxo_caixa(@access,@hash,"x00","x01");', // DT_INICIO, DT_FINAL
+        "FIN-2" => 'CALL sp_set_lancamento(@access,@hash,x00,"x01","x02","x03",x04);',//ID,VALOR,DESCRICAO,MODO,ENTRADA
 
         /* FUNCIONÁRIO*/
         "FUN-0" => 'CALL sp_view_func(@access,@hash,"x00","x01","x02");', // FIELD, SIGNAL, VALUE',

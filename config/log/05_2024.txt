@@ -89,3 +89,7 @@
 19/05/2024 23:30 admin@pesqueirodourado.com.br : Funcionario Editado Roger Cembraneli Dantas -> Roger Cembraneli Dantas
 19/05/2024 23:30 admin@pesqueirodourado.com.br : Funcionario Editado Roger Cembraneli Dantas -> Roger Cembraneli Dantas
 19/05/2024 23:35 admin@pesqueirodourado.com.br : Produto Editado Porcao de Tillapia - File -> Porcao de Tilapia - File
+20/05/2024 15:22 admin@pesqueirodourado.com.br : Menu Incluido (Pgto Funcionario)
+20/05/2024 15:24 admin@pesqueirodourado.com.br : Menu Alterado (Pgto Funcionario, fin_pag_func.html, pop-up, Pagamento de Funcionario)
+20/05/2024 15:25 admin@pesqueirodourado.com.br : Menu Alterado (Fluxo de Caixa, fin_fluxo.html, pop-up, Fluxo de Caixa)
+20/05/2024 15:46 admin@pesqueirodourado.com.br : Menu Alterado (Pgto Funcionario, fin_pag_func.html, pop-up, Pagamento de Funcionario)

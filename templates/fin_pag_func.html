@@ -1,0 +1,77 @@
+<template>
+    <style>
+
+     
+    </style>
+  
+    <fieldset>
+        <legend>Funcionário</legend>
+        <div class="inline">
+            <label for="cmbFunc">Nome</label>
+            <select id="cmbFunc"></select>
+        </div>
+        <div class="inline">
+            <label for="edtValor">Valor R$</label>
+            <input type="text" id="edtValor" onkeyup="valFloat(this)" onfocus="this.select()" onkeypress="return getEnter(event, 'btnSave')"inputmode="decimal" value="0">
+        </div>
+        <div class="inline">
+            <label for="cmbModoPgto">Modo de pgto</label>
+            <select id="cmbModoPgto">
+                <option value="DIN">Dinheiro</option>
+                <option value="PIX" selected>Pix</option>
+                <option value="CHK">Cheque</option>
+            </select>
+        </div>        
+        <div class="line">
+            <button id="btnSave">Salvar</button>
+        </div>
+    </fieldset>
+    
+
+</template>
+<script>
+    const pageData = main_data.fin_pag_func.data
+    const pageFunc = main_data.fin_pag_func.func
+    const pageScreen = document.querySelector('#card-fin_pag_func')
+
+    pageFunc.fillFunc = ()=>{      
+        const cmb = pageScreen.querySelector('#cmbFunc')
+        cmb.innerHTML = ''
+        const params = new Object;
+            params.field = 'ativo'
+            params.signal = '='
+            params.value = '1'
+        const myPromisse = queryDB(params,'FUN-0');
+        myPromisse.then((resolve)=>{
+            const json = JSON.parse(resolve)
+            for(let i=0; i<json.length;i++){
+                const opt = document.createElement('option')
+                opt.innerHTML = json[i].nome
+                opt.value = json[i].nome
+                cmb.appendChild(opt)
+            }         
+        });
+    }
+
+    pageScreen.querySelector('#btnSave').addEventListener('click',()=>{
+        const modo = pageScreen.querySelector('#cmbModoPgto').value
+        const nome = pageScreen.querySelector('#cmbFunc').value
+        const valor = parseFloat(pageScreen.querySelector('#edtValor').value).toFixed(2)
+        if(confirm(`Confirma o pgto de R$${valor} a ${nome} em ${modo}?`)){
+            const params = new Object;
+                params.id = 0
+                params.valor = valor
+                params.descricao = `Pgto Funcionário (${nome})`
+                params.modo = modo
+                params.entrada = 0
+            const myPromisse = queryDB(params,'FIN-2');
+            myPromisse.then((resolve)=>{
+                setLog(`Pagamento a Funcionário ${nome}, valor:${valor}, Modo.:${modo}`)
+                closeModal('fin_pag_func')
+            });
+        }
+    })
+
+    pageFunc.fillFunc()
+
+</script>

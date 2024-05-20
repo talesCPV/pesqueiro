@@ -53,5 +53,10 @@
         pageFunc.fillFluxo()
     })
 
+    pageScreen.querySelector('#tblFluxo').addEventListener('click',(e)=>{
+        const data = e.target.parentNode.data        
+        openHTML('fin_view_fluxo.html','pop-up','Edição de Pgto',data,600)
+    })
+
 
 </script>
