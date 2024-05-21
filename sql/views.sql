@@ -1,4 +1,15 @@
 
+--  DROP VIEW vw_cardapio;
+ CREATE VIEW vw_cardapio AS 
+    SELECT 
+        descricao,und,tipo,
+        ROUND(((markup/100 + 1)*custo),2) AS preco
+    FROM tb_produto
+    WHERE disp = 1
+	ORDER BY tipo,descricao;
+
+SELECT * FROM vw_cardapio ;
+
 -- DROP VIEW vw_prod;
  CREATE VIEW vw_prod AS 
     SELECT 

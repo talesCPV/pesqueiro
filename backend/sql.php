@@ -28,7 +28,7 @@
 
         /* PRODUTOS */
         "PROD-0"  => 'CALL sp_view_prod(@access,@hash,"x00","x01","x02");', // FIELD,SIGNAL, VALUE
-        "PROD-1"  => 'CALL sp_set_prod(@access,@hash,x00,"x01","x02","x03","x04","x05","x06","x07","x08","x09",x10,"x11","x12","x13","x14");',//ID,ID_EMP,DESCRIÇÃO,ESTOQUE,ESTQ_MIN,UND,NCM,COD_INT,COD_BAR,COD_FORN,CONSUMO,CUSTO,MARKUP,LOCAL,DISPONIVEL 
+        "PROD-1"  => 'CALL sp_set_prod(@access,@hash,x00,"x01","x02","x03","x04","x05","x06","x07","x08","x09",x10,"x11","x12","x13","x14","x15");',//ID,ID_EMP,DESCRIÇÃO,ESTOQUE,ESTQ_MIN,UND,NCM,COD_INT,COD_BAR,COD_FORN,CONSUMO,CUSTO,MARKUP,LOCAL,DISPONIVEL ,TIPO
         "PROD-2"  => 'CALL sp_del_prod(@access,@hash,x00);', // ID
         "PROD-3"  => 'CALL sp_set_reserv_prod(@access,@hash,x00,x01,x02,"x03",x04);', // ID_PROD, ID_PROJ,ID_USER,QTD,PAGO      
         "PROD-4"  => 'CALL sp_inventario(@access,@hash,x00,"x01","x02")', // ID_PROD, QTD, OPERAÇÃO
@@ -53,6 +53,7 @@
 
         /* CLIENTE */
         "CLI-0" => 'CALL sp_comanda_cliente("x00");',
+        "CLI-1" => 'SELECT * FROM vw_cardapio',
 
         /* FINANCEIRO */
         "FIN-0" => 'CALL sp_set_compra(@access,@hash,x00,x01,"x02","x03");', // ID, ID_PROD,QTD,CUSTO_UNIT

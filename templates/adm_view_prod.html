@@ -37,6 +37,9 @@
             max-width: 280px;
         }
 
+        .fds{
+            width: 100%;
+        }
 
         @media all and (max-width : 1000px) {
             .top-form{
@@ -109,15 +112,28 @@
             <input type="text" class="only-view" id="edtLocal" maxlength="20" disabled>
             <label for="edtNCM">NCM</label>
             <input type="text" class="only-view" id="edtNCM" maxlength="8" onkeyup="valInt(this)" inputmode="numeric" disabled>
-            <div class="line-ckb">
-                <label for="ckbDisp">Disponível</label>
-                <input type="checkbox" id="ckbDisp" class="only-view" disabled>
-            </div>
         </div>
         <div class="inline">
             <label for="cmbForn">Fornecedor</label>
             <select id="cmbForn" class="only-view" disabled></select>   
+            <fieldset class="fds">
+                <legend>Cardápio</legend>
+                <div class="inline">
+                    <div class="line-ckb">
+                        <label for="ckbDisp">Disponível</label>
+                        <input type="checkbox" id="ckbDisp" class="only-view" disabled>
+                    </div>
+                    <label for="cmbTipo">Tipo</label>
+                    <select id="cmbTipo" class="only-view" disabled>
+                        <option value="BEBIDAS">Bebidas</option>
+                        <option value="PORÇÕES">Porções</option>
+                        <option value="PESCA">Pesca</option>
+                    </select>
+                </div>
+    
+            </fieldset>            
         </div>
+
 
         <div class="line">
             <button id="btnDel" class="only-view" disabled>Deletar</button>
@@ -200,6 +216,7 @@
             pageScreen.querySelector('#edtLocal').value = pageData.local
             pageScreen.querySelector('#edtNCM').value = pageData.ncm
             pageScreen.querySelector('#ckbDisp').checked = parseInt(pageData.disp)
+            pageScreen.querySelector('#cmbTipo').value = pageData.tipo
             pageScreen.querySelector('#btnEdit').disabled = 0
 
             const back = backFunc({'filename':`../assets/prod/prod_${pageData.id}.jpg`},1)
@@ -234,6 +251,7 @@
             params.markup = pageScreen.querySelector('#edtMarkup').value.trim()
             params.local = pageScreen.querySelector('#edtLocal').value.trim()
             params.disp = pageScreen.querySelector('#ckbDisp').checked
+            params.tipo = pageScreen.querySelector('#cmbTipo').value
           
         const myPromisse = queryDB(params,'PROD-1');
         myPromisse.then((resolve)=>{            

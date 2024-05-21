@@ -37,3 +37,24 @@ function comanda_virual(comanda){
 
     doc.save('comanda_virtual.pdf')
 }
+
+function cardapio(){
+
+    const doc = new jsPDF() 
+
+    const logo = new Image()
+    logo.src = 'assets/logo.png'
+    doc.addImage(logo, 'png', 5, 5, logo.width/15, logo.height/15);
+
+
+    doc.setFontSize(30);
+//    txt.y = logo.height/10 + 20
+    txt.y = logo.height/15 +2
+    doc.text('CARDÁPIO',85,txt.y)
+    addLine(2)
+
+
+
+
+    doc.save('cardapio.pdf')
+}

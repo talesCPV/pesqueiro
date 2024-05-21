@@ -86,7 +86,11 @@ function newModal(title, content, width, id){
         mod_card.addEventListener('mousedown',(e)=>{
             queueModal(id)
         })
-        main_data.dashboard.up_page = mod_card.id
+
+        try{
+            main_data.dashboard.up_page = mod_card.id
+
+        }catch{null}
 
     const resize = document.createElement('div')
         resize.className = 'modal-resize'
@@ -101,8 +105,6 @@ function newModal(title, content, width, id){
                 document.onmouseup = null;
                 document.onmousemove = null;
             }
-
-
         })
 
     mod_card.appendChild(resize)
@@ -180,7 +182,9 @@ function closeModal(id='all'){
         }catch{ null }
     }
     mod_main.style.display = (document.querySelectorAll('.modal-content').length < 1) ? "none" : 'block'
-    main_data.dashboard.up_page = ''
+    try{
+        main_data.dashboard.up_page = ''
+    }catch{null}
 }
 
 function queueModal(id){
@@ -194,7 +198,9 @@ function queueModal(id){
         pop_index > up_index ? pop[i].style.zIndex = pop_index -1 : null        
     }
     up.style.zIndex = max
-    main_data.dashboard.up_page = up.id
+    try{
+        main_data.dashboard.up_page = up.id
+    }catch{null}
 }
 
 function menuContext(tbl,e){

@@ -51,7 +51,9 @@
             <legend>Ítens</legend>
             <table id="tblItens"></table>
         </fieldset>
-
+        <div class="line">
+            <button id="btnCardapio">Cardápio</button>
+        </div>
     </div>
 
 </template>
@@ -97,6 +99,9 @@
 
     }
 
+    document.querySelector('#btnCardapio').addEventListener('click',()=>{
+        openHTML('cli_cardapio.html','pop-up','Cardápio Virtual')
+    })
 
 
 

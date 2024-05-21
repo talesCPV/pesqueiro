@@ -306,3 +306,35 @@
 21/05/2024 14:51 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Parametros, Acesso:[[0,2]])
 21/05/2024 15:32 dantas@flexibus.com.br : Insercao de novo usuarios, email:undefined -> teste@, acesso:undefined -> 3
 21/05/2024 15:35 admin@pesqueirodourado.com.br : Delecao de usuario, email:teste@ -> , acesso:3 -> 3
+21/05/2024 21:14 admin@pesqueirodourado.com.br : Produto Editado Pesque Pague - Pacu -> Pesque Pague - Pacu
+21/05/2024 21:14 admin@pesqueirodourado.com.br : Produto Editado Pesque Pague - Pacu -> Pesque Pague - Pacu
+21/05/2024 21:14 admin@pesqueirodourado.com.br : Produto Editado Pesque Pague - Pacu -> Pesque Pague - Pacu
+21/05/2024 21:18 admin@pesqueirodourado.com.br : Produto Editado isca de Salsicha -> isca de Salsicha
+21/05/2024 21:35 admin@pesqueirodourado.com.br : Produto Editado isca massinha potinho -> isca massinha potinho
+21/05/2024 21:35 admin@pesqueirodourado.com.br : Produto Editado isca super tamba furadinha -> isca super tamba furadinha
+21/05/2024 21:36 admin@pesqueirodourado.com.br : Produto Editado massa arte de pescar - isca- -> massa arte de pescar - isca-
+21/05/2024 21:36 admin@pesqueirodourado.com.br : Produto Editado Meia porcao -> Meia porcao
+21/05/2024 21:36 admin@pesqueirodourado.com.br : Produto Editado Meia porcao -> Meia porcao de Fritas
+21/05/2024 21:37 admin@pesqueirodourado.com.br : Produto Editado Meia porcao tilapia -> Meia porcao tilapia
+21/05/2024 21:37 admin@pesqueirodourado.com.br : Produto Editado Pesque Pague - Pacu (limpo) -> Pesque Pague - Pacu (limpo)
+21/05/2024 21:37 admin@pesqueirodourado.com.br : Produto Editado Pesque Pague - Tambaqui -> Pesque Pague - Tambaqui
+21/05/2024 21:38 admin@pesqueirodourado.com.br : Produto Editado Pesque Pague - Tambaqui (limpo) -> Pesque Pague - Tambaqui (limpo)
+21/05/2024 21:38 admin@pesqueirodourado.com.br : Produto Editado Pesque Pague - Tilapia -> Pesque Pague - Tilapia
+21/05/2024 21:38 admin@pesqueirodourado.com.br : Produto Editado Pesque Pague - Tilapia (Limpa) -> Pesque Pague - Tilapia (Limpa)
+21/05/2024 21:38 admin@pesqueirodourado.com.br : Produto Editado porcao de Calabresa -> porcao de Calabresa
+21/05/2024 21:38 admin@pesqueirodourado.com.br : Produto Editado Porcao de Camarao 200gr -> Porcao de Camarao 200gr
+21/05/2024 21:39 admin@pesqueirodourado.com.br : Produto Editado Porcao de fritas -> Porcao de fritas
+21/05/2024 21:39 admin@pesqueirodourado.com.br : Produto Editado porcao de Tilapia -> porcao de Tilapia
+21/05/2024 21:39 admin@pesqueirodourado.com.br : Produto Editado Porcao de Tilapia - File -> Porcao de Tilapia - File
+21/05/2024 21:40 admin@pesqueirodourado.com.br : Produto Editado Varas de pescar -> Varas de pescar
+21/05/2024 21:47 admin@pesqueirodourado.com.br : Menu Alterado (Caixa, cli_cardapio.html, pop-up, Cardapio Virtual)
+21/05/2024 21:48 admin@pesqueirodourado.com.br : Menu Incluido (Cardapio)
+21/05/2024 21:50 admin@pesqueirodourado.com.br : Menu Alterado (Cardapio, cli_cardapio.html, pop-up, Cardapio Virtual)
+21/05/2024 21:52 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Sistema, Acesso:[[0,1,2]])
+21/05/2024 21:52 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Cadastros, Acesso:[[0,1,2]])
+21/05/2024 21:52 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Financeiro, Acesso:[[0,2,4]])
+21/05/2024 21:52 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Administracao, Acesso:[[0,1,2]])
+21/05/2024 21:52 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Caixa, Acesso:[[0,1,2,3]])
+21/05/2024 21:52 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Parametros, Acesso:[[0,2]])
+21/05/2024 21:55 admin@pesqueirodourado.com.br : Produto Editado Agua sem gas -> Agua sem gas
+21/05/2024 21:56 admin@pesqueirodourado.com.br : Produto Editado Agua sem gas -> Agua sem gas

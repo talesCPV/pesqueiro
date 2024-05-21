@@ -60,6 +60,7 @@ CREATE TABLE tb_produto(
     markup double DEFAULT 0,
     local varchar(20),
     disp boolean DEFAULT 1,
+    tipo varchar(15) NOT NULL DEFAULT "BEBIDA",    
     UNIQUE KEY (descricao),
     FOREIGN KEY (id_emp) REFERENCES tb_empresa(id),
     PRIMARY KEY (id)
