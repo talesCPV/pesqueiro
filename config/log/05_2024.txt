@@ -50,46 +50,259 @@
 17/05/2024 15:05 admin@pesqueirodourado.com.br : Menu Alterado (Fluxo de Caixa, fin_fluxo.html, pop-up, Fluxo de Caixa)
 17/05/2024 20:24 admin@pesqueirodourado.com.br : COMPRA  :  Prod:CERVEJA BRAHMA 600ML, Qtd:5, Custo Unit..:12
 17/05/2024 20:26 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:14, Prod:3, Qtd.:2
-19/05/2024 13:55 admin@pesqueirodourado.com.br : Alteracao de usuario, email:silmara@pesqueirodourado.com.br -> silmara@pesqueirodourado.com.br, acesso:0 -> 3
-19/05/2024 13:59 admin@pesqueirodourado.com.br : Edicao de Cliente Nome: Alexandre Luis Vargas, CPF: 07132278851, Cel: 1291045456, Saldo: 0, Obs: 
-19/05/2024 14:00 admin@pesqueirodourado.com.br : Empresa Deletada -> teste
-19/05/2024 14:01 admin@pesqueirodourado.com.br : Empresa Deletada -> teste
-19/05/2024 14:05 admin@pesqueirodourado.com.br : Empresa Deletada -> teste
-19/05/2024 14:31 admin@pesqueirodourado.com.br : Produto Editado Cerveja Brahma 600ml -> Cerveja Brahma 600ml
-19/05/2024 15:00 admin@pesqueirodourado.com.br : Produto Cadastrado  -> Pesque Pag - Tilapia
-19/05/2024 15:01 admin@pesqueirodourado.com.br : Produto Cadastrado  -> Pesque Pag - Tilapia Limpa
-19/05/2024 15:02 admin@pesqueirodourado.com.br : Produto Cadastrado  -> Pesque Pague - Pacu
-19/05/2024 15:02 admin@pesqueirodourado.com.br : Produto Editado Pesque Pag - Tilapia -> Pesque Pague - Tilapia
-19/05/2024 15:02 admin@pesqueirodourado.com.br : Produto Editado Pesque Pag - Tilapia Limpa -> Pesque Pague - Tilapia Limpa
-19/05/2024 15:03 admin@pesqueirodourado.com.br : Produto Cadastrado  -> Pesque Pague - Pacu (limpo)
-19/05/2024 15:03 admin@pesqueirodourado.com.br : Produto Editado Pesque Pague - Pacu -> Pesque Pague - Pacu
-19/05/2024 15:03 admin@pesqueirodourado.com.br : Produto Editado Pesque Pague - Tilapia Limpa -> Pesque Pague - Tilapia Limpa
-19/05/2024 15:04 admin@pesqueirodourado.com.br : Produto Editado Pesque Pague - Tilapia Limpa -> Pesque Pague - Tilapia (Limpa)
-19/05/2024 15:05 admin@pesqueirodourado.com.br : Produto Cadastrado  -> Pesque Pague - Tambaqui
-19/05/2024 15:05 admin@pesqueirodourado.com.br : Produto Cadastrado  -> Pesque Pague - Tambaqui (limpo)
-19/05/2024 15:06 admin@pesqueirodourado.com.br : Produto Editado Pesque Pague - Pacu (limpo) -> Pesque Pague - Pacu (limpo)
-19/05/2024 15:06 admin@pesqueirodourado.com.br : Produto Editado Pesque Pague - Tambaqui -> Pesque Pague - Tambaqui
-19/05/2024 15:06 admin@pesqueirodourado.com.br : Produto Editado Pesque Pague - Tilapia -> Pesque Pague - Tilapia
-19/05/2024 15:06 admin@pesqueirodourado.com.br : Produto Editado Pesque Pague - Tilapia (Limpa) -> Pesque Pague - Tilapia (Limpa)
-19/05/2024 15:09 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:1, Prod:Pesque Pague - Pacu, Qtd.:3.5
-19/05/2024 15:09 admin@pesqueirodourado.com.br : Item Deletado -> Comanda:1, Prod:undefined, Qtd.:undefined
-19/05/2024 15:13 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:1, Prod:Pesque Pague - Tambaqui, Qtd.:3.5
-19/05/2024 15:13 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:1, Prod:Pesque Pague - Tilapia, Qtd.:6.87
-19/05/2024 15:14 admin@pesqueirodourado.com.br : Item Deletado -> Comanda:1, Prod:undefined, Qtd.:undefined
-19/05/2024 15:14 admin@pesqueirodourado.com.br : Item Deletado -> Comanda:1, Prod:undefined, Qtd.:undefined
-19/05/2024 16:30 dantas@flexibus.com.br : Alteracao de usuario, email:dantas@flexibus.com.br -> dantas@flexibus.com.br, acesso:2 -> 2
-19/05/2024 16:31  : Alteracao de usuario, email:admin@pesqueirodourado.com.br -> admin@pesqueirodourado.com.br, acesso:0 -> 0
-19/05/2024 22:58 admin@pesqueirodourado.com.br : Menu Incluido (Funcionarios)
-19/05/2024 22:59 admin@pesqueirodourado.com.br : Menu Alterado (Funcionarios, adm_funcionarios.html, pop-up, Funcionarios)
-19/05/2024 23:18 admin@pesqueirodourado.com.br : Funcionario Cadastrado  -> Roger Cembraneli Dantas
-19/05/2024 23:19 admin@pesqueirodourado.com.br : Funcionario Cadastrado  -> Roger
-19/05/2024 23:24 admin@pesqueirodourado.com.br : Funcionario Editado Roger -> Roger Cembraneli Dantas
-19/05/2024 23:25 admin@pesqueirodourado.com.br : Funcionario Editado Roger Cembraneli Dantas -> Roger Cembraneli Dantas
-19/05/2024 23:29 admin@pesqueirodourado.com.br : Funcionario Editado Roger Cembraneli Dantas -> Roger Cembraneli Dantas
-19/05/2024 23:30 admin@pesqueirodourado.com.br : Funcionario Editado Roger Cembraneli Dantas -> Roger Cembraneli Dantas
-19/05/2024 23:30 admin@pesqueirodourado.com.br : Funcionario Editado Roger Cembraneli Dantas -> Roger Cembraneli Dantas
-19/05/2024 23:35 admin@pesqueirodourado.com.br : Produto Editado Porcao de Tillapia - File -> Porcao de Tilapia - File
-20/05/2024 15:22 admin@pesqueirodourado.com.br : Menu Incluido (Pgto Funcionario)
-20/05/2024 15:24 admin@pesqueirodourado.com.br : Menu Alterado (Pgto Funcionario, fin_pag_func.html, pop-up, Pagamento de Funcionario)
-20/05/2024 15:25 admin@pesqueirodourado.com.br : Menu Alterado (Fluxo de Caixa, fin_fluxo.html, pop-up, Fluxo de Caixa)
-20/05/2024 15:46 admin@pesqueirodourado.com.br : Menu Alterado (Pgto Funcionario, fin_pag_func.html, pop-up, Pagamento de Funcionario)
+17/05/2024 15:47 admin@pesqueirodourado.com.br : Novo Cliente Nome: Tales Cembraneli Dantas, CPF: 26687200879, Cel: 12997113793, Saldo: 0, Obs: 
+17/05/2024 15:47 admin@pesqueirodourado.com.br : Nova Comanda -> Cliente:Tales Cembraneli Dantas, CPF:26687200879
+18/05/2024 06:35 roger@pesqueirodourado.com.br : Produto Cadastrado  -> Acai Guaraviton bebida de guarana
+18/05/2024 06:37 roger@pesqueirodourado.com.br : Produto Cadastrado  -> Suco Del Valle sabores uva e limao
+18/05/2024 06:40 roger@pesqueirodourado.com.br : Novo Cliente Nome: Roger Cembraneli Dantas, CPF: 07237386801, Cel: 12996225587, Saldo: 0, Obs: 
+18/05/2024 06:45 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Roger Cembraneli Dantas, CPF:07237386801
+18/05/2024 06:46 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:2, Prod:Acai Guaraviton bebida de guarana, Qtd.:null
+18/05/2024 07:08 roger@pesqueirodourado.com.br : Produto Cadastrado  -> cerveja Imperio puro Malte
+18/05/2024 07:10 roger@pesqueirodourado.com.br : Novo Cliente Nome: Silmara Aparecida OLiveira Santos, CPF: 44284407821, Cel: 12997610687, Saldo: 0, Obs: 
+18/05/2024 07:10 roger@pesqueirodourado.com.br : Edicao de Cliente Nome: Silmara Aparecida OLiveira Santos, CPF: 44284407821, Cel: 12997610687, Saldo: 0, Obs: 
+18/05/2024 07:13 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Silmara Aparecida OLiveira Santos, CPF:44284407821
+18/05/2024 10:52 roger@pesqueirodourado.com.br : Novo Cliente Nome: Igor henrique Delfino, CPF: 10063040611, Cel: 12996508010, Saldo: 0, Obs: 
+18/05/2024 10:53 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Igor henrique Delfino, CPF:10063040611
+18/05/2024 10:55 celso@pesqueirodourado.com.br : Item Adicionado -> Comanda:4, Prod:Cerveja Skol lata 350 ml, Qtd.:2
+18/05/2024 11:08 celso@pesqueirodourado.com.br : Item Adicionado -> Comanda:4, Prod:Acai Guaraviton bebida de guarana, Qtd.:4
+18/05/2024 11:08 celso@pesqueirodourado.com.br : Item Baixado -> Comanda:4, Prod:19, Qtd.:2
+18/05/2024 11:09 celso@pesqueirodourado.com.br : Item Deletado -> Comanda:4, Prod:undefined, Qtd.:undefined
+18/05/2024 11:09 celso@pesqueirodourado.com.br : Item Baixado -> Comanda:4, Prod:14, Qtd.:4
+18/05/2024 11:21 roger@pesqueirodourado.com.br : Insercao de novo usuarios, email:undefined -> adriana@pesqueirodourado.com.br, acesso:undefined -> 0
+18/05/2024 11:23 roger@pesqueirodourado.com.br : Alteracao de usuario, email:adriana@pesqueirodourado.com.br -> adriana@pesqueirodourado.com.br, acesso:0 -> 0
+18/05/2024 11:23 celso@pesqueirodourado.com.br : Item Adicionado -> Comanda:4, Prod:Coca Cola 350 ml lata, Qtd.:1
+18/05/2024 12:12 celso@pesqueirodourado.com.br : Item Baixado -> Comanda:4, Prod:14, Qtd.:6
+18/05/2024 12:37 roger@pesqueirodourado.com.br : Novo Cliente Nome: Marcilio Biancardi Costa, CPF: 08376888844, Cel: 11995435734, Saldo: 0, Obs: 
+18/05/2024 12:37 roger@pesqueirodourado.com.br : Edicao de Cliente Nome: Marcilio Biancardi Costa, CPF: 08376888844, Cel: 11995435734, Saldo: 0, Obs: 
+18/05/2024 12:40 roger@pesqueirodourado.com.br : Edicao de Cliente Nome: Marcilio Biancardi Costa, CPF: 08376888844, Cel: 11995435734, Saldo: 0, Obs: 
+18/05/2024 12:43 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Marcilio Biancardi Costa, CPF:08376888844
+18/05/2024 12:52 celso@pesqueirodourado.com.br : Item Adicionado -> Comanda:4, Prod:Cerveja Heineken, Qtd.:2
+18/05/2024 12:52 celso@pesqueirodourado.com.br : Item Adicionado -> Comanda:4, Prod:Agua sem gas, Qtd.:1
+18/05/2024 12:56 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:5, Prod:cerveja Imperio puro Malte, Qtd.:2
+18/05/2024 13:12 roger@pesqueirodourado.com.br : Produto Cadastrado  -> Coca Cola Â¨600 ml
+18/05/2024 13:16 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:5, Prod:Coca Cola Â¨600 ml, Qtd.:1
+18/05/2024 13:19 celso@pesqueirodourado.com.br : Item Adicionado -> Comanda:4, Prod:Porcao de fritas, Qtd.:1
+18/05/2024 13:21 celso@pesqueirodourado.com.br : Item Adicionado -> Comanda:4, Prod:cerveja Imperio puro Malte, Qtd.:2
+18/05/2024 13:22 roger@pesqueirodourado.com.br : Novo Cliente Nome: Alexandre Luis V argas, CPF: 07132278851, Cel: 1291045456, Saldo: 0, Obs: 
+18/05/2024 13:22 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Alexandre Luis V argas, CPF:07132278851
+18/05/2024 13:24 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:5, Prod:cerveja Imperio puro Malte, Qtd.:1
+18/05/2024 13:24 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:5, Prod:cerveja Imperio puro Malte, Qtd.:1
+18/05/2024 13:26 celso@pesqueirodourado.com.br : Item Adicionado -> Comanda:6, Prod:Coca Cola Â¨600 ml, Qtd.:2
+18/05/2024 13:26 celso@pesqueirodourado.com.br : Item Adicionado -> Comanda:6, Prod:porcao de Tilapia, Qtd.:1
+18/05/2024 13:46 roger@pesqueirodourado.com.br : Produto Cadastrado  -> Heineken pure malt Lager
+18/05/2024 13:48 roger@pesqueirodourado.com.br : Produto Cadastrado  -> Ice noch drink
+18/05/2024 13:54 celso@pesqueirodourado.com.br : Item Baixado -> Comanda:4, Prod:21, Qtd.:2
+18/05/2024 14:18 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:5, Prod:Agua sem gas, Qtd.:1
+18/05/2024 14:19 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:5, Prod:Porcao de fritas, Qtd.:1
+18/05/2024 14:28 admin@pesqueirodourado.com.br : Alteracao de usuario, email:adriana@pesqueirodourado.com.br -> adriana@pesqueirodourado.com.br, acesso:0 -> 1
+18/05/2024 14:29 admin@pesqueirodourado.com.br : Alteracao de usuario, email:adriana@pesqueirodourado.com.br -> adriana@pesqueirodourado.com.br, acesso:1 -> 3
+18/05/2024 14:48 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:5, Prod:Coca Cola Â¨600 ml, Qtd.:1
+18/05/2024 14:59 roger@pesqueirodourado.com.br : Novo Cliente Nome: Jacy Dantas, CPF: 21634505891, Cel: 12997198837, Saldo: 0, Obs: 
+18/05/2024 14:59 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Jacy Dantas, CPF:21634505891
+18/05/2024 15:02 roger@pesqueirodourado.com.br : Novo Cliente Nome: Alexandre afonso Abreu da Silva, CPF: 36808981850, Cel: 12974073352, Saldo: 0, Obs: 
+18/05/2024 15:02 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Alexandre afonso Abreu da Silva, CPF:36808981850
+18/05/2024 15:18 celso@pesqueirodourado.com.br : Item Adicionado -> Comanda:8, Prod:Coca Cola Â¨600 ml, Qtd.:1
+18/05/2024 15:42 celso@pesqueirodourado.com.br : Item Adicionado -> Comanda:3, Prod:Ice noch drink, Qtd.:3
+18/05/2024 15:44 celso@pesqueirodourado.com.br : Item Baixado -> Comanda:3, Prod:24, Qtd.:4
+18/05/2024 16:10 celso@pesqueirodourado.com.br : Item Adicionado -> Comanda:3, Prod:Ice noch drink, Qtd.:1
+18/05/2024 16:37 celso@pesqueirodourado.com.br : Item Adicionado -> Comanda:3, Prod:Ice noch drink, Qtd.:1
+18/05/2024 16:43 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:2, Prod:cerveja Imperio puro Malte, Qtd.:1
+18/05/2024 17:10 celso@pesqueirodourado.com.br : Item Adicionado -> Comanda:3, Prod:Ice noch drink, Qtd.:3
+18/05/2024 17:11 celso@pesqueirodourado.com.br : Item Adicionado -> Comanda:3, Prod:Cerfveja Budweiser lomng neck, Qtd.:3
+18/05/2024 17:11 celso@pesqueirodourado.com.br : Item Adicionado -> Comanda:3, Prod:Mini Coca cola 200ml sem acucar, Qtd.:4
+18/05/2024 18:51 celso@pesqueirodourado.com.br : Item Baixado -> Comanda:3, Prod:17, Qtd.:4
+18/05/2024 18:51 celso@pesqueirodourado.com.br : Item Baixado -> Comanda:3, Prod:24, Qtd.:5
+18/05/2024 21:29 admin@pesqueirodourado.com.br : Insercao de novo usuarios, email:undefined -> dantas@flexibus.com.br, acesso:undefined -> 2
+19/05/2024 08:47 roger@pesqueirodourado.com.br : Insercao de novo usuarios, email:undefined -> silmara@pesqueirodourado.com.br, acesso:undefined -> 0
+19/05/2024 08:53 roger@pesqueirodourado.com.br : Novo Cliente Nome: Antonio MArcos Pires, CPF: 27452680820, Cel: 12996737368, Saldo: 0, Obs: 
+19/05/2024 08:56 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Antonio MArcos Pires, CPF:27452680820
+19/05/2024 09:03 roger@pesqueirodourado.com.br : Produto Cadastrado  -> isca de Salsicha
+19/05/2024 09:03 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:9, Prod:isca de Salsicha, Qtd.:1
+19/05/2024 09:06 roger@pesqueirodourado.com.br : Produto Cadastrado  -> isca massinha potinho
+19/05/2024 09:07 roger@pesqueirodourado.com.br : Produto Cadastrado  -> massa arte de pescar - isca-
+19/05/2024 09:08 roger@pesqueirodourado.com.br : Produto Cadastrado  -> isca super tamba furadinha
+19/05/2024 09:24 roger@pesqueirodourado.com.br : Delecao de usuario, email:adriana@pesqueirodourado.com.br -> , acesso:3 -> 0
+19/05/2024 09:38 admin@pesqueirodourado.com.br : Produto Editado Cerveja Brahma 600ml -> Cerveja Brahma 600ml
+19/05/2024 09:39 admin@pesqueirodourado.com.br : Produto Editado Cerveja Brahma 600ml -> Cerveja Brahma 600ml
+19/05/2024 09:42 roger@pesqueirodourado.com.br : Novo Cliente Nome: Claudio Roberto Moreira, CPF: 34631675810, Cel: 12988374076, Saldo: 0, Obs: 
+19/05/2024 09:43 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Claudio Roberto Moreira, CPF:34631675810
+19/05/2024 09:44 roger@pesqueirodourado.com.br : Produto Cadastrado  -> Varas de pescar
+19/05/2024 09:46 celso@pesqueirodourado.com.br : Item Adicionado -> Comanda:10, Prod:Varas de pescar, Qtd.:5
+19/05/2024 09:52 roger@pesqueirodourado.com.br : Novo Cliente Nome: Cintia Nogueira, CPF: 2765566489, Cel: 12997065197, Saldo: 0, Obs: 
+19/05/2024 09:54 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Cintia Nogueira, CPF:2765566489
+19/05/2024 10:14 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:11, Prod:Cerveja Brahma 350ml duplo malte, Qtd.:1
+19/05/2024 10:14 dantas@flexibus.com.br : Item Adicionado -> Comanda:1, Prod:Pesque Pague - Tambaqui, Qtd.:3.4
+19/05/2024 10:15 dantas@flexibus.com.br : Item Deletado -> Comanda:1, Prod:undefined, Qtd.:undefined
+19/05/2024 10:15 roger@pesqueirodourado.com.br : Novo Cliente Nome: Nelson Silva, CPF: 05179326877, Cel: 12992488692, Saldo: 0, Obs: 
+19/05/2024 10:15 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Nelson Silva, CPF:05179326877
+19/05/2024 10:18 roger@pesqueirodourado.com.br : Produto Cadastrado  -> Cerveja Budweiser 350 ml
+19/05/2024 10:19 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:12, Prod:Cerveja Budweiser 350 ml, Qtd.:1
+19/05/2024 10:20 roger@pesqueirodourado.com.br : Produto Cadastrado  -> Meia porcao
+19/05/2024 10:20 roger@pesqueirodourado.com.br : Produto Cadastrado  -> Meia porcao tilapia
+19/05/2024 10:35 silmara@pesqueirodourado.com.br : Item Baixado -> Comanda:11, Prod:15, Qtd.:2
+19/05/2024 10:58 roger@pesqueirodourado.com.br : Produto Cadastrado  -> cerveja Imperio 600ml
+19/05/2024 10:58 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:12, Prod:cerveja Imperio 600ml, Qtd.:1
+19/05/2024 11:06 roger@pesqueirodourado.com.br : Novo Cliente Nome: Mauricio dos Santos Lima, CPF: 42762266866, Cel: 12996817550, Saldo: 0, Obs: 
+19/05/2024 11:06 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Mauricio dos Santos Lima, CPF:42762266866
+19/05/2024 11:07 roger@pesqueirodourado.com.br : Novo Cliente Nome: Grasiele dos Santos, CPF: 37635583816, Cel: 12997052610, Saldo: 0, Obs: 
+19/05/2024 11:08 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Grasiele dos Santos, CPF:37635583816
+19/05/2024 11:10 roger@pesqueirodourado.com.br : Novo Cliente Nome: Mauro Augusto de Lima, CPF: 60583321844, Cel: 12997589068, Saldo: 0, Obs: 
+19/05/2024 11:11 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Mauro Augusto de Lima, CPF:60583321844
+19/05/2024 11:14 silmara@pesqueirodourado.com.br : Item Baixado -> Comanda:10, Prod:29, Qtd.:5
+19/05/2024 11:18 roger@pesqueirodourado.com.br : Produto Cadastrado  -> Cerveja Brahma lata 350 ml
+19/05/2024 11:19 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:10, Prod:Cerveja Brahma lata 350 ml, Qtd.:1
+19/05/2024 11:19 celso@pesqueirodourado.com.br : Item Adicionado -> Comanda:9, Prod:isca de Salsicha, Qtd.:1
+19/05/2024 11:19 celso@pesqueirodourado.com.br : Item Adicionado -> Comanda:9, Prod:Mini Coca cola 200ml c acucar, Qtd.:1
+19/05/2024 11:20 admin@pesqueirodourado.com.br : Edicao de Cliente Nome: Alexandre Luis Vargas, CPF: 07132278851, Cel: 12991045456, Saldo: 0, Obs: 
+19/05/2024 11:27 dantas@flexibus.com.br : Alteracao de usuario, email:admin@pesqueirodourado.com.br -> admin@pesqueirodourado.com.br, acesso:0 -> 0
+19/05/2024 11:28 dantas@flexibus.com.br : Alteracao de usuario, email:admin@pesqueirodourado.com.br -> admin@pesqueirodourado.com.br, acesso:0 -> 0
+19/05/2024 11:32 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:11, Prod:cerveja Imperio 600ml, Qtd.:1
+19/05/2024 11:34 roger@pesqueirodourado.com.br : Novo Cliente Nome: Jose donizetti, CPF: 157459828, Cel: 12997517496, Saldo: 0, Obs: 
+19/05/2024 11:35 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Jose donizetti, CPF:157459828
+19/05/2024 11:39 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:16, Prod:Heineken pure malt Lager, Qtd.:2
+19/05/2024 11:42 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:16, Prod:Varas de pescar, Qtd.:2
+19/05/2024 11:42 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:16, Prod:isca massinha potinho, Qtd.:1
+19/05/2024 11:43 roger@pesqueirodourado.com.br : Novo Cliente Nome: Wellington Orlando Nogueira, CPF: 10702502871, Cel: 12997735541, Saldo: 0, Obs: 
+19/05/2024 11:43 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Wellington Orlando Nogueira, CPF:10702502871
+19/05/2024 11:45 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:17, Prod:Porcao de fritas, Qtd.:1
+19/05/2024 11:45 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:17, Prod:Porcao de Tillapia - File, Qtd.:1
+19/05/2024 11:46 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:17, Prod:isca massinha potinho, Qtd.:1
+19/05/2024 11:46 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:17, Prod:Acai Guaraviton bebida de guarana, Qtd.:1
+19/05/2024 11:47 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:17, Prod:Varas de pescar, Qtd.:2
+19/05/2024 11:48 roger@pesqueirodourado.com.br : Produto Cadastrado  -> Suco Dell Vale
+19/05/2024 11:48 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:17, Prod:Suco Dell Vale, Qtd.:1
+19/05/2024 11:55 roger@pesqueirodourado.com.br : Produto Cadastrado  -> sambura
+19/05/2024 11:56 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:16, Prod:sambura, Qtd.:1
+19/05/2024 12:00 roger@pesqueirodourado.com.br : Novo Cliente Nome: Gabriel de Oliveira, CPF: 42484428847, Cel: 12974042070, Saldo: 0, Obs: 
+19/05/2024 12:00 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Gabriel de Oliveira, CPF:42484428847
+19/05/2024 12:04 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:18, Prod:cerveja Imperio 600ml, Qtd.:1
+19/05/2024 12:08 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:16, Prod:Heineken pure malt Lager, Qtd.:3
+19/05/2024 12:09 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:16, Prod:Porcao de Tillapia - File, Qtd.:1
+19/05/2024 12:10 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:18, Prod:Meia porcao, Qtd.:2
+19/05/2024 12:10 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:11, Prod:cerveja Imperio 600ml, Qtd.:2
+19/05/2024 12:23 roger@pesqueirodourado.com.br : Item Deletado -> Comanda:11, Prod:undefined, Qtd.:undefined
+19/05/2024 12:23 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:11, Prod:Cerveja Brahma lata 350 ml, Qtd.:1
+19/05/2024 12:25 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:12, Prod:cerveja Imperio 600ml, Qtd.:2
+19/05/2024 12:25 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:12, Prod:cerveja Imperio 600ml, Qtd.:1
+19/05/2024 12:29 roger@pesqueirodourado.com.br : Item Deletado -> Comanda:11, Prod:undefined, Qtd.:undefined
+19/05/2024 12:30 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:18, Prod:cerveja Imperio 600ml, Qtd.:2
+19/05/2024 12:30 roger@pesqueirodourado.com.br : Novo Cliente Nome: Cristiane Aparecida de Oliveira, CPF: 28166242850, Cel: 12981827921, Saldo: 0, Obs: 
+19/05/2024 12:31 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Cristiane Aparecida de Oliveira, CPF:28166242850
+19/05/2024 12:32 roger@pesqueirodourado.com.br : Novo Cliente Nome: Maraisa Aparecida Pereira, CPF: 03103061676, Cel: 12996314116, Saldo: 0, Obs: 
+19/05/2024 12:33 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:19, Prod:Varas de pescar, Qtd.:1
+19/05/2024 12:33 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Maraisa Aparecida Pereira, CPF:03103061676
+19/05/2024 12:34 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:17, Prod:Suco Dell Vale, Qtd.:2
+19/05/2024 12:37 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:20, Prod:cerveja Imperio 600ml, Qtd.:1
+19/05/2024 12:38 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:15, Prod:Mini Coca cola 200ml c acucar, Qtd.:3
+19/05/2024 12:38 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:15, Prod:Porcao de fritas, Qtd.:1
+19/05/2024 12:41 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:17, Prod:Acai Guaraviton bebida de guarana, Qtd.:2
+19/05/2024 12:41 roger@pesqueirodourado.com.br : Produto Cadastrado  -> guarana lata 350ml
+19/05/2024 12:41 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:15, Prod:guarana lata 350ml, Qtd.:1
+19/05/2024 12:48 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:19, Prod:sambura, Qtd.:1
+19/05/2024 12:49 roger@pesqueirodourado.com.br : Venda lancada -> Comanda:11, Valor:38.00
+19/05/2024 12:51 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:15, Prod:isca massinha potinho, Qtd.:1
+19/05/2024 12:54 roger@pesqueirodourado.com.br : Venda lancada -> Comanda:9, Valor:8.50
+19/05/2024 12:55 roger@pesqueirodourado.com.br : Produto Cadastrado  -> pinga de garrafa
+19/05/2024 12:57 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:16, Prod:pinga de garrafa, Qtd.:1
+19/05/2024 12:59 roger@pesqueirodourado.com.br : Venda lancada -> Comanda:16, Valor:146.00
+19/05/2024 13:01 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:18, Prod:Meia porcao tilapia, Qtd.:1
+19/05/2024 13:06 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:14, Prod:Coca Cola Â¨600 ml, Qtd.:1
+19/05/2024 13:06 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:14, Prod:sambura, Qtd.:1
+19/05/2024 13:15 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:15, Prod:Coca Cola Â¨600 ml, Qtd.:1
+19/05/2024 13:20 roger@pesqueirodourado.com.br : Novo Cliente Nome: Lusilvano goncalves, CPF: 35297693802, Cel: 12997006573, Saldo: 0, Obs: 
+19/05/2024 13:20 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Lusilvano goncalves, CPF:35297693802
+19/05/2024 13:25 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:15, Prod:sambura, Qtd.:1
+19/05/2024 13:27 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:21, Prod:Acai Guaraviton bebida de guarana, Qtd.:1
+19/05/2024 13:28 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:21, Prod:Cerveja Heineken, Qtd.:1
+19/05/2024 13:29 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:21, Prod:Meia porcao tilapia, Qtd.:1
+19/05/2024 13:41 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:21, Prod:Porcao de Camarao 200gr, Qtd.:1
+19/05/2024 13:42 roger@pesqueirodourado.com.br : Novo Cliente Nome: Wellington Junior, CPF: 43109777827, Cel: 12997877374, Saldo: 0, Obs: 
+19/05/2024 13:43 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:13, Prod:Agua sem gas, Qtd.:1
+19/05/2024 13:43 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:13, Prod:sambura, Qtd.:1
+19/05/2024 13:43 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Wellington Junior, CPF:43109777827
+19/05/2024 13:47 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:22, Prod:Acai Guaraviton bebida de guarana, Qtd.:2
+19/05/2024 13:48 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:22, Prod:Varas de pescar, Qtd.:2
+19/05/2024 13:48 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:22, Prod:isca massinha potinho, Qtd.:1
+19/05/2024 13:48 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:22, Prod:Porcao de Tillapia - File, Qtd.:1
+19/05/2024 14:05 roger@pesqueirodourado.com.br : Novo Cliente Nome: Fernando Ferreira da Silva, CPF: 31443193844, Cel: 12996162750, Saldo: 0, Obs: 
+19/05/2024 14:06 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Fernando Ferreira da Silva, CPF:31443193844
+19/05/2024 14:15 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:19, Prod:Agua sem gas, Qtd.:1
+19/05/2024 14:16 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:23, Prod:Porcao de Tillapia - File, Qtd.:1
+19/05/2024 14:17 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:23, Prod:guarana lata 350ml, Qtd.:2
+19/05/2024 14:17 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:21, Prod:Porcao de Tillapia - File, Qtd.:1
+19/05/2024 14:18 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:21, Prod:cerveja Imperio puro Malte, Qtd.:3
+19/05/2024 14:18 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:21, Prod:Agua com gas, Qtd.:1
+19/05/2024 14:23 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:21, Prod:Porcao de fritas, Qtd.:1
+19/05/2024 14:30 roger@pesqueirodourado.com.br : Novo Cliente Nome: Maria de Jesus Souza, CPF: 22446617840, Cel: 12996348992, Saldo: 0, Obs: 
+19/05/2024 14:30 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Maria de Jesus Souza, CPF:22446617840
+19/05/2024 14:33 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:21, Prod:isca massinha potinho, Qtd.:1
+19/05/2024 14:34 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:24, Prod:Meia porcao tilapia, Qtd.:1
+19/05/2024 14:35 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:24, Prod:Meia porcao, Qtd.:2
+19/05/2024 14:35 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:24, Prod:Coca Cola 350 ml lata, Qtd.:2
+19/05/2024 14:37 celso@pesqueirodourado.com.br : Item Adicionado -> Comanda:15, Prod:Agua sem gas, Qtd.:1
+19/05/2024 14:37 celso@pesqueirodourado.com.br : Item Adicionado -> Comanda:13, Prod:Agua sem gas, Qtd.:1
+19/05/2024 14:39 celso@pesqueirodourado.com.br : Item Adicionado -> Comanda:21, Prod:Coca Cola 350 ml lata, Qtd.:2
+19/05/2024 14:40 celso@pesqueirodourado.com.br : Item Adicionado -> Comanda:22, Prod:Porcao de fritas, Qtd.:1
+19/05/2024 14:44 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:21, Prod:Coca Cola 350 ml lata, Qtd.:1
+19/05/2024 14:45 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:21, Prod:cerveja Imperio 600ml, Qtd.:5
+19/05/2024 14:52 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:23, Prod:Coca Cola 350 ml lata, Qtd.:2
+19/05/2024 14:52 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:23, Prod:guarana lata 350ml, Qtd.:2
+19/05/2024 14:53 celso@pesqueirodourado.com.br : Item Adicionado -> Comanda:17, Prod:Coca Cola 350 ml lata, Qtd.:1
+19/05/2024 14:54 silmara@pesqueirodourado.com.br : Item Deletado -> Comanda:21, Prod:undefined, Qtd.:undefined
+19/05/2024 14:54 celso@pesqueirodourado.com.br : Item Alterado -> Comanda:17, Prod:Acai Guaraviton bebida de guarana, Qtd.:1
+19/05/2024 15:00 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:21, Prod:Cerveja Heineken, Qtd.:5
+19/05/2024 15:05 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:24, Prod:Coca Cola 350 ml lata, Qtd.:3
+19/05/2024 15:09 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:21, Prod:isca de Salsicha, Qtd.:1
+19/05/2024 15:22 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:2, Prod:cerveja Imperio puro Malte, Qtd.:1
+19/05/2024 15:23 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:7, Prod:pinga de garrafa, Qtd.:1
+19/05/2024 15:24 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:7, Prod:Agua sem gas, Qtd.:1
+19/05/2024 15:26 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:13, Prod:Meia porcao, Qtd.:2
+19/05/2024 15:29 roger@pesqueirodourado.com.br : Novo Cliente Nome: Silvano Siqueira Barbosa, CPF: 31940606861, Cel: 12996476268, Saldo: 0, Obs: 
+19/05/2024 15:29 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Silvano Siqueira Barbosa, CPF:31940606861
+19/05/2024 15:31 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:25, Prod:Cerveja Brahma lata 350 ml, Qtd.:2
+19/05/2024 15:31 silmara@pesqueirodourado.com.br : Item Deletado -> Comanda:25, Prod:Cerveja Brahma lata 350 ml, Qtd.:2
+19/05/2024 15:31 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:25, Prod:Cerveja Skol lata 350 ml, Qtd.:2
+19/05/2024 15:40 celso@pesqueirodourado.com.br : Item Adicionado -> Comanda:13, Prod:Suco Dell Vale, Qtd.:1
+19/05/2024 15:43 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:15, Prod:Suco Dell Vale, Qtd.:1
+19/05/2024 16:04 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:21, Prod:Agua sem gas, Qtd.:1
+19/05/2024 16:10 roger@pesqueirodourado.com.br : Produto Editado Pesque Pague - Pacu (limpo) -> Pesque Pague - Pacu (limpo)
+19/05/2024 16:14 roger@pesqueirodourado.com.br : Novo Cliente Nome: Marcio Luis tadakuma, CPF: 37676383803, Cel: 12997688740, Saldo: 0, Obs: 
+19/05/2024 16:15 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Marcio Luis tadakuma, CPF:37676383803
+19/05/2024 16:17 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:26, Prod:Pesque Pague - Pacu (limpo), Qtd.:1
+19/05/2024 16:41 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:15, Prod:Pesque Pague - Tambaqui, Qtd.:5,3
+19/05/2024 16:41 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:15, Prod:Pesque Pague - Tilapia, Qtd.:2,2
+19/05/2024 16:44 roger@pesqueirodourado.com.br : Venda lancada -> Comanda:15, Valor:258.50
+19/05/2024 16:49 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:13, Prod:Pesque Pague - Tilapia, Qtd.:0,490
+19/05/2024 17:04 roger@pesqueirodourado.com.br : Novo Cliente Nome: Luiz Carlos Zanin, CPF: 28544726836, Cel: 12981229833, Saldo: 0, Obs: 
+19/05/2024 17:05 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Luiz Carlos Zanin, CPF:28544726836
+19/05/2024 17:06 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:27, Prod:Cerveja Brahma lata 350 ml, Qtd.:2
+19/05/2024 21:14 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:16, Prod:Cerveja Brahma 600ml, Qtd.:3
+19/05/2024 21:19 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:1, Prod:Cerveja Skol lata 350 ml, Qtd.:1
+19/05/2024 21:19 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:1, Prod:Cerveja Skol lata 350 ml, Qtd.:2
+19/05/2024 21:19 admin@pesqueirodourado.com.br : Item Deletado -> Comanda:1, Prod:Cerveja Skol lata 350 ml, Qtd.:2
+19/05/2024 21:20 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:1, Prod:Agua com gas, Qtd.:1
+19/05/2024 21:20 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:1, Prod:Agua com gas, Qtd.:2
+19/05/2024 21:21 admin@pesqueirodourado.com.br : Item Deletado -> Comanda:1, Prod:Agua com gas, Qtd.:2
+21/05/2024 14:45 admin@pesqueirodourado.com.br : Pagamento a Funcionario Roger Cembraneli Dantas, valor:500.00, Modo.:PIX
+21/05/2024 14:46 admin@pesqueirodourado.com.br : Fluxo de Caixa EDITADO: Pgto Funcionario (Roger Cembraneli Dantas) 2, valor:300, Modo.:DIN, Fluxo:SAIDA
+21/05/2024 14:46 admin@pesqueirodourado.com.br : Fluxo de Caixa DELETADO: Pgto Funcionario (Roger Cembraneli Dantas) 2, valor:300, Modo.:DIN, Fluxo:SAIDA
+21/05/2024 14:50 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Parametros, Acesso:[[0,2]])
+21/05/2024 14:50 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Sistema, Acesso:[[0,1,2]])
+21/05/2024 14:50 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Cadastros, Acesso:[[0,1,2]])
+21/05/2024 14:50 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Administracao, Acesso:[[0,1,2]])
+21/05/2024 14:50 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Caixa, Acesso:[[0,1,2,3]])
+21/05/2024 14:50 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Financeiro, Acesso:[[0,2]])
+21/05/2024 14:51 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Sistema, Acesso:[[0,1,2]])
+21/05/2024 14:51 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Cadastros, Acesso:[[0,1,2]])
+21/05/2024 14:51 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Parametros, Acesso:[[0,2]])
+21/05/2024 14:51 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Administracao, Acesso:[[0,1,2]])
+21/05/2024 14:51 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Financeiro, Acesso:[[0,2]])
+21/05/2024 14:51 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Caixa, Acesso:[[0,1,2,3]])
+21/05/2024 14:51 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Sistema, Acesso:[[0,1,2]])
+21/05/2024 14:51 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Administracao, Acesso:[[0,1,2]])
+21/05/2024 14:51 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Caixa, Acesso:[[0,1,2,3]])
+21/05/2024 14:51 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Cadastros, Acesso:[[0,1,2]])
+21/05/2024 14:51 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Financeiro, Acesso:[[0,2,4]])
+21/05/2024 14:51 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Parametros, Acesso:[[0,2]])
+21/05/2024 15:32 dantas@flexibus.com.br : Insercao de novo usuarios, email:undefined -> teste@, acesso:undefined -> 3
+21/05/2024 15:35 admin@pesqueirodourado.com.br : Delecao de usuario, email:teste@ -> , acesso:3 -> 3

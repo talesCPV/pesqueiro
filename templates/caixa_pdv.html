@@ -191,7 +191,7 @@
             params.valor_pgto = meu_troco
         const myPromisse = queryDB(params,'CXA-7');
         myPromisse.then((resolve)=>{
-            setLog(`Venda lançada -> Comanda:${params.id_comanda}, Valor:${params.valor_pgto}`)
+            setLog(`Venda lançada -> Comanda:${params.id_comanda}, Valor:${params.valor_pgto}, Modo:${params.modo_pgto}`)
             pageFunc.clear()
         })
     }

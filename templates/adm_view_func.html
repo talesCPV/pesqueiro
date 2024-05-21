@@ -196,10 +196,10 @@
             pageScreen.querySelector('#edtObs').value = pageData.obs
             pageScreen.querySelector('#btnEdit').disabled = 0
 
-            const back = backFunc({'filename':`../assets/func/${pageData.id}/foto.jpg`},1)
+            const back = backFunc({'filename':`../config/func/${pageData.id}/foto.jpg`},1)
             back.then((resp)=>{
                 const imgExist = JSON.parse(resp)    
-                loadImg(imgExist ? `assets/func/${pageData.id}/foto.jpg` : 'assets/func/noimage.png')
+                loadImg(imgExist ? `config/func/${pageData.id}/foto.jpg` : 'config/user/noimage.png')
             })
         }
     }
@@ -241,7 +241,7 @@
 
     pageScreen.querySelector('#up_file').addEventListener('change',()=>{        
         showFile()
-        const up = uploadImage('up_file',`assets/func/${pageData.id}/`,'foto')
+        const up = uploadImage('up_file',`config/func/${pageData.id}/`,'foto.jpg')
 /*
         up.then((resp)=>{
         })

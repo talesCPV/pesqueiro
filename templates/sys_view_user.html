@@ -83,6 +83,7 @@
         
         if(pageData.access == '0' && localStorage.getItem('access') != '0'){
             alert('Você não tem autorização para editar o usuário ROOT do sistema!')
+            setLog(`Tentativa de Editar o usuário ROOT!`)                
         }else{
             const myPromisse = queryDB(params,'USR-1');
             myPromisse.then((resolve)=>{
@@ -146,6 +147,7 @@
     pageScreen.querySelector('#btnDelUser').addEventListener('click',()=>{
         if(pageData.access == '0'){
             alert('Você não pode deletar o usuário ROOT!')
+            setLog(`Tentativa de Deletar o usuário ROOT!`)                
         }else if(confirm(`Deseja deletar o usuário ${pageData.email}?`)){
             const id = parseInt(pageData.id)
             pageFunc.setUser(id,'')
