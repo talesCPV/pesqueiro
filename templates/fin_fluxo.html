@@ -29,24 +29,38 @@
 
     pageFunc.fillFluxo = ()=>{
         const params = new Object;
-                params.dt_in = pageScreen.querySelector('#edtDtIni').value
-                params.dt_out = pageScreen.querySelector('#edtDtFin').value
-            
-            const myPromisse = queryDB(params,'FIN-1');
-            myPromisse.then((resolve)=>{
-                const json = JSON.parse(resolve)
-                const tbl = pageScreen.querySelector('#tblFluxo')
-                tbl.head('Data,Descrição,Espécie,Fluxo,Valor')
-                const total = [0,0]
-                for(i=0; i<json.length; i++){
-                    tbl.plot(json[i],'data,descricao,modo,entrada,valor','dat,Upp,Upp,cha 1=RECEB. 0=PGTO,R$.')
+            params.dt_in = pageScreen.querySelector('#edtDtIni').value
+            params.dt_out = pageScreen.querySelector('#edtDtFin').value
+        
+        const myPromisse = queryDB(params,'FIN-1');
+        myPromisse.then((resolve)=>{
+            const json = JSON.parse(resolve)
+            const tbl = pageScreen.querySelector('#tblFluxo')
+            tbl.head('Data,Descrição,Espécie,Fluxo,Valor')
+            const total = [0,0]
+            const soma = new Object
+            for(i=0; i<json.length; i++){
+                tbl.plot(json[i],'data,descricao,modo,entrada,valor','dat,Upp,Upp,cha 1=RECEB. 0=PGTO,R$.')
+
+                soma[json[i].modo] = soma[json[i].modo] == undefined ? 0 : soma[json[i].modo]
+                soma[json[i].modo] += (json[i].entrada == '1' ? 1 : -1) * parseFloat(json[i].valor)
+
+                if(json[i].modo != 'CRT'){
                     total[parseInt(json[i].entrada)]+= parseFloat(json[i].valor)
                 }
-                const tr =  document.createElement('tr')
-                tr.innerHTML = `<th colspan="3"></th><th>Total</th><th>R$${(total[1]-total[0]).toFixed(2)}</th>`
-                tbl.appendChild(tr)
-            })  
 
+            }
+
+            const tr =  document.createElement('tr')
+            tr.innerHTML = `<th colspan="3"></th><th>Total</th><th>R$${(total[1]-total[0]).toFixed(2)}</th>`
+            tbl.appendChild(tr)
+            Object.keys(soma).forEach(function(key) {
+                const especie = {"DIN":"Dinheiro","PIX":"Pix","DEB":"Cartão de Débito","CRD":"Cartão de Crédito","CHK":"Cheque","VRF":"Vale Refeição","SLD":"Saldo do Cliente","CRT":"Cortesia","PGT":"Pagamento"}
+                const tr =  document.createElement('tr')
+                tr.innerHTML = `<th colspan="3"></th><th>${especie[key]}</th><th>R$${soma[key] <0 ? '('+Math.abs(soma[key].toFixed(2))+')' : soma[key].toFixed(2)}</th>`
+                tbl.appendChild(tr)
+            })
+        })  
     }
 
     pageScreen.querySelector('#btnBusca').addEventListener('click',()=>{
@@ -55,7 +69,9 @@
 
     pageScreen.querySelector('#tblFluxo').addEventListener('click',(e)=>{
         const data = e.target.parentNode.data        
-        openHTML('fin_view_fluxo.html','pop-up','Edição de Pgto',data,600)
+        if(data != undefined){
+            openHTML('fin_view_fluxo.html','pop-up','Edição de Pgto',data,600)
+        }
     })
 
 

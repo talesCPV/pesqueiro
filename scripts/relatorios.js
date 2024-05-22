@@ -73,7 +73,6 @@ function cardapio(data){
         tables[tables.length-1].body.push(row)
     }
 
-console.log(tables)
 
     for(let i=0; i<tables.length; i++){
 
@@ -90,10 +89,8 @@ console.log(tables)
             startY: txt.y
         });
 
-        txt.y = doc.lastAutoTable.finalY + 20
+        txt.y = doc.lastAutoTable.finalY + 15
     }
-
-
 
     doc.save('cardapio.pdf')
   

@@ -338,3 +338,22 @@
 21/05/2024 21:52 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Parametros, Acesso:[[0,2]])
 21/05/2024 21:55 admin@pesqueirodourado.com.br : Produto Editado Agua sem gas -> Agua sem gas
 21/05/2024 21:56 admin@pesqueirodourado.com.br : Produto Editado Agua sem gas -> Agua sem gas
+22/05/2024 20:35 admin@pesqueirodourado.com.br : Produto Editado porcao de Calabresa -> Porcao de Calabresa
+22/05/2024 20:36 admin@pesqueirodourado.com.br : Produto Editado porcao de Tilapia -> Porcao de Tilapia
+22/05/2024 20:37 admin@pesqueirodourado.com.br : Produto Editado Meia porcao de Fritas -> Porcao de Fritas (1/2)
+22/05/2024 20:38 admin@pesqueirodourado.com.br : Produto Editado Meia porcao tilapia -> Porcao de Tilapia (1/2)
+22/05/2024 20:39 admin@pesqueirodourado.com.br : Produto Editado Porcao de Camarao 200gr -> Porcao de Camarao (200gr)
+22/05/2024 20:39 admin@pesqueirodourado.com.br : Produto Editado isca de Salsicha -> Isca de Salsicha
+22/05/2024 20:40 admin@pesqueirodourado.com.br : Produto Editado isca massinha potinho -> Isca Massinha (potinho)
+22/05/2024 20:40 admin@pesqueirodourado.com.br : Produto Editado isca super tamba furadinha -> Isca Super Tamba Furadinha
+22/05/2024 20:41 admin@pesqueirodourado.com.br : Produto Editado massa arte de pescar - isca- -> Isca - Massa Arte de Pescar
+22/05/2024 20:42 admin@pesqueirodourado.com.br : Produto Editado cerveja Imperio puro Malte -> Cerveja Imperio Puro Malte
+22/05/2024 20:42 admin@pesqueirodourado.com.br : Produto Editado Porcao de fritas -> Porcao de Fritas
+22/05/2024 20:44 admin@pesqueirodourado.com.br : Produto Editado Cerfveja Budweiser lomng neck -> Cerveja Budweiser long neck
+22/05/2024 20:46 admin@pesqueirodourado.com.br : Produto Editado Ice noch drink -> Ice Noch Drink
+22/05/2024 20:47 admin@pesqueirodourado.com.br : Produto Editado Coca Cola Â¨600 ml -> Coca Cola 600 ml
+22/05/2024 20:48 admin@pesqueirodourado.com.br : Produto Editado Heineken pure malt Lager600 ml -> Heineken Pro Malte Lager 600 ml
+22/05/2024 20:48 admin@pesqueirodourado.com.br : Produto Editado Mini Coca cola 200ml c acucar -> Mini Coca Cola 200ml c/ acucar
+22/05/2024 20:49 admin@pesqueirodourado.com.br : Produto Editado Mini Coca cola 200ml sem acucar -> Mini Coca Cola 200ml sem acucar
+22/05/2024 21:30 admin@pesqueirodourado.com.br : Fluxo de Caixa EDITADO: Lancamento comanda 4, valor:96, Modo.:CRT, Fluxo:ENTRADA
+22/05/2024 21:30 admin@pesqueirodourado.com.br : Fluxo de Caixa EDITADO: Lancamento comanda 4, valor:96, Modo.:DIN, Fluxo:ENTRADA
