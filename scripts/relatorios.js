@@ -38,7 +38,11 @@ function comanda_virual(comanda){
     doc.save('comanda_virtual.pdf')
 }
 
-function cardapio(){
+function cardapio(data){
+
+    jsPDF.autoTableSetDefaults({
+        headStyles: { fillColor: [37, 68, 65] },
+    })
 
     const doc = new jsPDF() 
 
@@ -53,8 +57,44 @@ function cardapio(){
     doc.text('CARDÁPIO',85,txt.y)
     addLine(2)
 
+    let title = ''
+    const tables = []
+
+    for(let i=0; i<data.length; i++){
+        if(title != data[i].tipo){
+            title = data[i].tipo
+            const tbl = new Object
+            tbl.head = [[{content: title, colSpan: 3, styles: {halign: 'center', fillColor: [22, 160, 133]}}]]
+            tbl.body = []
+            tables.push(tbl)
+        }
+        const row = [data[i].descricao,'R$'+data[i].preco]
+
+        tables[tables.length-1].body.push(row)
+    }
+
+console.log(tables)
+
+    for(let i=0; i<tables.length; i++){
+
+        doc.autoTable({
+            head: tables[i].head,
+            body: tables[i].body,
+    
+            columnStyles: {
+                0: {cellWidth: 50},
+                1: {cellWidth: 10, hAling:'rigth' }
+            },
+            
+            styles :{fontSize: 15},
+            startY: txt.y
+        });
+
+        txt.y = doc.lastAutoTable.finalY + 20
+    }
 
 
 
     doc.save('cardapio.pdf')
+  
 }

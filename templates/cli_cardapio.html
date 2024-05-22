@@ -2,12 +2,31 @@
     <style>
         .title{
             text-align: center;
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+
+        .preco{
             font-size: 1.5em;
+            font-weight: bold;
         }
      
+        .desc{
+            font-size: 1.2em;
+        }
+
+        #btnPrint{
+            display: none;
+            font-size: 2em;
+            width: 60px;
+            height: 60px;
+        }
+
     </style>
     <table id="tblCardapio"></table>
-
+    <div class="line">
+        <button id="btnPrint" class="btn-round"><span class="mdi mdi-printer-outline"></span></button>
+    </div>
 </template>
 <script>
 
@@ -20,9 +39,12 @@
         const myPromisse = queryDB({},'CLI-1');
         myPromisse.then((resolve)=>{
             const json = JSON.parse(resolve)
+            pageData.cardapio = json
             const tbl = pageScreen.querySelector('#tblCardapio')
             tbl.head('')
             let tipo = ''
+            pageScreen.querySelector('#btnPrint').style.display = 'flex'
+
             for(let i=0; i<json.length; i++){
                 if(json[i].tipo != tipo){
                     tipo = json[i].tipo
@@ -30,10 +52,14 @@
                     tr.innerHTML = `<th colspan="3" class="title">${json[i].tipo.toUpperCase()}</th>`
                     tbl.appendChild(tr)
                 }
-                tbl.plot(json[i],'descricao,preco','Upp,R$.')
+                tbl.plot(json[i],'descricao|desc,preco|preco','Upp,R$.')
             }
         })
     }
+
+    pageScreen.querySelector('#btnPrint').addEventListener('click',()=>{
+        cardapio(pageData.cardapio)
+    })
 
 
     pageFunc.fillCardapio()

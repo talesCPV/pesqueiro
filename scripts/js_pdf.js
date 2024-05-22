@@ -13,6 +13,7 @@ var doc = new jsPDF({
 
 var txt = new Object
     txt.lineHeigth = 5
+    txt.font = 15
     txt.x = 10
     txt.y = 10
     txt.page = 1
@@ -164,5 +165,24 @@ function header_pdf(lin_h = 5, font_size = 12){
     doc.text('Nova Cacapava - Cacapava-SP - CEP 12.283-020', 88,ini_y+lin_h);
     doc.text('comercial@flexibus.com.br | (12) 3653-2230', 93,ini_y + (lin_h*2));
     doc.text('CNPJ 00.519.547/0001-06', 111,ini_y+(lin_h*3));    
+
+}
+
+/* AUTO TABLE */
+
+function plotTable(head,body){
+
+    doc.autoTable({
+        head: head,
+        body: body,
+/*
+        columnStyles: {
+            0: {cellWidth: 25},
+            1: {cellWidth: 25}
+        },
+*/        
+        styles :{fontSize: txt.font},
+        startY: txt.y
+    });
 
 }

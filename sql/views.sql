@@ -1,4 +1,3 @@
-
 --  DROP VIEW vw_cardapio;
  CREATE VIEW vw_cardapio AS 
     SELECT 
@@ -6,7 +5,9 @@
         ROUND(((markup/100 + 1)*custo),2) AS preco
     FROM tb_produto
     WHERE disp = 1
-	ORDER BY tipo,descricao;
+	ORDER BY CASE WHEN tipo = "BEBIDAS" THEN 1
+				  WHEN tipo = "PORÇÕES" THEN 2
+				  ELSE 3 END,descricao;
 
 SELECT * FROM vw_cardapio ;
 
