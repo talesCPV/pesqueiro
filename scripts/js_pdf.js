@@ -168,6 +168,13 @@ function header_pdf(lin_h = 5, font_size = 12){
 
 }
 
+function openPDF(doc,filename){
+    const file = doc.output('blob')
+    uploadFile(file,`config/user/${localStorage.getItem('id_user')}/temp/`,`${filename}.pdf`).then(()=>{
+        window.open(window.location.href+`config/user/${localStorage.getItem('id_user')}/temp/${filename}.pdf`, '_blank').focus();
+    })
+}
+
 /* AUTO TABLE */
 
 function plotTable(head,body){

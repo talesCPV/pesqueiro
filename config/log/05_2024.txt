@@ -357,3 +357,8 @@
 22/05/2024 20:49 admin@pesqueirodourado.com.br : Produto Editado Mini Coca cola 200ml sem acucar -> Mini Coca Cola 200ml sem acucar
 22/05/2024 21:30 admin@pesqueirodourado.com.br : Fluxo de Caixa EDITADO: Lancamento comanda 4, valor:96, Modo.:CRT, Fluxo:ENTRADA
 22/05/2024 21:30 admin@pesqueirodourado.com.br : Fluxo de Caixa EDITADO: Lancamento comanda 4, valor:96, Modo.:DIN, Fluxo:ENTRADA
+23/05/2024 20:19 admin@pesqueirodourado.com.br :  Imagem Alterada -> Produto: Cerveja Budweiser 350 ml
+23/05/2024 20:21 admin@pesqueirodourado.com.br :  Imagem Alterada -> Produto: Cerveja Budweiser 350 ml
+23/05/2024 20:39 admin@pesqueirodourado.com.br :  Imagem Alterada -> Produto: Cerveja Brahma 600ml
+23/05/2024 20:40 admin@pesqueirodourado.com.br :  Imagem Alterada -> Produto: Cerveja Brahma 600ml
+23/05/2024 20:41 admin@pesqueirodourado.com.br :  Imagem Alterada -> Produto: Cerveja Brahma 600ml

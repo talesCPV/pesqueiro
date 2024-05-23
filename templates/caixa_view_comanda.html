@@ -20,14 +20,22 @@
             
         }
 
+        #frmPDF{
+            display: none;
+        }
+
     </style>
   
     <fieldset>
         <legend>Cliente</legend>
         <table id="tblCliente"></table>
-        <div class="line">
+        <div class="hide">
             <div id="qr_code"></div>
-            <button id="btnPrint"><span class="mdi mdi-printer-outline"></span> Comanda</button>
+            <iframe name="frmPDF" id="frmPDF"></iframe>
+        </div>
+        <div class="line">
+            <button id="btnPrint"><span class="mdi mdi-printer-outline"></span> Imprimir</button>
+            <button id="btnPDF">PDF</button>
         </div>
     </fieldset>
     <fieldset class="fds-itens">
@@ -35,7 +43,6 @@
         <table id="tblItens"></table>
         <div class="line">
             <button id="btnNovo" disabled><span class="mdi mdi-plus-thick"></span> Adicionar Produto</button> 
-            <img src="" id="img">
         </div>
     </fieldset>
 
@@ -47,6 +54,7 @@
 
     pageFunc.start = ()=>{
         pageFunc.fillItemComanda()
+    
         const tbl = pageScreen.querySelector('#tblCliente')
         tbl.head('Nome,CPF|mobiHide,Telefone,Saldo')
         tbl.plot(pageData,'nome,cpf|mobiHide,cel|,saldo|edtSaldo','Upp,cpf,tel,R$.')
@@ -62,9 +70,11 @@
             correctLevel : QRCode.CorrectLevel.H,
             size : 300
         });
+        
+        console.log(qrcode)
 
 //        qrcode.makeCode(`https://www.flexibus.com.br/pesqueiro/index.html?comanda=${pageData.token}`)
-
+        comanda_virual(pageData,'frmPDF')
     }
 
     pageFunc.fillItemComanda = ()=>{
@@ -108,15 +118,22 @@
             })
         }
     }
-
+/*
     pageScreen.querySelector('#qr_code').addEventListener('click',()=>{
         comanda_virual(pageData)
     })
-
+*/
     pageScreen.querySelector('#btnPrint').addEventListener('click',()=>{
-        comanda_virual(pageData)
+        comanda_virual(pageData,'frmPDF')
+        pageScreen.querySelector('#frmPDF').addEventListener('load',()=>{
+            window.frames["frmPDF"].print();
+        })
+//        window.frames["frmPDF"].print();
     })
 
+    pageScreen.querySelector('#btnPDF').addEventListener('click',()=>{
+        window.open(window.location.href+`config/user/${localStorage.getItem('id_user')}/temp/comanda.pdf`, '_blank').focus()
+    })
 
     pageScreen.querySelector('#btnNovo').addEventListener('click',()=>{
         pageData.org = 'caixa_view_comanda'
@@ -130,6 +147,8 @@
             openHTML('caixa_view_item_comanda.html','pop-up',`Comanda - ${pageData.id.padStart(8,0)} - ${pageData.nome.toUpperCase()}`,row.data,450)
         }
     })
+
+  
 
     pageFunc.start()
 

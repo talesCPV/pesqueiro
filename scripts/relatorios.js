@@ -1,5 +1,5 @@
 
-function comanda_virual(comanda){
+function comanda_virual(comanda,frame=0){
 
     const logo = new Image()
     logo.src = 'assets/logo.png'
@@ -35,43 +35,11 @@ function comanda_virual(comanda){
     doc.setFontSize(12);
     doc.text(`Acompanhe sua comanda por este QR-Code`,6,txt.y)
 
-    const pdf =  doc.output('dataurlstring').split(',')[1]
-//    window.open(pdf, '_blank').focus()
-
-//    var image = document.createElement('image');
-    document.querySelector('#img').src = 'data:image/bmp;base64,'+pdf
-
-
-
-    console.log(pdf)
-
-
+    const blob = doc.output('blob')
+    uploadFile(blob,`config/user/${localStorage.getItem('id_user')}/temp/`,'comanda.pdf').then(()=>{
+        window.open(window.location.href+`config/user/${localStorage.getItem('id_user')}/temp/comanda.pdf`, frame)
+    })
 }
-
-function uploadFile(file){
-
-    const up_data = new FormData();        
-        up_data.append("sendFile",  file);
-
-    const myRequest = new Request("backend/upFile.php",{
-        method : "POST",
-        body : up_data
-    });
-
-    const myPromisse = new Promise((resolve,reject) =>{
-        fetch(myRequest)
-        .then(function (response){
-            if (response.status === 200) { 
-                resolve(response.text());             
-            } else { 
-                reject(new Error("Houve algum erro na comunicação com o servidor"));                    
-            } 
-        });
-    }); 
-
-    return myPromisse
-}
-
 
 function cardapio(data){
 
@@ -127,6 +95,13 @@ function cardapio(data){
         txt.y = doc.lastAutoTable.finalY + 15
     }
 
-    doc.save('cardapio.pdf')
-  
+    openPDF(doc,'cardapio')
+
+//    doc.save('cardapio.pdf')
+/*  
+    const blob = doc.output('blob')
+    uploadFile(blob,`config/user/${localStorage.getItem('id_user')}/temp/`,'cardapio.pdf').then(()=>{
+        window.open(window.location.href+`config/user/${localStorage.getItem('id_user')}/temp/cardapio.pdf`, '_blank').focus();
+    })
+**/
 }
