@@ -35,8 +35,43 @@ function comanda_virual(comanda){
     doc.setFontSize(12);
     doc.text(`Acompanhe sua comanda por este QR-Code`,6,txt.y)
 
-    doc.save('comanda_virtual.pdf')
+    const pdf =  doc.output('dataurlstring').split(',')[1]
+//    window.open(pdf, '_blank').focus()
+
+//    var image = document.createElement('image');
+    document.querySelector('#img').src = 'data:image/bmp;base64,'+pdf
+
+
+
+    console.log(pdf)
+
+
 }
+
+function uploadFile(file){
+
+    const up_data = new FormData();        
+        up_data.append("sendFile",  file);
+
+    const myRequest = new Request("backend/upFile.php",{
+        method : "POST",
+        body : up_data
+    });
+
+    const myPromisse = new Promise((resolve,reject) =>{
+        fetch(myRequest)
+        .then(function (response){
+            if (response.status === 200) { 
+                resolve(response.text());             
+            } else { 
+                reject(new Error("Houve algum erro na comunicação com o servidor"));                    
+            } 
+        });
+    }); 
+
+    return myPromisse
+}
+
 
 function cardapio(data){
 
