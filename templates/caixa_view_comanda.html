@@ -24,6 +24,12 @@
             display: none;
         }
 
+        .big{
+            font-size: 2.5em;
+            width: 50px;
+            height: 50px;
+        }
+
     </style>
   
     <fieldset>
@@ -34,7 +40,7 @@
             <iframe name="frmPDF" id="frmPDF"></iframe>
         </div>
         <div class="line">
-            <button id="btnPrint" disabled><span class="mdi mdi-printer-outline"></span> Imprimir</button>
+            <button id="btnPrint" class="btn-round big" disabled><span class="mdi mdi-printer-outline"></span></button>
             <button id="btnPDF" class="hide" disabled><span class="mdi mdi-file-check-outline"></span>PDF</button>
         </div>
     </fieldset>
@@ -42,7 +48,7 @@
         <legend>Ítens</legend>
         <table id="tblItens"></table>
         <div class="line">
-            <button id="btnNovo" disabled><span class="mdi mdi-plus-thick"></span> Adicionar Produto</button> 
+            <button id="btnNovo" class="btn-round big" disabled><span class="mdi mdi-plus-circle-outline"></span></button> 
         </div>
     </fieldset>
 

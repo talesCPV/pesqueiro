@@ -50,13 +50,13 @@ function cardapio(data){
 
     const logo = new Image()
     logo.src = 'assets/logo.png'
-    doc.addImage(logo, 'png', 5, 5, logo.width/15, logo.height/15);
+    doc.addImage(logo, 'png', 15, 8, 40, 12,4);
 
 
     doc.setFontSize(30);
 //    txt.y = logo.height/10 + 20
-    txt.y = logo.height/15 +2
-    doc.text('CARDÁPIO',85,txt.y)
+    txt.y = 18
+    doc.text('CARDÁPIO',80,txt.y)
     addLine(2)
 
     let title = ''
