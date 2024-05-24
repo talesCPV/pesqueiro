@@ -19,6 +19,9 @@
             display: none;
         }
 
+        .hide{
+            display: none;
+        }
         /*  MOBILE  */
 
         @media all and (max-width : 768px) {
@@ -45,6 +48,11 @@
         }
 
     </style>
+    <div class="hide">
+        <div id="cli-code"></div>
+        <iframe name="cli-PDF" id="cli-PDF"></iframe>
+    </div>
+
     <div class="frm-comandas">
         <fieldset class="fds-busca caixa">
             <legend>Filtro</legend>
@@ -98,6 +106,22 @@
         })
     }
 
+    function printComanda(data){
+        console.log(data) 
+
+        const qrcode = new QRCode("cli-code", {
+            text:`https://www.flexibus.com.br/pesqueiro/index.html?token=${data.token.substr(0,30)}`,
+            width: 512,
+            height: 512,
+            colorDark : "#000000",
+            colorLight : "#ffffff",
+            correctLevel : QRCode.CorrectLevel.H,
+            size : 300
+        });
+        console.log(qrcode)
+        comanda_virual(data,'cli-PDF')
+    }
+
     pageFunc.buscaCliente = (cliente)=>{
         const params = new Object;
             params.id = 0
@@ -105,14 +129,17 @@
             params.obs = ''
         const myPromisse = queryDB(params,'CXA-3');
         myPromisse.then((resolve)=>{
-            const resp = JSON.parse(resolve)[0].message
-
-            if(resp=='SUCESSO!'){
+         
+            const json = JSON.parse(resolve)
+  
+            if(json[0].OK=='1'){
                 setLog(`Nova Comanda -> Cliente:${cliente.nome}, CPF:${cliente.cpf}`)
                 pageFunc.fillComanda()
+                
             }else{
-                alert(resp)
+                alert('Já existe uma comanda aberta para este cliente, favor verificar!')
             }
+            printComanda(json[0])
         })        
     }
 

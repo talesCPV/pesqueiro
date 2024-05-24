@@ -12,7 +12,7 @@
             border: solid 2px #000000;
             cursor: pointer;
             padding: 3px;
-            display: none;
+/*            display: none;*/
         }
 
         #qr_code:hover{
@@ -20,7 +20,7 @@
             
         }
 
-        #frmPDF{
+        .hide{
             display: none;
         }
 
@@ -35,7 +35,7 @@
         </div>
         <div class="line">
             <button id="btnPrint"><span class="mdi mdi-printer-outline"></span> Imprimir</button>
-            <button id="btnPDF">PDF</button>
+            <button id="btnPDF"><span class="mdi mdi-file-check-outline"></span>PDF</button>
         </div>
     </fieldset>
     <fieldset class="fds-itens">
@@ -71,10 +71,17 @@
             size : 300
         });
         
-        console.log(qrcode)
+        delay(100).then(() => {
+            comanda_virual(pageData).then(()=>{
+                pageScreen.querySelector('#frmPDF').src = window.location.href+`config/user/${localStorage.getItem('id_user')}/temp/comanda.pdf`
+
+            })
+
+//            window.frames["frmPDF"].print();
+        })        
 
 //        qrcode.makeCode(`https://www.flexibus.com.br/pesqueiro/index.html?comanda=${pageData.token}`)
-        comanda_virual(pageData,'frmPDF')
+        
     }
 
     pageFunc.fillItemComanda = ()=>{
@@ -124,14 +131,12 @@
     })
 */
     pageScreen.querySelector('#btnPrint').addEventListener('click',()=>{
-        comanda_virual(pageData,'frmPDF')
-        pageScreen.querySelector('#frmPDF').addEventListener('load',()=>{
-            window.frames["frmPDF"].print();
-        })
-//        window.frames["frmPDF"].print();
+//        comanda_virual(pageData)
+        window.frames["frmPDF"].print();
     })
 
     pageScreen.querySelector('#btnPDF').addEventListener('click',()=>{
+
         window.open(window.location.href+`config/user/${localStorage.getItem('id_user')}/temp/comanda.pdf`, '_blank').focus()
     })
 
@@ -148,7 +153,9 @@
         }
     })
 
-  
+    pageScreen.querySelector('#frmPDF').addEventListener('load',()=>{
+ 
+    })
 
     pageFunc.start()
 

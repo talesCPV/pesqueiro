@@ -447,3 +447,8 @@ function getVal(fds){
 
     return [field,signal,value]
 }
+
+/* DELAY */
+function delay(time) {
+    return new Promise(resolve => setTimeout(resolve, time));
+}

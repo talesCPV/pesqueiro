@@ -1,5 +1,5 @@
 
-function comanda_virual(comanda,frame=0){
+function comanda_virual(comanda){
 
     const logo = new Image()
     logo.src = 'assets/logo.png'
@@ -36,9 +36,7 @@ function comanda_virual(comanda,frame=0){
     doc.text(`Acompanhe sua comanda por este QR-Code`,6,txt.y)
 
     const blob = doc.output('blob')
-    uploadFile(blob,`config/user/${localStorage.getItem('id_user')}/temp/`,'comanda.pdf').then(()=>{
-        window.open(window.location.href+`config/user/${localStorage.getItem('id_user')}/temp/comanda.pdf`, frame)
-    })
+    return uploadFile(blob,`config/user/${localStorage.getItem('id_user')}/temp/`,'comanda.pdf')
 }
 
 function cardapio(data){

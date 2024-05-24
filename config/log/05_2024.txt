@@ -362,3 +362,6 @@
 23/05/2024 20:39 admin@pesqueirodourado.com.br :  Imagem Alterada -> Produto: Cerveja Brahma 600ml
 23/05/2024 20:40 admin@pesqueirodourado.com.br :  Imagem Alterada -> Produto: Cerveja Brahma 600ml
 23/05/2024 20:41 admin@pesqueirodourado.com.br :  Imagem Alterada -> Produto: Cerveja Brahma 600ml
+24/05/2024 04:07 admin@pesqueirodourado.com.br : Venda lancada -> Comanda:36, Valor:0.00, Modo:DIN
+24/05/2024 04:07 admin@pesqueirodourado.com.br : Venda lancada -> Comanda:35, Valor:0.00, Modo:DIN
+24/05/2024 04:08 admin@pesqueirodourado.com.br : Nova Comanda -> Cliente:Tales Cembraneli Dantas, CPF:26687200879
