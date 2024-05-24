@@ -16,10 +16,18 @@
         }
 
         #btnPrint{
-            display: none;
+            display: flex;
             font-size: 2em;
             width: 60px;
             height: 60px;
+        }
+
+        /*  MOBILE  */
+
+        @media all and (max-width : 768px) {
+            #btnPrint{
+                display: none;
+            }
         }
 
     </style>
@@ -43,7 +51,7 @@
             const tbl = pageScreen.querySelector('#tblCardapio')
             tbl.head('')
             let tipo = ''
-            pageScreen.querySelector('#btnPrint').style.display = 'flex'
+//            pageScreen.querySelector('#btnPrint').style.display = 'flex'
 
             for(let i=0; i<json.length; i++){
                 if(json[i].tipo != tipo){

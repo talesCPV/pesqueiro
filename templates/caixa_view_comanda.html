@@ -34,8 +34,8 @@
             <iframe name="frmPDF" id="frmPDF"></iframe>
         </div>
         <div class="line">
-            <button id="btnPrint"><span class="mdi mdi-printer-outline"></span> Imprimir</button>
-            <button id="btnPDF"><span class="mdi mdi-file-check-outline"></span>PDF</button>
+            <button id="btnPrint" disabled><span class="mdi mdi-printer-outline"></span> Imprimir</button>
+            <button id="btnPDF" class="hide" disabled><span class="mdi mdi-file-check-outline"></span>PDF</button>
         </div>
     </fieldset>
     <fieldset class="fds-itens">
@@ -74,10 +74,9 @@
         delay(100).then(() => {
             comanda_virual(pageData).then(()=>{
                 pageScreen.querySelector('#frmPDF').src = window.location.href+`config/user/${localStorage.getItem('id_user')}/temp/comanda.pdf`
-
+                pageScreen.querySelector('#btnPrint').disabled = false
+                pageScreen.querySelector('#btnPDF').disabled = false
             })
-
-//            window.frames["frmPDF"].print();
         })        
 
 //        qrcode.makeCode(`https://www.flexibus.com.br/pesqueiro/index.html?comanda=${pageData.token}`)
@@ -125,13 +124,8 @@
             })
         }
     }
-/*
-    pageScreen.querySelector('#qr_code').addEventListener('click',()=>{
-        comanda_virual(pageData)
-    })
-*/
+
     pageScreen.querySelector('#btnPrint').addEventListener('click',()=>{
-//        comanda_virual(pageData)
         window.frames["frmPDF"].print();
     })
 
@@ -151,10 +145,6 @@
             row.data.org = 'caixa_view_comanda'
             openHTML('caixa_view_item_comanda.html','pop-up',`Comanda - ${pageData.id.padStart(8,0)} - ${pageData.nome.toUpperCase()}`,row.data,450)
         }
-    })
-
-    pageScreen.querySelector('#frmPDF').addEventListener('load',()=>{
- 
     })
 
     pageFunc.start()

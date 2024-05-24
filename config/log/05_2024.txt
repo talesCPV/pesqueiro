@@ -365,3 +365,6 @@
 24/05/2024 04:07 admin@pesqueirodourado.com.br : Venda lancada -> Comanda:36, Valor:0.00, Modo:DIN
 24/05/2024 04:07 admin@pesqueirodourado.com.br : Venda lancada -> Comanda:35, Valor:0.00, Modo:DIN
 24/05/2024 04:08 admin@pesqueirodourado.com.br : Nova Comanda -> Cliente:Tales Cembraneli Dantas, CPF:26687200879
+24/05/2024 16:40 admin@pesqueirodourado.com.br : Produto Editado Pesque Pague - Pacu (limpo) -> Pesque Pague - Pacu (limpo)
+24/05/2024 16:42 admin@pesqueirodourado.com.br : Produto Cadastrado  -> Pesca Esportiva (dia todo)
+24/05/2024 16:42 admin@pesqueirodourado.com.br : Produto Editado Pesca Esportiva (dia todo) -> Pesca Esportiva (dia todo)
