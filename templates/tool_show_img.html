@@ -1,0 +1,45 @@
+<template>
+    <style>
+
+    .frm-img{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+     
+    #preco{
+        text-align: center;
+    }
+
+    #cnvImg{
+        max-width: 400px;
+    }
+
+    </style>
+
+
+        <fieldset class="frm-img">
+            <legend id="title"></legend>
+            <canvas id="cnvImg"></canvas>
+            <h2 id="preco"></h2>
+        </fieldset>
+ 
+
+
+</template>
+<script>
+    const pageData = main_data.tool_show_img.data
+    const pageFunc = main_data.tool_show_img.func
+    const pageScreen = document.querySelector('#card-tool_show_img')
+     
+    console.log(pageData)
+
+    pageScreen.querySelector('#title').innerHTML = pageData.descricao
+    pageScreen.querySelector('#preco').innerHTML = 'R$'+pageData.preco+' '+pageData.und
+    const back = backFunc({'filename':'../'+pageData.filename},1)
+    back.then((resp)=>{    
+console.log(JSON.parse(resp) ? pageData.filename : 'assets/prod/noimage.jpg')                 
+        loadImg( JSON.parse(resp) ? pageData.filename : 'assets/prod/noimage.jpg')
+    })  
+
+</script>

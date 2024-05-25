@@ -65,10 +65,15 @@
         })
     }
 
+    pageScreen.querySelector('#tblCardapio').addEventListener('click',(e)=>{
+        const data = e.target.parentNode.data
+        data.filename = `assets/prod/prod_${data.id}.jpg`
+        openHTML('tool_show_img.html','pop-up',data.descricao,data,400)        
+    })
+
     pageScreen.querySelector('#btnPrint').addEventListener('click',()=>{
         cardapio(pageData.cardapio)
     })
-
 
     pageFunc.fillCardapio()
 

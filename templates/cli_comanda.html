@@ -27,6 +27,15 @@
             margin-bottom: 60px;
         }
 
+        .bottom {
+            padding-bottom: 50px;
+        }
+
+        .bottom p{
+            text-align: center;
+            font-size: 0.8em;
+        }
+
     </style>
   
     <div class="frm-comanda">
@@ -54,9 +63,11 @@
             <legend>Ítens</legend>
             <table id="tblItens"></table>
         </fieldset>
+        <div class="bottom">
+            <p>dev by: Tales Cembraneli Dantas (12)9 9711-3793</p>
+        </div>
 
     </div>
-
 </template>
 <script>
 
@@ -73,15 +84,16 @@
             myPromisse.then((resolve)=>{
                 const json = JSON.parse(resolve)
                 const tbl = document.querySelector('#tblItens')
-                if(json.length >0){
-                    document.querySelector('#cli-nome').innerHTML = 'Nome: '+json[0].nome.toUpperCase()
-                    document.querySelector('#cli-cel').innerHTML = 'Cel: '+getFone(json[0].cel)
-                    document.querySelector('#cli-saldo').innerHTML = 'Saldo: R$'+parseFloat(json[0].saldo).toFixed(2)
+        
+                document.querySelector('#cli-nome').innerHTML = 'Nome: '+json[0].nome.toUpperCase()
+                document.querySelector('#cli-cel').innerHTML = 'Cel: '+getFone(json[0].cel)
+                document.querySelector('#cli-saldo').innerHTML = 'Saldo: R$'+parseFloat(json[0].saldo).toFixed(2)
 
-                    document.querySelector('#com-num').innerHTML = 'Num.: '+json[0].id.padStart(10,0)
-                    document.querySelector('#com-data').innerHTML = 'Data: '+json[0].data+' '+json[0].hora
-                    document.querySelector('#com-aberta').innerHTML = 'Status: '+ (json[0].aberta == '1' ? 'Aberta' : 'Fechada')
-
+                document.querySelector('#com-num').innerHTML = 'Num.: '+json[0].id.padStart(10,0)
+                document.querySelector('#com-data').innerHTML = 'Data: '+json[0].data+' '+json[0].hora
+                document.querySelector('#com-aberta').innerHTML = 'Status: '+ (json[0].aberta == '1' ? 'Aberta' : 'Fechada')
+            
+                if(json[0].hasOwnProperty('preco')){
                     tbl.head('Desc.,Qtd.,Unit.,Tot.')
                     for(let i=0; i<json.length; i++){
                         tbl.plot(json[i],'descricao,qtd,preco,sub_total','Upp,str,R$.,R$.')

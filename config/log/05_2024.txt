@@ -368,3 +368,5 @@
 24/05/2024 16:40 admin@pesqueirodourado.com.br : Produto Editado Pesque Pague - Pacu (limpo) -> Pesque Pague - Pacu (limpo)
 24/05/2024 16:42 admin@pesqueirodourado.com.br : Produto Cadastrado  -> Pesca Esportiva (dia todo)
 24/05/2024 16:42 admin@pesqueirodourado.com.br : Produto Editado Pesca Esportiva (dia todo) -> Pesca Esportiva (dia todo)
+25/05/2024 19:27 admin@pesqueirodourado.com.br : Insercao de novo usuarios, email:undefined -> garcom@pesqueirodourado.com.br, acesso:undefined -> 3
+25/05/2024 19:28 admin@pesqueirodourado.com.br : Insercao de novo usuarios, email:undefined -> caixa@pesqueirodourado.com.br, acesso:undefined -> 1
