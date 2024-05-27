@@ -15,7 +15,7 @@
             font-size: 1.2em;
         }
 
-        #btnPrint{
+        #btnPrint, #btnPos{
             display: flex;
             font-size: 2em;
             width: 60px;
@@ -34,6 +34,7 @@
     <table id="tblCardapio"></table>
     <div class="line">
         <button id="btnPrint" class="btn-round"><span class="mdi mdi-printer-outline"></span></button>
+        <button id="btnPos" class="btn-round"><span class="mdi mdi-printer-pos"></span></button>
     </div>
 </template>
 <script>
@@ -72,7 +73,11 @@
     })
 
     pageScreen.querySelector('#btnPrint').addEventListener('click',()=>{
-        cardapio(pageData.cardapio)
+        cardapio_print(pageData.cardapio)
+    })
+
+    pageScreen.querySelector('#btnPos').addEventListener('click',()=>{
+        cardapio_pos(pageData.cardapio)
     })
 
     pageFunc.fillCardapio()

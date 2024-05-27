@@ -27,9 +27,7 @@ var imgData = new Image()
 /* FUNCTIONS */
 
 function addPage(Y=46){
-    doc.addPage();
-    frame()
-    header_pdf()    
+    doc.addPage(); 
     txt.y = Y 
 }
 
@@ -79,7 +77,7 @@ function addLine(N=1, botton=0, top=46){
     return true
 }
 
-function backLine(N=1, botton=0, top=46){
+function backLine(N=1){
     txt.y -= txt.lineHeigth * N
     return true
 }
@@ -155,19 +153,6 @@ function block_text(T=''){
     print()
 }
 
-function header_pdf(lin_h = 5, font_size = 12){
-    ini_y = 13
-    logo([14,15,45,10])
-    //  CABEÇALHO
-    doc.setFontSize(font_size)
-    doc.setFont(undefined, 'normal')
-    doc.text('Av. Dr. Rosalvo de Almeida Telles, 2070', 97,ini_y);
-    doc.text('Nova Cacapava - Cacapava-SP - CEP 12.283-020', 88,ini_y+lin_h);
-    doc.text('comercial@flexibus.com.br | (12) 3653-2230', 93,ini_y + (lin_h*2));
-    doc.text('CNPJ 00.519.547/0001-06', 111,ini_y+(lin_h*3));    
-
-}
-
 function openPDF(doc,filename){
     const file = doc.output('blob')
     uploadFile(file,`config/user/${localStorage.getItem('id_user')}/temp/`,`${filename}.pdf`).then(()=>{
@@ -175,21 +160,3 @@ function openPDF(doc,filename){
     })
 }
 
-/* AUTO TABLE */
-
-function plotTable(head,body){
-
-    doc.autoTable({
-        head: head,
-        body: body,
-/*
-        columnStyles: {
-            0: {cellWidth: 25},
-            1: {cellWidth: 25}
-        },
-*/        
-        styles :{fontSize: txt.font},
-        startY: txt.y
-    });
-
-}

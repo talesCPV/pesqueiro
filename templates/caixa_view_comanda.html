@@ -40,7 +40,7 @@
             <iframe name="frmPDF" id="frmPDF"></iframe>
         </div>
         <div class="line">
-            <button id="btnPrint" class="btn-round big" disabled><span class="mdi mdi-printer-outline"></span></button>
+            <button id="btnPrint" class="btn-round big" disabled><span class="mdi mdi-printer-pos"></span></button>
             <button id="btnPDF" class="hide" disabled><span class="mdi mdi-file-check-outline"></span>PDF</button>
         </div>
     </fieldset>
@@ -136,7 +136,6 @@
     })
 
     pageScreen.querySelector('#btnPDF').addEventListener('click',()=>{
-
         window.open(window.location.href+`config/user/${localStorage.getItem('id_user')}/temp/comanda.pdf`, '_blank').focus()
     })
 

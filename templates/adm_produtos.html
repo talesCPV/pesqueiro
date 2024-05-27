@@ -4,7 +4,11 @@
         .w70{
             width: 70%;
         }
-     
+        
+        .print{
+            display: none;
+        }
+
     </style>
 
     <fieldset class="fds-busca prod">
@@ -23,10 +27,11 @@
             <input type="text" id="edtBusca" onkeypress="return getEnter(event, 'btnBusca-prod')">
             <button id="btnBusca-prod" class="btn-round" ><span class="mdi mdi-magnify"></span></button>
             <button id="btnNovo" class="btn-round"><span class="mdi mdi-plus-thick"></span></button>            
-
         </div>
-
         <table id="tblProd"></table>
+        <div class="line print">
+            <button id="btnPrint" class="btn-round big" ><span class="mdi mdi-printer-pos"></span></button>
+        </div>        
     </fieldset>  
 
 </template>
@@ -47,8 +52,10 @@
         const myPromisse = queryDB(params,'PROD-0');
         myPromisse.then((resolve)=>{
             const json = JSON.parse(resolve)
+            pageData.produtos = json
             tbl.style.display = json.length > 0 ? 'inline-table' : 'none'
             tbl.head('Descrição|w70,Und.,Estq.,Preço')
+            pageScreen.querySelector('.print').style.display = json.length ? 'flex' : 'none'
             for(let i=0; i<json.length;i++){
                 tbl.plot(json[i],'descricao,und,disponivel,preco','Upp,Upp,str,R$.')
             }         
@@ -97,5 +104,9 @@
         }catch{}
     })    
 
+    pageScreen.querySelector('#btnPrint').addEventListener('click',()=>{
+console.log(pageData.produtos)        
+        produtos_pos(pageData.produtos)
+    })
 
 </script>
