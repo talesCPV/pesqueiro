@@ -10,7 +10,7 @@
 endobj
 4 0 obj
 <<
-/Length 9925
+/Length 9912
 >>
 stream
 0.57 w
@@ -337,12 +337,6 @@ Q
 1.00 g
 0.78 G
 0.00 w
-0.96 g
-0.78 G
-0.00 w
-0.96 g
-0.78 G
-0.00 w
 0.00 g
 0.78 G
 0.00 w
@@ -659,12 +653,6 @@ Q
 0.78 G
 0.00 w
 1.00 g
-0.78 G
-0.00 w
-0.96 g
-0.78 G
-0.00 w
-0.96 g
 0.78 G
 0.00 w
 0.00 g
@@ -773,7 +761,7 @@ BT
 11.50 TL
 0.000 g
 19.17 388.14 Td
-(Brahma Zero alcool) Tj
+(Cerveja Aretzbeer) Tj
 ET
 1.00 g
 0.78 G
@@ -785,7 +773,7 @@ BT
 11.50 TL
 0.000 g
 224.72 388.14 Td
-(10) Tj
+(18) Tj
 ET
 0.96 g
 0.78 G
@@ -797,7 +785,7 @@ BT
 11.50 TL
 0.000 g
 19.17 366.64 Td
-(cerveja Aretzbeer) Tj
+(Cerveja Brahma \(600ml\)) Tj
 ET
 0.96 g
 0.78 G
@@ -809,7 +797,7 @@ BT
 11.50 TL
 0.000 g
 224.72 366.64 Td
-(18) Tj
+(0) Tj
 ET
 1.00 g
 0.78 G
@@ -821,7 +809,7 @@ BT
 11.50 TL
 0.000 g
 19.17 345.14 Td
-(Cerveja Blue Ribbon 1.5 lts Lager) Tj
+(Cerveja Brahma Duplo Malte \(269ml\)) Tj
 ET
 1.00 g
 0.78 G
@@ -833,7 +821,7 @@ BT
 11.50 TL
 0.000 g
 224.72 345.14 Td
-(1) Tj
+(15) Tj
 ET
 0.96 g
 0.78 G
@@ -845,7 +833,7 @@ BT
 11.50 TL
 0.000 g
 19.17 323.64 Td
-(Cerveja Brahma 350ml duplo malte) Tj
+(Cerveja Brahma Duplo Malte \(350ml\)) Tj
 ET
 0.96 g
 0.78 G
@@ -869,7 +857,7 @@ BT
 11.50 TL
 0.000 g
 19.17 302.14 Td
-(Cerveja Brahma 600ml) Tj
+(Cerveja Brahma lata \(350ml\)) Tj
 ET
 1.00 g
 0.78 G
@@ -881,7 +869,7 @@ BT
 11.50 TL
 0.000 g
 224.72 302.14 Td
-(0) Tj
+(23) Tj
 ET
 0.96 g
 0.78 G
@@ -893,7 +881,7 @@ BT
 11.50 TL
 0.000 g
 19.17 280.64 Td
-(Cerveja Brahma Duplo Malte 269ml) Tj
+(Cerveja Brahma Zero alcool) Tj
 ET
 0.96 g
 0.78 G
@@ -905,7 +893,7 @@ BT
 11.50 TL
 0.000 g
 224.72 280.64 Td
-(15) Tj
+(10) Tj
 ET
 1.00 g
 0.78 G
@@ -917,7 +905,7 @@ BT
 11.50 TL
 0.000 g
 19.17 259.14 Td
-(Cerveja Brahma lata 350 ml) Tj
+(Cerveja Budweiser \(Long Neck\)) Tj
 ET
 1.00 g
 0.78 G
@@ -929,7 +917,7 @@ BT
 11.50 TL
 0.000 g
 224.72 259.14 Td
-(23) Tj
+(5) Tj
 ET
 0.96 g
 0.78 G
@@ -941,7 +929,7 @@ BT
 11.50 TL
 0.000 g
 19.17 237.64 Td
-(Cerveja Budweiser 350 ml) Tj
+(Cerveja Budweiser lata \(350ml\)) Tj
 ET
 0.96 g
 0.78 G
@@ -965,7 +953,7 @@ BT
 11.50 TL
 0.000 g
 19.17 216.14 Td
-(Cerveja Budweiser long neck) Tj
+(Cerveja Ecobier Chopp) Tj
 ET
 1.00 g
 0.78 G
@@ -977,7 +965,7 @@ BT
 11.50 TL
 0.000 g
 224.72 216.14 Td
-(5) Tj
+(1) Tj
 ET
 0.96 g
 0.78 G
@@ -989,7 +977,7 @@ BT
 11.50 TL
 0.000 g
 19.17 194.64 Td
-(Cerveja Ecobier Chopp) Tj
+(Cerveja Heineken lata \(350ml\)) Tj
 ET
 0.96 g
 0.78 G
@@ -1001,7 +989,7 @@ BT
 11.50 TL
 0.000 g
 224.72 194.64 Td
-(1) Tj
+(4) Tj
 ET
 1.00 g
 0.78 G
@@ -1013,7 +1001,7 @@ BT
 11.50 TL
 0.000 g
 19.17 173.14 Td
-(Cerveja Heineken lata 350ml) Tj
+(Cerveja Império \(600ml\)) Tj
 ET
 1.00 g
 0.78 G
@@ -1025,7 +1013,7 @@ BT
 11.50 TL
 0.000 g
 224.72 173.14 Td
-(4) Tj
+(0) Tj
 ET
 0.96 g
 0.78 G
@@ -1037,7 +1025,7 @@ BT
 11.50 TL
 0.000 g
 19.17 151.64 Td
-(cerveja Império 600ml) Tj
+(Cerveja Império Puro Malte) Tj
 ET
 0.96 g
 0.78 G
@@ -1049,7 +1037,7 @@ BT
 11.50 TL
 0.000 g
 224.72 151.64 Td
-(0) Tj
+(24) Tj
 ET
 1.00 g
 0.78 G
@@ -1061,7 +1049,7 @@ BT
 11.50 TL
 0.000 g
 19.17 130.14 Td
-(Cerveja Império Puro Malte) Tj
+(Cerveja Original Long Neck \(300ml\)) Tj
 ET
 1.00 g
 0.78 G
@@ -1085,7 +1073,7 @@ BT
 11.50 TL
 0.000 g
 19.17 108.64 Td
-(cerveja original 300ml garrafa vidro) Tj
+(Cerveja Skol lata \(350ml\)) Tj
 ET
 0.96 g
 0.78 G
@@ -1097,103 +1085,104 @@ BT
 11.50 TL
 0.000 g
 224.72 108.64 Td
-(24) Tj
+(22) Tj
 ET
 1.00 g
 0.78 G
 0.00 w
-14.17 100.64 205.54 -21.50 re
+14.17 100.64 205.54 -33.00 re
 f
 BT
 /F1 10 Tf
 11.50 TL
 0.000 g
 19.17 87.14 Td
-(Cerveja Skol lata 350 ml) Tj
+(Chopp Blue Ribbon - Lager / Pilsen / IPA) Tj
+T* (\(1.5 lts\)) Tj
 ET
 1.00 g
 0.78 G
 0.00 w
-219.72 100.64 41.11 -21.50 re
+219.72 100.64 41.11 -33.00 re
 f
 BT
 /F1 10 Tf
 11.50 TL
 0.000 g
 224.72 87.14 Td
-(22) Tj
-ET
-0.96 g
-0.78 G
-0.00 w
-14.17 79.14 205.54 -21.50 re
-f
-BT
-/F1 10 Tf
-11.50 TL
-0.000 g
-19.17 65.64 Td
-(Cervreja Wien Bier Chopp 1,5 lts  Pilsen) Tj
-ET
-0.96 g
-0.78 G
-0.00 w
-219.72 79.14 41.11 -21.50 re
-f
-BT
-/F1 10 Tf
-11.50 TL
-0.000 g
-224.72 65.64 Td
 (1) Tj
 ET
-1.00 g
+0.96 g
 0.78 G
 0.00 w
-14.17 57.64 205.54 -21.50 re
+14.17 67.64 205.54 -21.50 re
 f
 BT
 /F1 10 Tf
 11.50 TL
 0.000 g
-19.17 44.14 Td
-(Coca Cola 350 ml lata) Tj
+19.17 54.14 Td
+(Coca Cola \(600ml\)) Tj
+ET
+0.96 g
+0.78 G
+0.00 w
+219.72 67.64 41.11 -21.50 re
+f
+BT
+/F1 10 Tf
+11.50 TL
+0.000 g
+224.72 54.14 Td
+(24) Tj
 ET
 1.00 g
 0.78 G
 0.00 w
-219.72 57.64 41.11 -21.50 re
+14.17 46.14 205.54 -21.50 re
 f
 BT
 /F1 10 Tf
 11.50 TL
 0.000 g
-224.72 44.14 Td
+19.17 32.64 Td
+(Coca Cola lata \(350ml\)) Tj
+ET
+1.00 g
+0.78 G
+0.00 w
+219.72 46.14 41.11 -21.50 re
+f
+BT
+/F1 10 Tf
+11.50 TL
+0.000 g
+224.72 32.64 Td
 (9) Tj
 ET
 0.96 g
 0.78 G
 0.00 w
-14.17 36.14 205.54 -21.50 re
+14.17 24.64 205.54 -21.50 re
 f
 BT
 /F1 10 Tf
 11.50 TL
 0.000 g
-19.17 22.64 Td
-(Coca Cola 600 ml) Tj
+19.17 11.14 Td
+(Guaraná Antártica lata \(350ml\)) Tj
 ET
 0.96 g
 0.78 G
 0.00 w
-219.72 36.14 41.11 -21.50 re
+219.72 24.64 41.11 -21.50 re
 f
 BT
 /F1 10 Tf
 11.50 TL
 0.000 g
-224.72 22.64 Td
-(24) Tj
+224.72 11.14 Td
+(7) Tj
 ET
 0.78 G
 0.00 w
@@ -1209,7 +1198,7 @@ endobj
 endobj
 6 0 obj
 <<
-/Length 5822
+/Length 5915
 >>
 stream
 0.57 w
@@ -1248,7 +1237,7 @@ BT
 11.50 TL
 0.000 g
 19.17 486.65 Td
-(guaraná lata 350ml) Tj
+(Heineken Puro Malte Lager \(600ml\)) Tj
 ET
 1.00 g
 0.78 G
@@ -1260,7 +1249,7 @@ BT
 11.50 TL
 0.000 g
 224.72 486.65 Td
-(7) Tj
+(11) Tj
 ET
 0.96 g
 0.78 G
@@ -1272,7 +1261,7 @@ BT
 11.50 TL
 0.000 g
 19.17 465.15 Td
-(Heineken Pro Malte Lager 600 ml) Tj
+(Ice Noch Drink) Tj
 ET
 0.96 g
 0.78 G
@@ -1284,7 +1273,7 @@ BT
 11.50 TL
 0.000 g
 224.72 465.15 Td
-(11) Tj
+(3) Tj
 ET
 1.00 g
 0.78 G
@@ -1296,7 +1285,7 @@ BT
 11.50 TL
 0.000 g
 19.17 443.65 Td
-(Ice Noch Drink) Tj
+(Isca - Massa Arte de Pescar) Tj
 ET
 1.00 g
 0.78 G
@@ -1308,7 +1297,7 @@ BT
 11.50 TL
 0.000 g
 224.72 443.65 Td
-(3) Tj
+(0) Tj
 ET
 0.96 g
 0.78 G
@@ -1320,7 +1309,7 @@ BT
 11.50 TL
 0.000 g
 19.17 422.15 Td
-(Isca - Massa Arte de Pescar) Tj
+(Isca de Salsicha) Tj
 ET
 0.96 g
 0.78 G
@@ -1332,7 +1321,7 @@ BT
 11.50 TL
 0.000 g
 224.72 422.15 Td
-(0) Tj
+(-2) Tj
 ET
 1.00 g
 0.78 G
@@ -1344,7 +1333,7 @@ BT
 11.50 TL
 0.000 g
 19.17 400.65 Td
-(Isca de Salsicha) Tj
+(Isca Massinha \(potinho\)) Tj
 ET
 1.00 g
 0.78 G
@@ -1356,7 +1345,7 @@ BT
 11.50 TL
 0.000 g
 224.72 400.65 Td
-(-2) Tj
+(9) Tj
 ET
 0.96 g
 0.78 G
@@ -1368,7 +1357,7 @@ BT
 11.50 TL
 0.000 g
 19.17 379.15 Td
-(Isca Massinha \(potinho\)) Tj
+(Isca Super Tamba Furadinha) Tj
 ET
 0.96 g
 0.78 G
@@ -1380,7 +1369,7 @@ BT
 11.50 TL
 0.000 g
 224.72 379.15 Td
-(9) Tj
+(0) Tj
 ET
 1.00 g
 0.78 G
@@ -1392,7 +1381,7 @@ BT
 11.50 TL
 0.000 g
 19.17 357.65 Td
-(Isca Super Tamba Furadinha) Tj
+(Itaipava Malzibier lata \(350ml\)) Tj
 ET
 1.00 g
 0.78 G
@@ -1404,7 +1393,7 @@ BT
 11.50 TL
 0.000 g
 224.72 357.65 Td
-(0) Tj
+(11) Tj
 ET
 0.96 g
 0.78 G
@@ -1416,7 +1405,7 @@ BT
 11.50 TL
 0.000 g
 19.17 336.15 Td
-(Itaipava Malzibier350ml) Tj
+(Mini Coca Cola \(200ml\)) Tj
 ET
 0.96 g
 0.78 G
@@ -1428,7 +1417,7 @@ BT
 11.50 TL
 0.000 g
 224.72 336.15 Td
-(11) Tj
+(24) Tj
 ET
 1.00 g
 0.78 G
@@ -1440,7 +1429,7 @@ BT
 11.50 TL
 0.000 g
 19.17 314.65 Td
-(Mini Coca Cola 200ml c/ açúcar) Tj
+(Mini Coca Cola sem açucar \(200ml\)) Tj
 ET
 1.00 g
 0.78 G
@@ -1452,7 +1441,7 @@ BT
 11.50 TL
 0.000 g
 224.72 314.65 Td
-(24) Tj
+(0) Tj
 ET
 0.96 g
 0.78 G
@@ -1464,7 +1453,7 @@ BT
 11.50 TL
 0.000 g
 19.17 293.15 Td
-(Mini Coca Cola 200ml sem açucar) Tj
+(Pesca Esportiva \(dia todo\)) Tj
 ET
 0.96 g
 0.78 G
@@ -1488,7 +1477,7 @@ BT
 11.50 TL
 0.000 g
 19.17 271.65 Td
-(Pesca Esportiva \(dia todo\)) Tj
+(Pesque Pague - Pacu) Tj
 ET
 1.00 g
 0.78 G
@@ -1500,7 +1489,7 @@ BT
 11.50 TL
 0.000 g
 224.72 271.65 Td
-(0) Tj
+(10) Tj
 ET
 0.96 g
 0.78 G
@@ -1512,7 +1501,7 @@ BT
 11.50 TL
 0.000 g
 19.17 250.15 Td
-(Pesque Pague - Pacu) Tj
+(Pesque Pague - Pacu \(limpo\)) Tj
 ET
 0.96 g
 0.78 G
@@ -1524,7 +1513,7 @@ BT
 11.50 TL
 0.000 g
 224.72 250.15 Td
-(0) Tj
+(-21) Tj
 ET
 1.00 g
 0.78 G
@@ -1536,7 +1525,7 @@ BT
 11.50 TL
 0.000 g
 19.17 228.65 Td
-(Pesque Pague - Pacu \(limpo\)) Tj
+(Pesque Pague - Tambaqui) Tj
 ET
 1.00 g
 0.78 G
@@ -1548,7 +1537,7 @@ BT
 11.50 TL
 0.000 g
 224.72 228.65 Td
-(-1) Tj
+(-5) Tj
 ET
 0.96 g
 0.78 G
@@ -1560,7 +1549,7 @@ BT
 11.50 TL
 0.000 g
 19.17 207.15 Td
-(Pesque Pague - Tambaqui) Tj
+(Pesque Pague - Tambaqui \(limpo\)) Tj
 ET
 0.96 g
 0.78 G
@@ -1572,7 +1561,7 @@ BT
 11.50 TL
 0.000 g
 224.72 207.15 Td
-(-5) Tj
+(0) Tj
 ET
 1.00 g
 0.78 G
@@ -1584,7 +1573,7 @@ BT
 11.50 TL
 0.000 g
 19.17 185.65 Td
-(Pesque Pague - Tambaqui \(limpo\)) Tj
+(Pesque Pague - Tilápia) Tj
 ET
 1.00 g
 0.78 G
@@ -1596,7 +1585,7 @@ BT
 11.50 TL
 0.000 g
 224.72 185.65 Td
-(0) Tj
+(-2) Tj
 ET
 0.96 g
 0.78 G
@@ -1608,7 +1597,7 @@ BT
 11.50 TL
 0.000 g
 19.17 164.15 Td
-(Pesque Pague - Tilápia) Tj
+(Pesque Pague - Tilápia \(limpa\)) Tj
 ET
 0.96 g
 0.78 G
@@ -1620,7 +1609,7 @@ BT
 11.50 TL
 0.000 g
 224.72 164.15 Td
-(-2) Tj
+(0) Tj
 ET
 1.00 g
 0.78 G
@@ -1632,7 +1621,7 @@ BT
 11.50 TL
 0.000 g
 19.17 142.65 Td
-(Pesque Pague - Tilápia \(Limpa\)) Tj
+(Pinga de Garrafa \(dose\)) Tj
 ET
 1.00 g
 0.78 G
@@ -1644,7 +1633,7 @@ BT
 11.50 TL
 0.000 g
 224.72 142.65 Td
-(0) Tj
+(-4) Tj
 ET
 0.96 g
 0.78 G
@@ -1656,7 +1645,7 @@ BT
 11.50 TL
 0.000 g
 19.17 121.15 Td
-(pinga de garrafa) Tj
+(Porção de Calabresa \(400gr\)) Tj
 ET
 0.96 g
 0.78 G
@@ -1668,7 +1657,7 @@ BT
 11.50 TL
 0.000 g
 224.72 121.15 Td
-(-4) Tj
+(0) Tj
 ET
 1.00 g
 0.78 G
@@ -1680,7 +1669,7 @@ BT
 11.50 TL
 0.000 g
 19.17 99.65 Td
-(Porção de Calabresa) Tj
+(Porção de Calabresa - Meia \(200gr\)) Tj
 ET
 1.00 g
 0.78 G
@@ -1692,7 +1681,7 @@ BT
 11.50 TL
 0.000 g
 224.72 99.65 Td
-(0) Tj
+(-1) Tj
 ET
 0.96 g
 0.78 G
@@ -1704,7 +1693,7 @@ BT
 11.50 TL
 0.000 g
 19.17 78.15 Td
-(Porção de Calabresa \(1/2\)) Tj
+(Porção de Camarão \(400gr\)) Tj
 ET
 0.96 g
 0.78 G
@@ -1716,7 +1705,7 @@ BT
 11.50 TL
 0.000 g
 224.72 78.15 Td
-(-1) Tj
+(0) Tj
 ET
 1.00 g
 0.78 G
@@ -1728,7 +1717,7 @@ BT
 11.50 TL
 0.000 g
 19.17 56.65 Td
-(Porção de Camarão  200gr \(1/2\)) Tj
+(Porção de Camarão - Meia \(200gr\)) Tj
 ET
 1.00 g
 0.78 G
@@ -1752,7 +1741,7 @@ BT
 11.50 TL
 0.000 g
 19.17 35.15 Td
-(Porção de Camarão 400gr) Tj
+(Porção de Filé de Tilápia \(400gr\)) Tj
 ET
 0.96 g
 0.78 G
@@ -1764,7 +1753,7 @@ BT
 11.50 TL
 0.000 g
 224.72 35.15 Td
-(0) Tj
+(-6) Tj
 ET
 1.00 g
 0.78 G
@@ -1776,7 +1765,7 @@ BT
 11.50 TL
 0.000 g
 19.17 13.65 Td
-(Porção de Fritas) Tj
+(Porção de Filé de Tilápia - Meia \(200gr\)) Tj
 ET
 1.00 g
 0.78 G
@@ -1788,7 +1777,7 @@ BT
 11.50 TL
 0.000 g
 224.72 13.65 Td
-(4) Tj
+(-5) Tj
 ET
 0.78 G
 0.00 w
@@ -1804,7 +1793,7 @@ endobj
 endobj
 8 0 obj
 <<
-/Length 2408
+/Length 2190
 >>
 stream
 0.57 w
@@ -1843,7 +1832,7 @@ BT
 11.50 TL
 0.000 g
 19.17 486.65 Td
-(Porção de Fritas \(1/2\)) Tj
+(Porção de Fritas \(400gr\)) Tj
 ET
 0.96 g
 0.78 G
@@ -1855,7 +1844,7 @@ BT
 11.50 TL
 0.000 g
 224.72 486.65 Td
-(-7) Tj
+(4) Tj
 ET
 1.00 g
 0.78 G
@@ -1867,7 +1856,7 @@ BT
 11.50 TL
 0.000 g
 19.17 465.15 Td
-(Porção de Tilápia) Tj
+(Porção de Fritas - Meia \(200gr\)) Tj
 ET
 1.00 g
 0.78 G
@@ -1879,7 +1868,7 @@ BT
 11.50 TL
 0.000 g
 224.72 465.15 Td
-(38) Tj
+(-7) Tj
 ET
 0.96 g
 0.78 G
@@ -1891,7 +1880,7 @@ BT
 11.50 TL
 0.000 g
 19.17 443.65 Td
-(Porção de Tilápia \(1/2\)) Tj
+(Porção de Panceta \(400gr\)) Tj
 ET
 0.96 g
 0.78 G
@@ -1903,7 +1892,7 @@ BT
 11.50 TL
 0.000 g
 224.72 443.65 Td
-(-5) Tj
+(0) Tj
 ET
 1.00 g
 0.78 G
@@ -1915,7 +1904,7 @@ BT
 11.50 TL
 0.000 g
 19.17 422.15 Td
-(Porção de Tilápia - Filé) Tj
+(Porção de Postas de Tilápia \(400gr\)) Tj
 ET
 1.00 g
 0.78 G
@@ -1927,7 +1916,7 @@ BT
 11.50 TL
 0.000 g
 224.72 422.15 Td
-(-6) Tj
+(38) Tj
 ET
 0.96 g
 0.78 G
@@ -1939,7 +1928,7 @@ BT
 11.50 TL
 0.000 g
 19.17 400.65 Td
-(samburá) Tj
+(Samburá) Tj
 ET
 0.96 g
 0.78 G
@@ -1963,7 +1952,7 @@ BT
 11.50 TL
 0.000 g
 19.17 379.15 Td
-(Suco Del Valle sabores uva e limão) Tj
+(Suco Del Valle Limão) Tj
 ET
 1.00 g
 0.78 G
@@ -1975,7 +1964,7 @@ BT
 11.50 TL
 0.000 g
 224.72 379.15 Td
-(12) Tj
+(-4) Tj
 ET
 0.96 g
 0.78 G
@@ -1987,7 +1976,7 @@ BT
 11.50 TL
 0.000 g
 19.17 357.65 Td
-(Suco Dell Vale) Tj
+(Suco Del Valle Uva) Tj
 ET
 0.96 g
 0.78 G
@@ -1999,7 +1988,7 @@ BT
 11.50 TL
 0.000 g
 224.72 357.65 Td
-(-4) Tj
+(12) Tj
 ET
 1.00 g
 0.78 G
@@ -2011,7 +2000,7 @@ BT
 11.50 TL
 0.000 g
 19.17 336.15 Td
-(Varas de pescar) Tj
+(Varas de Pescar) Tj
 ET
 1.00 g
 0.78 G
@@ -2024,30 +2013,6 @@ BT
 0.000 g
 224.72 336.15 Td
 (-12) Tj
-ET
-0.96 g
-0.78 G
-0.00 w
-14.17 328.15 205.54 -21.50 re
-f
-BT
-/F1 10 Tf
-11.50 TL
-0.000 g
-19.17 314.65 Td
-(wien bier 1,5 lts IPA) Tj
-ET
-0.96 g
-0.78 G
-0.00 w
-219.72 328.15 41.11 -21.50 re
-f
-BT
-/F1 10 Tf
-11.50 TL
-0.000 g
-224.72 314.65 Td
-(1) Tj
 ET
 0.78 G
 0.00 w
@@ -2325,7 +2290,7 @@ endobj
 25 0 obj
 <<
 /Producer (jsPDF 1.5.3)
-/CreationDate (D:20240526213802-03'00')
+/CreationDate (D:20240527232808-03'00')
 >>
 endobj
 26 0 obj
@@ -2339,39 +2304,39 @@ endobj
 xref
 0 27
 0000000000 65535 f 
-0000018653 00000 n 
-0000070535 00000 n 
+0000018515 00000 n 
+0000070397 00000 n 
 0000000015 00000 n 
 0000000124 00000 n 
-0000010101 00000 n 
-0000010210 00000 n 
-0000016084 00000 n 
-0000016193 00000 n 
-0000018722 00000 n 
-0000018847 00000 n 
-0000018978 00000 n 
+0000010088 00000 n 
+0000010197 00000 n 
+0000016164 00000 n 
+0000016273 00000 n 
+0000018584 00000 n 
+0000018709 00000 n 
+0000018840 00000 n 
+0000018974 00000 n 
 0000019112 00000 n 
-0000019250 00000 n 
-0000019374 00000 n 
-0000019503 00000 n 
-0000019635 00000 n 
-0000019771 00000 n 
-0000019899 00000 n 
-0000020026 00000 n 
-0000020155 00000 n 
-0000020288 00000 n 
-0000020390 00000 n 
-0000020486 00000 n 
-0000057910 00000 n 
-0000070798 00000 n 
-0000070884 00000 n 
+0000019236 00000 n 
+0000019365 00000 n 
+0000019497 00000 n 
+0000019633 00000 n 
+0000019761 00000 n 
+0000019888 00000 n 
+0000020017 00000 n 
+0000020150 00000 n 
+0000020252 00000 n 
+0000020348 00000 n 
+0000057772 00000 n 
+0000070660 00000 n 
+0000070746 00000 n 
 trailer
 <<
 /Size 27
 /Root 26 0 R
 /Info 25 0 R
-/ID [ <208B16828044B20D97CD940C337A9BD7> <208B16828044B20D97CD940C337A9BD7> ]
+/ID [ <60BDA3B497D5B1EAD4655718F5524547> <60BDA3B497D5B1EAD4655718F5524547> ]
 >>
 startxref
-70988
+70850
 %%EOF

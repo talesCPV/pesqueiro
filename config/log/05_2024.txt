@@ -365,11 +365,188 @@
 24/05/2024 04:07 admin@pesqueirodourado.com.br : Venda lancada -> Comanda:36, Valor:0.00, Modo:DIN
 24/05/2024 04:07 admin@pesqueirodourado.com.br : Venda lancada -> Comanda:35, Valor:0.00, Modo:DIN
 24/05/2024 04:08 admin@pesqueirodourado.com.br : Nova Comanda -> Cliente:Tales Cembraneli Dantas, CPF:26687200879
-24/05/2024 16:40 admin@pesqueirodourado.com.br : Produto Editado Pesque Pague - Pacu (limpo) -> Pesque Pague - Pacu (limpo)
-24/05/2024 16:42 admin@pesqueirodourado.com.br : Produto Cadastrado  -> Pesca Esportiva (dia todo)
-24/05/2024 16:42 admin@pesqueirodourado.com.br : Produto Editado Pesca Esportiva (dia todo) -> Pesca Esportiva (dia todo)
-25/05/2024 19:27 admin@pesqueirodourado.com.br : Insercao de novo usuarios, email:undefined -> garcom@pesqueirodourado.com.br, acesso:undefined -> 3
-25/05/2024 19:28 admin@pesqueirodourado.com.br : Insercao de novo usuarios, email:undefined -> caixa@pesqueirodourado.com.br, acesso:undefined -> 1
-26/05/2024 16:03 admin@pesqueirodourado.com.br : Produto Cadastrado  -> teste comida
-26/05/2024 16:03 admin@pesqueirodourado.com.br : Produto Editado teste comida -> teste comida
-26/05/2024 16:05 admin@pesqueirodourado.com.br : Produto Deletado -> teste comida
+24/05/2024 11:01 celso@pesqueirodourado.com.br : Item Adicionado -> Comanda:31, Prod:Cerveja Brahma 600ml, Qtd.:3
+24/05/2024 14:05 celso@pesqueirodourado.com.br : Nova Comanda -> Cliente:Nelson Silva, CPF:05179326877
+24/05/2024 14:06 celso@pesqueirodourado.com.br : Item Adicionado -> Comanda:38, Prod:Cerveja Skol lata 350 ml, Qtd.:1
+24/05/2024 14:06 celso@pesqueirodourado.com.br : Item Adicionado -> Comanda:38, Prod:pinga de garrafa, Qtd.:1
+25/05/2024 08:45 roger@pesqueirodourado.com.br : Produto Editado Cerveja Brahma lata 350 ml -> Cerveja Brahma lata 350 ml
+25/05/2024 08:50 celso@pesqueirodourado.com.br : Item Deletado -> Comanda:31, Prod:Cerveja Brahma 600ml, Qtd.:3
+25/05/2024 08:50 celso@pesqueirodourado.com.br : Item Deletado -> Comanda:31, Prod:Ice Noch Drink, Qtd.:2
+25/05/2024 08:50 celso@pesqueirodourado.com.br : Item Deletado -> Comanda:31, Prod:cerveja Imperio 600ml, Qtd.:1
+25/05/2024 08:55 roger@pesqueirodourado.com.br : Produto Editado Coca Cola 600 ml -> Coca Cola 600 ml
+25/05/2024 08:55 roger@pesqueirodourado.com.br : Produto Editado Coca Cola 600 ml -> Coca Cola 600 ml
+25/05/2024 08:59 roger@pesqueirodourado.com.br : Produto Editado cerveja Imperio 600ml -> cerveja Imperio 600ml
+25/05/2024 09:01 roger@pesqueirodourado.com.br : Produto Cadastrado  -> Cerveja Brahma Duplo Malte 269mk
+25/05/2024 09:03 roger@pesqueirodourado.com.br : Produto Cadastrado  -> Itaipava Malzibier350ml
+25/05/2024 09:04 roger@pesqueirodourado.com.br : Produto Cadastrado  -> cerveja original 300ml garrafa vidro
+25/05/2024 09:10 roger@pesqueirodourado.com.br : Produto Editado Heineken Pro Malte Lager 600 ml -> Heineken Pro Malte Lager 600 ml
+25/05/2024 09:13 roger@pesqueirodourado.com.br : Produto Editado Cerveja Heineken lata 350ml -> Cerveja Heineken lata 350ml
+25/05/2024 09:17 roger@pesqueirodourado.com.br : Produto Cadastrado  -> cerveja Blue Ribbon 1.5 lts
+25/05/2024 09:18 roger@pesqueirodourado.com.br : Produto Cadastrado  -> cervreja Wien bier Chopp 1,5 lts
+25/05/2024 09:23 roger@pesqueirodourado.com.br : Produto Editado cervreja Wien bier Chopp 1,5 lts -> cervreja Wien bier Chopp 1,5 lts  Pilsen
+25/05/2024 09:23 roger@pesqueirodourado.com.br : Produto Editado cerveja Blue Ribbon 1.5 lts -> cerveja Blue Ribbon 1.5 lts
+25/05/2024 09:24 roger@pesqueirodourado.com.br : Produto Cadastrado  -> wien bier 1,5 lts IPA
+25/05/2024 09:25 roger@pesqueirodourado.com.br : Produto Editado cerveja Blue Ribbon 1.5 lts -> cerveja Blue Ribbon 1.5 lts LAager
+25/05/2024 09:27 roger@pesqueirodourado.com.br : Novo Cliente Nome: Alberto Silva Francisco, CPF: 07747707835, Cel: 12996207696, Saldo: 0, Obs: 
+25/05/2024 09:28 roger@pesqueirodourado.com.br : Produto Editado cerveja original 300ml garrafa vidro -> cerveja original 300ml garrafa vidro
+25/05/2024 09:31 roger@pesqueirodourado.com.br : Produto Editado Acai Guaraviton bebida de guarana -> Acai Guaraviton bebida de guarana
+25/05/2024 09:31 roger@pesqueirodourado.com.br : Produto Editado Agua com gas -> Agua com gas
+25/05/2024 09:34 roger@pesqueirodourado.com.br : Produto Editado Agua sem gas -> Agua sem gas
+25/05/2024 09:36 roger@pesqueirodourado.com.br : Produto Editado cerveja Aretzbeer -> cerveja Aretzbeer
+25/05/2024 09:37 roger@pesqueirodourado.com.br : Produto Editado Cerveja Brahma 600ml -> Cerveja Brahma 600ml
+25/05/2024 09:38 roger@pesqueirodourado.com.br : Produto Editado Cerveja Brahma Duplo Malte 269mk -> Cerveja Brahma Duplo Malte 269ml
+25/05/2024 09:40 roger@pesqueirodourado.com.br : Produto Editado Cerveja Budweiser 350 ml -> Cerveja Budweiser 350 ml
+25/05/2024 09:46 roger@pesqueirodourado.com.br :  Imagem Alterada -> Produto: Acai Guaraviton bebida de guarana
+25/05/2024 09:47 roger@pesqueirodourado.com.br : Produto Editado Acai Guaraviton bebida de guarana -> Acai Guaraviton bebida de guarana
+25/05/2024 09:51 roger@pesqueirodourado.com.br :  Imagem Alterada -> Produto: Agua com gas
+25/05/2024 09:51 roger@pesqueirodourado.com.br : Produto Editado Agua com gas -> Agua com gas
+25/05/2024 09:55 roger@pesqueirodourado.com.br :  Imagem Alterada -> Produto: Agua sem gas
+25/05/2024 09:55 roger@pesqueirodourado.com.br : Produto Editado Agua sem gas -> Agua sem gas
+25/05/2024 10:06 roger@pesqueirodourado.com.br :  Imagem Alterada -> Produto: cerveja Aretzbeer
+25/05/2024 10:06 roger@pesqueirodourado.com.br : Produto Editado cerveja Aretzbeer -> cerveja Aretzbeer
+25/05/2024 10:10 roger@pesqueirodourado.com.br :  Imagem Alterada -> Produto: cerveja Blue Ribbon 1.5 lts LAager
+25/05/2024 10:10 roger@pesqueirodourado.com.br : Produto Editado cerveja Blue Ribbon 1.5 lts LAager -> cerveja Blue Ribbon 1.5 lts LAager
+25/05/2024 10:12 roger@pesqueirodourado.com.br :  Imagem Alterada -> Produto: Cerveja Brahma Duplo Malte 269ml
+25/05/2024 10:13 roger@pesqueirodourado.com.br : Produto Editado Cerveja Brahma Duplo Malte 269ml -> Cerveja Brahma Duplo Malte 269ml
+25/05/2024 10:18 roger@pesqueirodourado.com.br :  Imagem Alterada -> Produto: Cerveja Brahma lata 350 ml
+25/05/2024 10:19 roger@pesqueirodourado.com.br : Produto Editado Cerveja Brahma lata 350 ml -> Cerveja Brahma lata 350 ml
+25/05/2024 10:23 roger@pesqueirodourado.com.br :  Imagem Alterada -> Produto: Cerveja Budweiser 350 ml
+25/05/2024 10:23 roger@pesqueirodourado.com.br : Produto Editado Cerveja Budweiser 350 ml -> Cerveja Budweiser 350 ml
+25/05/2024 10:25 roger@pesqueirodourado.com.br :  Imagem Alterada -> Produto: Cerveja Budweiser long neck
+25/05/2024 10:28 roger@pesqueirodourado.com.br : Produto Editado Cerveja Budweiser long neck -> Cerveja Budweiser long neck
+25/05/2024 10:31 roger@pesqueirodourado.com.br :  Imagem Alterada -> Produto: Cerveja Heineken lata 350ml
+25/05/2024 10:31 roger@pesqueirodourado.com.br : Produto Editado Cerveja Heineken lata 350ml -> Cerveja Heineken lata 350ml
+25/05/2024 10:34 roger@pesqueirodourado.com.br :  Imagem Alterada -> Produto: cerveja Imperio 600ml
+25/05/2024 10:34 roger@pesqueirodourado.com.br : Produto Editado cerveja Imperio 600ml -> cerveja Imperio 600ml
+25/05/2024 10:38 roger@pesqueirodourado.com.br :  Imagem Alterada -> Produto: cerveja Imperio 600ml
+25/05/2024 10:38 roger@pesqueirodourado.com.br : Produto Editado cerveja Imperio 600ml -> cerveja Imperio 600ml
+25/05/2024 10:39 roger@pesqueirodourado.com.br :  Imagem Alterada -> Produto: Cerveja Imperio Puro Malte
+25/05/2024 10:39 roger@pesqueirodourado.com.br : Produto Editado Cerveja Imperio Puro Malte -> Cerveja Imperio Puro Malte
+25/05/2024 10:42 roger@pesqueirodourado.com.br :  Imagem Alterada -> Produto: cerveja original 300ml garrafa vidro
+25/05/2024 10:42 roger@pesqueirodourado.com.br : Produto Editado cerveja original 300ml garrafa vidro -> cerveja original 300ml garrafa vidro
+25/05/2024 10:47 roger@pesqueirodourado.com.br :  Imagem Alterada -> Produto: Cerveja Skol lata 350 ml
+25/05/2024 10:47 roger@pesqueirodourado.com.br : Produto Editado Cerveja Skol lata 350 ml -> Cerveja Skol lata 350 ml
+25/05/2024 10:52 roger@pesqueirodourado.com.br :  Imagem Alterada -> Produto: cervreja Wien bier Chopp 1,5 lts  Pilsen
+25/05/2024 10:52 roger@pesqueirodourado.com.br : Produto Editado cervreja Wien bier Chopp 1,5 lts  Pilsen -> cervreja Wien bier Chopp 1,5 lts  Pilsen
+25/05/2024 10:56 roger@pesqueirodourado.com.br :  Imagem Alterada -> Produto: Coca Cola 350 ml lata
+25/05/2024 10:56 roger@pesqueirodourado.com.br : Produto Editado Coca Cola 350 ml lata -> Coca Cola 350 ml lata
+25/05/2024 10:57 roger@pesqueirodourado.com.br : Produto Editado Cerveja Skol lata 350 ml -> Cerveja Skol lata 350 ml
+25/05/2024 10:59 roger@pesqueirodourado.com.br :  Imagem Alterada -> Produto: Coca Cola 600 ml
+25/05/2024 10:59 roger@pesqueirodourado.com.br : Produto Editado Coca Cola 600 ml -> Coca Cola 600 ml
+25/05/2024 11:02 roger@pesqueirodourado.com.br :  Imagem Alterada -> Produto: guarana lata 350ml
+25/05/2024 11:02 roger@pesqueirodourado.com.br : Produto Editado guarana lata 350ml -> guarana lata 350ml
+25/05/2024 11:05 roger@pesqueirodourado.com.br :  Imagem Alterada -> Produto: Heineken Pro Malte Lager 600 ml
+25/05/2024 11:05 roger@pesqueirodourado.com.br : Produto Editado Heineken Pro Malte Lager 600 ml -> Heineken Pro Malte Lager 600 ml
+25/05/2024 11:06 roger@pesqueirodourado.com.br :  Imagem Alterada -> Produto: Ice Noch Drink
+25/05/2024 11:07 roger@pesqueirodourado.com.br : Produto Editado Ice Noch Drink -> Ice Noch Drink
+25/05/2024 11:08 roger@pesqueirodourado.com.br :  Imagem Alterada -> Produto: Itaipava Malzibier350ml
+25/05/2024 11:08 roger@pesqueirodourado.com.br : Produto Editado Itaipava Malzibier350ml -> Itaipava Malzibier350ml
+25/05/2024 11:17 roger@pesqueirodourado.com.br :  Imagem Alterada -> Produto: Mini Coca Cola 200ml c/ acucar
+25/05/2024 11:17 roger@pesqueirodourado.com.br : Produto Editado Mini Coca Cola 200ml c/ acucar -> Mini Coca Cola 200ml c/ acucar
+25/05/2024 11:39 roger@pesqueirodourado.com.br : Produto Editado Pesque Pague - Tilapia (Limpa) -> Pesque Pague - Tilapia (Limpa)
+25/05/2024 13:19 roger@pesqueirodourado.com.br : Novo Cliente Nome: Fred Ramos, CPF: 08105926814, Cel: 12981197149, Saldo: 0, Obs: 
+25/05/2024 13:20 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Fred Ramos, CPF:08105926814
+25/05/2024 13:21 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:39, Prod:Agua com gas, Qtd.:1
+25/05/2024 13:22 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:39, Prod:Porcao de Tilapia, Qtd.:1
+25/05/2024 13:43 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:39, Prod:Agua com gas, Qtd.:2
+25/05/2024 13:43 silmara@pesqueirodourado.com.br : Item Deletado -> Comanda:39, Prod:Agua com gas, Qtd.:1
+25/05/2024 14:29 caixa@pesqueirodourado.com.br : Produto Editado Isca de Salsicha -> Isca de Salsicha
+25/05/2024 14:30 caixa@pesqueirodourado.com.br : Produto Editado Isca Massinha (potinho) -> Isca Massinha (potinho)
+25/05/2024 14:30 caixa@pesqueirodourado.com.br : INVENTARIO: ADICIONADO 1 Cerveja Ecobier Chopp
+25/05/2024 14:30 caixa@pesqueirodourado.com.br : INVENTARIO: ADICIONADO 10 Isca Massinha (potinho)
+25/05/2024 14:33 caixa@pesqueirodourado.com.br :  Imagem Alterada -> Produto: Cerveja Brahma 600ml
+25/05/2024 15:01 roger@pesqueirodourado.com.br : Novo Cliente Nome: Paulo Donizetti Fordeca, CPF: 97753386891, Cel: 12997916507, Saldo: 0, Obs: 
+25/05/2024 15:02 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Paulo Donizetti Fordeca, CPF:97753386891
+25/05/2024 15:06 roger@pesqueirodourado.com.br : Novo Cliente Nome: Antonio Fernando da Silva, CPF: 14474796888, Cel: 12991584667, Saldo: 0, Obs: 
+25/05/2024 15:08 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Antonio Fernando da Silva, CPF:14474796888
+25/05/2024 15:09 roger@pesqueirodourado.com.br : Edicao de Cliente Nome: Antonio Fernando da Silva, CPF: 14474796888, Cel: 12991584667, Saldo: 0, Obs: 
+25/05/2024 15:10 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:41, Prod:Heineken Pro Malte Lager 600 ml, Qtd.:1
+25/05/2024 15:11 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:41, Prod:Porcao de Tilapia (1/2), Qtd.:1
+25/05/2024 15:12 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:41, Prod:Isca Massinha (potinho), Qtd.:1
+25/05/2024 15:12 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:40, Prod:Porcao de Tilapia - File, Qtd.:1
+25/05/2024 15:12 roger@pesqueirodourado.com.br : Produto Editado Porcao de Camarao (200gr) -> meia Porcao de Camarao (200gr)
+25/05/2024 15:13 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:40, Prod:Porcao de Fritas (1/2), Qtd.:1
+25/05/2024 15:13 roger@pesqueirodourado.com.br : Produto Cadastrado  -> Porcao de Camarao (400gr)
+25/05/2024 15:13 roger@pesqueirodourado.com.br : Produto Editado meia Porcao de Camarao (200gr) -> meia Porcao de Camarao (200gr)
+25/05/2024 15:14 roger@pesqueirodourado.com.br : Produto Editado meia Porcao de Camarao (200gr) -> meia Porcao de Camarao (200gr)
+25/05/2024 15:14 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:41, Prod:meia Porcao de Camarao (200gr), Qtd.:1
+25/05/2024 15:14 roger@pesqueirodourado.com.br : Produto Cadastrado  -> meia porcao de Calabresa
+25/05/2024 15:16 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:40, Prod:meia porcao de Calabresa, Qtd.:1
+25/05/2024 15:26 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:40, Prod:Itaipava Malzibier350ml, Qtd.:1
+25/05/2024 15:30 roger@pesqueirodourado.com.br : Produto Cadastrado  -> Brahma Zero alcool
+25/05/2024 15:30 roger@pesqueirodourado.com.br :  Imagem Alterada -> Produto: Brahma Zero alcool
+25/05/2024 15:31 roger@pesqueirodourado.com.br : Produto Editado Brahma Zero alcool -> Brahma Zero alcool
+25/05/2024 15:31 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:32, Prod:Cerveja Brahma lata 350 ml, Qtd.:1
+25/05/2024 15:32 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:40, Prod:Brahma Zero alcool, Qtd.:1
+25/05/2024 15:33 roger@pesqueirodourado.com.br : Item Baixado -> Comanda:32, Prod:Cerveja Brahma lata 350 ml, Qtd.:1
+25/05/2024 15:34 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:31, Prod:cerveja Imperio 600ml, Qtd.:1
+25/05/2024 15:34 roger@pesqueirodourado.com.br : Item Baixado -> Comanda:31, Prod:cerveja Imperio 600ml, Qtd.:1
+25/05/2024 15:37 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Antonio Fernando da Silva, CPF:14474796888
+25/05/2024 15:38 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:42, Prod:Heineken Pro Malte Lager 600 ml, Qtd.:1
+25/05/2024 15:38 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Alberto Silva Francisco, CPF:07747707835
+25/05/2024 15:38 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:43, Prod:Coca Cola 600 ml, Qtd.:1
+25/05/2024 15:38 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:42, Prod:Isca de Salsicha, Qtd.:2
+25/05/2024 15:39 roger@pesqueirodourado.com.br : Item Baixado -> Comanda:43, Prod:Coca Cola 600 ml, Qtd.:1
+25/05/2024 15:39 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:42, Prod:pinga de garrafa, Qtd.:1
+25/05/2024 15:39 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:42, Prod:Porcao de Tilapia (1/2), Qtd.:1
+25/05/2024 15:40 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:42, Prod:meia Porcao de Camarao (200gr), Qtd.:1
+25/05/2024 15:40 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:32, Prod:Porcao de Tilapia, Qtd.:1
+25/05/2024 15:40 roger@pesqueirodourado.com.br : Item Baixado -> Comanda:32, Prod:Porcao de Tilapia, Qtd.:1
+25/05/2024 15:50 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:40, Prod:Suco Dell Vale, Qtd.:1
+25/05/2024 15:51 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:30, Prod:cerveja Aretzbeer, Qtd.:2
+25/05/2024 16:02 roger@pesqueirodourado.com.br :  Imagem Alterada -> Produto: Suco Del Valle sabores uva e limao
+25/05/2024 16:02 roger@pesqueirodourado.com.br : Produto Editado Suco Del Valle sabores uva e limao -> Suco Del Valle sabores uva e limao
+25/05/2024 16:09 roger@pesqueirodourado.com.br :  Imagem Alterada -> Produto: wien bier 1,5 lts IPA
+25/05/2024 16:09 roger@pesqueirodourado.com.br : Produto Editado wien bier 1,5 lts IPA -> wien bier 1,5 lts IPA
+25/05/2024 17:13 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:42, Prod:Isca Massinha (potinho), Qtd.:1
+25/05/2024 17:14 roger@pesqueirodourado.com.br : Item Deletado -> Comanda:42, Prod:Isca Massinha (potinho), Qtd.:1
+25/05/2024 17:26 admin@pesqueirodourado.com.br : Produto Editado meia porcao de Calabresa -> Porcao de Calabresa (1/2)
+25/05/2024 17:27 admin@pesqueirodourado.com.br : Produto Editado meia Porcao de Camarao (200gr) -> Porcao de Camarao  1/2  (200gr)
+25/05/2024 17:29 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:40, Prod:Brahma Zero alcool, Qtd.:1
+25/05/2024 17:29 admin@pesqueirodourado.com.br : Produto Editado Porcao de Camarao (400gr) -> Porcao de Camarao (400gr)
+25/05/2024 17:30 admin@pesqueirodourado.com.br : Produto Editado Porcao de Camarao  1/2  (200gr) -> Porcao de Camarao   (200gr)
+25/05/2024 17:33 admin@pesqueirodourado.com.br : Produto Editado Porcao de Camarao   (200gr) -> Porcao de Camarao  200gr (1/2)
+25/05/2024 17:33 admin@pesqueirodourado.com.br : Produto Editado Porcao de Camarao (400gr) -> Porcao de Camarao 400gr
+26/05/2024 10:59 admin@pesqueirodourado.com.br : Produto Editado cerveja Aretzbeer -> cerveja Aretzbeer
+26/05/2024 10:59 admin@pesqueirodourado.com.br : Produto Editado cerveja Blue Ribbon 1.5 lts LAager -> Cerveja Blue Ribbon 1.5 lts Lager
+26/05/2024 11:00 admin@pesqueirodourado.com.br : Produto Editado cervreja Wien bier Chopp 1,5 lts  Pilsen -> Cervreja Wien Bier Chopp 1,5 lts  Pilsen
+26/05/2024 21:32  : Tentativa de alteracao de senha
+26/05/2024 21:33  : Tentativa de alteracao de senha
+26/05/2024 21:53 dantas@flexibus.com.br : Produto Editado Porcao de Calabresa -> Porcao de Calabresa 400 gr
+26/05/2024 22:10 dantas@flexibus.com.br : Produto Editado Porcao de Fritas -> Porcao de Fritas 400gr
+26/05/2024 22:12 dantas@flexibus.com.br : Produto Editado Porcao de Tilapia -> Porcao file de Tilapia 400gr
+26/05/2024 22:16 dantas@flexibus.com.br : Produto Editado Porcao de Tilapia - File -> Porcao de Tilapia - File 400gr
+26/05/2024 22:19 dantas@flexibus.com.br : Produto Editado Porcao file de Tilapia 400gr -> Porcao de postas de Tilapia 400gr
+26/05/2024 22:25 dantas@flexibus.com.br : Produto Editado Porcao de Tilapia (1/2) -> Porcao de Tilapia file (1/2)
+26/05/2024 22:55 dantas@flexibus.com.br : COMPRA  :  Prod:CERVEJA IMPERIO 600ML, Qtd:0, Custo Unit..:0.00
+26/05/2024 23:07 dantas@flexibus.com.br : Produto Editado Brahma Zero alcool -> Cerveja Brahma Zero alcool
+26/05/2024 23:11 dantas@flexibus.com.br : Produto Editado Cerveja Blue Ribbon 1.5 lts Lager -> Chop Blue Ribbon 1.5 lts Lager/PILSEN/iPA
+26/05/2024 23:15 dantas@flexibus.com.br : Produto Deletado -> Cervreja Wien Bier Chopp 1,5 lts  Pilsen
+26/05/2024 23:18 dantas@flexibus.com.br : Produto Deletado -> wien bier 1,5 lts IPA
+27/05/2024 11:26 admin@pesqueirodourado.com.br : INVENTARIO: ADICIONADO 10 Pesque Pague - Pacu
+27/05/2024 11:26 admin@pesqueirodourado.com.br : INVENTARIO: RETIRADO 20 Pesque Pague - Pacu (limpo)
+27/05/2024 15:22 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:32, Prod:cerveja original 300ml garrafa vidro, Qtd.:1
+27/05/2024 15:23 roger@pesqueirodourado.com.br : Item Baixado -> Comanda:32, Prod:cerveja original 300ml garrafa vidro, Qtd.:1
+27/05/2024 15:24 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:31, Prod:Coca Cola 600 ml, Qtd.:1
+27/05/2024 15:24 roger@pesqueirodourado.com.br : Item Baixado -> Comanda:31, Prod:Coca Cola 600 ml, Qtd.:1
+27/05/2024 15:25 roger@pesqueirodourado.com.br : Produto Cadastrado  -> Porcao de Panceta
+27/05/2024 15:26 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:31, Prod:Porcao de Panceta, Qtd.:1
+27/05/2024 15:26 roger@pesqueirodourado.com.br : Item Baixado -> Comanda:31, Prod:Porcao de Panceta, Qtd.:1
+27/05/2024 15:27 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:31, Prod:Cerveja Imperio Puro Malte, Qtd.:7
+27/05/2024 15:27 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:31, Prod:Cerveja Imperio Puro Malte, Qtd.:1
+27/05/2024 15:27 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:31, Prod:Cerveja Skol lata 350 ml, Qtd.:1
+27/05/2024 15:28 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:31, Prod:Cerveja Brahma lata 350 ml, Qtd.:9
+27/05/2024 17:19 admin@pesqueirodourado.com.br : Produto Editado cerveja Aretzbeer -> Cerveja Aretzbeer
+27/05/2024 17:23 admin@pesqueirodourado.com.br : Produto Editado sambura -> sambura
+27/05/2024 17:24 admin@pesqueirodourado.com.br : Produto Editado sambura -> sambura
+27/05/2024 17:25 admin@pesqueirodourado.com.br : Produto Editado pinga de garrafa -> pinga de garrafa
+27/05/2024 17:26 admin@pesqueirodourado.com.br : Produto Editado Cerveja Brahma Duplo Malte 269ml -> Cerveja Brahma Duplo Malte 269ml
+27/05/2024 17:26 admin@pesqueirodourado.com.br : Produto Editado Cerveja Brahma lata 350 ml -> Cerveja Brahma lata 350 ml
+27/05/2024 17:26 admin@pesqueirodourado.com.br : Produto Editado Cerveja Budweiser 350 ml -> Cerveja Budweiser 350 ml
+27/05/2024 17:27 admin@pesqueirodourado.com.br : Produto Editado Cerveja Ecobier Chopp -> Cerveja Ecobier Chopp
+27/05/2024 17:27 admin@pesqueirodourado.com.br : Produto Editado cerveja Imperio 600ml -> cerveja Imperio 600ml
+27/05/2024 17:28 admin@pesqueirodourado.com.br : Produto Editado cerveja original 300ml garrafa vidro -> Cerveja Original 300ml Long Neck
+27/05/2024 17:29 admin@pesqueirodourado.com.br : Produto Editado guarana lata 350ml -> Guarana Lata Antartica 350ml
+27/05/2024 17:30 admin@pesqueirodourado.com.br : Produto Editado Heineken Pro Malte Lager 600 ml -> Heineken Puro Malte Lager 600 ml
+27/05/2024 17:31 admin@pesqueirodourado.com.br : Produto Editado Itaipava Malzibier350ml -> Itaipava Malzibier 350ml
+27/05/2024 17:33 admin@pesqueirodourado.com.br : Produto Editado Varas de pescar -> Varas de Pescar

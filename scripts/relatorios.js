@@ -120,7 +120,7 @@ function cardapio_pos(data){
 
         }
 
-        doc.text(data[i].descricao,5,txt.y)
+        doc.text(data[i].descricao.substr(0,41),5,txt.y)
         doc.text(`R$${data[i].preco}`,80,txt.y)
         addLine(1)
         if(txt.y >= doc.internal.pageSize.getHeight() - 20){

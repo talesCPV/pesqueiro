@@ -15,13 +15,12 @@
             font-size: 1.2em;
         }
 
-        #btnPrint, #btnPos{
+        .big{
             display: flex;
-            font-size: 2em;
-            width: 60px;
-            height: 60px;
+            font-size: 2.5em;
+            width: 50px;
+            height: 50px;
         }
-
         /*  MOBILE  */
 
         @media all and (max-width : 768px) {
@@ -33,8 +32,8 @@
     </style>
     <table id="tblCardapio"></table>
     <div class="line">
-        <button id="btnPrint" class="btn-round"><span class="mdi mdi-printer-outline"></span></button>
-        <button id="btnPos" class="btn-round"><span class="mdi mdi-printer-pos"></span></button>
+        <button id="btnPrint" class="btn-round big"><span class="mdi mdi-printer-outline"></span></button>
+        <button id="btnPos" class="btn-round big"><span class="mdi mdi-printer-pos"></span></button>
     </div>
 </template>
 <script>
@@ -52,7 +51,7 @@
             const tbl = pageScreen.querySelector('#tblCardapio')
             tbl.head('')
             let tipo = ''
-//            pageScreen.querySelector('#btnPrint').style.display = 'flex'
+            pageScreen.querySelector('#btnPrint').style.display = 'flex'
 
             for(let i=0; i<json.length; i++){
                 if(json[i].tipo != tipo){
@@ -61,7 +60,7 @@
                     tr.innerHTML = `<th colspan="3" class="title">${json[i].tipo.toUpperCase()}</th>`
                     tbl.appendChild(tr)
                 }
-                tbl.plot(json[i],'descricao|desc,preco|preco','Upp,R$.')
+                tbl.plot(json[i],'descricao|desc,preco|preco','str,R$.')
             }
         })
     }
