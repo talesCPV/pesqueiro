@@ -11,7 +11,6 @@ function comanda_virual(comanda){
         format: [550, 275]
     });
 
-
     doc.addImage(logo, 'png', 24, 10, 50, 15.5);
 
     doc.setFontSize(20);
@@ -40,7 +39,7 @@ function comanda_virual(comanda){
     return uploadFile(blob,`config/user/${localStorage.getItem('id_user')}/temp/`,'comanda.pdf')
 }
 
-function cardapio_print(data){
+function cardapio_print(data,font=15){
 
     jsPDF.autoTableSetDefaults({
         headStyles: { fillColor: [37, 68, 65] },
@@ -82,8 +81,7 @@ function cardapio_print(data){
                 0: {cellWidth: 60},
                 1: {cellWidth: 10, haling:'rigth' }
             },
-            
-            styles :{fontSize: 15},
+            styles :{fontSize: font},
             startY: txt.y
         });
         txt.y = doc.lastAutoTable.finalY + 15
@@ -91,7 +89,7 @@ function cardapio_print(data){
     openPDF(doc,'cardapio')
 }
 
-function cardapio_pos(data){
+function cardapio_pos(data,font=10){
     const logo = new Image()
     logo.src = 'assets/logo_peq.png'
 
@@ -104,7 +102,7 @@ function cardapio_pos(data){
     doc.addImage(logo, 'png', 22, 5, 50, 15.5);
     doc.setFontSize(20);
     txt.y = 28
-    doc.setFontSize(10);
+    doc.setFontSize(data.font);
     let title = ''
     const tables = []
 
@@ -116,8 +114,7 @@ function cardapio_pos(data){
             doc.setFontSize(16);
             doc.text(title,35,txt.y)
             addLine(2)
-            doc.setFontSize(10);
-
+            doc.setFontSize(font);
         }
 
         doc.text(data[i].descricao.substr(0,41),5,txt.y)
@@ -145,7 +142,6 @@ function produtos_pos(data){
 
     doc.setFontSize(30);
     txt.y = 22
-
 
     const tbl = new Object
     tbl.head = [['Descrição','Qtd']]

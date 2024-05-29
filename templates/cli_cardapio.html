@@ -15,25 +15,34 @@
             font-size: 1.2em;
         }
 
-        .big{
-            display: flex;
+        .big{            
             font-size: 2.5em;
             width: 50px;
             height: 50px;
         }
+
+        .btn-hide{
+            display: none;
+        }
+
+        #edtFont{
+            width: 50px;
+        }
         /*  MOBILE  */
 
         @media all and (max-width : 768px) {
-            #btnPrint{
-                display: none;
-            }
+            
         }
 
     </style>
     <table id="tblCardapio"></table>
     <div class="line">
-        <button id="btnPrint" class="btn-round big"><span class="mdi mdi-printer-outline"></span></button>
-        <button id="btnPos" class="btn-round big"><span class="mdi mdi-printer-pos"></span></button>
+        <button id="btnPrint" class="btn-round big btn-hide"> <span class="mdi mdi-printer-outline"> </span></button>
+        <button id="btnPos"   class="btn-round big btn-hide"> <span class="mdi mdi-printer-pos">     </span></button>
+        <div id="div_font" class="inline btn-hide">
+            <label for="edtFont">Font</label>
+            <input type="text" id="edtFont" maxlength="3" onkeyup="valFloat(this)" inputmode="decimal" value="13">
+        </div>
     </div>
 </template>
 <script>
@@ -51,7 +60,9 @@
             const tbl = pageScreen.querySelector('#tblCardapio')
             tbl.head('')
             let tipo = ''
-            pageScreen.querySelector('#btnPrint').style.display = 'flex'
+            pageScreen.querySelector('#div_font').style.display   =  ['0','2'].includes(localStorage.getItem('access')) ? 'flex' : 'none'
+            pageScreen.querySelector('#btnPrint').style.display =  ['0','2'].includes(localStorage.getItem('access')) ? 'flex' : 'none'
+            pageScreen.querySelector('#btnPos').style.display   =  ['0','1'].includes(localStorage.getItem('access')) ? 'flex' : 'none'
 
             for(let i=0; i<json.length; i++){
                 if(json[i].tipo != tipo){
@@ -72,10 +83,12 @@
     })
 
     pageScreen.querySelector('#btnPrint').addEventListener('click',()=>{
-        cardapio_print(pageData.cardapio)
+        const font = parseFloat(pageScreen.querySelector('#edtFont').value)
+        cardapio_print(pageData.cardapio, font)
     })
 
     pageScreen.querySelector('#btnPos').addEventListener('click',()=>{
+        const font = parseFloat(pageScreen.querySelector('#edtFont').value)
         cardapio_pos(pageData.cardapio)
     })
 
