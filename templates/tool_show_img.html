@@ -23,7 +23,6 @@
             <canvas id="cnvImg"></canvas>
             <h2 id="preco"></h2>
         </fieldset>
- 
 
 
 </template>
@@ -32,13 +31,10 @@
     const pageFunc = main_data.tool_show_img.func
     const pageScreen = document.querySelector('#card-tool_show_img')
      
-    console.log(pageData)
-
     pageScreen.querySelector('#title').innerHTML = pageData.descricao
     pageScreen.querySelector('#preco').innerHTML = 'R$'+pageData.preco+' '+pageData.und
     const back = backFunc({'filename':'../'+pageData.filename},1)
     back.then((resp)=>{    
-console.log(JSON.parse(resp) ? pageData.filename : 'assets/prod/noimage.jpg')                 
         loadImg( JSON.parse(resp) ? pageData.filename : 'assets/prod/noimage.jpg')
     })  
 
