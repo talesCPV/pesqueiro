@@ -112,23 +112,13 @@
     }
 
     pageFunc.buscaProd = (prod)=>{
-        prod.qtd = getFloat(prompt('Quantidade:',1),2)
-
-        if(prod.qtd > 0){
-            const params = new Object;
-                params.id = 0
-                params.id_comanda = pageData.id
-                params.id_prod = prod.id
-                params.qtd = prod.qtd
-                params.pg = 0
-            
-            const myPromisse = queryDB(params,'CXA-4');
-            myPromisse.then((resolve)=>{
-                setLog(`Item Adicionado -> Comanda:${params.id_comanda}, Prod:${prod.descricao}, Qtd.:${prod.qtd}`)
-                pageFunc.fillItemComanda()
-                main_data.caixa_comanda.func.fillComanda()
-            })
-        }
+        prod.org = 'caixa_view_comanda'
+        prod.oper = 'qtd'
+        prod.id_produto = (' ' + prod.id).slice(1) // copia o valor e não a referência
+        prod.id_comanda = pageData.id
+        prod.id = 0
+        prod.qtd = 1
+        openHTML('caixa_view_item_comanda.html','pop-up',`Comanda - ${pageData.id.padStart(8,0)} - ${pageData.nome.toUpperCase()}`,prod,450)       
     }
 
     pageScreen.querySelector('#btnPrint').addEventListener('click',()=>{

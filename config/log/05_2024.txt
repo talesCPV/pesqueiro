@@ -550,3 +550,18 @@
 27/05/2024 17:30 admin@pesqueirodourado.com.br : Produto Editado Heineken Pro Malte Lager 600 ml -> Heineken Puro Malte Lager 600 ml
 27/05/2024 17:31 admin@pesqueirodourado.com.br : Produto Editado Itaipava Malzibier350ml -> Itaipava Malzibier 350ml
 27/05/2024 17:33 admin@pesqueirodourado.com.br : Produto Editado Varas de pescar -> Varas de Pescar
+31/05/2024 15:17 admin@pesqueirodourado.com.br : Nova Comanda -> Cliente:Tales Cembraneli Dantas, CPF:26687200879
+31/05/2024 15:18 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:53, Prod:Agua sem gas, Qtd.:5.32
+31/05/2024 15:19 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:53, Prod:Agua sem gas, Qtd.:3.56
+31/05/2024 15:34 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:53, Prod:Agua com gas, Qtd.:2.45
+31/05/2024 15:37 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:53, Prod:Pesque Pague - Pacu, Qtd.:3.5
+31/05/2024 15:38 admin@pesqueirodourado.com.br : Item Deletado -> Comanda:53, Prod:Agua com gas, Qtd.:2.45
+31/05/2024 15:38 admin@pesqueirodourado.com.br : Item Deletado -> Comanda:53, Prod:Agua sem gas, Qtd.:3.56
+31/05/2024 15:38 admin@pesqueirodourado.com.br : Item Deletado -> Comanda:53, Prod:Pesque Pague - Pacu, Qtd.:3.5
+31/05/2024 15:39 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:53, Prod:Chopp Blue Ribbon - Lager / Pilsen / IPA (1.5 lts), Qtd.:3
+31/05/2024 15:40 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:53, Prod:Pesque Pague - Tilapia, Qtd.:2.5
+31/05/2024 15:40 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:53, Prod:Pesque Pague - Tilapia, Qtd.:5.5
+31/05/2024 15:40 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:53, Prod:Pesque Pague - Tilapia, Qtd.:34765
+31/05/2024 15:40 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:53, Prod:Pesque Pague - Tilapia, Qtd.:2.84
+31/05/2024 15:41 admin@pesqueirodourado.com.br : Item Deletado -> Comanda:53, Prod:Chopp Blue Ribbon - Lager / Pilsen / IPA (1.5 lts), Qtd.:3
+31/05/2024 15:41 admin@pesqueirodourado.com.br : Item Deletado -> Comanda:53, Prod:Pesque Pague - Tilapia, Qtd.:2.84

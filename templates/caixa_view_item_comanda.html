@@ -29,6 +29,7 @@
     const pageScreen = document.querySelector('#card-caixa_view_item_comanda')
 
     function save(pgto){
+
         const params = new Object;
             params.id = pageData.id
             params.id_comanda = pageData.id_comanda
@@ -49,6 +50,7 @@
         pageScreen.querySelector('#edtQtd').value = pageData.qtd
         pageScreen.querySelector('#edtQtd').focus()
         pageScreen.querySelector('#btnPgto').style.display = pageData.org == 'caixa_pdv' ? 'block' : 'none'
+        pageScreen.querySelector('#btnDel').style.display = pageData.oper == 'qtd' ? 'none' : 'block'
     }
 
     pageFunc.end = ()=>{
