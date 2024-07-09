@@ -60,7 +60,7 @@
 
     pageFunc.start = ()=>{
         pageFunc.fillItemComanda()
-    
+console.log(pageData)    
         const tbl = pageScreen.querySelector('#tblCliente')
         tbl.head('Nome,CPF|mobiHide,Telefone,Saldo')
         tbl.plot(pageData,'nome,cpf|mobiHide,cel|,saldo|edtSaldo','Upp,cpf,tel,R$.')

@@ -1,0 +1,6 @@
+09/07/2024 03:10 admin@pesqueirodourado.com.br : Nova Comanda -> Cliente:Tales Cembraneli Dantas, CPF:26687200879
+09/07/2024 03:27 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:212, Prod:Acai Guaraviton bebida de guarana, Qtd.:1
+09/07/2024 03:28 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:212, Prod:Agua mineiral aquissima 510 ml com gas, Qtd.:5
+09/07/2024 03:28 admin@pesqueirodourado.com.br : Pgto Parcial -> Comanda:212, Valor:10.50, Modo:DIN
+09/07/2024 04:16 admin@pesqueirodourado.com.br : Venda lancada -> Comanda:212, Valor:20.00, Modo:DIN
+09/07/2024 04:21 admin@pesqueirodourado.com.br : Venda lancada -> Comanda:212, Valor:20.00, Modo:DIN

@@ -55,13 +55,18 @@
             max-height: 100%;
         }
 
-        #edtTotal{
-            margin-top: -12px;
-            font-size: 3em;
-            text-align: center;
+        #tbl_total{
+            margin-top: 0 !important;
         }
 
-        #edtValRec, #edtTroco{
+        #edtSaldo{
+            font-size: 2em;
+            text-align: center;
+            padding: 0;
+        }
+
+        #edtValRec, #edtTroco, #edtTotal{
+            padding: 0;
             font-size: 2em;
             text-align: center;
         } 
@@ -72,6 +77,10 @@
 
         #card-caixa_pdv table{
             margin-top: -20px;
+        }
+
+        .sider .inline{
+            padding: 5px;
         }
 
         /* Media Queries */
@@ -101,19 +110,21 @@
                 </fieldset>
                 <fieldset class="fds-button">
                     <button id="btnAddItem" disabled><span class="mdi mdi-plus-thick"></span>Adicionar Ítem</button>
-                    <button id="btnComanda"><span class="mdi mdi-magnify"></span> Comandas</button>            
+                    <button id="btnComanda"><span class="mdi mdi-magnify"></span> Comandas</button>
+                    <button id="btnPrint"><span class="mdi mdi-printer-pos-outline"></span> Imprimir</button>
                 </fieldset>                
             </div>
             <div class="sider">
                 <fieldset class="sider fds-controle">
                     <legend>Caixa</legend>
+                    <table id="tbl_total"></table>
                     <div class="inline">
-                        <label for="edtTotal">Total</label>
-                        <input type="text" id="edtTotal" value="R$0,00" disabled>
+                        <label for="edtSaldo">Saldo Devido</label>
+                        <input type="text" id="edtSaldo" value="R$0,00" disabled>
                     </div>
                     <div class="inline">
                         <label for="edtValRec">Valor Recebido</label>
-                        <input type="text" id="edtValRec" onfocus="this.select();" onkeyup="valFloat(this)" onkeypress="return event.which== 13 ? troco('edtTotal','edtValRec','edtTroco','ckbTroco') : null" inputmode="decimal" value="0">
+                        <input type="text" id="edtValRec" onfocus="this.select();" onkeyup="valFloat(this)" onkeypress="return event.which== 13 ? troco('edtSaldo','edtValRec','edtTroco','ckbTroco') : null" inputmode="decimal" value="0">
                     </div>
                     <div class="inline">
                         <label for="edtTroco">Troco</label>
@@ -135,6 +146,7 @@
                 </fieldset >
 
                 <fieldset class="fds-button">
+                    <button id="btnParcial" disabled><span class="mdi mdi-cash"></span>Receber Parcial</button>
                     <button id="btnFinaliza" disabled><span class="mdi mdi-check-bold"></span>Finalizar</button>
                 </fieldset> 
             </div>            
@@ -151,13 +163,16 @@
 
     pageFunc.clear =()=>{
         pageScreen.querySelector('#btnFinaliza').disabled = 1
+        pageScreen.querySelector('#btnParcial').disabled = 1
         pageScreen.querySelector('#btnAddItem').disabled = 1
+        pageScreen.querySelector('#btnPrint').disabled = 1
         pageScreen.querySelector('#ckbTroco').checked = 1
-        pageScreen.querySelector('#edtTotal').value = 'R$0,00'
         pageScreen.querySelector('#edtValRec').value = '0'
         pageScreen.querySelector('#edtTroco').value = 'R$0,00'
+        pageScreen.querySelector('#edtSaldo').value = 'R$0,00'
         pageScreen.querySelector('#tblCliente').innerHTML = ''
         pageScreen.querySelector('#tblComanda').innerHTML = ''
+        pageScreen.querySelector('#tbl_total').innerHTML = ''
     }
 
     pageFunc.fillItemComanda = ()=>{
@@ -176,8 +191,7 @@
                 tbl.plot(json[i],'descricao|w70,und|mobiHide,qtd,preco|mobiHide,sub_total,pago|mobiHide','Upp,Upp,str,R$.,R$.,ico 0=mdi-close-thick 1=mdi-check-bold ')
                 tot += !Number(json[i].pago) ? parseFloat(json[i].sub_total) : 0
             }
-            pageScreen.querySelector('#edtTotal').value = 'R$'+tot.toFixed(2)
-            pageScreen.querySelector('#edtValRec').value = tot.toFixed(2)
+//            pageScreen.querySelector('#edtValRec').value = tot.toFixed(2)
             pageScreen.querySelector('#edtValRec').focus()
 
         })  
@@ -185,7 +199,7 @@
 
     pageFunc.finaliza = ()=>{
 
-        const meu_troco = troco('edtTotal','edtValRec','edtTroco','ckbTroco')
+        const meu_troco = troco('edtSaldo','edtValRec','edtTroco','ckbTroco')
         const params = new Object;
             params.id_comanda = pageData.comanda.id
             params.modo_pgto = pageScreen.querySelector('#cmbModoPgto').value
@@ -205,9 +219,17 @@
         tbl_cli.plot(data,'nome,cpf,cel,saldo','Upp,cpf,tel,R$.')
 
         data.aberta == '1' ? pageScreen.querySelector('#btnFinaliza').disabled = false : null
+        data.aberta == '1' ? pageScreen.querySelector('#btnParcial').disabled = false : null
 
+        const tbl = pageScreen.querySelector('#tbl_total')
+        tbl.head('Valor Comanda, Pago, Total')
+        tbl.plot(data,'total,pago,saldo_dev','R$.,R$.,R$.')
+
+        pageScreen.querySelector('#edtSaldo').value = `R$${data.saldo_dev}`
+        pageScreen.querySelector('#edtValRec').value = data.saldo_dev
         pageScreen.querySelector('#edtTroco').value = 'R$0,00'
         pageScreen.querySelector('#btnAddItem').disabled = false
+        pageScreen.querySelector('#btnPrint').disabled = false
         
         pageFunc.fillItemComanda()
     }
@@ -239,6 +261,10 @@
         openHTML('busca_prod.html','pop-up',`Adicionar produto`,pageData,600)
     })
 
+    pageScreen.querySelector('#btnPrint').addEventListener('click',()=>{
+        comanda_itens(pageData.comanda)
+    })
+
     pageScreen.querySelector('#tblComanda').addEventListener('click',(e)=>{
         const row = e.target.parentNode
         if(row.rowIndex > 0 && row.tagName == 'TR'){
@@ -252,6 +278,13 @@
             pageFunc.finaliza()
         }
     })
+
+    pageScreen.querySelector('#btnParcial').addEventListener('click',()=>{
+        closeModal('caixa_pg_parcial')
+        openHTML('caixa_pg_parcial.html','pop-up',`Comanda - ${pageData.comanda.id.padStart(8,0)} - ${pageData.comanda.nome.toUpperCase()}`,pageData.comanda,600)
+    })
+
+    
 
     pageFunc.clear()
 

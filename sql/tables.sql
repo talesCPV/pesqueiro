@@ -60,7 +60,6 @@ CREATE TABLE tb_produto(
     markup double DEFAULT 0,
     local varchar(20),
     disp boolean DEFAULT 1,
-    tipo varchar(15) NOT NULL DEFAULT "BEBIDA",    
     UNIQUE KEY (descricao),
     FOREIGN KEY (id_emp) REFERENCES tb_empresa(id),
     PRIMARY KEY (id)
@@ -150,7 +149,31 @@ CREATE TABLE tb_item_comanda (
   FOREIGN KEY (id_garcom) REFERENCES tb_usuario(id),
   PRIMARY KEY (id)
 ) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
+/* FUNCIONÁRIOS */
 
+ DROP TABLE tb_funcionario;
+CREATE TABLE tb_funcionario (
+    id int(11) NOT NULL AUTO_INCREMENT,
+    nome varchar(30) DEFAULT NULL,
+    nasc date DEFAULT NULL,
+    rg varchar(15) DEFAULT NULL,
+    cpf varchar(15) DEFAULT NULL,
+    pis varchar(15) DEFAULT NULL,
+    end varchar(60) DEFAULT NULL,
+    num varchar(6) DEFAULT NULL,
+    cidade varchar(30) DEFAULT NULL,
+    bairro varchar(40) DEFAULT NULL,
+    uf varchar(2) DEFAULT NULL,
+    cep varchar(10) DEFAULT NULL,    
+    data_adm date DEFAULT NULL,
+	data_dem date DEFAULT NULL,
+    cargo varchar(30) DEFAULT NULL,
+    tel varchar(15) DEFAULT NULL,
+    cel varchar(15) DEFAULT NULL,
+    ativo boolean DEFAULT 1,
+	obs varchar(255) DEFAULT NULL,
+    PRIMARY KEY (id)
+) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=utf8; 
 
 /* FINANCEIRO */
 
@@ -162,8 +185,14 @@ CREATE TABLE tb_lancamento (
   descricao varchar(60),
   modo varchar(3) DEFAULT "DEB",
   entrada boolean DEFAULT 1,
+  id_comanda int(11) DEFAULT NULL,
   PRIMARY KEY (id)
 ) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
+
+/*
+	ALTER TABLE tb_lancamento
+	ADD id_comanda int(11) DEFAULT NULL;
+*/
 
 DROP TABLE IF EXISTS tb_compra;
 CREATE TABLE tb_compra (

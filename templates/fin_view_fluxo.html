@@ -62,6 +62,7 @@
             params.descricao = del ? '' : pageScreen.querySelector('#edtDesc').value
             params.modo = pageScreen.querySelector('#cmbModoPgto').value
             params.entrada = pageScreen.querySelector('#cmbEntrada').value
+            params.id_comanda = null
         const myPromisse = queryDB(params,'FIN-2');
         myPromisse.then((resolve)=>{
             setLog(`Fluxo de Caixa ${del?'DELETADO':'EDITADO'}: ${pageScreen.querySelector('#edtDesc').value}, valor:${params.valor}, Modo.:${params.modo}, Fluxo:${pageScreen.querySelector('#cmbEntrada').value=='1'?'ENTRADA':'SAÍDA'}`)

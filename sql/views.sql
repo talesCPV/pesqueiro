@@ -1,13 +1,14 @@
---  DROP VIEW vw_cardapio;
+  DROP VIEW vw_cardapio;
  CREATE VIEW vw_cardapio AS 
     SELECT 
-        descricao,und,tipo,
+        id,descricao,und,tipo,
         ROUND(((markup/100 + 1)*custo),2) AS preco
     FROM tb_produto
     WHERE disp = 1
 	ORDER BY CASE WHEN tipo = "BEBIDAS" THEN 1
-				  WHEN tipo = "PORÇÕES" THEN 2
-				  ELSE 3 END,descricao;
+				  WHEN tipo = "COMIDAS" THEN 2
+                  WHEN tipo = "PORÇÕES" THEN 3
+				  ELSE 4 END,descricao;
 
 SELECT * FROM vw_cardapio ;
 
@@ -54,9 +55,9 @@ SELECT * FROM vw_prod_reserva;
 
 /* CAIXA */
 
--- DROP VIEW vw_item_comanda;
--- CREATE VIEW vw_item_comanda AS  
-	SELECT ITN.*, PROD.preco, (ITN.qtd * PROD.preco) AS sub_total, PROD.descricao, PROD.und 
+ DROP VIEW vw_item_comanda;
+ CREATE VIEW vw_item_comanda AS  
+	SELECT ITN.*, PROD.preco, ROUND((ITN.qtd * PROD.preco),2) AS sub_total, PROD.descricao, PROD.und 
     FROM tb_item_comanda AS ITN
     INNER JOIN vw_prod AS PROD
     ON ITN.id_produto = PROD.id;
@@ -73,14 +74,26 @@ SELECT * FROM vw_prod_reserva;
 
 SELECT * FROM vw_comanda_valor;
 
+ DROP VIEW vw_cmd_pgto;
+ CREATE VIEW vw_cmd_pgto AS  
+	SELECT CMD.id AS id_comanda, COALESCE(ROUND(SUM(LNC.valor),2), 0) AS pago FROM tb_comanda AS CMD
+	LEFT JOIN tb_lancamento AS LNC
+	ON LNC.id_comanda = CMD.id
+	GROUP BY CMD.id;
+
+SELECT * FROM vw_cmd_pgto;
+
  DROP VIEW vw_comanda;
  CREATE VIEW vw_comanda AS     
-	SELECT COM.id,COM.aberta,COM.entrada,DATE_FORMAT(COM.entrada,"%d/%m/%Y") AS data,DATE_FORMAT(COM.entrada,"%H:%i:%S") AS hora,COM.obs AS obs_comanda, COM.total,
+	SELECT COM.id,COM.aberta,COM.entrada,DATE_FORMAT(COM.entrada,"%d/%m/%Y") AS data,DATE_FORMAT(COM.entrada,"%H:%i:%S") AS hora,
+		COM.obs AS obs_comanda, ROUND(COM.total,2) AS total, ROUND((COM.total - PGTO.pago),2) AS saldo_dev,
 		CLI.id AS id_cliente, CLI.nome,CLI.cpf, CLI.cel, CLI.saldo, CLI.obs AS obs_cliente,
-        SHA2(COM.id, 256) AS hash_
+        SHA2(COM.id, 256) AS token, PGTO.pago
 		FROM vw_comanda_valor AS COM
         INNER JOIN tb_cliente AS CLI
+        INNER JOIN vw_cmd_pgto AS PGTO
         ON COM.id_cliente = CLI.id
+        AND COM.id =  PGTO.id_comanda
 		ORDER BY entrada DESC;
         
 SELECT * FROM vw_comanda;        

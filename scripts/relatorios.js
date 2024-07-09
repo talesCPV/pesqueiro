@@ -169,3 +169,55 @@ function produtos_pos(data){
 //    doc.save('cardapio.pdf')
 
 }
+
+
+function comanda_itens(comanda){
+
+    const logo = new Image()
+    logo.src = 'assets/logo_peq.png'
+
+
+    const doc = new jsPDF({
+        orientation: "portrait",
+        unit: "mm",
+        format: [550, 275]
+    });
+
+    doc.addImage(logo, 'png', 24, 10, 50, 15.5);
+
+    doc.setFontSize(10);
+    txt.y = 35
+    doc.text(`Comanda: ${comanda.id}`,10,txt.y)
+    addLine(1)
+    doc.text(`Cliente: ${comanda.nome}`,10,txt.y)
+    addLine(2)
+
+    const tbl = new Object
+    tbl.head = [['Descrição','Qtd','R$ Unt.','R$ Total']]
+    tbl.body = []
+
+    for(let i=0; i<comanda.itens.length; i++){
+        tbl.body.push([comanda.itens[i].descricao,comanda.itens[i].qtd,comanda.itens[i].preco,comanda.itens[i].sub_total])
+    }
+    tbl.body.push([''])
+    tbl.body.push(['Sub-Total','','',`R$${comanda.total}`])
+    tbl.body.push(['Pago','','',`R$${comanda.pago}`])
+    tbl.body.push(['Total','','',`R$${comanda.saldo_dev}`])
+
+    doc.autoTable({
+        head: tbl.head,
+        body: tbl.body,
+        columnStyles: {
+            0: {cellWidth: 30},
+            1: {cellWidth: 5, haling:'rigth' },
+            2: {cellWidth: 5, haling:'rigth' },
+            3: {cellWidth: 10, haling:'rigth' }
+        },
+        margin: {top: 10, right: 0, bottom: 0, left: 0},
+        headStyles :{fillColor : [0], textColor : [255]},
+        styles :{fontSize: 8, textColor : [0]},
+        startY: txt.y
+    });
+
+    openPDF(doc,'comanda')
+}

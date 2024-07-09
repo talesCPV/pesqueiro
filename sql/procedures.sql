@@ -58,11 +58,8 @@ DELIMITER $$
 		CALL sp_allow(Iallow,Ihash);
 		IF(@allow)THEN
 			IF(Iemail="")THEN
-				SET @access = (SELECT access FROM tb_usuario WHERE id=Iid);
-				IF(@access > 0)THEN
-					DELETE FROM tb_mail WHERE id_from=Iid OR id_to=Iid;
-					DELETE FROM tb_usuario WHERE id=Iid;
-                END IF;
+				DELETE FROM tb_mail WHERE de=Iid OR para=Iid;
+				DELETE FROM tb_usuario WHERE id=Iid;
             ELSE			
 				IF(Iid=0)THEN
 					INSERT INTO tb_usuario (email,hash,access)VALUES(Iemail,SHA2(CONCAT(Iemail, Isenha), 256),Iaccess);            
@@ -166,15 +163,17 @@ DELIMITER ;
  DROP PROCEDURE sp_view_usr_perm_perf;
 DELIMITER $$
 	CREATE PROCEDURE sp_view_usr_perm_perf(	
-		IN Iaccess varchar(50),
+		IN Iallow varchar(80),
 		IN Ihash varchar(64),
 		IN Ifield varchar(30),
         IN Isignal varchar(4),
 		IN Ivalue varchar(50)
     )
 	BEGIN    
-		SET @access = (SELECT IFNULL(access,-1) FROM tb_usuario WHERE hash COLLATE utf8_general_ci = Ihash COLLATE utf8_general_ci LIMIT 1);
-		IF(@access IN (0))THEN
+		CALL sp_allow(Iallow,Ihash);
+		IF(@allow)THEN
+-- 		SET @access = (SELECT IFNULL(access,-1) FROM tb_usuario WHERE hash COLLATE utf8_general_ci = Ihash COLLATE utf8_general_ci LIMIT 1);
+-- 		IF(@access IN (0))THEN
 			SET @quer = CONCAT('SELECT * FROM tb_usr_perm_perfil WHERE ',Ifield,' ',Isignal,' ',Ivalue,' ORDER BY ',Ifield,';');
 			PREPARE stmt1 FROM @quer;
 			EXECUTE stmt1;
@@ -392,16 +391,17 @@ DELIMITER $$
 		IN Iconsumo BOOLEAN,
         IN Icusto double,
 		IN Imarkup double,
-        IN Ilocal varchar(20)
+        IN Ilocal varchar(20),
+        IN Idisp BOOLEAN
     )
 	BEGIN
 		CALL sp_allow(Iallow,Ihash);
 		IF(@allow)THEN
-			INSERT INTO tb_produto (id,id_emp,descricao,estoque,estq_min,und,ncm,cod_int,cod_bar,cod_forn,consumo,custo,markup,local)
-				VALUES (Iid,Iid_emp,Idescricao,Iestoque,Iestq_min,Iund,Incm,Icod_int,Icod_bar,Icod_forn,Iconsumo,Icusto,Imarkup,Ilocal)
+			INSERT INTO tb_produto (id,id_emp,descricao,estoque,estq_min,und,ncm,cod_int,cod_bar,cod_forn,consumo,custo,markup,local,disp)
+				VALUES (Iid,Iid_emp,Idescricao,Iestoque,Iestq_min,Iund,Incm,Icod_int,Icod_bar,Icod_forn,Iconsumo,Icusto,Imarkup,Ilocal,Idisp)
 				ON DUPLICATE KEY UPDATE
 				id_emp=Iid_emp,descricao=Idescricao,estoque=Iestoque,estq_min=Iestq_min,und=Iund,ncm=Incm,cod_int=Icod_int,
-                cod_bar=Icod_bar,cod_forn=Icod_forn,consumo=Iconsumo,custo=Icusto,markup=Imarkup,local=Ilocal;
+                cod_bar=Icod_bar,cod_forn=Icod_forn,consumo=Iconsumo,custo=Icusto,markup=Imarkup,local=Ilocal,disp=Idisp;
         END IF;
 	END $$
 DELIMITER ;
@@ -534,6 +534,25 @@ DELIMITER $$
 	END $$
 DELIMITER ;
 
+ DROP PROCEDURE sp_del_emp;
+DELIMITER $$ 
+	CREATE PROCEDURE sp_del_emp(	
+		IN Iallow varchar(80),
+		IN Ihash varchar(64),
+		IN Iid int(11)
+    )
+	BEGIN    
+		CALL sp_allow(Iallow,Ihash);
+		IF(@allow)THEN
+			DELETE FROM tb_empresa WHERE id=Iid;
+            UPDATE tb_produto SET id_emp=NULL WHERE id_emp=Iid;
+            SELECT 1 AS ok;
+		ELSE 
+			SELECT 0 AS ok;
+        END IF;	
+	END $$
+DELIMITER ;
+
  /* CAIXA */
  DROP PROCEDURE sp_view_comandas;
 DELIMITER $$
@@ -572,7 +591,7 @@ BEGIN
 			EXECUTE stmt1;
         END IF;
 	END $$
-	DELIMITER ;   
+	DELIMITER ;    
 
  DROP PROCEDURE sp_view_item_comanda;
 DELIMITER $$
@@ -656,9 +675,18 @@ DELIMITER $$
 	BEGIN
 		CALL sp_allow(Iallow,Ihash);
 		IF(@allow)THEN
-			INSERT INTO tb_comanda (id,id_cliente,obs) 
-            VALUES(Iid,Iid_cliente,Iobs)
-            ON DUPLICATE KEY UPDATE obs=Iobs;
+			SET @exist = (SELECT COUNT(*) FROM tb_comanda WHERE aberta=1 AND id_cliente=Iid_cliente);
+            IF(@exist>0)THEN
+                SELECT 0 AS OK, CMD.* FROM vw_comanda AS CMD WHERE aberta=1 AND id_cliente=Iid_cliente;
+            ELSE
+				INSERT INTO tb_comanda (id,id_cliente,obs) 
+				VALUES(Iid,Iid_cliente,Iobs)
+				ON DUPLICATE KEY UPDATE obs=Iobs;
+				
+				SET @id = (SELECT IF(Iid=0,(SELECT MAX(id) FROM tb_comanda),Iid));
+				SELECT 1 AS OK, CMD.* FROM vw_comanda AS CMD WHERE CMD.id=@id;
+            END IF;
+        
         END IF;
 	END $$
 	DELIMITER ;        
@@ -684,10 +712,6 @@ DELIMITER $$
 				INSERT INTO tb_item_comanda (id,id_comanda,id_garcom,id_produto,qtd,pago)
 					VALUES (@id,Iid_comanda,@call_id,Iid_produto,Iqtd,Ipago)
 					ON DUPLICATE KEY UPDATE id_garcom=@call_id, qtd=Iqtd, pago=Ipago;
-				IF(Ipago = 1)THEN
-					SET @preco = (SELECT (custo * (markup/100 + 1)) * Iqtd FROM tb_produto WHERE id=Iid_produto);
-					CALL sp_set_lancamento(Iallow,Ihash,0,@preco,CONCAT("Pgto Item comanda ",Iid_comanda),"PIX",1);
-                END IF;
 			END IF;
         END IF;
 	END $$
@@ -741,7 +765,7 @@ DELIMITER $$
 					WHERE  ITN.id_comanda = Iid_comanda
                     AND ITN.pago = 0;
                 
-                CALL sp_set_lancamento(Iallow,Ihash,0,@total,CONCAT("Lançamento comanda ",Iid_comanda),Imodo,1);
+                CALL sp_set_lancamento(Iallow,Ihash,0,Ivalor,CONCAT("Lançamento comanda ",Iid_comanda),Imodo,1,Iid_comanda);
                 
 				DELETE FROM tb_item_comanda WHERE id=Iid AND id_comanda=Iid_comanda;
 				SELECT 1 AS ok;
@@ -758,15 +782,90 @@ DELIMITER $$
 		IN Itoken varchar(64)
     )
 	BEGIN
-		SELECT COM.id,COM.aberta,COM.data, COM.hora, COM.obs_comanda AS obs, COM.nome, COM.cel, COM.saldo, ROUND(COM.total,2) AS total, 
+		
+        SET @vazia = (SELECT COUNT(*) FROM tb_item_comanda AS ITN
+						INNER JOIN vw_comanda AS CMD
+						ON ITN.id_comanda=CMD.id
+						AND CMD.token LIKE CONCAT(Itoken,'%'));
+		IF(@vazia=0)THEN
+			SELECT * FROM vw_comanda WHERE token LIKE CONCAT(Itoken,'%');
+        ELSE
+			SELECT COM.id,COM.aberta,COM.data, COM.hora, COM.obs_comanda AS obs, COM.nome, COM.cel, COM.saldo, ROUND(COM.total,2) AS total, 
 			ITN.id AS id_item, ITN.registro, ITN.qtd, ITN.pago, ROUND(ITN.preco,2) AS preco, ROUND(ITN.sub_total,2) AS sub_total, ITN.descricao,ITN.und
 			FROM vw_comanda AS COM 
 			INNER JOIN vw_item_comanda AS ITN
 			ON ITN.id_comanda = COM.id
 			WHERE token LIKE CONCAT(Itoken,'%');
+        END IF;
+    
+
 	END $$
-	DELIMITER ;  
-	
+	DELIMITER ;
+    
+/* FUNCIONÁRIO */
+
+ DROP PROCEDURE sp_set_func;
+DELIMITER $$
+	CREATE PROCEDURE sp_set_func(
+		IN Iallow varchar(80),
+		IN Ihash varchar(64),
+        IN Iid int(11),
+		IN Inome varchar(30),
+		IN Inasc date,
+		IN Irg varchar(15),
+		IN Icpf varchar(15),
+		IN Ipis varchar(15),
+		IN Iend varchar(60),
+		IN Inum varchar(6),
+		IN Icidade varchar(30),
+		IN Ibairro varchar(40),
+		IN Iuf varchar(2),
+		IN Icep varchar(10),
+		IN Idata_adm datetime,
+		IN Idata_dem datetime,
+		IN Icargo varchar(30),
+		IN Itel varchar(15),
+		IN Icel varchar(15),
+		IN Iativo boolean,
+		IN Iobs varchar(255)
+    )
+	BEGIN    
+		CALL sp_allow(Iallow,Ihash);
+		IF(@allow)THEN
+			IF(TRIM(Inome)="")THEN
+				DELETE FROM tb_funcionario WHERE id=Iid;
+            ELSE
+				INSERT INTO tb_funcionario (id,nome,nasc,rg,cpf,pis,end,num,cidade,bairro,uf,cep,data_adm,cargo,tel,cel,obs) 
+				VALUES (Iid,Inome,Inasc,Irg,Icpf,Ipis,Iend,Inum,Icidade,Ibairro,Iuf,Icep,Idata_adm,Icargo,Itel,Icel,Iobs)
+				ON DUPLICATE KEY UPDATE
+				nome=Inome,nasc=Inasc,rg=Irg,cpf=Icpf,pis=Ipis,end=Iend,num=Inum,cidade=Icidade,bairro=Ibairro,uf=Iuf,cep=Icep,data_adm=Idata_adm,
+				data_dem=Idata_dem,cargo=Icargo,tel=Itel,cel=Icel,ativo=Iativo,obs=Iobs;
+            END IF;
+        END IF;
+	END $$
+DELIMITER ;
+
+ DROP PROCEDURE sp_view_func;
+DELIMITER $$
+	CREATE PROCEDURE sp_view_func(	
+		IN Iallow varchar(80),
+		IN Ihash varchar(64),
+		IN Ifield varchar(30),
+        IN Isignal varchar(4),
+		IN Ivalue varchar(50)
+    )
+	BEGIN    
+		CALL sp_allow(Iallow,Ihash);
+		IF(@allow)THEN
+			SET @quer =CONCAT('SELECT * FROM tb_funcionario WHERE ',Ifield,' ',Isignal,' ',Ivalue,' ORDER BY nome;');
+			PREPARE stmt1 FROM @quer;
+			EXECUTE stmt1;
+		ELSE 
+			SELECT 0 AS id, "" AS nome;
+        END IF;
+	END $$
+DELIMITER ;
+    
 /* Financeiro */
 
      DROP PROCEDURE sp_set_lancamento;
@@ -778,70 +877,16 @@ DELIMITER $$
 		IN Ivalor double,
 		IN Idescricao varchar(60),
 		IN Imodo varchar(30),
-		IN Ientrada boolean
+		IN Ientrada boolean,
+        IN Iid_comanda int(11)
     )
 	BEGIN
 		CALL sp_allow(Iallow,Ihash);
 		IF(@allow)THEN
-			IF(TRIM(Idescricao)="")THEN
-				DELETE FROM tb_lancamento WHERE id=Iid;
-            ELSE
-				SET @id = (SELECT IF(COUNT(id)=0,"DEFAULT",id) FROM tb_lancamento WHERE id=Iid);              
-					INSERT INTO tb_lancamento (id,valor,descricao,modo,entrada)
-					VALUES (@id,Ivalor,Idescricao,Imodo,Ientrada)
-					ON DUPLICATE KEY UPDATE descricao=Idescricao, modo=Imodo, entrada=Ientrada, valor=Ivalor;
-            END IF;
+			SET @id = (SELECT IF(COUNT(id)=0,"DEFAULT",id) FROM tb_lancamento WHERE id=Iid);
+			INSERT INTO tb_lancamento (id,valor,descricao,modo,entrada,id_comanda)
+            VALUES (@id,Ivalor,Idescricao,Imodo,Ientrada,Iid_comanda)
+            ON DUPLICATE KEY UPDATE descricao=Idescricao, modo=Imodo, entrada=Ientrada;
         END IF;
 	END $$
 	DELIMITER ;    
-    
-     DROP PROCEDURE sp_view_fluxo_caixa;
-DELIMITER $$
-	CREATE PROCEDURE sp_view_fluxo_caixa(
-		IN Iallow varchar(80),
-		IN Ihash varchar(64),
-        IN IdtIn date,
-        IN IdtOut date
-    )
-	BEGIN
-		CALL sp_allow(Iallow,Ihash);
-		IF(@allow)THEN
-			SELECT * FROM tb_lancamento WHERE data >= CONCAT(IdtIn," 00:00:00") AND data <= CONCAT(IdtOut,"23:59:59");
-        END IF;
-	END $$
-	DELIMITER ;       
-    
-    
-     DROP PROCEDURE sp_set_compra;
-DELIMITER $$
-	CREATE PROCEDURE sp_set_compra(
-		IN Iallow varchar(80),
-		IN Ihash varchar(64),
-        IN Iid int(11),
-        IN Iid_prod int(11),
-		IN Iqtd double,
-		IN Icusto_unit double
-    )
-	BEGIN
-		CALL sp_allow(Iallow,Ihash);
-		IF(@allow)THEN
-			IF(Iqtd>0)THEN
-            
-				SET @preco = (SELECT (custo * (markup/100 + 1)) FROM tb_produto WHERE id=Iid_prod);
-				SET @markup = ROUND((@preco/Icusto_unit -1)*100,2);
-				            
-				UPDATE tb_produto SET estoque=estoque+Iqtd, custo=Icusto_unit, markup=@markup WHERE id=Iid_prod ;
-            
-				SET @prod_name = (SELECT descricao FROM tb_produto WHERE id=Iid_prod);
-				CALL sp_set_lancamento(Iallow,Ihash,0,ROUND(Icusto_unit * Iqtd,2),CONCAT("Compra ",@prod_name),"PGT",0);
-            
-				SET @id = (SELECT IF(COUNT(id)=0,"DEFAULT",id) FROM tb_compra WHERE id=Iid);
-				INSERT INTO tb_compra (id,id_prod,custo_unit,qtd)
-				VALUES (@id,Iid_prod,Icusto_unit,Iqtd)
-				ON DUPLICATE KEY UPDATE custo_unit=Icusto_unit, qtd=Iqtd;
-			ELSE
-				DELETE FROM tb_compra WHERE id=Iid;
-            END IF;
-        END IF;
-	END $$
-	DELIMITER ;      

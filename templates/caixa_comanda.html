@@ -97,6 +97,7 @@
         const myPromisse = queryDB(params,'CXA-0');
         myPromisse.then((resolve)=>{
             const json = JSON.parse(resolve)
+console.log(json)            
             tbl.style.display = json.length > 0 ? 'inline-table' : 'none'
             tbl.head('CMD.,Data|mobiHide,Hora|mobiHide,Cliente|w70,Valor')
             for(let i=0; i<json.length;i++){
