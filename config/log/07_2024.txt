@@ -1,6 +1,568 @@
-09/07/2024 03:10 admin@pesqueirodourado.com.br : Nova Comanda -> Cliente:Tales Cembraneli Dantas, CPF:26687200879
-09/07/2024 03:27 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:212, Prod:Acai Guaraviton bebida de guarana, Qtd.:1
-09/07/2024 03:28 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:212, Prod:Agua mineiral aquissima 510 ml com gas, Qtd.:5
-09/07/2024 03:28 admin@pesqueirodourado.com.br : Pgto Parcial -> Comanda:212, Valor:10.50, Modo:DIN
-09/07/2024 04:16 admin@pesqueirodourado.com.br : Venda lancada -> Comanda:212, Valor:20.00, Modo:DIN
-09/07/2024 04:21 admin@pesqueirodourado.com.br : Venda lancada -> Comanda:212, Valor:20.00, Modo:DIN
+02/07/2024 10:03 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:81, Prod:Coca Cola (600ml), Qtd.:2
+03/07/2024 15:31 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:57, Prod:pirulito de cxhocolate V&V, Qtd.:2
+03/07/2024 15:34 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:148, Prod:Bolo V&V, Qtd.:1
+03/07/2024 15:34 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:57, Prod:pirulito de cxhocolate V&V, Qtd.:3
+03/07/2024 15:42 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:148, Prod:bombom V&V, Qtd.:1
+04/07/2024 13:32 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:148, Prod:Salgadinho Torcida, Qtd.:1
+04/07/2024 16:17 roger@pesqueirodourado.com.br : Produto Cadastrado  -> Tortinha V&V
+04/07/2024 16:18 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:62, Prod:Tortinha V&V, Qtd.:1
+04/07/2024 16:18 roger@pesqueirodourado.com.br : Item Baixado -> Comanda:62, Prod:Tortinha V&V, Qtd.:1
+04/07/2024 16:19 roger@pesqueirodourado.com.br : Item Deletado -> Comanda:148, Prod:Bolo V&V, Qtd.:1
+04/07/2024 16:19 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:148, Prod:Bolo V&V, Qtd.:1
+04/07/2024 16:19 roger@pesqueirodourado.com.br : Item Deletado -> Comanda:148, Prod:bombom V&V, Qtd.:1
+04/07/2024 16:20 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:148, Prod:Tortinha V&V, Qtd.:1
+04/07/2024 16:47 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Paulo Francisco, CPF:62323768620
+04/07/2024 16:48 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:186, Prod:Guarana Antartica lata (350ml), Qtd.:1
+04/07/2024 16:50 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:81, Prod:Cerveja Aretzbeer, Qtd.:2
+04/07/2024 16:50 roger@pesqueirodourado.com.br : Item Baixado -> Comanda:81, Prod:Cerveja Aretzbeer, Qtd.:2
+04/07/2024 17:02 roger@pesqueirodourado.com.br : Delecao de usuario, email:celso@pesqueirodourado.com.br -> , acesso:3 -> 3
+04/07/2024 17:05 roger@pesqueirodourado.com.br : Insercao de novo usuarios, email:undefined -> celso@pesqueirodourado.com.br, acesso:undefined -> 3
+04/07/2024 17:08 roger@pesqueirodourado.com.br : Alteracao de usuario, email:celso@pesqueirodourado.com.br -> celso@pesqueirodourado.com.br, acesso:3 -> 3
+05/07/2024 12:41 celso@pesqueirodourado.com.br : Item Alterado -> Comanda:57, Prod:pirulito de cxhocolate V&V, Qtd.:3
+05/07/2024 12:42 celso@pesqueirodourado.com.br : Nova Comanda -> Cliente:Nelson Silva, CPF:05179326877
+05/07/2024 12:42 celso@pesqueirodourado.com.br : Item Adicionado -> Comanda:187, Prod:Heineken Puro Malte Lager (600ml), Qtd.:1
+05/07/2024 15:08 celso@pesqueirodourado.com.br : Item Alterado -> Comanda:81, Prod:Cerveja Brahma lata (350ml), Qtd.:5
+05/07/2024 15:25 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:57, Prod:Suco Del Vale Uva 450 PET, Qtd.:1
+05/07/2024 15:54 roger@pesqueirodourado.com.br : Produto Cadastrado  -> aquissima agua mineiral c gas 1,5lts
+05/07/2024 15:55 roger@pesqueirodourado.com.br :  Imagem Alterada -> Produto: aquissima agua mineiral c gas 1,5lts
+05/07/2024 15:55 roger@pesqueirodourado.com.br : Produto Editado aquissima agua mineiral c gas 1,5lts -> aquissima agua mineiral c gas 1,5lts
+05/07/2024 15:56 roger@pesqueirodourado.com.br : Produto Cadastrado  -> Agua mineiral Aquissima s gas
+05/07/2024 15:57 roger@pesqueirodourado.com.br :  Imagem Alterada -> Produto: Agua mineiral Aquissima s gas
+05/07/2024 15:57 roger@pesqueirodourado.com.br : Produto Editado Agua mineiral Aquissima s gas -> Agua mineiral Aquissima s gas 1,5 litros
+05/07/2024 16:00 roger@pesqueirodourado.com.br : Produto Cadastrado  -> aquissima agua mineiral 510 ml sem gas
+05/07/2024 16:00 roger@pesqueirodourado.com.br :  Imagem Alterada -> Produto: aquissima agua mineiral 510 ml sem gas
+05/07/2024 16:00 roger@pesqueirodourado.com.br : Produto Editado aquissima agua mineiral 510 ml sem gas -> aquissima agua mineiral 510 ml sem gas
+05/07/2024 16:04 roger@pesqueirodourado.com.br : Produto Cadastrado  -> Agua mineiral aquissima 510 ml com gas
+05/07/2024 16:05 roger@pesqueirodourado.com.br :  Imagem Alterada -> Produto: Agua mineiral aquissima 510 ml com gas
+05/07/2024 16:05 roger@pesqueirodourado.com.br : Produto Editado Agua mineiral aquissima 510 ml com gas -> Agua mineiral aquissima 510 ml com gas
+06/07/2024 00:07 celso@pesqueirodourado.com.br : Item Adicionado -> Comanda:81, Prod:Cerveja Budweiser lata (350ml), Qtd.:2
+06/07/2024 00:07 celso@pesqueirodourado.com.br : Item Adicionado -> Comanda:81, Prod:Cerveja Brahma lata (350ml), Qtd.:1
+06/07/2024 00:07 celso@pesqueirodourado.com.br : Item Adicionado -> Comanda:81, Prod:Cerveja Ecobier Chopp, Qtd.:1
+06/07/2024 08:31 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Antonio MArcos Pires, CPF:27452680820
+06/07/2024 08:31 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:188, Prod:Acai Guaraviton bebida de guarana, Qtd.:1
+06/07/2024 08:31 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:188, Prod:Isca de Salsicha, Qtd.:1
+06/07/2024 09:34 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Carlos Alves, CPF:78999316815
+06/07/2024 10:31 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Igor henrique Delfino, CPF:10063040611
+06/07/2024 10:32 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:190, Prod:Cerveja Original 600 ml, Qtd.:1
+06/07/2024 11:04 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:189, Prod:Isca - Massa Arte de Pescar, Qtd.:1
+06/07/2024 11:12 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Maria Eugenia de Oliveira, CPF:43402287889
+06/07/2024 11:12 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:191, Prod:Guarana Antartica lata (350ml), Qtd.:1
+06/07/2024 11:14 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:190, Prod:Cerveja Original 600 ml, Qtd.:2
+06/07/2024 11:32 roger@pesqueirodourado.com.br : Alteracao de usuario, email:silmara@pesqueirodourado.com.br -> silmara@pesqueirodourado.com.br, acesso:3 -> 3
+06/07/2024 12:03 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Sidney da Silva, CPF:40357511891
+06/07/2024 12:11 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:188, Prod:Refeicao, Qtd.:1
+06/07/2024 12:28 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:190, Prod:Cerveja Original 600 ml, Qtd.:3
+06/07/2024 12:48 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:189, Prod:Salgadinho Torcida, Qtd.:1
+06/07/2024 12:49 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:81, Prod:Cerveja Skol lata (350ml), Qtd.:1
+06/07/2024 12:56 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:190, Prod:pirulito de cxhocolate V&V, Qtd.:1
+06/07/2024 12:58 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:192, Prod:Porcao de File de Tilapia (400gr), Qtd.:1
+06/07/2024 12:59 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:192, Prod:Cerveja Original 600 ml, Qtd.:1
+06/07/2024 12:59 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:192, Prod:Coca Cola (600ml), Qtd.:1
+06/07/2024 13:40 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:62, Prod:Porcao de Camarao (400gr), Qtd.:1
+06/07/2024 13:41 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:62, Prod:Heineken Puro Malte Lager (600ml), Qtd.:3
+06/07/2024 13:49 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:57, Prod:Cerveja Skol lata (350ml), Qtd.:1
+06/07/2024 14:04 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:192, Prod:Porcao de Fritas (400gr), Qtd.:1
+06/07/2024 14:04 roger@pesqueirodourado.com.br : Produto Editado tortinha -> tortinha
+06/07/2024 14:05 roger@pesqueirodourado.com.br : Produto Editado tortinha -> tortinha V&V1
+06/07/2024 14:06 roger@pesqueirodourado.com.br : Produto Editado Tortinha V&V -> Tortinha de poite V&V
+06/07/2024 14:10 roger@pesqueirodourado.com.br : Novo Cliente Nome: Adauto de oliveira Moreira, CPF: 43119465895, Cel: 12991152607, Saldo: 0, Obs: 
+06/07/2024 14:10 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Adauto de oliveira Moreira, CPF:43119465895
+06/07/2024 14:14 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:193, Prod:Isca Massinha (potinho), Qtd.:1
+06/07/2024 14:16 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:192, Prod:Heineken Puro Malte Lager (600ml), Qtd.:1
+06/07/2024 14:17 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:193, Prod:Varas de Pescar, Qtd.:2
+06/07/2024 14:29 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:62, Prod:Cerveja Original 600 ml, Qtd.:1
+06/07/2024 14:35 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:193, Prod:Cerveja Skol lata (350ml), Qtd.:2
+06/07/2024 14:41 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:57, Prod:Heineken Puro Malte Lager (600ml), Qtd.:1
+06/07/2024 14:45 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:57, Prod:Coca Cola lata (350ml), Qtd.:1
+06/07/2024 15:06 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:193, Prod:Heineken Puro Malte Lager (600ml), Qtd.:1
+06/07/2024 15:07 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:81, Prod:Heineken Puro Malte Lager (600ml), Qtd.:4
+06/07/2024 15:09 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:81, Prod:Isca de Salsicha, Qtd.:1
+06/07/2024 15:16 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:57, Prod:Tortinha de poite V&V, Qtd.:1
+06/07/2024 15:17 roger@pesqueirodourado.com.br : Produto Editado Tortinha de poite V&V -> Tortinha de pote V&V
+06/07/2024 15:21 roger@pesqueirodourado.com.br : Item Baixado -> Comanda:57, Prod:Heineken Puro Malte Lager (600ml), Qtd.:1
+06/07/2024 15:28 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:62, Prod:tortinha V&V1, Qtd.:1
+06/07/2024 15:28 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:62, Prod:tortinha V&V1, Qtd.:2
+06/07/2024 15:44 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:193, Prod:Heineken Puro Malte Lager (600ml), Qtd.:1
+06/07/2024 15:44 roger@pesqueirodourado.com.br : Item Baixado -> Comanda:193, Prod:Heineken Puro Malte Lager (600ml), Qtd.:1
+06/07/2024 15:55 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:57, Prod:Porcao de Fritas (400gr), Qtd.:1
+06/07/2024 16:13 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:192, Prod:Pesque Pague - Tilapia (limpa), Qtd.:1,780
+06/07/2024 16:13 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:192, Prod:Pesque Pague - Tilapia (limpa), Qtd.:1.78
+06/07/2024 16:37 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:188, Prod:Pesca Esportiva, Qtd.:1
+06/07/2024 16:38 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:188, Prod:Tortinha de pote V&V, Qtd.:1
+06/07/2024 16:44 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:191, Prod:Guarana Antartica lata (350ml), Qtd.:2
+06/07/2024 16:45 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:191, Prod:Coca Cola lata (350ml), Qtd.:2
+06/07/2024 16:45 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:191, Prod:Cerveja Budweiser lata (350ml), Qtd.:1
+06/07/2024 16:46 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:191, Prod:Cerveja Original 600 ml, Qtd.:5
+06/07/2024 16:46 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:191, Prod:pirulito de cxhocolate V&V, Qtd.:3
+06/07/2024 16:46 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:191, Prod:Heineken Puro Malte Lager (600ml), Qtd.:1
+06/07/2024 16:46 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:191, Prod:Porcao de Postas de Tilapia (400gr), Qtd.:1
+06/07/2024 16:47 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:191, Prod:Porcao de Fritas (400gr), Qtd.:1
+06/07/2024 17:48 roger@pesqueirodourado.com.br : Venda lancada -> Comanda:191, Valor:197.50, Modo:DIN
+06/07/2024 17:58 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Maria Eugenia de Oliveira, CPF:43402287889
+06/07/2024 17:59 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:194, Prod:Cerveja Skol lata (350ml), Qtd.:6
+06/07/2024 18:00 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:194, Prod:Heineken Puro Malte Lager (600ml), Qtd.:1
+06/07/2024 18:04 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:81, Prod:Cerveja Brahma lata (350ml), Qtd.:1
+07/07/2024 01:17 silmara@pesqueirodourado.com.br : Item Deletado -> Comanda:57, Prod:Suco Del Valle Limao, Qtd.:2
+07/07/2024 01:18 silmara@pesqueirodourado.com.br : Item Deletado -> Comanda:57, Prod:Guarana Antartica lata (350ml), Qtd.:1
+07/07/2024 01:18 silmara@pesqueirodourado.com.br : Item Deletado -> Comanda:57, Prod:Guarana Antartica lata (350ml), Qtd.:1
+07/07/2024 01:18 silmara@pesqueirodourado.com.br : Item Deletado -> Comanda:57, Prod:Suco Del Valle Uva, Qtd.:1
+07/07/2024 08:52 roger@pesqueirodourado.com.br : Novo Cliente Nome: Luciano da silva, CPF: 07237079875, Cel: 12997601819, Saldo: 0, Obs: 
+07/07/2024 08:52 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Luciano da silva, CPF:07237079875
+07/07/2024 08:54 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:195, Prod:Isca Massinha (potinho), Qtd.:1
+07/07/2024 08:54 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:195, Prod:Isca de Salsicha, Qtd.:1
+07/07/2024 09:00 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:81, Prod:Vinho dose, Qtd.:1
+07/07/2024 09:35 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:195, Prod:pirulito de cxhocolate V&V, Qtd.:1
+07/07/2024 10:42 roger@pesqueirodourado.com.br : Novo Cliente Nome: Desiel william, CPF: 23563368856, Cel: 12983078788, Saldo: 0, Obs: 
+07/07/2024 10:42 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Desiel william, CPF:23563368856
+07/07/2024 10:44 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:196, Prod:Heineken Puro Malte Lager (600ml), Qtd.:1
+07/07/2024 10:53 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:195, Prod:Agua sem gas, Qtd.:1
+07/07/2024 10:54 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:195, Prod:Sambura, Qtd.:1
+07/07/2024 10:57 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:196, Prod:Cerveja Original 600 ml, Qtd.:1
+07/07/2024 10:59 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:195, Prod:Coca Cola (600ml), Qtd.:1
+07/07/2024 11:13 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:195, Prod:Heineken Puro Malte Lager (600ml), Qtd.:1
+07/07/2024 11:13 silmara@pesqueirodourado.com.br : Item Deletado -> Comanda:195, Prod:Heineken Puro Malte Lager (600ml), Qtd.:1
+07/07/2024 11:13 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:196, Prod:Heineken Puro Malte Lager (600ml), Qtd.:2
+07/07/2024 11:27 silmara@pesqueirodourado.com.br : Nova Comanda -> Cliente:Antonio Carlos da Silva, CPF:15008228846
+07/07/2024 11:28 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:197, Prod:Heineken Puro Malte Lager (600ml), Qtd.:1
+07/07/2024 11:28 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:197, Prod:Coca Cola (600ml), Qtd.:1
+07/07/2024 11:28 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:197, Prod:Porcao de Calabresa (400gr), Qtd.:1
+07/07/2024 11:39 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:196, Prod:Heineken Puro Malte Lager (600ml), Qtd.:3
+07/07/2024 11:45 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:195, Prod:Pesque Pague - Tilapia, Qtd.:12.26
+07/07/2024 11:54 roger@pesqueirodourado.com.br : Novo Cliente Nome: Marcosdos Reis Pereira Magalhaes, CPF: 12473900809, Cel: 12997578885, Saldo: 0, Obs: 
+07/07/2024 11:54 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Marcosdos Reis Pereira Magalhaes, CPF:12473900809
+07/07/2024 11:56 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:198, Prod:Coca Cola (600ml), Qtd.:2
+07/07/2024 12:00 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:196, Prod:Guarana Antartica lata (350ml), Qtd.:3
+07/07/2024 12:01 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:196, Prod:Guarana Antartica lata (350ml), Qtd.:4
+07/07/2024 12:05 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:198, Prod:Varas de Pescar, Qtd.:3
+07/07/2024 12:05 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:198, Prod:Isca Massinha (potinho), Qtd.:1
+07/07/2024 12:07 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:196, Prod:Porcao de File de Tilapia (400gr), Qtd.:1
+07/07/2024 12:16 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Jacy Dantas, CPF:21634505891
+07/07/2024 12:17 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:199, Prod:Chopp Blue Ribbon - Lager / Pilsen / IPA (1.5 lts), Qtd.:1
+07/07/2024 12:20 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:197, Prod:Heineken Puro Malte Lager (600ml), Qtd.:2
+07/07/2024 12:23 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Antonio MArcos Pires, CPF:27452680820
+07/07/2024 12:24 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:200, Prod:Bolo V&V, Qtd.:1
+07/07/2024 12:25 roger@pesqueirodourado.com.br : Produto Editado Chopp Blue Ribbon - Lager / Pilsen / IPA (1.5 lts) -> Chopp Blue Ribbon - Lager / Pilsen / IPA (1.5 lts)
+07/07/2024 12:50 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:198, Prod:Cerveja Skol lata (350ml), Qtd.:2
+07/07/2024 12:53 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:198, Prod:Coca Cola (600ml), Qtd.:3
+07/07/2024 12:53 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Cristiane Aparecida de Oliveira, CPF:28166242850
+07/07/2024 12:55 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:201, Prod:Isca de Salsicha, Qtd.:1
+07/07/2024 13:01 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:198, Prod:Meia Refeicao, Qtd.:4
+07/07/2024 13:01 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:196, Prod:Heineken Puro Malte Lager (600ml), Qtd.:4
+07/07/2024 13:01 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:196, Prod:Heineken Puro Malte Lager (600ml), Qtd.:3
+07/07/2024 13:02 roger@pesqueirodourado.com.br : Novo Cliente Nome: Alessandro Henreique Fernandes das Neves, CPF: 40424041898, Cel: 12996323927, Saldo: 0, Obs: 
+07/07/2024 13:03 roger@pesqueirodourado.com.br : Edicao de Cliente Nome: Alessandro Henrique Fernandes das Neves, CPF: 40424041898, Cel: 12996323927, Saldo: 0, Obs: 
+07/07/2024 13:03 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Alessandro Henrique Fernandes das Neves, CPF:40424041898
+07/07/2024 13:08 roger@pesqueirodourado.com.br : Novo Cliente Nome: Wilson Donizeti Rizzo, CPF: 04800593816, Cel: 12996275115, Saldo: 0, Obs: 
+07/07/2024 13:09 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Wilson Donizeti Rizzo, CPF:04800593816
+07/07/2024 13:09 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:202, Prod:Coca Cola (600ml), Qtd.:1
+07/07/2024 13:14 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:203, Prod:Cerveja Imperio (600ml) Lager, Qtd.:1
+07/07/2024 13:27 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:203, Prod:Meia Refeicao, Qtd.:4
+07/07/2024 13:27 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:203, Prod:Agua sem gas, Qtd.:1
+07/07/2024 13:28 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:202, Prod:Porcao de Calabresa - Meia (200gr), Qtd.:1
+07/07/2024 13:30 roger@pesqueirodourado.com.br : Produto Cadastrado  -> Meia porcao de Pancerta
+07/07/2024 13:31 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:202, Prod:Meia porcao de Pancerta, Qtd.:1
+07/07/2024 13:35 roger@pesqueirodourado.com.br : Novo Cliente Nome: Eduardo Rebocho, CPF: 37618551847, Cel: 12996813860, Saldo: 0, Obs: 
+07/07/2024 13:36 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Eduardo Rebocho, CPF:37618551847
+07/07/2024 13:36 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:202, Prod:Coca Cola (600ml), Qtd.:2
+07/07/2024 13:36 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:202, Prod:Isca - Massa Arte de Pescar, Qtd.:1
+07/07/2024 13:40 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:203, Prod:Cerveja Skol lata (350ml), Qtd.:1
+07/07/2024 13:40 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:203, Prod:Coca Cola lata (350ml), Qtd.:1
+07/07/2024 13:41 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:204, Prod:Isca de Salsicha, Qtd.:1
+07/07/2024 13:41 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:204, Prod:Porcao de Camarao (400gr), Qtd.:1
+07/07/2024 13:41 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:204, Prod:Isca Massinha (potinho), Qtd.:1
+07/07/2024 13:41 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:204, Prod:Porcao de Fritas (400gr), Qtd.:1
+07/07/2024 13:41 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:204, Prod:Cerveja Imperio (600ml) Lager, Qtd.:1
+07/07/2024 14:02 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:196, Prod:Coca Cola (600ml), Qtd.:1
+07/07/2024 14:02 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:196, Prod:Refeicao, Qtd.:1
+07/07/2024 14:10 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:204, Prod:Refeicao, Qtd.:1
+07/07/2024 14:23 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Carlos Alves, CPF:78999316815
+07/07/2024 14:26 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:205, Prod:Guarana Antartica lata (350ml), Qtd.:1
+07/07/2024 14:28 roger@pesqueirodourado.com.br : Item Deletado -> Comanda:204, Prod:Porcao de Camarao (400gr), Qtd.:1
+07/07/2024 14:28 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:204, Prod:Heineken Puro Malte Lager (600ml), Qtd.:2
+07/07/2024 14:29 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:204, Prod:Heineken Puro Malte Lager (600ml), Qtd.:2
+07/07/2024 14:39 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Paulo Donizetti Fordeca, CPF:97753386891
+07/07/2024 14:42 roger@pesqueirodourado.com.br : Produto Cadastrado  -> Brahma malzibier long neck
+07/07/2024 14:42 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:206, Prod:Brahma malzibier long neck, Qtd.:1
+07/07/2024 14:43 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:206, Prod:Cerveja Brahma Zero alcool, Qtd.:1
+07/07/2024 14:47 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:203, Prod:Agua com gas, Qtd.:1
+07/07/2024 14:57 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:203, Prod:Tortinha de pote V&V, Qtd.:2
+07/07/2024 15:00 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:204, Prod:Suco Del Vale Uva 450 PET, Qtd.:1
+07/07/2024 15:03 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Mauro Augusto de Lima, CPF:60583321844
+07/07/2024 15:07 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:204, Prod:Refeicao, Qtd.:4
+07/07/2024 15:22 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:206, Prod:Brahma malzibier long neck, Qtd.:2
+07/07/2024 15:24 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:204, Prod:Guarana Antartica lata (350ml), Qtd.:1
+07/07/2024 15:25 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:204, Prod:Cerveja Skol lata (350ml), Qtd.:1
+07/07/2024 15:32 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:196, Prod:Heineken Puro Malte Lager (600ml), Qtd.:4
+07/07/2024 15:50 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:205, Prod:Tortinha de pote V&V, Qtd.:1
+07/07/2024 15:50 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:205, Prod:Coca Cola (600ml), Qtd.:1
+07/07/2024 15:57 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:205, Prod:Salgadinho Torcida, Qtd.:1
+07/07/2024 15:57 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:205, Prod:Tortinha de pote V&V, Qtd.:2
+07/07/2024 16:09 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:204, Prod:Pesque Pague - Tilapia (limpa), Qtd.:2.3
+07/07/2024 16:22 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:204, Prod:Heineken Puro Malte Lager (600ml), Qtd.:2
+07/07/2024 16:30 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:207, Prod:Agua sem gas, Qtd.:2
+07/07/2024 16:44 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:201, Prod:Pesque Pague - Tilapia (limpa), Qtd.:3.29
+07/07/2024 16:49 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:204, Prod:Heineken Puro Malte Lager (600ml), Qtd.:1
+07/07/2024 16:50 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:199, Prod:Coca Cola lata (350ml), Qtd.:1
+07/07/2024 16:52 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:201, Prod:Salgadinho Torcida, Qtd.:1
+07/07/2024 17:01 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:81, Prod:Cerveja Skol lata (350ml), Qtd.:14
+07/07/2024 17:02 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:81, Prod:Heineken Puro Malte Lager (600ml), Qtd.:5
+07/07/2024 17:02 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:205, Prod:Pesque Pague - Tilapia, Qtd.:0.950
+07/07/2024 17:04 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:204, Prod:Coca Cola lata (350ml), Qtd.:1
+07/07/2024 17:07 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:207, Prod:Pesque Pague - Tilapia, Qtd.:6.495
+07/07/2024 17:10 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:200, Prod:Pesque Pague - Tilapia, Qtd.:1.215
+07/07/2024 17:11 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Antonio MArcos Pires, CPF:27452680820
+07/07/2024 17:12 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:208, Prod:Pesque Pague - Tilapia, Qtd.:2.45
+07/07/2024 17:23 roger@pesqueirodourado.com.br : Venda lancada -> Comanda:208, Valor:61.25, Modo:DIN
+07/07/2024 17:23 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:206, Prod:Refeicao, Qtd.:1
+07/07/2024 17:43 roger@pesqueirodourado.com.br : Venda lancada -> Comanda:204, Valor:347.40, Modo:DEB
+07/07/2024 17:54 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:199, Prod:tortinha V&V1, Qtd.:2
+07/07/2024 18:11 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:57, Prod:Suco Del Vale Uva 450 PET, Qtd.:1
+07/07/2024 18:33 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:81, Prod:Cerveja Skol lata (350ml), Qtd.:5
+07/07/2024 18:34 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:81, Prod:Cerveja Brahma Duplo Malte (350ml), Qtd.:2
+07/07/2024 18:37 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:148, Prod:Caipirinha de Pinga, Qtd.:1
+07/07/2024 19:02 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Maria Eugenia de Oliveira, CPF:43402287889
+07/07/2024 19:03 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:209, Prod:Cerveja Ecobier Chopp, Qtd.:1
+07/07/2024 19:14 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:209, Prod:Cerveja Skol lata (350ml), Qtd.:4
+08/07/2024 12:51 admin@pesqueirodourado.com.br : INVENTARIO: ADICIONADO 7 Acai Guaraviton bebida de guarana
+08/07/2024 12:54 admin@pesqueirodourado.com.br : COMPRA  :  Prod:ACAI GUARAVITON BEBIDA DE GUARANA, Qtd:10, Custo Unit..:5
+08/07/2024 13:07 admin@pesqueirodourado.com.br : Produto Editado Heineken Puro Malte Lager (600ml) -> Heineken Puro Malte Lager (600ml)
+08/07/2024 13:40 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Antonio MArcos Pires, CPF:27452680820
+08/07/2024 13:41 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:210, Prod:Acai Guaraviton bebida de guarana, Qtd.:1
+08/07/2024 13:54 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:148, Prod:tortinha V&V1, Qtd.:2
+08/07/2024 13:55 roger@pesqueirodourado.com.br : Item Baixado -> Comanda:148, Prod:tortinha V&V1, Qtd.:2
+08/07/2024 14:40 roger@pesqueirodourado.com.br : Novo Cliente Nome: Leoncio Viana de Carvalho, CPF: 01969639822, Cel: 12997413954, Saldo: 0, Obs: 
+08/07/2024 14:42 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Leoncio Viana de Carvalho, CPF:01969639822
+08/07/2024 14:42 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:211, Prod:Cerveja Aretzbeer, Qtd.:1
+08/07/2024 14:42 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:211, Prod:Isca Massinha (potinho), Qtd.:1
+08/07/2024 16:39 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:211, Prod:Pesque Pague - Tilapia (limpa), Qtd.:1.9
+09/07/2024 09:10 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Carlos Alves, CPF:78999316815
+09/07/2024 09:10 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:213, Prod:Guarana Antartica lata (350ml), Qtd.:1
+09/07/2024 09:58 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:213, Prod:Brownie V&V, Qtd.:1
+09/07/2024 09:59 roger@pesqueirodourado.com.br : INVENTARIO: ADICIONADO 5 Acai Guaraviton bebida de guarana
+09/07/2024 10:00 roger@pesqueirodourado.com.br : INVENTARIO: ADICIONADO 26 Salgadinho Torcida
+09/07/2024 10:01 roger@pesqueirodourado.com.br : INVENTARIO: ADICIONADO 17 Cerveja Original 600 ml
+09/07/2024 10:03 roger@pesqueirodourado.com.br : INVENTARIO: ADICIONADO 49 Guarana Antartica lata (350ml)
+09/07/2024 10:09 roger@pesqueirodourado.com.br : INVENTARIO: ADICIONADO 58 Coca Cola lata (350ml)
+09/07/2024 10:10 roger@pesqueirodourado.com.br : INVENTARIO: ADICIONADO 11 Cerveja Budweiser lata (350ml)
+09/07/2024 10:17 roger@pesqueirodourado.com.br : INVENTARIO: ADICIONADO 56 Coca Cola (600ml)
+09/07/2024 10:17 roger@pesqueirodourado.com.br : INVENTARIO: ADICIONADO 3 Brahma malzibier long neck
+09/07/2024 10:17 roger@pesqueirodourado.com.br : INVENTARIO: RETIRADO 1 Cerveja Ecobier Chopp
+09/07/2024 10:17 roger@pesqueirodourado.com.br : INVENTARIO: ADICIONADO 48 Heineken Puro Malte Lager (600ml)
+09/07/2024 10:17 roger@pesqueirodourado.com.br : INVENTARIO: ADICIONADO 38 Cerveja Skol lata (350ml)
+09/07/2024 10:17 roger@pesqueirodourado.com.br : INVENTARIO: RETIRADO 2 Cerveja Brahma Zero alcool
+09/07/2024 10:17 roger@pesqueirodourado.com.br : INVENTARIO: ADICIONADO 19 Suco Del Vale Uva 450 PET
+09/07/2024 10:17 roger@pesqueirodourado.com.br : INVENTARIO: ADICIONADO 23 Agua sem gas
+09/07/2024 10:17 roger@pesqueirodourado.com.br : INVENTARIO: ADICIONADO 4 Agua com gas
+09/07/2024 10:17 roger@pesqueirodourado.com.br : INVENTARIO: ADICIONADO 19 Cerveja Imperio (600ml) Lager
+09/07/2024 10:25 roger@pesqueirodourado.com.br : INVENTARIO: ADICIONADO 36 Heineken Puro Malte Lager (600ml)
+09/07/2024 10:25 roger@pesqueirodourado.com.br : INVENTARIO: ADICIONADO 24 Cerveja Original 600 ml
+09/07/2024 10:25 roger@pesqueirodourado.com.br : INVENTARIO: RETIRADO 3 Cerveja Original Long Neck (300ml)
+09/07/2024 10:25 roger@pesqueirodourado.com.br : INVENTARIO: ADICIONADO 12 Cerveja Imperio (600ml) Lager
+09/07/2024 10:25 roger@pesqueirodourado.com.br : INVENTARIO: ADICIONADO 3 Itaipava Malzibier lata (350ml)
+09/07/2024 10:26 roger@pesqueirodourado.com.br : Produto Deletado -> Cerveja Imperio Puro Malte 600 ml garrafa
+09/07/2024 10:28 roger@pesqueirodourado.com.br : Produto Editado Cerveja Imperio (600ml) Lager -> Cerveja Imperio (600ml) Lager
+09/07/2024 10:37 roger@pesqueirodourado.com.br : Produto Cadastrado  -> coca cola 310 ml
+09/07/2024 10:37 roger@pesqueirodourado.com.br : Produto Cadastrado  -> coca cola 310 ml
+09/07/2024 10:38 roger@pesqueirodourado.com.br :  Imagem Alterada -> Produto: coca cola 310 ml
+09/07/2024 10:38 roger@pesqueirodourado.com.br : Produto Editado coca cola 310 ml -> coca cola 310 ml
+09/07/2024 10:55 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:213, Prod:coca cola 310 ml, Qtd.:1
+09/07/2024 10:55 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:213, Prod:Pinga de Garrafa (dose), Qtd.:1
+09/07/2024 11:54 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Antonio MArcos Pires, CPF:27452680820
+09/07/2024 11:55 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:214, Prod:Refeicao, Qtd.:1
+09/07/2024 11:56 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:213, Prod:Refeicao, Qtd.:2
+09/07/2024 12:23 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:214, Prod:Suco Del Vale Uva 450 PET, Qtd.:1
+09/07/2024 12:24 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:213, Prod:bombom V&V, Qtd.:1
+09/07/2024 12:49 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:57, Prod:bombom V&V, Qtd.:1
+09/07/2024 12:50 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:57, Prod:bombom V&V, Qtd.:1
+09/07/2024 13:00 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:214, Prod:Pesque Pague - Tilapia, Qtd.:1.405
+09/07/2024 13:36 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:209, Prod:Salgadinho Torcida, Qtd.:1
+09/07/2024 16:30 silmara@pesqueirodourado.com.br : Nova Comanda -> Cliente:Alberto Augusto, CPF:28255581847
+09/07/2024 16:30 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:215, Prod:Porcao de File de Tilapia (400gr), Qtd.:1
+09/07/2024 16:30 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:215, Prod:Heineken Puro Malte Lager (600ml), Qtd.:1
+09/07/2024 16:30 silmara@pesqueirodourado.com.br : Item Adicionado -> Comanda:215, Prod:Guarana Antartica lata (350ml), Qtd.:1
+09/07/2024 16:33 silmara@pesqueirodourado.com.br : Item Deletado -> Comanda:215, Prod:Heineken Puro Malte Lager (600ml), Qtd.:1
+09/07/2024 16:33 silmara@pesqueirodourado.com.br : Item Deletado -> Comanda:215, Prod:Porcao de File de Tilapia (400gr), Qtd.:1
+09/07/2024 16:33 silmara@pesqueirodourado.com.br : Item Deletado -> Comanda:215, Prod:Guarana Antartica lata (350ml), Qtd.:1
+09/07/2024 16:37 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:57, Prod:Suco Del Vale Uva 450 PET, Qtd.:2
+11/07/2024 15:31 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:215, Prod:Porcao de File de Tilapia (400gr), Qtd.:1
+11/07/2024 15:31 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:215, Prod:Heineken Puro Malte Lager (600ml), Qtd.:1
+11/07/2024 15:31 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:215, Prod:Guarana Antartica lata (350ml), Qtd.:2
+11/07/2024 15:33 roger@pesqueirodourado.com.br : Produto Cadastrado  -> Meia porcao de posta de tilapia
+11/07/2024 15:34 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:215, Prod:Meia porcao de posta de tilapia, Qtd.:1
+11/07/2024 15:43 roger@pesqueirodourado.com.br : Novo Cliente Nome: Emerson Suzuki, CPF: 15134398801, Cel: 11981212685, Saldo: 0, Obs: 
+11/07/2024 15:44 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Emerson Suzuki, CPF:15134398801
+11/07/2024 15:44 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:216, Prod:Heineken Puro Malte Lager (600ml), Qtd.:2
+11/07/2024 15:44 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:216, Prod:Isca - Massa Arte de Pescar, Qtd.:1
+11/07/2024 17:27 roger@pesqueirodourado.com.br : Novo Cliente Nome: Benedito Cristovao Santana Castilho, CPF: 28670593807, Cel: 12988414483, Saldo: 0, Obs: 
+11/07/2024 17:27 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Benedito Cristovao Santana Castilho, CPF:28670593807
+11/07/2024 17:31 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:217, Prod:Cerveja Original 600 ml, Qtd.:1
+11/07/2024 17:40 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:216, Prod:Heineken Puro Malte Lager (600ml), Qtd.:1
+11/07/2024 17:50 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:217, Prod:Cerveja Original 600 ml, Qtd.:1
+11/07/2024 17:52 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:216, Prod:Heineken Puro Malte Lager (600ml), Qtd.:1
+11/07/2024 18:12 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:216, Prod:Heineken Puro Malte Lager (600ml), Qtd.:1
+11/07/2024 18:31 roger@pesqueirodourado.com.br : Venda lancada -> Comanda:217, Valor:32.00, Modo:PIX
+11/07/2024 18:57 roger@pesqueirodourado.com.br : Venda lancada -> Comanda:216, Valor:92.00, Modo:DIN
+12/07/2024 14:01 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:187, Prod:Heineken Puro Malte Lager (600ml), Qtd.:2
+12/07/2024 14:01 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:187, Prod:Heineken Puro Malte Lager (600ml), Qtd.:2
+12/07/2024 14:02 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:187, Prod:Heineken Puro Malte Lager (600ml), Qtd.:2
+12/07/2024 14:02 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:187, Prod:Pinga de Garrafa (dose), Qtd.:1
+12/07/2024 14:08 roger@pesqueirodourado.com.br : INVENTARIO: ADICIONADO 23 Cerveja Brahma lata (350ml)
+12/07/2024 14:08 roger@pesqueirodourado.com.br : INVENTARIO: RETIRADO 17 Cerveja Brahma lata (350ml)
+12/07/2024 14:08 roger@pesqueirodourado.com.br : INVENTARIO: ADICIONADO 9 Guarana Antartica lata (350ml)
+12/07/2024 14:08 roger@pesqueirodourado.com.br : INVENTARIO: ADICIONADO 21 Cerveja Skol lata (350ml)
+12/07/2024 14:08 roger@pesqueirodourado.com.br : INVENTARIO: ADICIONADO 13 Cerveja Skol lata (350ml)
+12/07/2024 14:09 roger@pesqueirodourado.com.br : INVENTARIO: ADICIONADO 13 Cerveja Brahma lata (350ml)
+12/07/2024 15:41 celso@pesqueirodourado.com.br : Item Alterado -> Comanda:57, Prod:Coca Cola lata (350ml), Qtd.:1
+12/07/2024 15:42 celso@pesqueirodourado.com.br : Item Alterado -> Comanda:57, Prod:Cerveja Skol lata (350ml), Qtd.:1
+12/07/2024 16:08 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:57, Prod:Salgadinho Torcida, Qtd.:1
+12/07/2024 16:19 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:57, Prod:Tortinha de pote V&V, Qtd.:1
+12/07/2024 16:41 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:148, Prod:Cerveja Original 600 ml, Qtd.:1
+12/07/2024 19:07 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:81, Prod:Cerveja Skol lata (350ml), Qtd.:8
+13/07/2024 09:22 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:81, Prod:Coca Cola lata (350ml), Qtd.:1
+13/07/2024 13:03 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:148, Prod:Tortinha de pote V&V, Qtd.:1
+13/07/2024 13:04 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Antonio MArcos Pires, CPF:27452680820
+13/07/2024 13:04 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:218, Prod:Isca - Massa Arte de Pescar, Qtd.:1
+13/07/2024 15:49 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:57, Prod:Suco Del Vale Uva 450 PET, Qtd.:3
+13/07/2024 16:20 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:57, Prod:Brownie V&V, Qtd.:1
+13/07/2024 16:56 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:218, Prod:Acai Guaraviton bebida de guarana, Qtd.:1
+14/07/2024 11:33 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Antonio MArcos Pires, CPF:27452680820
+14/07/2024 11:33 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:219, Prod:Acai Guaraviton bebida de guarana, Qtd.:1
+14/07/2024 12:50 roger@pesqueirodourado.com.br : Novo Cliente Nome: Joao Donizzeti, CPF: 26114286898, Cel: 12991599967, Saldo: 0, Obs: 
+14/07/2024 12:50 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Joao Donizzeti, CPF:26114286898
+14/07/2024 12:54 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:220, Prod:Cerveja Original 600 ml, Qtd.:1
+14/07/2024 12:54 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:220, Prod:Coca Cola (600ml), Qtd.:1
+14/07/2024 13:15 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:220, Prod:Porcao de Fritas - Meia (200gr), Qtd.:1
+14/07/2024 13:16 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:220, Prod:Porcao de Postas de Tilapia (400gr), Qtd.:1
+14/07/2024 13:16 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:220, Prod:Cerveja Original 600 ml, Qtd.:2
+14/07/2024 13:18 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:219, Prod:Refeicao, Qtd.:1
+14/07/2024 13:56 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:220, Prod:Varas de pescar de 3 metros, Qtd.:1
+14/07/2024 13:56 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:220, Prod:Varas de Pescar, Qtd.:1
+14/07/2024 13:56 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:220, Prod:Isca Massinha (potinho), Qtd.:1
+14/07/2024 13:58 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:220, Prod:Cerveja Original 600 ml, Qtd.:3
+14/07/2024 14:50 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Carlos Alves, CPF:78999316815
+14/07/2024 14:50 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:221, Prod:Guarana Antartica lata (350ml), Qtd.:1
+14/07/2024 14:51 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:221, Prod:Salgadinho Torcida, Qtd.:1
+14/07/2024 16:06 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:221, Prod:Coca Cola lata (350ml), Qtd.:1
+14/07/2024 16:35 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:219, Prod:Heineken Puro Malte Lager (600ml), Qtd.:1
+14/07/2024 16:35 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:219, Prod:Pesque Pague - Tilapia, Qtd.:2.65
+14/07/2024 16:39 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:57, Prod:Tortinha de pote V&V, Qtd.:1
+14/07/2024 16:39 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:57, Prod:pirulito de cxhocolate V&V, Qtd.:1
+14/07/2024 16:42 roger@pesqueirodourado.com.br : Novo Cliente Nome: Luiz Ribeiro, CPF: 05153281892, Cel: 12997374818, Saldo: 0, Obs: 
+14/07/2024 16:42 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Luiz Ribeiro, CPF:05153281892
+14/07/2024 16:42 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:222, Prod:Refeicao, Qtd.:1
+14/07/2024 17:31 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:221, Prod:pirulito de cxhocolate V&V, Qtd.:1
+14/07/2024 17:43 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:81, Prod:Cerveja Skol lata (350ml), Qtd.:3
+14/07/2024 17:49 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:81, Prod:Salgadinho Torcida, Qtd.:1
+14/07/2024 18:11 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:81, Prod:Brahma malzibier long neck, Qtd.:3
+14/07/2024 18:12 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:81, Prod:pirulito de cxhocolate V&V, Qtd.:1
+14/07/2024 18:52 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:81, Prod:Cerveja Skol lata (350ml), Qtd.:1
+14/07/2024 19:36 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:81, Prod:Cerveja Brahma lata (350ml), Qtd.:1
+14/07/2024 20:32 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:81, Prod:Cerveja Brahma lata (350ml), Qtd.:1
+14/07/2024 20:32 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:81, Prod:Cerveja Skol lata (350ml), Qtd.:1
+16/07/2024 14:57 roger@pesqueirodourado.com.br : Novo Cliente Nome: Lucas Sattelmayr, CPF: 40569230861, Cel: 12997771128, Saldo: 0, Obs: 
+16/07/2024 15:03 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Lucas Sattelmayr, CPF:40569230861
+16/07/2024 15:08 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:223, Prod:Varas de Pescar, Qtd.:3
+16/07/2024 15:08 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:223, Prod:Isca Massinha (potinho), Qtd.:2
+16/07/2024 15:08 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:223, Prod:Isca de Salsicha, Qtd.:2
+16/07/2024 15:08 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:223, Prod:Passagua, Qtd.:1
+16/07/2024 17:21 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:148, Prod:pirulito de cxhocolate V&V, Qtd.:1
+16/07/2024 17:34 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:223, Prod:Isca Massinha (potinho), Qtd.:2
+17/07/2024 12:55 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Alberto Augusto, CPF:28255581847
+17/07/2024 12:55 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:224, Prod:Meia porcao de posta de tilapia, Qtd.:2
+17/07/2024 12:56 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:224, Prod:Guarana Antartica lata (350ml), Qtd.:1
+17/07/2024 15:06 roger@pesqueirodourado.com.br : Novo Cliente Nome: william Nelson da Silva, CPF: 16536063179, Cel: 13996125524, Saldo: 0, Obs: 
+17/07/2024 15:08 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:william Nelson da Silva, CPF:16536063179
+17/07/2024 15:11 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:225, Prod:Pesca Esportiva, Qtd.:1
+17/07/2024 16:03 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:225, Prod:Isca Massinha (potinho), Qtd.:1
+17/07/2024 16:03 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:225, Prod:Varas de Pescar, Qtd.:1
+17/07/2024 17:45 roger@pesqueirodourado.com.br : INVENTARIO: ADICIONADO 12 Cerveja Imperio (600ml) Lager
+17/07/2024 17:45 roger@pesqueirodourado.com.br : INVENTARIO: ADICIONADO 12 Heineken Puro Malte Lager (600ml)
+17/07/2024 17:45 roger@pesqueirodourado.com.br : INVENTARIO: ADICIONADO 12 Agua sem gas
+17/07/2024 17:45 roger@pesqueirodourado.com.br : INVENTARIO: ADICIONADO 12 Agua com gas
+17/07/2024 17:45 roger@pesqueirodourado.com.br : INVENTARIO: ADICIONADO 12 Itaipava Malzibier lata (350ml)
+17/07/2024 17:45 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Paulo Francisco, CPF:62323768620
+17/07/2024 17:45 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:226, Prod:Guarana Antartica lata (350ml), Qtd.:1
+19/07/2024 15:23 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:31, CPF:61520454791
+19/07/2024 15:23 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:227, Prod:Cerveja Skol lata (350ml), Qtd.:2
+19/07/2024 15:57 roger@pesqueirodourado.com.br : Novo Cliente Nome: Bruno Alexandre Berti, CPF: 17379198858, Cel: 12996006443, Saldo: 0, Obs: 
+19/07/2024 15:59 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Bruno Alexandre Berti, CPF:17379198858
+19/07/2024 15:59 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:228, Prod:Cerveja Original 600 ml, Qtd.:1
+19/07/2024 15:59 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:228, Prod:Isca Massinha (potinho), Qtd.:1
+19/07/2024 15:59 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:228, Prod:Isca de Salsicha, Qtd.:1
+19/07/2024 15:59 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:228, Prod:Heineken Puro Malte Lager (600ml), Qtd.:6
+19/07/2024 16:00 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:228, Prod:Guarana Antartica lata (350ml), Qtd.:1
+19/07/2024 16:00 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:228, Prod:Porcao de Fritas (400gr), Qtd.:1
+19/07/2024 16:08 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:228, Prod:Heineken Puro Malte Lager (600ml), Qtd.:7
+19/07/2024 16:26 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:228, Prod:Guarana Antartica lata (350ml), Qtd.:2
+19/07/2024 16:55 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:228, Prod:Heineken Puro Malte Lager (600ml), Qtd.:8
+19/07/2024 16:57 silmara@pesqueirodourado.com.br : Nova Comanda -> Cliente:Lucas Sattelmayr, CPF:40569230861
+19/07/2024 16:57 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:229, Prod:Isca Massinha (potinho), Qtd.:4
+19/07/2024 16:58 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:229, Prod:Sambura, Qtd.:1
+19/07/2024 16:58 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:229, Prod:Passagua, Qtd.:1
+19/07/2024 17:17 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:228, Prod:Porcao de File de Tilapia (400gr), Qtd.:1
+19/07/2024 17:56 roger@pesqueirodourado.com.br : Venda lancada -> Comanda:228, Valor:235.00, Modo:DIN
+19/07/2024 17:57 roger@pesqueirodourado.com.br : Venda lancada -> Comanda:229, Valor:18.00, Modo:PIX
+19/07/2024 21:29 celso@pesqueirodourado.com.br : Nova Comanda -> Cliente:Bruno Alexandre Berti, CPF:17379198858
+20/07/2024 12:57 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Antonio MArcos Pires, CPF:27452680820
+20/07/2024 13:19 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:231, Prod:Tortinha de pote V&V, Qtd.:1
+20/07/2024 13:31 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:199, Prod:Heineken Puro Malte Lager (600ml), Qtd.:1
+20/07/2024 13:31 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:199, Prod:Guarana Antartica lata (350ml), Qtd.:1
+20/07/2024 15:22 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:230, Prod:coca cola 310 ml, Qtd.:2
+20/07/2024 16:07 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:231, Prod:Heineken Puro Malte Lager (600ml), Qtd.:2
+20/07/2024 16:13 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:148, Prod:bombom V&V, Qtd.:1
+20/07/2024 16:20 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:57, Prod:Tortinha de pote V&V, Qtd.:1
+20/07/2024 16:52 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:209, Prod:Cerveja Skol lata (350ml), Qtd.:8
+20/07/2024 17:48 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:231, Prod:Heineken Puro Malte Lager (600ml), Qtd.:1
+20/07/2024 17:48 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Antonio MArcos Pires, CPF:27452680820
+20/07/2024 17:48 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:232, Prod:Heineken Puro Malte Lager (600ml), Qtd.:1
+21/07/2024 09:43 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Pedro Bezerra, CPF:02613600861
+21/07/2024 09:46 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:233, Prod:Conhaque Dose, Qtd.:1
+21/07/2024 09:50 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:233, Prod:Coca Cola (600ml), Qtd.:1
+21/07/2024 09:51 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:233, Prod:Isca Massinha (potinho), Qtd.:1
+21/07/2024 09:51 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:233, Prod:Varas de Pescar, Qtd.:1
+21/07/2024 11:51 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:232, Prod:Refeicao, Qtd.:2
+21/07/2024 12:09 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:232, Prod:Suco Del Valle Uva, Qtd.:1
+21/07/2024 12:09 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:233, Prod:Conhaque Dose, Qtd.:2
+21/07/2024 12:14 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:233, Prod:Conhaque Dose, Qtd.:1
+21/07/2024 12:14 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:233, Prod:Pinga de Garrafa (dose), Qtd.:1
+21/07/2024 12:20 roger@pesqueirodourado.com.br : Novo Cliente Nome: Alcione da Silva Dos Santos, CPF: 73988057304, Cel: 12981593185, Saldo: 0, Obs: 
+21/07/2024 12:21 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Alcione da Silva Dos Santos, CPF:73988057304
+21/07/2024 12:26 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:234, Prod:Pesque Pague - Tilapia, Qtd.:1.97
+21/07/2024 12:39 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Mauricio dos Santos Lima, CPF:42762266866
+21/07/2024 12:42 roger@pesqueirodourado.com.br : Novo Cliente Nome: Marcelo De Jesus Ceclestino, CPF: 26416574810, Cel: 12997009467, Saldo: 0, Obs: 
+21/07/2024 12:42 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Marcelo De Jesus Ceclestino, CPF:26416574810
+21/07/2024 12:43 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:236, Prod:Cerveja Skol lata (350ml), Qtd.:1
+21/07/2024 12:45 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:236, Prod:Cerveja Skol lata (350ml), Qtd.:2
+21/07/2024 12:57 roger@pesqueirodourado.com.br : Novo Cliente Nome: Valmir Ferreira, CPF: 27161756839, Cel: 12991441645, Saldo: 0, Obs: 
+21/07/2024 12:58 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Valmir Ferreira, CPF:27161756839
+21/07/2024 13:03 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:233, Prod:Sambura, Qtd.:1
+21/07/2024 13:05 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:233, Prod:Varas de Pescar, Qtd.:2
+21/07/2024 13:08 roger@pesqueirodourado.com.br : Novo Cliente Nome: Israel Fernandes, CPF: 269030657, Cel: 12996145932, Saldo: 0, Obs: 
+21/07/2024 13:09 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Israel Fernandes, CPF:269030657
+21/07/2024 13:09 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:235, Prod:Porcao de Arroz, Qtd.:3
+21/07/2024 13:09 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:235, Prod:Porcao de Postas de Tilapia (400gr), Qtd.:2
+21/07/2024 13:09 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:235, Prod:Coca Cola (600ml), Qtd.:2
+21/07/2024 13:19 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Ivete Sattelmayer, CPF:61520445479
+21/07/2024 13:19 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:239, Prod:Tortinha de pote V&V, Qtd.:2
+21/07/2024 13:21 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:239, Prod:Refeicao, Qtd.:3
+21/07/2024 13:21 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:239, Prod:Cerveja Imperio (600ml) Lager, Qtd.:1
+21/07/2024 13:22 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:239, Prod:Guarana Antartica lata (350ml), Qtd.:1
+21/07/2024 13:30 roger@pesqueirodourado.com.br : Novo Cliente Nome: Sandra Aparevida Valente, CPF: 12528840870, Cel: 12991133637, Saldo: 0, Obs: 
+21/07/2024 13:31 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Sandra Aparevida Valente, CPF:12528840870
+21/07/2024 13:33 roger@pesqueirodourado.com.br : Edicao de Cliente Nome: Sandra Aparecida Valente, CPF: 12528840870, Cel: 12991133637, Saldo: 0, Obs: 
+21/07/2024 13:35 roger@pesqueirodourado.com.br : Novo Cliente Nome: KArina Thays Bretas, CPF: 37270790884, Cel: 12991433220, Saldo: 0, Obs: 
+21/07/2024 13:35 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:KArina Thays Bretas, CPF:37270790884
+21/07/2024 13:50 roger@pesqueirodourado.com.br : Venda lancada -> Comanda:239, Valor:116.00, Modo:DIN
+21/07/2024 13:53 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:240, Prod:Heineken Puro Malte Lager (600ml), Qtd.:1
+21/07/2024 13:53 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:240, Prod:Cerveja Skol lata (350ml), Qtd.:1
+21/07/2024 13:54 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:240, Prod:Coca Cola (600ml), Qtd.:1
+21/07/2024 14:01 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:238, Prod:Refeicao, Qtd.:2
+21/07/2024 14:02 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:238, Prod:coca cola 310 ml, Qtd.:1
+21/07/2024 14:03 roger@pesqueirodourado.com.br : Produto Cadastrado  -> meia  porcao de panceta
+21/07/2024 14:05 roger@pesqueirodourado.com.br : Novo Cliente Nome: Julio Cesar Cembraneli, CPF: 22043318802, Cel: 12981401089, Saldo: 0, Obs: 
+21/07/2024 14:05 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Julio Cesar Cembraneli, CPF:22043318802
+21/07/2024 14:08 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:31, CPF:61520454791
+21/07/2024 14:09 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:243, Prod:Tortinha de pote V&V, Qtd.:1
+21/07/2024 14:10 roger@pesqueirodourado.com.br : Produto Cadastrado  -> pao de Mel
+21/07/2024 14:10 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:243, Prod:pao de Mel, Qtd.:1
+21/07/2024 14:10 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:243, Prod:Agua com gas, Qtd.:1
+21/07/2024 14:12 roger@pesqueirodourado.com.br : Novo Cliente Nome: Andre luis Ferreira Furlan, CPF: 21592208843, Cel: 12974058660, Saldo: 0, Obs: 
+21/07/2024 14:13 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Andre luis Ferreira Furlan, CPF:21592208843
+21/07/2024 14:13 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:241, Prod:Refeicao, Qtd.:3
+21/07/2024 14:13 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:241, Prod:Coca Cola (600ml), Qtd.:1
+21/07/2024 14:16 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:244, Prod:Cerveja Original 600 ml, Qtd.:1
+21/07/2024 14:16 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:238, Prod:Cerveja Original 600 ml, Qtd.:1
+21/07/2024 14:24 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:240, Prod:Heineken Puro Malte Lager (600ml), Qtd.:2
+21/07/2024 14:24 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:240, Prod:Cerveja Skol lata (350ml), Qtd.:2
+21/07/2024 14:29 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:240, Prod:Coca Cola (600ml), Qtd.:2
+21/07/2024 14:31 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:241, Prod:Heineken Puro Malte Lager (600ml), Qtd.:1
+21/07/2024 14:31 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:236, Prod:Isca de Salsicha, Qtd.:1
+21/07/2024 14:39 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:240, Prod:Heineken Puro Malte Lager (600ml), Qtd.:3
+21/07/2024 14:39 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:240, Prod:Cerveja Skol lata (350ml), Qtd.:3
+21/07/2024 14:40 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:235, Prod:Cerveja Original 600 ml, Qtd.:1
+21/07/2024 14:47 roger@pesqueirodourado.com.br : Novo Cliente Nome: Karina Mellissa, CPF: 40387177809, Cel: 12997984665, Saldo: 0, Obs: 
+21/07/2024 14:47 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:241, Prod:Coca Cola (600ml), Qtd.:2
+21/07/2024 14:47 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Karina Mellissa, CPF:40387177809
+21/07/2024 14:48 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:241, Prod:Agua sem gas, Qtd.:1
+21/07/2024 14:49 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:238, Prod:Isca Massinha (potinho), Qtd.:1
+21/07/2024 14:50 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:238, Prod:Varas de Pescar, Qtd.:1
+21/07/2024 14:50 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:235, Prod:Pinga de Garrafa (dose), Qtd.:1
+21/07/2024 14:53 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:240, Prod:Porcao de Fritas (400gr), Qtd.:1
+21/07/2024 14:57 roger@pesqueirodourado.com.br : Novo Cliente Nome: Kaua Azevredo, CPF: 55246926826, Cel: 12996570725, Saldo: 0, Obs: 
+21/07/2024 14:57 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Kaua Azevredo, CPF:55246926826
+21/07/2024 15:06 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:242, Prod:Agua sem gas, Qtd.:2
+21/07/2024 15:08 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:244, Prod:Cerveja Original 600 ml, Qtd.:2
+21/07/2024 15:09 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:246, Prod:Porcao de Calabresa (400gr), Qtd.:1
+21/07/2024 15:10 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:246, Prod:Coca Cola (600ml), Qtd.:2
+21/07/2024 15:15 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:235, Prod:pao de Mel, Qtd.:1
+21/07/2024 15:20 roger@pesqueirodourado.com.br : Pgto Parcial -> Comanda:246, Valor:11, Modo:DIN
+21/07/2024 15:21 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:241, Prod:pao de Mel, Qtd.:1
+21/07/2024 15:22 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Kaua Azevredo, CPF:55246926826
+21/07/2024 15:23 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:247, Prod:Cerveja Brahma Zero alcool, Qtd.:1
+21/07/2024 15:24 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:241, Prod:Agua sem gas, Qtd.:2
+21/07/2024 15:24 roger@pesqueirodourado.com.br : Venda lancada -> Comanda:247, Valor:7.00, Modo:DIN
+21/07/2024 15:31 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:242, Prod:Isca Massinha (potinho), Qtd.:1
+21/07/2024 15:35 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:241, Prod:Agua sem gas, Qtd.:3
+21/07/2024 15:36 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:238, Prod:Cerveja Original 600 ml, Qtd.:2
+21/07/2024 15:37 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:244, Prod:Cerveja Original 600 ml, Qtd.:3
+21/07/2024 15:44 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:241, Prod:Heineken Puro Malte Lager (600ml), Qtd.:2
+21/07/2024 15:49 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:240, Prod:Cerveja Skol lata (350ml), Qtd.:4
+21/07/2024 15:49 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:240, Prod:Heineken Puro Malte Lager (600ml), Qtd.:4
+21/07/2024 15:50 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:240, Prod:Agua sem gas, Qtd.:1
+21/07/2024 15:50 roger@pesqueirodourado.com.br : Novo Cliente Nome: Silmara da Silva, CPF: 34612278895, Cel: 12988194967, Saldo: 0, Obs: 
+21/07/2024 15:51 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Silmara da Silva, CPF:34612278895
+21/07/2024 15:51 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:248, Prod:Tortinha de pote V&V, Qtd.:1
+21/07/2024 15:55 roger@pesqueirodourado.com.br : Produto Editado tortinha V&V1 -> tortinha V&V1
+21/07/2024 16:12 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:242, Prod:pirulito de cxhocolate V&V, Qtd.:1
+21/07/2024 16:12 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:242, Prod:bombom V&V, Qtd.:1
+21/07/2024 16:27 roger@pesqueirodourado.com.br : Item Deletado -> Comanda:238, Prod:Refeicao, Qtd.:2
+21/07/2024 16:28 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:235, Prod:Porcao de Arroz, Qtd.:4
+21/07/2024 16:30 roger@pesqueirodourado.com.br : Novo Cliente Nome: Israel Elias, CPF: 37635582844, Cel: 12997402605, Saldo: 0, Obs: 
+21/07/2024 16:30 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:240, Prod:Coca Cola lata (350ml), Qtd.:3
+21/07/2024 16:33 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:240, Prod:Coca Cola lata (350ml), Qtd.:4
+21/07/2024 16:35 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:235, Prod:Coca Cola lata (350ml), Qtd.:1
+21/07/2024 16:37 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:241, Prod:Agua sem gas, Qtd.:4
+21/07/2024 16:38 roger@pesqueirodourado.com.br : Pgto Parcial -> Comanda:240, Valor:75.50, Modo:DIN
+21/07/2024 16:40 roger@pesqueirodourado.com.br : Venda lancada -> Comanda:240, Valor:75.50, Modo:PIX
+21/07/2024 16:40 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:235, Prod:Pesque Pague - Tilapia, Qtd.:0.710
+21/07/2024 16:44 roger@pesqueirodourado.com.br : Item Deletado -> Comanda:235, Prod:Cerveja Original 600 ml, Qtd.:1
+21/07/2024 16:45 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:241, Prod:Agua sem gas, Qtd.:5
+21/07/2024 16:45 roger@pesqueirodourado.com.br : Item Deletado -> Comanda:235, Prod:Pinga de Garrafa (dose), Qtd.:1
+21/07/2024 16:46 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:235, Prod:Coca Cola (600ml), Qtd.:3
+21/07/2024 16:48 roger@pesqueirodourado.com.br : Item Adicionado -> Comanda:235, Prod:Coca Cola lata (350ml), Qtd.:1
+21/07/2024 16:52 roger@pesqueirodourado.com.br : Venda lancada -> Comanda:237, Valor:0.00, Modo:PIX
+21/07/2024 17:02 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:236, Prod:Cerveja Brahma lata (350ml), Qtd.:1
+21/07/2024 17:04 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Israel Elias, CPF:37635582844
+21/07/2024 17:04 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:249, Prod:coca cola 310 ml, Qtd.:1
+21/07/2024 17:04 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:249, Prod:Cerveja Original 600 ml, Qtd.:1
+21/07/2024 17:05 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:248, Prod:Varas de Pescar, Qtd.:2
+21/07/2024 17:05 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:249, Prod:Refeicao, Qtd.:2
+21/07/2024 17:05 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:249, Prod:Isca Massinha (potinho), Qtd.:1
+21/07/2024 17:05 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:249, Prod:Varas de Pescar, Qtd.:1
+21/07/2024 17:11 roger@pesqueirodourado.com.br : Novo Cliente Nome: Allan dos Santos Silva, CPF: 34083019808, Cel: 12987052977, Saldo: 0, Obs: 
+21/07/2024 17:12 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Allan dos Santos Silva, CPF:34083019808
+21/07/2024 17:14 roger@pesqueirodourado.com.br : Novo Cliente Nome: Silvio Pedro, CPF: 01915154855, Cel: 12997022280, Saldo: 0, Obs: 
+21/07/2024 17:14 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Silvio Pedro, CPF:01915154855
+21/07/2024 17:16 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:250, Prod:Coca Cola lata (350ml), Qtd.:3
+21/07/2024 17:16 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:250, Prod:Porcao de File de Tilapia (400gr), Qtd.:1
+21/07/2024 17:17 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:251, Prod:Heineken Puro Malte Lager (600ml), Qtd.:1
+21/07/2024 17:18 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:241, Prod:Cerveja Original 600 ml, Qtd.:1
+21/07/2024 17:19 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:241, Prod:Cerveja Original 600 ml, Qtd.:1
+21/07/2024 17:21 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:236, Prod:Pesque Pague - Tilapia, Qtd.:4
+21/07/2024 17:26 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:232, Prod:Tortinha de pote V&V, Qtd.:1
+21/07/2024 17:27 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:232, Prod:Pesque Pague - Tilapia, Qtd.:0.9
+21/07/2024 17:27 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:232, Prod:Heineken Puro Malte Lager (600ml), Qtd.:2
+21/07/2024 17:36 silmara@pesqueirodourado.com.br : Nova Comanda -> Cliente:Antonio MArcos Pires, CPF:27452680820
+21/07/2024 17:36 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:252, Prod:Heineken Puro Malte Lager (600ml), Qtd.:1
+21/07/2024 17:36 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:251, Prod:Heineken Puro Malte Lager (600ml), Qtd.:2
+21/07/2024 17:36 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:251, Prod:Porcao de File de Tilapia - Meia (200gr), Qtd.:1
+21/07/2024 17:41 roger@pesqueirodourado.com.br : Nova Comanda -> Cliente:Andre luis Ferreira Furlan, CPF:21592208843
+21/07/2024 17:41 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:253, Prod:Cerveja Original 600 ml, Qtd.:1
+21/07/2024 17:46 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:250, Prod:Porcao de Postas de Tilapia (400gr), Qtd.:1
+21/07/2024 17:56 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:252, Prod:Heineken Puro Malte Lager (600ml), Qtd.:2
+21/07/2024 17:57 silmara@pesqueirodourado.com.br : Item Alterado -> Comanda:250, Prod:coca cola 310 ml, Qtd.:1
+21/07/2024 18:14 roger@pesqueirodourado.com.br : Item Alterado -> Comanda:253, Prod:Cerveja Original 600 ml, Qtd.:2
+21/07/2024 18:27 roger@pesqueirodourado.com.br : Venda lancada -> Comanda:148, Valor:192.50, Modo:CRT
+21/07/2024 18:32 roger@pesqueirodourado.com.br : Venda lancada -> Comanda:81, Valor:670.50, Modo:CRT
+22/07/2024 13:31 admin@pesqueirodourado.com.br : Nova Comanda -> Cliente:Tales Cembraneli Dantas, CPF:26687200879
+22/07/2024 13:31 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:254, Prod:Agua com gas, Qtd.:2

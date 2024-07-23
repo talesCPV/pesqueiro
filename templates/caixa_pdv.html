@@ -191,7 +191,13 @@
                 tbl.plot(json[i],'descricao|w70,und|mobiHide,qtd,preco|mobiHide,sub_total,pago|mobiHide','Upp,Upp,str,R$.,R$.,ico 0=mdi-close-thick 1=mdi-check-bold ')
                 tot += !Number(json[i].pago) ? parseFloat(json[i].sub_total) : 0
             }
-//            pageScreen.querySelector('#edtValRec').value = tot.toFixed(2)
+            const saldo_dev = (tot - parseFloat(pageData.comanda.pago)).toFixed(2)
+            const tbl_total = pageScreen.querySelector('#tbl_total')
+            tbl_total.head('Valor Comanda, Pago, Total')
+            tbl_total.plot({'total':tot.toFixed(2),'pago':pageData.comanda.pago,'saldo_dev':saldo_dev},'total,pago,saldo_dev','R$.,R$.,R$.')
+
+            pageScreen.querySelector('#edtSaldo').value = `R$${saldo_dev}`
+            pageScreen.querySelector('#edtValRec').value = saldo_dev
             pageScreen.querySelector('#edtValRec').focus()
 
         })  
@@ -212,7 +218,6 @@
     }
 
     pageFunc.buscaComanda = (data)=>{
-
         pageData.comanda = data
         const tbl_cli = pageScreen.querySelector('#tblCliente')
         tbl_cli.head('Nome,CPF,Tel,Saldo')
@@ -221,12 +226,6 @@
         data.aberta == '1' ? pageScreen.querySelector('#btnFinaliza').disabled = false : null
         data.aberta == '1' ? pageScreen.querySelector('#btnParcial').disabled = false : null
 
-        const tbl = pageScreen.querySelector('#tbl_total')
-        tbl.head('Valor Comanda, Pago, Total')
-        tbl.plot(data,'total,pago,saldo_dev','R$.,R$.,R$.')
-
-        pageScreen.querySelector('#edtSaldo').value = `R$${data.saldo_dev}`
-        pageScreen.querySelector('#edtValRec').value = data.saldo_dev
         pageScreen.querySelector('#edtTroco').value = 'R$0,00'
         pageScreen.querySelector('#btnAddItem').disabled = false
         pageScreen.querySelector('#btnPrint').disabled = false

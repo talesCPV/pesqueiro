@@ -64,7 +64,7 @@
             tbl.head('Descrição|w70,Und.,Estq.,Preço')
             pageScreen.querySelector('.print').style.display = json.length ? 'flex' : 'none'
             for(let i=0; i<json.length;i++){
-                tbl.plot(json[i],'descricao,und,disponivel,preco','str,Upp,str,R$.')
+                tbl.plot(json[i],'descricao,und,disponivel,preco','str,Upp,flo,R$.')
             }         
         });
     }

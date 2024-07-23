@@ -97,7 +97,6 @@
         const myPromisse = queryDB(params,'CXA-0');
         myPromisse.then((resolve)=>{
             const json = JSON.parse(resolve)
-console.log(json)            
             tbl.style.display = json.length > 0 ? 'inline-table' : 'none'
             tbl.head('CMD.,Data|mobiHide,Hora|mobiHide,Cliente|w70,Valor')
             for(let i=0; i<json.length;i++){
@@ -108,8 +107,6 @@ console.log(json)
     }
 
     function printComanda(data){
-        console.log(data) 
-
         const qrcode = new QRCode("cli-code", {
             text:`https://www.flexibus.com.br/pesqueiro/index.html?token=${data.token.substr(0,30)}`,
             width: 512,
