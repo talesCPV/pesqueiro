@@ -20,8 +20,15 @@ function troco(tot,din,troco,ckb){
     const total = parseFloat(getFloat(document.getElementById(tot).value))
     const dinheiro = parseFloat(getFloat(document.getElementById(din).value))
     const troco_dev = (dinheiro - total)
+    let out = 0
+    if(total <= dinheiro){
+        out = document.getElementById(ckb).checked ? total : dinheiro
+    }else{
+        out = dinheiro - total
+    }
+
     document.getElementById(troco).value = 'R$'+troco_dev.toFixed(2)
-    return (document.getElementById(ckb).checked && total < dinheiro)? total.toFixed(2) : dinheiro.toFixed(2)
+    return out.toFixed(2)
 }
 
 function checkField(fields){
@@ -101,13 +108,16 @@ function getFloat(text,dec=2){
     let before_dot = '0';
     let after_dot = '';
     let dot =  '';
+    let signal = 1
     for(var i = 0; i<text.length; i++){
         if(dot.length == 0){
             if(['.',','].includes(text[i])){
                 dot = '.'
-            }else{                
+            }else{
+                if((before_dot=='' || before_dot=='0') && text[i]=='-'){
+                  signal = -1
+                }
                 before_dot +=  ok_chr.includes(text[i]) ? text[i] : ''
-                before_dot = parseInt(before_dot).toString()
             }
         }else{
             if(after_dot.length < dec){
@@ -115,7 +125,7 @@ function getFloat(text,dec=2){
             }
         }
     }     
-    return before_dot+dot+after_dot;
+    return (parseInt(before_dot) * signal).toString() +dot+after_dot;
 }
 
 function getNum(V){

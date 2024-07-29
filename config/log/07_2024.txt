@@ -566,3 +566,11 @@
 21/07/2024 18:32 roger@pesqueirodourado.com.br : Venda lancada -> Comanda:81, Valor:670.50, Modo:CRT
 22/07/2024 13:31 admin@pesqueirodourado.com.br : Nova Comanda -> Cliente:Tales Cembraneli Dantas, CPF:26687200879
 22/07/2024 13:31 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:254, Prod:Agua com gas, Qtd.:2
+29/07/2024 19:19 admin@pesqueirodourado.com.br : Venda lancada -> Comanda:298, Valor:-12.00, Modo:DIN
+29/07/2024 19:20 admin@pesqueirodourado.com.br : Nova Comanda -> Cliente:Tales Cembraneli Dantas, CPF:26687200879
+29/07/2024 19:21 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:299, Prod:Acai Guaraviton bebida de guarana, Qtd.:3
+29/07/2024 19:21 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:299, Prod:Acai Guaraviton bebida de guarana, Qtd.:2
+29/07/2024 20:56 admin@pesqueirodourado.com.br : Venda lancada -> Comanda:299, Valor:0, Modo:DIN
+29/07/2024 20:58 admin@pesqueirodourado.com.br : Venda lancada -> Comanda:299, Valor:0, Modo:DIN
+29/07/2024 21:18 admin@pesqueirodourado.com.br : Venda lancada -> Comanda:299, Valor:0, Modo:DIN
+29/07/2024 21:19 admin@pesqueirodourado.com.br : Produto Editado Acai Guaraviton bebida de guarana -> Acai Guaraviton bebida de guarana

@@ -6,25 +6,34 @@
 
         <div class="inline">
             <label for="edtNome">Nome *</label>
-            <input type="text" id="edtNome" maxlength="50">
+            <input type="text" id="edtNome" maxlength="50" onfocus="this.select();">
         </div>
 
         <div class="inline">
             <label for="edtCPF">CPF *</label>
             <div class="edtbtn">
-                <input type="text" id="edtCPF" onkeyup="valCPF(this)" inputmode="numeric" maxlength="14">
+                <input type="text" id="edtCPF" onkeyup="valCPF(this)" inputmode="numeric" maxlength="14" onfocus="this.select();">
             </div>
         </div>
 
         <div class="inline">
             <label for="edtCel">Celular</label>
-            <input type="text" id="edtCel" onkeyup="valTel(this)" inputmode="numeric"maxlength="15">
+            <input type="text" id="edtCel" onkeyup="valTel(this)" inputmode="numeric"maxlength="15" onfocus="this.select();">
         </div>
 
         <div class="inline">
             <label for="edtSaldo">Saldo</label>
-            <input type="text" id="edtSaldo" onkeyup="valFloat(this)" inputmode="numeric" value="0">
+            <input type="text" id="edtSaldo" value="0" readonly>
         </div>
+
+        <div class="inline">
+            <label for="edtbtn">Receber</label>
+            <div class="edtbtn">                
+                <input type="text" id="edtAddSaldo" inputmode="numeric" value="0" onkeyup="valFloat(this)" onfocus="this.select();">
+                <button id="btnAddSaldo" class="btn-round"><span class="mdi mdi-currency-usd"></span></button>
+            </div>
+        </div>
+
 
         <div class="inline">
             <label for="edtObs">Obs</label>
@@ -82,6 +91,13 @@
                 alert(resp.MESSAGE)
                 closeModal('adm_new_client')
             })
+        }
+    })
+
+    pageScreen.querySelector('#btnAddSaldo').addEventListener('click',()=>{
+        const val = parseFloat(pageScreen.querySelector('#edtAddSaldo').value)
+        if(confirm(`Confirma a ${val<0 ?'Subtração':'Adição'} de R$${val.toFixed(2)} ao saldo do cliente?`)){
+
         }
     })
 

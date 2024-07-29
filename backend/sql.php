@@ -49,7 +49,7 @@
         "CXA-4" => 'CALL sp_set_item_comanda(@access,@hash,x00,x01,x02,"x03","x04");', //ID,ID_COMANDA,ID_PRODUTO,QTD,PAGO
         "CXA-5" => 'CALL sp_view_item_comanda(@access,@hash,x00);', //ID_COMANDA
         "CXA-6" => 'CALL sp_del_item_comanda(@access,@hash,x00,x01);', // ID_ITEM, ID_COMANDA 
-        "CXA-7" => 'CALL sp_fecha_comanda(@access,@hash,x00,"x01","x02");', // ID_COMANDA, MODO_PGTO, VALOR
+        "CXA-7" => 'CALL sp_fecha_comanda(@access,@hash,x00,"x01",x02,x03);', // ID_COMANDA, MODO_PGTO, VALOR, SALDO
 
         /* CLIENTE */
         "CLI-0" => 'CALL sp_comanda_cliente("x00");',

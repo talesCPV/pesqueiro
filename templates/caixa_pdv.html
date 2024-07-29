@@ -205,11 +205,18 @@
 
     pageFunc.finaliza = ()=>{
 
-        const meu_troco = troco('edtSaldo','edtValRec','edtTroco','ckbTroco')
+        troco('edtSaldo','edtValRec','edtTroco','ckbTroco')
+        const saldo_dev = parseFloat(document.querySelector('#edtSaldo').value.substr(2,10))
+        const recebido = parseFloat(document.querySelector('#edtValRec').value)
+        const meutroco = parseFloat(document.querySelector('#edtTroco').value.substr(2,10))
+        const ckb = document.querySelector('#ckbTroco').checked
+
         const params = new Object;
             params.id_comanda = pageData.comanda.id
             params.modo_pgto = pageScreen.querySelector('#cmbModoPgto').value
-            params.valor_pgto = meu_troco
+            params.valor_pgto = !ckb ? recebido  : meutroco >= 0 ? saldo_dev :  recebido
+            params.saldo_cli = !ckb || meutroco < 0 ? meutroco : 0
+
         const myPromisse = queryDB(params,'CXA-7');
         myPromisse.then((resolve)=>{
             setLog(`Venda lançada -> Comanda:${params.id_comanda}, Valor:${params.valor_pgto}, Modo:${params.modo_pgto}`)
