@@ -47,10 +47,11 @@
         myPromisse.then((resolve)=>{
             const json = JSON.parse(resolve)
             pageScreen.querySelector('#fdsUser').style.display = json.length > 0 ? 'block' : 'none'
-
             tbl.head('Cod.,Email,Perfil')
             for(let i=0; i<json.length;i++){
-                tbl.plot(json[i],'id,email,perfil','str,Low,Upp')                
+                if(json[i].access != 0 || localStorage.getItem('access') == '0'){
+                    tbl.plot(json[i],'id,email,perfil','str,Low,Upp')                
+                }
             }         
         });
     }

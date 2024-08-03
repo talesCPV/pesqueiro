@@ -45,7 +45,7 @@
         </div>        
 
         <div class="inline">
-            <label for="edtAcesso">Perfil de Acesso</label>
+            <label for="edtAcesso">Perfil</label>
             <select id="cmbPerfil"></select>  
         </div>
 
@@ -115,11 +115,11 @@
                 const opt = document.createElement('option')
                 opt.value = id
                 opt.innerHTML = nome
-                opt.selected = pageData.access == id 
+                opt.selected = pageData.id == '0' && id == '3' ? 1 :  pageData.access == id 
                 cmb.appendChild(opt)
             }
 
-            if(pageData.access=='0'){
+            if(localStorage.getItem('access') == '0'){
                 addOpt(0,'ADMINISTRADOR ROOT')
             }
 
