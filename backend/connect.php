@@ -6,10 +6,16 @@
     $servidor = decrip('k0kn-k5F)()f,/kyo*klqmC-0k#(LzAuAtHA_k1n!k*J%2/('); // 108.179.253.230
     $banco = decrip('5Ynq0n83)3/=/2n!r,not/,/3n)+3"L;ww!8]n4q%n/z@5/0'); // flexib52_db_estoque
     $conexao = new mysqli($servidor, $usuario, $senha, $banco);
-*/
+
     $conexao = new mysqli("108.179.253.230", "flexib52_tales", "Xspider0", "flexib52_pesqueiro");
     if (!$conexao){
         die ("Erro de conexão com localhost, o seguinte erro ocorreu -> ".mysql_error());
     }    
+*/
+
+    $conexao = new mysqli("192.185.176.182", "pesqu590_pdv", "Z1977dourado#", "pesqu590_pdv");
+    if (!$conexao){
+        die ("Erro de conexão com localhost, o seguinte erro ocorreu -> ".mysql_error());
+    }   
 
 ?>

@@ -97,9 +97,9 @@
                     <input type="text" class="only-view" id="edtEtqMin" maxlength="10" onkeyup="valFloat(this)" inputmode="decimal" disabled>              
                 </div>
                 <div class="inline">
-                    <label for="edtCusto">Custo (R$)</label>
+                    <label for="edtCusto">Custo* (R$)</label>
                     <input type="text" class="only-view" id="edtCusto" onkeyup="valFloat(this)" onfocus="this.select();" value="0" inputmode="decimal" disabled>
-                    <label for="edtMarkup">Markup (%)</label>
+                    <label for="edtMarkup">Markup* (%)</label>
                     <input type="text" class="only-view" id="edtMarkup" onkeyup="valFloat(this)" onfocus="this.select();" value="0" inputmode="decimal" disabled>    
                 </div>
         
@@ -284,7 +284,9 @@
     }
 
     pageScreen.querySelector('#btnSave').addEventListener('click',()=>{
-        pageFunc.setProd()
+        if(checkField(['edtDesc','edtCusto','edtMarkup'])){
+            pageFunc.setProd()
+        }
     })
 
     pageScreen.querySelector('#btnDel').addEventListener('click',()=>{

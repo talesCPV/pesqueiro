@@ -49,7 +49,7 @@
         pageScreen.querySelector('#fds-legend').innerHTML = pageData.descricao
         pageScreen.querySelector('#edtQtd').value = pageData.qtd
         pageScreen.querySelector('#edtQtd').focus()
-        pageScreen.querySelector('#btnPgto').style.display = pageData.org == 'caixa_pdv' ? 'block' : 'none'
+        pageScreen.querySelector('#btnPgto').style.display = pageData.org == 'caixa_pdv' ? 'none' : 'none'
         pageScreen.querySelector('#btnDel').style.display = pageData.oper == 'qtd' ? 'none' : 'block'
     }
 
