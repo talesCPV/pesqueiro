@@ -1,2 +1,12 @@
 19/08/2024 02:12 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:371, Prod:Coca Cola lata (350ml), Qtd.:2
 19/08/2024 02:12 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:371, Prod:Coca Cola lata (350ml), Qtd.:1
+19/08/2024 16:06 admin@pesqueirodourado.com.br : Menu Incluido (Site)
+19/08/2024 16:06 admin@pesqueirodourado.com.br : Menu Incluido (Posts)
+19/08/2024 16:06 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Sistema, Acesso:[[0,1,2]])
+19/08/2024 16:06 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Administracao, Acesso:[[0,1,2]])
+19/08/2024 16:06 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Cadastros, Acesso:[[0,1,2]])
+19/08/2024 16:06 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Parametros, Acesso:[[0,2]])
+19/08/2024 16:06 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Financeiro, Acesso:[[0,2,4]])
+19/08/2024 16:06 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Caixa, Acesso:[[0,1,2,3]])
+19/08/2024 16:06 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Site, Acesso:[[0,1,2]])
+19/08/2024 16:08 admin@pesqueirodourado.com.br : Menu Alterado (Posts, site_posts.html, pop-up, Posts no Site)

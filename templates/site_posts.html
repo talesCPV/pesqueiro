@@ -1,0 +1,119 @@
+<template>
+    <style>
+        .frm-post{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .frm-post select{
+            max-width: 30%;
+            overflow-y: scroll;
+        }
+
+        .data-post{
+            width: 100%;
+            height: 100%;
+        }
+
+        .data-post textarea{
+            height: 150px
+        }
+
+    </style>
+    <div class="frm-post">
+        <select id="cmbPosts" size="15"></select>
+        <div class="data-post">
+            <div class="inline">
+                <label for="edtTitle">Título</label>
+                <input type="text" id="edtTitle">
+            </div>
+            <div class="inline">
+                <label for="edtText">Texto</label>
+                <textarea id="edtText"></textarea>
+            </div>
+            <div class="line">
+                <button id="btnNovo">Novo</button>
+                <button id="btnPost">Post</button>
+                <button id="btnDel">Deletar</button>
+            </div>
+        </div>
+    </div>
+
+</template>
+<script>
+    const pageData = main_data.site_posts.data
+    const pageFunc = main_data.site_posts.func
+    const pageScreen = document.querySelector('#card-site_posts')
+     
+    function clearForm(){
+        pageScreen.querySelector('#edtTitle').value = ''
+        pageScreen.querySelector('#edtText').value = ''
+        pageData.pick = -1
+    }
+
+    function saveForm(){
+        saveFile(pageData.posts,'/../../site/blog/post.json')
+        .then((resolve)=>{
+            loadPosts()            
+        })
+    }
+
+
+    function loadPosts(){
+        fetch( "../site/blog/post.json")
+        .then( stream => stream.text())
+        .then( text => {
+            pageData.posts = JSON.parse(text)
+//            console.log(pageData.posts)
+            const sel =  pageScreen.querySelector('#cmbPosts')
+            sel.innerHTML = ''
+
+            for(let i=0; i<pageData.posts.length; i++){
+                const opt = document.createElement('option')
+                opt.value = i
+                opt.innerHTML = pageData.posts[i].title
+                sel.appendChild(opt)
+            }
+            clearForm()
+        })
+    }
+
+
+    pageScreen.querySelector('#cmbPosts').addEventListener('click',()=>{
+        pageData.pick = pageScreen.querySelector('#cmbPosts').value
+        pageScreen.querySelector('#edtTitle').value = pageData.posts[pageData.pick].title
+        pageScreen.querySelector('#edtText').value = pageData.posts[pageData.pick].message
+    })
+
+
+    pageScreen.querySelector('#btnNovo').addEventListener('click',()=>{
+        clearForm()
+    })
+
+    pageScreen.querySelector('#btnPost').addEventListener('click',()=>{
+        if(pageData.pick<0){
+            const post = new Object
+            post.title = pageScreen.querySelector('#edtTitle').value.trim()
+            post.message = pageScreen.querySelector('#edtText').value.trim()
+            post.img = ''
+            pageData.posts.push(post)
+        }else{
+            pageData.posts[pageData.pick].title = pageScreen.querySelector('#edtTitle').value.trim()
+            pageData.posts[pageData.pick].message = pageScreen.querySelector('#edtText').value.trim()
+        }
+
+        saveForm()
+
+    })
+
+    pageScreen.querySelector('#btnDel').addEventListener('click',()=>{
+        if(confirm('Remover este post?')){
+            pageData.posts.splice(pageData.pick,1)
+            saveForm()
+        }
+    })
+
+
+    loadPosts()
+
+</script>
