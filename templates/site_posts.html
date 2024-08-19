@@ -80,9 +80,14 @@
 
 
     pageScreen.querySelector('#cmbPosts').addEventListener('click',()=>{
-        pageData.pick = pageScreen.querySelector('#cmbPosts').value
-        pageScreen.querySelector('#edtTitle').value = pageData.posts[pageData.pick].title
-        pageScreen.querySelector('#edtText').value = pageData.posts[pageData.pick].message
+        try{
+            pageData.pick = pageScreen.querySelector('#cmbPosts').value
+            pageScreen.querySelector('#edtTitle').value = pageData.posts[pageData.pick].title
+            pageScreen.querySelector('#edtText').value = pageData.posts[pageData.pick].message
+        }catch{
+            console.error('Não existe nenhum Post.')
+            pageData.pick = -1
+        }
     })
 
 
@@ -91,25 +96,27 @@
     })
 
     pageScreen.querySelector('#btnPost').addEventListener('click',()=>{
-        if(pageData.pick<0){
-            const post = new Object
-            post.title = pageScreen.querySelector('#edtTitle').value.trim()
-            post.message = pageScreen.querySelector('#edtText').value.trim()
-            post.img = ''
-            pageData.posts.push(post)
-        }else{
-            pageData.posts[pageData.pick].title = pageScreen.querySelector('#edtTitle').value.trim()
-            pageData.posts[pageData.pick].message = pageScreen.querySelector('#edtText').value.trim()
+        if(pageScreen.querySelector('#edtTitle').value.trim() != '' ){
+            if(pageData.pick<0){
+                const post = new Object
+                post.title = pageScreen.querySelector('#edtTitle').value.trim()
+                post.message = pageScreen.querySelector('#edtText').value.trim()
+                post.img = ''
+                pageData.posts.push(post)
+            }else{
+                pageData.posts[pageData.pick].title = pageScreen.querySelector('#edtTitle').value.trim()
+                pageData.posts[pageData.pick].message = pageScreen.querySelector('#edtText').value.trim()
+            }
+            saveForm()
         }
-
-        saveForm()
-
     })
 
     pageScreen.querySelector('#btnDel').addEventListener('click',()=>{
-        if(confirm('Remover este post?')){
-            pageData.posts.splice(pageData.pick,1)
-            saveForm()
+        if(pageData.pick >=0){
+            if(confirm('Remover este post?')){
+                pageData.posts.splice(pageData.pick,1)
+                saveForm()
+            }
         }
     })
 
