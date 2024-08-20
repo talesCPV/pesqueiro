@@ -1,0 +1,62 @@
+<template>
+    <style>
+
+        #btnPos{
+            display: none;
+        }
+     
+    </style>
+  
+    <fieldset>
+        <legend>Período</legend>
+        <div class="inline">
+            <label for="edtDtIni">de</label>
+            <input type="date" id="edtDtIni">
+            <label for="edtDtFin">até</label>
+            <input type="date" id="edtDtFin">
+            <button class="btn-round" id="btnBusca"><span class="mdi mdi-magnify"></span></button>
+        </div>
+    </fieldset>
+
+    <table id="tblConsumo"></table>
+    <div class="line">
+        <button id="btnPos"   class="btn-round big btn-hide"> <span class="mdi mdi-printer-pos"> </span></button>
+    </div>
+</template>
+<script>
+
+    const pageData = main_data.tool_consumo.data
+    const pageFunc = main_data.tool_consumo.func
+    const pageScreen = document.querySelector('#card-tool_consumo')
+
+    pageScreen.querySelector('#edtDtIni').value = today.iniMonth()
+    pageScreen.querySelector('#edtDtFin').value = today.finMonth()
+
+    pageFunc.fillConsumo = ()=>{
+        const params = new Object;
+            params.dt_in = pageScreen.querySelector('#edtDtIni').value
+            params.dt_out = pageScreen.querySelector('#edtDtFin').value
+        
+        const myPromisse = queryDB(params,'PROD-5');
+        myPromisse.then((resolve)=>{
+            const json = JSON.parse(resolve)
+            const tbl = pageScreen.querySelector('#tblConsumo')
+            tbl.head('Descrição,Qtd.,Und.')
+            for(i=0; i<json.length; i++){
+                tbl.plot(json[i],'descricao,qtd,und','Upp,Upp,Upp')
+            }
+            pageScreen.querySelector('#btnPos').style.display = json.length ? 'flex' : 'none'
+            pageData.tbl = json
+        })  
+    }
+
+    pageScreen.querySelector('#btnBusca').addEventListener('click',()=>{
+        pageFunc.fillConsumo()
+    })
+
+    pageScreen.querySelector('#btnPos').addEventListener('click',()=>{
+        consumo_pos(pageData.tbl)
+    })
+
+
+</script>

@@ -32,6 +32,8 @@
         "PROD-2"  => 'CALL sp_del_prod(@access,@hash,x00);', // ID
         "PROD-3"  => 'CALL sp_set_reserv_prod(@access,@hash,x00,x01,x02,"x03",x04);', // ID_PROD, ID_PROJ,ID_USER,QTD,PAGO      
         "PROD-4"  => 'CALL sp_inventario(@access,@hash,x00,"x01","x02")', // ID_PROD, QTD, OPERAÇÃO
+        "PROD-5"  => 'CALL sp_view_consumo(@access,@hash,"x00","x01");', // DT_INICIO, DT_FINAL
+
 
         /* ADMIN */
         "ADM-0"   => 'CALL sp_set_und(@access,@hash,x00,"x01","x02");', // ID,NOME, SIGLA

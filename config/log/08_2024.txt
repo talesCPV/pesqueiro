@@ -10,3 +10,9 @@
 19/08/2024 16:06 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Caixa, Acesso:[[0,1,2,3]])
 19/08/2024 16:06 admin@pesqueirodourado.com.br : Permissao alterada, Modulo: Site, Acesso:[[0,1,2]])
 19/08/2024 16:08 admin@pesqueirodourado.com.br : Menu Alterado (Posts, site_posts.html, pop-up, Posts no Site)
+20/08/2024 20:45 admin@pesqueirodourado.com.br : Menu Incluido (Consumo)
+20/08/2024 20:47 admin@pesqueirodourado.com.br : Menu Alterado (Consumo, menu, pop-up, Consumo por Periodo)
+20/08/2024 21:36 admin@pesqueirodourado.com.br : Menu Alterado (Consumo, tool_consumo.html, pop-up, Consumo por Periodo)
+20/08/2024 21:56 admin@pesqueirodourado.com.br : Produto Editado Meia Refeicao -> Meia Refeicao
+20/08/2024 21:57 admin@pesqueirodourado.com.br : Produto Editado Meia Refeicao -> Meia Refeicao
+20/08/2024 21:58 admin@pesqueirodourado.com.br : Produto Editado Pesque Pague - Pacu (limpo) -> Pesque Pague - Pacu (limpo)

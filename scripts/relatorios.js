@@ -221,3 +221,46 @@ function comanda_itens(comanda){
 
     openPDF(doc,'comanda')
 }
+
+function consumo_pos(data){
+    const logo = new Image()
+    logo.src = 'assets/logo_peq.png'
+
+    const doc = new jsPDF({
+        orientation: "portrait",
+        unit: "mm",
+        format: [550, 275]
+    });
+
+    doc.addImage(logo, 'png', 22, 5, 50, 15.5);
+
+    doc.setFontSize(30);
+    txt.y = 22
+
+    const tbl = new Object
+    tbl.head = [['Descrição','Qtd','Und.']]
+    tbl.body = []
+
+    for(let i=0; i<data.length; i++){
+        tbl.body.push([data[i].descricao,data[i].qtd,data[i].und])
+    }
+
+    doc.autoTable({
+        head: tbl.head,
+        body: tbl.body,
+        columnStyles: {
+            0: {cellWidth: 50},
+            1: {cellWidth: 10, haling:'rigth' },
+            2: {cellWidth: 10, haling:'rigth' }
+        },
+        margin: {top: 10, right: 5, bottom: 0, left: 5},
+        headStyles :{fillColor : [0], textColor : [255]},
+        styles :{fontSize: 10, textColor : [0]},
+        startY: txt.y
+    });
+
+    openPDF(doc,'consumo')
+
+//    doc.save('cardapio.pdf')
+
+}
