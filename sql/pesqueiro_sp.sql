@@ -746,7 +746,8 @@ DELIMITER $$
 		IN Ihash varchar(64),
 		IN Iid_comanda INT(11),
         IN Imodo varchar(30),
-        IN Ivalor double
+        IN Ivalor double,
+        IN Isaldo double
     )
 	BEGIN
 		CALL sp_allow(Iallow,Ihash);
@@ -765,7 +766,10 @@ DELIMITER $$
 					WHERE  ITN.id_comanda = Iid_comanda
                     AND ITN.pago = 0;
                 
+                CALL sp_baixa_comanda_lote(Iallow,Ihash,Iid_comanda);
                 CALL sp_set_lancamento(Iallow,Ihash,0,@total,CONCAT("Lançamento comanda ",Iid_comanda),Imodo,1,Iid_comanda);
+                
+--                UPDATE tb_cliente SET saldo = saldo+Isaldo WHERE
                 
 				DELETE FROM tb_item_comanda WHERE id=Iid AND id_comanda=Iid_comanda;
 				SELECT 1 AS ok;
@@ -774,7 +778,7 @@ DELIMITER $$
 			END IF;
         END IF;
 	END $$
-	DELIMITER ;      
+	DELIMITER ;       
     
      DROP PROCEDURE IF EXISTS sp_comanda_cliente;
 DELIMITER $$
@@ -801,6 +805,70 @@ DELIMITER $$
 
 	END $$
 	DELIMITER ;
+    
+-- CALL sp_baixa_lote(Iallow,Ihash,Iid_comanda); 
+
+     DROP PROCEDURE IF EXISTS sp_baixa_comanda_lote;
+DELIMITER $$
+	CREATE PROCEDURE sp_baixa_comanda_lote(    
+		IN Iallow varchar(80),
+		IN Ihash varchar(64),
+        IN Iid_comanda int(11)
+    )
+	BEGIN
+
+		DECLARE done INT DEFAULT FALSE;
+		DECLARE id_prod INT(11);
+        DECLARE qtd_prod DOUBLE;
+		DECLARE itens_comanda CURSOR FOR SELECT id_produto,qtd FROM tb_item_comanda WHERE id_comanda = Iid_comanda;
+		DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = TRUE;
+
+		OPEN itens_comanda;
+
+		read_loop: LOOP
+			FETCH itens_comanda INTO id_prod,qtd_prod;
+			IF done THEN
+				LEAVE read_loop;
+			END IF;			
+            CALL sp_baixa_lote(Iallow,Ihash,id_prod,qtd_prod);
+		END LOOP read_loop;
+
+	CLOSE itens_comanda;
+
+		
+	END $$
+	DELIMITER ;   
+   
+     DROP PROCEDURE IF EXISTS sp_baixa_lote;
+DELIMITER $$
+	CREATE PROCEDURE sp_baixa_lote(    
+		IN Iallow varchar(80),
+		IN Ihash varchar(64),
+        IN Iid_prod int(11),
+        IN Iqtd double
+    )
+	BEGIN
+		CALL sp_allow(Iallow,Ihash);
+		IF(@allow)THEN
+			SET @qtd_lote = 0;
+			SET @entrada = "0000-00-00 00:00:00";
+            SELECT qtd, entrada INTO @qtd_lote, @entrada FROM tb_lote ORDER BY validade ASC, entrada ASC LIMIT 1;
+			IF(@qtd_lote>= Iqtd)THEN
+				UPDATE tb_lote SET qtd = qtd-Iqtd WHERE id_prod=Iid_prod AND entrada = @entrada;
+            ELSE
+				DELETE FROM tb_lote WHERE id_prod=Iid_prod AND entrada = @entrada;
+                SET @n_qtd = (SELECT Iqtd-@qtd_lote);
+                IF((SELECT COUNT(*) FROM tb_lote)>0)THEN
+					SET SQL_SAFE_UPDATES = 0;
+					SET @@GLOBAL.max_sp_recursion_depth = 255;
+					SET @@session.max_sp_recursion_depth = 255;
+					CALL sp_baixa_lote(Iallow,Ihash,Iid_prod,@n_qtd);
+				END IF;
+            END IF;
+			DELETE FROM tb_lote WHERE qtd<=0;
+		END IF;
+	END $$
+	DELIMITER ;    
     
 /* FUNCIONÁRIO */
 
@@ -918,7 +986,8 @@ DELIMITER $$
         IN Iid int(11),
         IN Iid_prod int(11),
 		IN Iqtd double,
-		IN Icusto_unit double
+		IN Icusto_unit double,
+        IN Ivalidade date
     )
 BEGIN
 		CALL sp_allow(Iallow,Ihash);
@@ -929,6 +998,8 @@ BEGIN
 				SET @markup = ROUND((@preco/Icusto_unit -1)*100,2);
 				            
 				UPDATE tb_produto SET estoque=estoque+Iqtd, custo=Icusto_unit, markup=@markup WHERE id=Iid_prod ;
+            
+				INSERT INTO tb_lote (id_prod,validade,qtd) VALUES(Iid_prod,Ivalidade,Iqtd);
             
 				SET @prod_name = (SELECT descricao FROM tb_produto WHERE id=Iid_prod);
 				CALL sp_set_lancamento(Iallow,Ihash,0,ROUND(Icusto_unit * Iqtd,2),CONCAT("Compra ",@prod_name),"PGT",0,0);
@@ -943,3 +1014,24 @@ BEGIN
         END IF;
 	END $$
 	DELIMITER ;   
+    
+	DROP PROCEDURE IF EXISTS sp_view_consumo;
+DELIMITER $$
+    CREATE PROCEDURE sp_view_consumo(
+		IN Iallow varchar(80),
+		IN Ihash varchar(64),
+        IN IdtIn varchar(10),
+        IN IdtOut varchar(10)
+    )
+	BEGIN
+		CALL sp_allow(Iallow,Ihash);
+		IF(@allow)THEN
+			SELECT id_produto,descricao,ROUND(SUM(qtd),2) AS qtd, und 
+			FROM vw_item_comanda 
+			WHERE registro BETWEEN CONCAT(IdtIn," 00:00:00") AND CONCAT(IdtOut," 23:59:59") 
+			GROUP BY id_produto
+			ORDER BY descricao;
+        END IF;
+	END $$
+	DELIMITER ;  
+    

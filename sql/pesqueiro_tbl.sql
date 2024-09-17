@@ -1,6 +1,6 @@
 /* USUARIOS */
 
--- DROP TABLE tb_usuario;
+-- DROP TABLE IF EXISTS tb_usuario;
 CREATE TABLE tb_usuario (
     id int(11) NOT NULL AUTO_INCREMENT,
     email varchar(70) NOT NULL,
@@ -13,7 +13,7 @@ CREATE TABLE tb_usuario (
 
 INSERT INTO tb_usuario (email,hash,access)VALUES("admin@pesqueirodourado.com.br",'ebf62be8158ce26e56a2a1714a7ad7564efac3f61dd1c604d43c270b8ab5e1b4',0);
 
--- DROP TABLE tb_usr_perm_perfil;
+-- DROP TABLE IF EXISTS tb_usr_perm_perfil;
 CREATE TABLE tb_usr_perm_perfil (
     id int(11) NOT NULL AUTO_INCREMENT,
     nome varchar(30) NOT NULL,
@@ -21,7 +21,7 @@ CREATE TABLE tb_usr_perm_perfil (
     PRIMARY KEY (id)
 ) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
 
- DROP TABLE tb_calendario;
+ DROP TABLE IF EXISTS tb_calendario;
 CREATE TABLE tb_calendario (
     id_user int(11) NOT NULL,
     data_agd date NOT NULL,
@@ -29,7 +29,7 @@ CREATE TABLE tb_calendario (
     PRIMARY KEY (id_user,data_agd)
 ) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
 
- DROP TABLE tb_mail;
+ DROP TABLE IF EXISTS tb_mail;
 CREATE TABLE tb_mail (
 	data TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, 
     id_from int(11) NOT NULL,
@@ -43,7 +43,7 @@ CREATE TABLE tb_mail (
 
 /* PRODUTOS */
 
-DROP TABLE tb_produto;
+DROP TABLE IF EXISTS tb_produto;
 CREATE TABLE tb_produto(
     id int(11) NOT NULL AUTO_INCREMENT,
     id_emp int(11) DEFAULT NULL,
@@ -60,12 +60,13 @@ CREATE TABLE tb_produto(
     markup double DEFAULT 0,
     local varchar(20),
     disp boolean DEFAULT 1,
+    tipo varchar(15) NOT NULL DEFAULT "BEBIDA",
     UNIQUE KEY (descricao),
     FOREIGN KEY (id_emp) REFERENCES tb_empresa(id),
     PRIMARY KEY (id)
 ) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
 
-DROP TABLE tb_prod_reserva;
+DROP TABLE IF EXISTS tb_prod_reserva;
 CREATE TABLE tb_prod_reserva(
     id_prod int(11) NOT NULL AUTO_INCREMENT,
     id_proj int(11) NOT NULL,
@@ -79,7 +80,17 @@ CREATE TABLE tb_prod_reserva(
     PRIMARY KEY (id_prod,id_proj)
 ) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
 
--- DROP TABLE tb_und;
+ DROP TABLE IF EXISTS tb_lote;
+CREATE TABLE tb_lote (
+    id_prod int(11) NOT NULL,
+    entrada datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    validade date,
+    qtd double NOT NULL DEFAULT 0,
+    FOREIGN KEY (id_prod) REFERENCES tb_produto(id),
+    PRIMARY KEY (id_prod,entrada)
+) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
+
+-- DROP TABLE IF EXISTS tb_und;
 CREATE TABLE tb_und (
     id int(11) NOT NULL AUTO_INCREMENT,
     nome varchar(30) NOT NULL,
@@ -89,7 +100,7 @@ CREATE TABLE tb_und (
 
 /* EMPRESAS */
 
-DROP TABLE tb_empresa;
+DROP TABLE IF EXISTS tb_empresa;
 CREATE TABLE tb_empresa(
     id int(11) NOT NULL AUTO_INCREMENT,
     razao_social varchar(80) NOT NULL,
@@ -149,31 +160,7 @@ CREATE TABLE tb_item_comanda (
   FOREIGN KEY (id_garcom) REFERENCES tb_usuario(id),
   PRIMARY KEY (id)
 ) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
-/* FUNCIONÁRIOS */
 
- DROP TABLE tb_funcionario;
-CREATE TABLE tb_funcionario (
-    id int(11) NOT NULL AUTO_INCREMENT,
-    nome varchar(30) DEFAULT NULL,
-    nasc date DEFAULT NULL,
-    rg varchar(15) DEFAULT NULL,
-    cpf varchar(15) DEFAULT NULL,
-    pis varchar(15) DEFAULT NULL,
-    end varchar(60) DEFAULT NULL,
-    num varchar(6) DEFAULT NULL,
-    cidade varchar(30) DEFAULT NULL,
-    bairro varchar(40) DEFAULT NULL,
-    uf varchar(2) DEFAULT NULL,
-    cep varchar(10) DEFAULT NULL,    
-    data_adm date DEFAULT NULL,
-	data_dem date DEFAULT NULL,
-    cargo varchar(30) DEFAULT NULL,
-    tel varchar(15) DEFAULT NULL,
-    cel varchar(15) DEFAULT NULL,
-    ativo boolean DEFAULT 1,
-	obs varchar(255) DEFAULT NULL,
-    PRIMARY KEY (id)
-) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=utf8; 
 
 /* FINANCEIRO */
 
@@ -185,14 +172,8 @@ CREATE TABLE tb_lancamento (
   descricao varchar(60),
   modo varchar(3) DEFAULT "DEB",
   entrada boolean DEFAULT 1,
-  id_comanda int(11) DEFAULT NULL,
   PRIMARY KEY (id)
 ) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
-
-/*
-	ALTER TABLE tb_lancamento
-	ADD id_comanda int(11) DEFAULT NULL;
-*/
 
 DROP TABLE IF EXISTS tb_compra;
 CREATE TABLE tb_compra (

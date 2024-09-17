@@ -1,10 +1,10 @@
-  DROP VIEW IF EXISTS vw_cardapio;
+  DROP VIEW vw_cardapio;
  CREATE VIEW vw_cardapio AS 
     SELECT 
         id,descricao,und,tipo,
         ROUND(((markup/100 + 1)*custo),2) AS preco
     FROM tb_produto
-    WHERE disp = 1
+    WHERE disp = 1 AND estoque > 0
 	ORDER BY CASE WHEN tipo = "BEBIDAS" THEN 1
 				  WHEN tipo = "COMIDAS" THEN 2
                   WHEN tipo = "PORÇÕES" THEN 3
@@ -12,24 +12,28 @@
 
 SELECT * FROM vw_cardapio ;
 
- DROP VIEW IF EXISTS vw_prod;
- CREATE VIEW vw_prod AS 
+-- DROP VIEW vw_prod;
+-- CREATE VIEW vw_prod AS 
     SELECT 
         PROD.*,
         RES.reserva AS reserva,
         (PROD.estoque - RES.reserva) AS disponivel,
-        ROUND(((PROD.markup/100 + 1)*PROD.custo),2) AS preco
+        ROUND(((PROD.markup/100 + 1)*PROD.custo),2) AS preco,
+        VENC.venc AS validade,
+        COALESCE( DATE_FORMAT(VENC.venc,'%d/%m/%Y'), "S/ LOTE") AS lote
     FROM
         tb_produto AS PROD
         JOIN vw_prod_forn AS FORN
         JOIN vw_prod_reserva AS RES
+        JOIN vw_prod_venc AS VENC
         ON RES.id = PROD.id
-		AND FORN.id = PROD.id;
+		AND FORN.id = PROD.id
+        AND VENC.id_prod = PROD.id;
 
-SELECT * FROM vw_prod;        
+SELECT * FROM vw_prod WHERE id >= 88;        
 
- DROP VIEW IF EXISTS vw_prod_forn;
- CREATE VIEW vw_prod_forn AS 
+-- DROP VIEW vw_prod_forn;
+-- CREATE VIEW vw_prod_forn AS 
     SELECT 
         PROD.id AS id,
         COALESCE(EMP.fantasia, '') AS fornecedor
@@ -38,8 +42,8 @@ SELECT * FROM vw_prod;
         LEFT JOIN tb_empresa AS EMP
         ON PROD.id_emp = EMP.id;
         
- DROP VIEW IF EXISTS vw_prod_reserva;
- CREATE VIEW vw_prod_reserva AS 
+-- DROP VIEW vw_prod_reserva;
+-- CREATE VIEW vw_prod_reserva AS 
     SELECT 
         PROD.id AS id,
         (PROD.custo * (PROD.markup/100 + 1)) AS preco,
@@ -53,9 +57,22 @@ SELECT * FROM vw_prod;
 
 SELECT * FROM vw_prod_reserva;
 
+
+ DROP VIEW vw_prod_venc;
+ CREATE VIEW vw_prod_venc AS 
+    SELECT 
+        PROD.id AS id_prod,
+--        COALESCE((SELECT  DATE_FORMAT(validade,'%d/%m/%Y') FROM tb_lote WHERE id_prod = PROD.id ORDER BY validade LIMIT 1), "S/ LOTE") AS venc        
+       (SELECT  validade FROM tb_lote WHERE id_prod = PROD.id ORDER BY validade LIMIT 1) AS venc
+    FROM
+        tb_produto AS PROD
+    GROUP BY PROD.id;    
+
+SELECT * FROM vw_prod_venc;
+
 /* CAIXA */
 
- DROP VIEW IF EXISTS vw_item_comanda;
+ DROP VIEW vw_item_comanda;
  CREATE VIEW vw_item_comanda AS  
 	SELECT ITN.*, PROD.preco, ROUND((ITN.qtd * PROD.preco),2) AS sub_total, PROD.descricao, PROD.und 
     FROM tb_item_comanda AS ITN
@@ -64,8 +81,8 @@ SELECT * FROM vw_prod_reserva;
 
 	SELECT * FROM vw_item_comanda;
 
- DROP VIEW IF EXISTS vw_comanda_valor;
- CREATE VIEW vw_comanda_valor AS
+ DROP VIEW vw_comanda_valor;
+-- CREATE VIEW vw_comanda_valor AS
 	SELECT COM.*, IFNULL(SUM(ITN.sub_total),0) AS total 
     FROM tb_comanda AS COM
     LEFT JOIN vw_item_comanda AS ITN
@@ -74,7 +91,7 @@ SELECT * FROM vw_prod_reserva;
 
 SELECT * FROM vw_comanda_valor;
 
- DROP VIEW IF EXISTS vw_cmd_pgto;
+ DROP VIEW vw_cmd_pgto;
  CREATE VIEW vw_cmd_pgto AS  
 	SELECT CMD.id AS id_comanda, COALESCE(ROUND(SUM(LNC.valor),2), 0) AS pago FROM tb_comanda AS CMD
 	LEFT JOIN tb_lancamento AS LNC
@@ -83,7 +100,7 @@ SELECT * FROM vw_comanda_valor;
 
 SELECT * FROM vw_cmd_pgto;
 
- DROP VIEW IF EXISTS vw_comanda;
+ DROP VIEW vw_comanda;
  CREATE VIEW vw_comanda AS     
 	SELECT COM.id,COM.aberta,COM.entrada,DATE_FORMAT(COM.entrada,"%d/%m/%Y") AS data,DATE_FORMAT(COM.entrada,"%H:%i:%S") AS hora,
 		COM.obs AS obs_comanda, ROUND(COM.total,2) AS total, ROUND((COM.total - PGTO.pago),2) AS saldo_dev,
@@ -97,20 +114,3 @@ SELECT * FROM vw_cmd_pgto;
 		ORDER BY entrada DESC;
         
 SELECT * FROM vw_comanda;        
-
- DROP VIEW IF EXISTS vw_cardapio;
- CREATE VIEW  vw_cardapio AS
-    SELECT 
-		id,descricao,und,tipo,
-        ROUND((((markup / 100) + 1) * custo),2) AS preco
-    FROM
-        tb_produto
-    WHERE
-        disp = 1
-    ORDER BY 
-		CASE
-			WHEN tipo = "BEBIDAS" THEN 1
-			WHEN tipo = "COMIDAS" THEN 2
-			WHEN tipo = "PORÇÕES" THEN 3
-			ELSE 4
-		END ;
