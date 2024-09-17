@@ -1,0 +1,46 @@
+17/09/2024 14:42 admin@pesqueirodourado.com.br : COMPRA  :  Prod:AGUA MINEIRAL AQUISSIMA 510 ML COM GAS, Qtd:10, Custo Unit..:5
+17/09/2024 14:48 admin@pesqueirodourado.com.br : COMPRA  :  Prod:AGUA MINEIRAL AQUISSIMA 510 ML COM GAS, Qtd:5, Custo Unit..:5.5
+17/09/2024 14:48 admin@pesqueirodourado.com.br : COMPRA  :  Prod:AGUA MINEIRAL AQUISSIMA 510 ML COM GAS, Qtd:3, Custo Unit..:5.10
+17/09/2024 16:12 admin@pesqueirodourado.com.br : Nova Comanda -> Cliente:Tales Cembraneli Dantas, CPF:26687200879
+17/09/2024 16:12 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:468, Prod:Agua mineiral aquissima 510 ml com gas, Qtd.:2
+17/09/2024 16:13 admin@pesqueirodourado.com.br : Venda lancada -> Comanda:468, Valor:10, Modo:DIN
+17/09/2024 16:46 admin@pesqueirodourado.com.br : Venda lancada -> Comanda:468, Valor:0, Modo:DIN
+17/09/2024 16:53 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:468, Prod:Agua mineiral aquissima 510 ml com gas, Qtd.:3
+17/09/2024 16:54 admin@pesqueirodourado.com.br : Venda lancada -> Comanda:468, Valor:5, Modo:DIN
+17/09/2024 16:55 admin@pesqueirodourado.com.br : Venda lancada -> Comanda:468, Valor:5, Modo:DIN
+17/09/2024 16:57 admin@pesqueirodourado.com.br : Venda lancada -> Comanda:468, Valor:5, Modo:DIN
+17/09/2024 16:57 admin@pesqueirodourado.com.br : Venda lancada -> Comanda:468, Valor:5, Modo:DIN
+17/09/2024 16:58 admin@pesqueirodourado.com.br : Venda lancada -> Comanda:468, Valor:5, Modo:DIN
+17/09/2024 17:06 admin@pesqueirodourado.com.br : Venda lancada -> Comanda:468, Valor:5, Modo:DIN
+17/09/2024 17:07 admin@pesqueirodourado.com.br : Venda lancada -> Comanda:468, Valor:-10, Modo:DIN
+17/09/2024 17:08 admin@pesqueirodourado.com.br : Venda lancada -> Comanda:468, Valor:-25, Modo:DIN
+17/09/2024 19:15 admin@pesqueirodourado.com.br : COMPRA  :  Prod:AGUA MINEIRAL AQUISSIMA 510 ML COM GAS, Qtd:1, Custo Unit..:0.00
+17/09/2024 19:16 admin@pesqueirodourado.com.br : COMPRA  :  Prod:AGUA MINEIRAL AQUISSIMA 510 ML COM GAS, Qtd:2, Custo Unit..:5
+17/09/2024 20:01 admin@pesqueirodourado.com.br : COMPRA  :  Prod:AGUA MINEIRAL AQUISSIMA 510 ML COM GAS, Qtd:3, Custo Unit..:5
+17/09/2024 20:01 admin@pesqueirodourado.com.br : COMPRA  :  Prod:AGUA MINEIRAL AQUISSIMA 510 ML COM GAS, Qtd:1, Custo Unit..:5
+17/09/2024 20:15 admin@pesqueirodourado.com.br : Produto Editado Conhaque Dose -> Conhaque Dose
+17/09/2024 20:16 admin@pesqueirodourado.com.br : Produto Editado Guarda-sol -> Guarda-sol
+17/09/2024 20:16 admin@pesqueirodourado.com.br : Produto Editado Passagua -> Passagua
+17/09/2024 20:16 admin@pesqueirodourado.com.br : Produto Editado Pesca Esportiva -> Pesca Esportiva
+17/09/2024 20:16 admin@pesqueirodourado.com.br : Produto Editado Meia Refeicao -> Meia Refeicao
+17/09/2024 20:17 admin@pesqueirodourado.com.br : Produto Editado Pesque Pague - Pacu (limpo) -> Pesque Pague - Pacu (limpo)
+17/09/2024 20:17 admin@pesqueirodourado.com.br : Produto Editado Pesque Pague - Tambaqui -> Pesque Pague - Tambaqui
+17/09/2024 20:17 admin@pesqueirodourado.com.br : Produto Editado Porcao de Calabresa -> Porcao de Calabresa
+17/09/2024 20:18 admin@pesqueirodourado.com.br : Produto Editado Pesque Pague - Tambaqui (limpo) -> Pesque Pague - Tambaqui (limpo)
+17/09/2024 20:18 admin@pesqueirodourado.com.br : Produto Editado Pesque Pague - Tilapia -> Pesque Pague - Tilapia
+17/09/2024 20:18 admin@pesqueirodourado.com.br : Produto Editado Porcao de File de Tilapia -> Porcao de File de Tilapia
+17/09/2024 20:19 admin@pesqueirodourado.com.br : Produto Editado Pesque Pague - Tilapia (limpa) -> Pesque Pague - Tilapia (limpa)
+17/09/2024 20:19 admin@pesqueirodourado.com.br : Produto Editado Porcao de Camarao -> Porcao de Camarao
+17/09/2024 20:19 admin@pesqueirodourado.com.br : Produto Editado Porcao de Fritas -> Porcao de Fritas
+17/09/2024 20:19 admin@pesqueirodourado.com.br : Produto Editado porcao de Mandioca -> porcao de Mandioca
+17/09/2024 20:20 admin@pesqueirodourado.com.br : Produto Editado Porcao de Panceta -> Porcao de Panceta
+17/09/2024 20:20 admin@pesqueirodourado.com.br : Produto Editado Refeicao -> Refeicao
+17/09/2024 20:20 admin@pesqueirodourado.com.br : Produto Editado Sambura -> Sambura
+17/09/2024 20:21 admin@pesqueirodourado.com.br : Produto Editado Varas de Pescar -> Varas de Pescar
+17/09/2024 20:21 admin@pesqueirodourado.com.br : Produto Editado Varas de pescar de 3 metros -> Varas de pescar de 3 metros
+17/09/2024 20:32 admin@pesqueirodourado.com.br : Produto Editado Agua mineiral aquissima 510 ml com gas -> Agua mineiral aquissima 510 ml com gas
+17/09/2024 20:34 admin@pesqueirodourado.com.br : COMPRA  :  Prod:AQUISSIMA AGUA MINEIRAL 510 ML SEM GAS, Qtd:5, Custo Unit..:4.00
+17/09/2024 20:39 admin@pesqueirodourado.com.br : COMPRA  :  Prod:AQUISSIMA AGUA MINEIRAL 510 ML SEM GAS, Qtd:2, Custo Unit..:1.50
+17/09/2024 21:12 admin@pesqueirodourado.com.br : Venda lancada -> Comanda:468, Valor:-25, Modo:DIN
+17/09/2024 21:23 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:468, Prod:Agua mineiral aquissima 510 ml com gas, Qtd.:2
+17/09/2024 21:24 admin@pesqueirodourado.com.br : Venda lancada -> Comanda:468, Valor:-30, Modo:DIN

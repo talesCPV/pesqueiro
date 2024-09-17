@@ -29,6 +29,7 @@
                 <option value="cod_bar" signal="LIKE" >Código de Barras</option>
                 <option value="consumo" signal="=" val="1">Consumo</option>
                 <option value="estoque" signal="<=" val="estq_min">Estoque Baixo</option>
+                <option value="validade" signal="<=">Dias p/ Vencimento</option>
                 <option value="ramo" signal="LIKE" >Fornecedor</option>
             </select>
             <input type="text" id="edtBusca" onkeypress="return getEnter(event, 'btnBusca-prod')">
@@ -51,20 +52,22 @@
     pageFunc.fillProd = ()=>{      
         const tbl = pageScreen.querySelector('#tblProd')
         tbl.innerHTML = ''
+        const sel_busca = pageScreen.querySelector('#cmbBusca')
+        const edt_busca = pageScreen.querySelector('#edtBusca')
         const query = getVal('prod')
         const params = new Object;
             params.field = query[0]
             params.signal = query[1]
-            params.value = query[2]
+            params.value = sel_busca.value == 'validade' ? `'${today.overday(parseInt(edt_busca.value)).pure_date()}'` : query[2]
         const myPromisse = queryDB(params,'PROD-0');
         myPromisse.then((resolve)=>{
             const json = JSON.parse(resolve)
             pageData.produtos = json
             tbl.style.display = json.length > 0 ? 'inline-table' : 'none'
-            tbl.head('Descrição|w70,Und.,Estq.,Preço')
+            tbl.head('Descrição|w70,Und.,Estq.,Prox.Venc.,Preço')
             pageScreen.querySelector('.print').style.display = json.length ? 'flex' : 'none'
             for(let i=0; i<json.length;i++){
-                tbl.plot(json[i],'descricao,und,disponivel,preco','str,Upp,flo,R$.')
+                tbl.plot(json[i],'descricao,und,disponivel,lote,preco','str,Upp,flo,Upp,R$.')
             }         
         });
     }

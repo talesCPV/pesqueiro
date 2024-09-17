@@ -58,7 +58,7 @@
         "CLI-1" => 'SELECT * FROM vw_cardapio',
 
         /* FINANCEIRO */
-        "FIN-0" => 'CALL sp_set_compra(@access,@hash,x00,x01,"x02","x03");', // ID, ID_PROD,QTD,CUSTO_UNIT
+        "FIN-0" => 'CALL sp_set_compra(@access,@hash,x00,x01,"x02","x03","x04");', // ID, ID_PROD,QTD,CUSTO_UNIT,VALIDADE
         "FIN-1" => 'CALL sp_view_fluxo_caixa(@access,@hash,"x00","x01");', // DT_INICIO, DT_FINAL
         "FIN-2" => 'CALL sp_set_lancamento(@access,@hash,x00,"x01","x02","x03",x04, x05);',//ID,VALOR,DESCRICAO,MODO,ENTRADA,ID_COMANDA
 

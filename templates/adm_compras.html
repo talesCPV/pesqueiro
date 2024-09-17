@@ -18,9 +18,13 @@
             <input type="text" id="edtQtd" onkeyup="valFloat(this)" onfocus="this.select();" value="0" inputmode="decimal">
         </div>
         <div class="inline">
-            <label for="edtCusto">Valor Unitário:* R$</label>
+            <label for="edtCusto">Custo Unit.:* R$</label>
             <input type="text" id="edtCusto" onkeyup="valFloat(this)" onfocus="this.select();" value="0.00" inputmode="decimal">
         </div>
+        <div class="inline">
+            <label for="edtVal">Validade</label>
+            <input type="date" id="edtVal">
+        </div>        
         <div class="line">
             <button id="btnAdd">Adicionar</button>
         </div>
@@ -38,6 +42,7 @@
 
     pageFunc.start = ()=>{
         pageData.id = newComp ? 0 : pageData.id
+        pageScreen.querySelector('#edtVal').value = today.getFormatDate()
     }
 
 
@@ -52,19 +57,25 @@
     }
 
     pageScreen.querySelector('#btnAdd').addEventListener('click',()=>{
+        const custo = parseFloat(pageScreen.querySelector('#edtCusto').value)
         if(checkField(['edtBuscaProd','edtQtd','edtCusto'])){
-            const params = new Object;
-                params.id = pageData.id
-                params.id_prod = pageScreen.querySelector('#edtBuscaProd').data.id
-                params.qtd = pageScreen.querySelector('#edtQtd').value
-                params.custo_unit = pageScreen.querySelector('#edtCusto').value
-            
-            const myPromisse = queryDB(params,'FIN-0');
-            myPromisse.then((resolve)=>{
-                setLog(`COMPRA  ${newComp ? '' : 'Editada'}:  Prod:${pageScreen.querySelector('#edtBuscaProd').value}, Qtd:${params.qtd}, Custo Unit..:${params.custo_unit}`)
-                closeModal('adm_compras')
-            })
-
+            if(custo <=0){
+                alert('O custo unitário não pode ser R$0.00')
+                pageScreen.querySelector('#edtCusto').focus()
+            }else{
+                const params = new Object;
+                    params.id = pageData.id
+                    params.id_prod = pageScreen.querySelector('#edtBuscaProd').data.id
+                    params.qtd = pageScreen.querySelector('#edtQtd').value
+                    params.custo_unit = custo.toFixed(2)
+                    params.validade = pageScreen.querySelector('#edtVal').value
+                
+                const myPromisse = queryDB(params,'FIN-0');
+                myPromisse.then((resolve)=>{
+                    setLog(`COMPRA  ${newComp ? '' : 'Editada'}:  Prod:${pageScreen.querySelector('#edtBuscaProd').value}, Qtd:${params.qtd}, Custo Unit..:${params.custo_unit}`)
+                    closeModal('adm_compras')
+                })
+            }
         }
     })
 
