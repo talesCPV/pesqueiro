@@ -16,21 +16,6 @@ function getEnter(e, button = '',screen=''){
     }
 }
 
-function troco(tot,din,troco,ckb){
-    const total = parseFloat(getFloat(document.getElementById(tot).value))
-    const dinheiro = parseFloat(getFloat(document.getElementById(din).value))
-    const troco_dev = (dinheiro - total)
-    let out = 0
-    if(total <= dinheiro){
-        out = document.getElementById(ckb).checked ? total : dinheiro
-    }else{
-        out = dinheiro - total
-    }
-
-    document.getElementById(troco).value = 'R$'+troco_dev.toFixed(2)
-    return out.toFixed(2)
-}
-
 function checkField(fields){
     
     for(let i=0; i< fields.length; i++){
@@ -102,6 +87,12 @@ function valPlaca(edt){
 function valTel(edt){ 
     edt.value = getFone(edt.value)
 }
+
+function valMoney(edt){
+    const num = getNum(edt.value).toString().padStart(3,0) 
+    edt.value = 'R$'+Number(num.substr(0,num.length-2)+'.'+num.substr(-2)).toFixed(2)
+}
+
 
 function getFloat(text,dec=2){
     const ok_chr = ['1','2','3','4','5','6','7','8','9','0']
@@ -390,4 +381,10 @@ function validaEmail(edt){
         return false
     }
 
+}
+
+function troco(id_tot,edtRec,id_troco){
+    total = Number(getNum(document.getElementById(id_tot).value))
+    recebido = Number(getNum(edtRec.value))
+    document.getElementById(id_troco).value = 'R$'+((recebido-total)/100).toFixed(2)
 }

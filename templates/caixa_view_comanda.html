@@ -67,14 +67,14 @@
         pageScreen.querySelector('#btnNovo').disabled = pageData.org=='adm_comandas' ? 1 : !Number(pageData.aberta)
 
         const qrcode = new QRCode("qr_code", {
-            text:`https://www.flexibus.com.br/pesqueiro/index.html?token=${pageData.token.substr(0,20)}`,
+            text:`https://www.pesqueirodourado.com.br/pdv/index.html?token=${pageData.token.substr(0,20)}`,
             width: 512,
             height: 512,
             colorDark : "#000000",
             colorLight : "#ffffff",
             correctLevel : QRCode.CorrectLevel.H,
             size : 300
-        });
+        })
         
         delay(100).then(() => {
             comanda_virual(pageData).then(()=>{

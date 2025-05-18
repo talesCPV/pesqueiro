@@ -1,0 +1,85 @@
+<template>
+    <style> </style>    
+
+    <div class="inline">
+        <label for="edtTotal">Total</label>
+        <input type="text" id="edtTotal" disabled>
+    </div>
+<!--
+    <div class="inline">
+        <label for="edtValRec">Recebido</label>
+        <input type="text" id="edtValRec" disabled>
+    </div>
+-->    
+    <div class="inline">
+        <select id="cmbModoPgto">
+            <option value="DIN" >Dinheiro</option>
+            <option value="DEB">Cartão de Débito</option>
+            <option value="CRD">Cartão de Crédito</option>
+            <option value="PIX" selected>Pix</option>
+            <option value="CHK">Cheque</option>
+            <option value="VRF">Vale Refeição</option>
+            <option value="SLD">Saldo Cliente</option>
+            <option value="CRT">Cortesia</option>
+        </select>
+    </div>
+    <div class="line">
+        <div id="qr_code"></div>
+    </div>
+    <div class="line">
+        <button id="btnReceber">Receber</button>
+    </div>
+
+</template>
+<script>
+    const pageData = main_data.caixa_encerra.data
+    const pageFunc = main_data.caixa_encerra.func
+    const pageScreen = document.querySelector('#card-caixa_encerra')
+
+    function pageStart(){
+        pageScreen.querySelector('#edtTotal').value = pageData.saldo_dev.money()
+//        pageScreen.querySelector('#edtValRec').value = pageData.valor_rec.toString().money()
+        const pix = new Pix('26687200879',pageData.saldo_dev,'TALES CEMBRANELI DANTAS','CACAPAVA','pesqdourado')
+        pageData.pix = pix.payload()
+
+        const qrcode = new QRCode("qr_code", {
+            text: pageData.pix,
+            width: 300,
+            height: 300,
+            colorDark : "#000000",
+            colorLight : "#ffffff",
+            correctLevel : QRCode.CorrectLevel.H,
+            size : 150
+        })
+
+        console.log(pageData)
+    }
+
+    pageFunc.finaliza = ()=>{
+
+        const saldo_dev = Number(pageData.saldo_dev)
+        const recebido = Number(pageData.valor_rec)
+        const meutroco = recebido - saldo_dev
+
+        const params = new Object;
+            params.id_comanda = pageData.id
+            params.modo_pgto = pageScreen.querySelector('#cmbModoPgto').value
+            params.valor_pgto = recebido
+
+        const myPromisse = queryDB(params,'CXA-7');
+        myPromisse.then((resolve)=>{
+            setLog(`Venda lançada -> Comanda:${params.id_comanda}, Valor:${params.valor_pgto}, Modo:${params.modo_pgto}`)
+            pageFunc.clear()
+        })
+    }
+
+    pageScreen.querySelector('#cmbModoPgto').addEventListener('change',()=>{
+
+        const sel = pageScreen.querySelector('#cmbModoPgto').value
+
+        pageScreen.querySelector('#qr_code').style.display = sel=='PIX' ? 'block' : 'none'
+    })
+
+    pageStart()
+
+</script>
