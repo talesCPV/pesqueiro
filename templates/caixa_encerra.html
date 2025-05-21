@@ -2,7 +2,7 @@
     <style> </style>    
 
     <div class="inline">
-        <label for="edtTotal">Total</label>
+        <label for="edtTotal">Valor Pago</label>
         <input type="text" id="edtTotal" disabled>
     </div>
 <!--
@@ -37,47 +37,72 @@
     const pageScreen = document.querySelector('#card-caixa_encerra')
 
     function pageStart(){
-        pageScreen.querySelector('#edtTotal').value = pageData.saldo_dev.money()
-//        pageScreen.querySelector('#edtValRec').value = pageData.valor_rec.toString().money()
-        const pix = new Pix('26687200879',pageData.saldo_dev,'TALES CEMBRANELI DANTAS','CACAPAVA','pesqdourado')
-        pageData.pix = pix.payload()
-
-        const qrcode = new QRCode("qr_code", {
-            text: pageData.pix,
-            width: 300,
-            height: 300,
-            colorDark : "#000000",
-            colorLight : "#ffffff",
-            correctLevel : QRCode.CorrectLevel.H,
-            size : 150
-        })
-
-        console.log(pageData)
+        pageData.total = pageData.valor_rec < Number(pageData.saldo_dev) ? pageData.valor_rec : Number(pageData.saldo_dev)
+        pageScreen.querySelector('#edtTotal').value = pageData.total.toString().money()
+        loadPix()
     }
 
-    pageFunc.finaliza = ()=>{
+    function loadPix(){
+        const data = new URLSearchParams()
+        data.append("path",'/../config/data.json' )
 
-        const saldo_dev = Number(pageData.saldo_dev)
-        const recebido = Number(pageData.valor_rec)
-        const meutroco = recebido - saldo_dev
+        const myRequest = new Request("backend/loadFile.php",{
+            method : "POST",
+            body : data
+        })
+
+        const MyPromisse = new Promise((resolve,reject) =>{
+            fetch(myRequest)
+            .then(function (response){
+                if (response.status === 200) { 
+                    response.text()
+                    .then((txt)=>{                    
+                        pageData.dados = JSON.parse(txt) == null ? {} : JSON.parse(txt)
+                        const pix = new Pix(pageData.dados.chave_pix,pageData.saldo_dev,pageData.dados.pix_nome,pageData.dados.pix_cidade,'pesqdourado')
+                        pageData.pix = pix.payload()
+
+                        const qrcode = new QRCode("qr_code", {
+                            text: pageData.pix,
+                            width: 300,
+                            height: 300,
+                            colorDark : "#000000",
+                            colorLight : "#ffffff",
+                            correctLevel : QRCode.CorrectLevel.H,
+                            size : 150
+                        })
+
+                    })
+                } else { 
+                    reject(new Error("Houve algum erro na comunicação com o servidor"));
+                } 
+            })
+        })
+
+    }
+
+
+    pageFunc.finaliza = ()=>{
 
         const params = new Object;
             params.id_comanda = pageData.id
             params.modo_pgto = pageScreen.querySelector('#cmbModoPgto').value
-            params.valor_pgto = recebido
+            params.valor_pgto = pageData.total
 
         const myPromisse = queryDB(params,'CXA-7');
         myPromisse.then((resolve)=>{
             setLog(`Venda lançada -> Comanda:${params.id_comanda}, Valor:${params.valor_pgto}, Modo:${params.modo_pgto}`)
-            pageFunc.clear()
+            main_data.caixa_pdv.func.clear()
+            closeModal('caixa_encerra')
         })
     }
 
     pageScreen.querySelector('#cmbModoPgto').addEventListener('change',()=>{
-
         const sel = pageScreen.querySelector('#cmbModoPgto').value
-
         pageScreen.querySelector('#qr_code').style.display = sel=='PIX' ? 'block' : 'none'
+    })
+
+    pageScreen.querySelector('#btnReceber').addEventListener('click',()=>{
+        pageFunc.finaliza()
     })
 
     pageStart()

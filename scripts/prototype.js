@@ -158,6 +158,12 @@ HTMLTableElement.prototype.plot = function(obj, fields,type='',file=false, mark=
                 case 'flo': // Numero Decimal
                     html = obj[arr[0]] != null ? parseFloat(obj[arr[0]]).toFixed(2) : ''
                     break;
+
+                case 'hor': // HORA 00:00
+                    const a = obj[arr[0]] != null ? parseFloat(obj[arr[0]]).toFixed(2) : 0
+                    html =  Math.floor(a).toString().padStart(2,0)+':'+ Math.round(parseFloat((a - Math.floor(a)) * 60)).toString().padStart(2,0)                    
+                    break;
+
                 case 'Upp': // Upper Case
                     html = obj[arr[0]] != null ? obj[arr[0]].toUpperCase().trim() : ''
                     break
@@ -165,11 +171,8 @@ HTMLTableElement.prototype.plot = function(obj, fields,type='',file=false, mark=
                     html = obj[arr[0]] != null ? obj[arr[0]].trim() : ''
                   break;
                 case 'dat': // Formato de Data dia/mes/ano
-                    html = obj[arr[0]] != null ? obj[arr[0]].substr(8,2)+'/'+obj[arr[0]].substr(5,2)+'/'+obj[arr[0]].substr(0,4): ''
-                    break    
-                case 'hra': // Formato de Hora dia/mes/ano
-                    html = obj[arr[0]] != null ? obj[arr[0]].substr(10,6): ''
-                    break                                   
+                    html = obj[arr[0]] != null ? obj[arr[0]].substring(8,10)+'/'+ obj[arr[0]].substring(5,7)+'/'+obj[arr[0]].substring(0,4) : ''
+                    break                 
                 case 'Low': // Lower Case
                     html = obj[arr[0]] != null ? obj[arr[0]].toLowerCase().trim() : ''
                     break;
@@ -181,7 +184,11 @@ HTMLTableElement.prototype.plot = function(obj, fields,type='',file=false, mark=
                         html = obj[arr[0]] != null ? `(${viewMoneyBR(parseFloat(obj[arr[0]]).toFixed(2))})` : ''
                         green = false
                     }
+                    break
+                case '%..':
+                    html = obj[arr[0]] != null ?parseFloat(obj[arr[0]]).toFixed(2)+'%' : ''   // parseFloat(obj[arr[0]]).toFixed(2) + %
                     break;             
+    
                 case 'cha': // Troca palavra escolhida por outra valor_original=valor_desejado
                     op = type[i].split(' ')
                     html = ''
@@ -208,18 +215,22 @@ HTMLTableElement.prototype.plot = function(obj, fields,type='',file=false, mark=
                     break;
                 case 'ie.': // Formata Insc. Estadual
                     html = obj[arr[0]] != null ? getIE(obj[arr[0]].trim()) : ''
-                    break; 
-                case 'cpf': // Formata CPF
-                    html = obj[arr[0]] != null ? getCPF(obj[arr[0]].trim()) : ''
-                    break;
-                case 'tel': // Formata Cel
-                    html = obj[arr[0]] != null ? getFone(obj[arr[0]].trim()) : ''
-                    break;
+                    break;                    
                 case 'btn': // Adiciona Botão
                     op = type[i].split(' ')
                     op = op.length > 1 ? op[1] : 'OK'                
                     html = `<button id="btn_${this.rows.length-1}" class="tbl-btn">${op}</button>`
-                    break;                      
+                    break;
+                case 'let':                            
+                    html = arr[0]
+                    break;     
+                case 'chk':                            
+                    html = obj[arr[0]]== '1' ? '<span class="mdi mdi-check-bold"></span>' : '<span class="mdi mdi-close-thick"></span>'
+                    break;
+                case 'pad': // pasStart ou padEnd: " "start ou end" "num casas" "valor a preencher
+                    op = `'${obj[arr[0]]}'.${type[i].replaceAll('.',',')}` 
+                    html = eval(op)
+                    break;                                                            
                 default:
                   html = obj[arr[0]] != null ? obj[arr[0]] :''
             }            
@@ -231,8 +242,7 @@ HTMLTableElement.prototype.plot = function(obj, fields,type='',file=false, mark=
     }
     tr.data = obj
     if(mark){
-        tr.style.background = green ? 'rgb(99, 201, 99)' : 'rgb(201, 99, 99)'
-        tr.style.color = green ? 'rgb(0,0,0)' : 'rgb(255,255,255)'
+        tr.classList.add(green ? 'green' : 'red')
     }
     this.appendChild(tr)
 }
@@ -274,7 +284,7 @@ HTMLTableElement.prototype.head = function(hd){
 
 class Pix{
 
-    constructor(chave,valor,nome='',cidade='',cod_pix='PESQ_DOURADO'){
+    constructor(chave,valor,nome='',cidade='',codpgto='Flexibus'){
 
         chave  = (chave.includes('@') && chave.includes('.com')) ? chave  : chave[0]=='+' ? '+' + getNum(chave) : getNum(chave)
         nome = nome.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^\w\s]|_/g, '').replace(/\s+/g, ' ').trim().substring(0,25)
@@ -311,7 +321,7 @@ class Pix{
         this.indicators.push(addIndicator('Merchant City',60,cidade))
 
         const Additional = []
-        Additional.push(addIndicator('txid',5,cod_pix))        
+        Additional.push(addIndicator('txid',5,codpgto))        
         this.indicators.push(addIndicator('Additional Data Field Template ',62,Additional))
 
 //        this.indicators.push(addIndicator('CRC16',63,'1D3D'))
@@ -319,6 +329,7 @@ class Pix{
     }
 
 }
+
 
 Pix.prototype.computeCRC = (str, invert = false)=>{
     const bytes = new TextEncoder().encode(str);
@@ -350,3 +361,24 @@ Pix.prototype.payload = function(){
 
     return  payload + this.computeCRC(payload)
 }
+
+
+// 00020126330014BR.GOV.BCB.PIX0111266872008795204000053039865406100.005802BR5923TALES CEMBRANELI DANTAS6008CACAPAVA62120508Teste12363041D3D
+// 00020126330014BR.GOV.BCB.PIX0111266872008795204000053039865406100.005802BR5923Tales Cembraneli Dantas6008Cacapava62120508Teste1236304C13A
+// 00020126330014BR.GOV.BCB.PIX0111266872008795204000053039865406100.005802BR5923Tales Cembraneli Dantas6008CACAPAVA62120508Teste123630433D8
+
+/*  PAYLOAD KAUÃ FUNCIONAL
+    00020126360014BR.GOV.BCB.PIX0114+5512996508245520400005303986540525.005802BR5925HENRIQUE DA SILVA DELFINO6008CACAPAVA62120508Teste12363043A8B
+    00020126360014BR.GOV.BCB.PIX0114+5512996508245520400005303986540525.005802BR5925KAUA HENRIQUE DA SILVA DE6008CACAPAVA62120508Teste12363042846 
+
+    PAYLOAD KAUÃ QUEBRADO
+    00020126330014BR.GOV.BCB.PIX011112996508245520400005303986540525.005802BR5930KAUA HENRIQUE DA SILVA DELFINO6008CACAPAVA62120508Teste1236304892A
+    00020126360014BR.GOV.BCB.PIX0114+5512996508245520400005303986540525.005802BR5925KAUA HENRIQUE DA SILVA DE6008CACAPAVA62120508Teste12363042846
+
+    IGOR gerado pelo site
+    00020126330014BR.GOV.BCB.PIX011110063040611520400005303986540525.005802BR5913IGOR HENRIQUE6008CACAPAVA62120508Teste123630432F9
+
+    IGOR gerado pelo sistema
+    00020126330014BR.GOV.BCB.PIX011110063040611520400005303986540525.005802BR5913IGOR HENRIQUE6008CACAPAVA62120508Teste123630432F9
+
+    */

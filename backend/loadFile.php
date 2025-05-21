@@ -4,7 +4,6 @@
 
 	if (IsSet($_POST["path"])){
 	  $path = getcwd().$_POST["path"];
-
       if (file_exists($path)) {
           $fp = fopen($path, "r");
           $resp = "";
@@ -13,6 +12,10 @@
           }
           fclose($fp);
           $out = json_decode($resp);
+      }else{
+          $fp = fopen($path, "a");
+          fwrite($fp,json_encode($out));
+          fclose($fp);          
       }            
 
   }

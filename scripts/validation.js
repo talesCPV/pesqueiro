@@ -386,5 +386,6 @@ function validaEmail(edt){
 function troco(id_tot,edtRec,id_troco){
     total = Number(getNum(document.getElementById(id_tot).value))
     recebido = Number(getNum(edtRec.value))
-    document.getElementById(id_troco).value = 'R$'+((recebido-total)/100).toFixed(2)
+    const trc = (recebido-total)/100
+    document.getElementById(id_troco).value = 'R$'+( trc<0 ? 0 : trc ).toFixed(2)
 }

@@ -1,2 +1,38 @@
 17/05/2025 16:40 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:473, Prod:Agua com gas, Qtd.:1
 18/05/2025 15:31 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:473, Prod:Blue Honey, Qtd.:2
+21/05/2025 02:00 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:473, Prod:Agua com gas, Qtd.:1
+21/05/2025 02:02 admin@pesqueirodourado.com.br : Item Deletado -> Comanda:473, Prod:Agua com gas, Qtd.:1
+21/05/2025 02:02 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:473, Prod:Agua mineiral Aquissima s gas 1,5 litros, Qtd.:1
+21/05/2025 02:03 admin@pesqueirodourado.com.br : Item Deletado -> Comanda:473, Prod:Coca Cola (600ml), Qtd.:1
+21/05/2025 02:07 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:473, Prod:Acai Guaraviton bebida de guarana, Qtd.:1
+21/05/2025 02:10 admin@pesqueirodourado.com.br : Item Deletado -> Comanda:473, Prod:Acai Guaraviton bebida de guarana, Qtd.:1
+21/05/2025 02:59 admin@pesqueirodourado.com.br : Venda lancada -> Comanda:473, Valor:1, Modo:DIN
+21/05/2025 03:07 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:473, Prod:Cerveja Bavaria Lata 350 ml, Qtd.:5
+21/05/2025 03:09 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:473, Prod:Agua com gas, Qtd.:1
+21/05/2025 03:10 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:473, Prod:Agua com gas, Qtd.:2
+21/05/2025 03:11 admin@pesqueirodourado.com.br : Venda lancada -> Comanda:473, Valor:5, Modo:PIX
+21/05/2025 03:14 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:473, Prod:Bolo V&V, Qtd.:3
+21/05/2025 03:17 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:473, Prod:Agua com gas, Qtd.:1
+21/05/2025 03:17 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:473, Prod:Agua mineiral Aquissima s gas 1,5 litros, Qtd.:1
+21/05/2025 03:19 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:473, Prod:Agua com gas, Qtd.:1
+21/05/2025 03:23 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:473, Prod:Agua mineiral aquissima 510 ml com gas, Qtd.:1
+21/05/2025 03:24 admin@pesqueirodourado.com.br : Venda lancada -> Comanda:473, Valor:10, Modo:PIX
+21/05/2025 03:26 admin@pesqueirodourado.com.br : Venda lancada -> Comanda:473, Valor:50, Modo:PIX
+21/05/2025 03:26 admin@pesqueirodourado.com.br : Venda lancada -> Comanda:473, Valor:1.5, Modo:PIX
+21/05/2025 03:27 admin@pesqueirodourado.com.br : Nova Comanda -> Cliente:Tales Cembraneli Dantas, CPF:26687200879
+21/05/2025 03:27 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:475, Prod:Agua com gas, Qtd.:3
+21/05/2025 03:28 admin@pesqueirodourado.com.br : Venda lancada -> Comanda:475, Valor:12, Modo:PIX
+21/05/2025 03:31 admin@pesqueirodourado.com.br : Menu Incluido (Dados Compl.)
+21/05/2025 03:32 admin@pesqueirodourado.com.br : Menu Alterado (Dados Compl., sys_dados.html, pop-up, Dados Complementares)
+21/05/2025 03:32 admin@pesqueirodourado.com.br : Menu Alterado (Dados Compl., sys_data.html, pop-up, Dados Complementares)
+21/05/2025 03:55 admin@pesqueirodourado.com.br : Nova Comanda -> Cliente:Alessandra Barros da Costa, CPF:32874337846
+21/05/2025 03:55 admin@pesqueirodourado.com.br : Item Adicionado -> Comanda:476, Prod:Agua mineiral aquissima 510 ml com gas, Qtd.:2
+21/05/2025 04:04 admin@pesqueirodourado.com.br : Alteracao de usuario, email:celso@pesqueirodourado.com.br -> celso@pesqueirodourado.com.br, acesso:3 -> 1
+21/05/2025 04:04 admin@pesqueirodourado.com.br : Alteracao de usuario, email:celso@pesqueirodourado.com.br -> celso@pesqueirodourado.com.br, acesso:1 -> 1
+21/05/2025 04:08 admin@pesqueirodourado.com.br : Delecao de usuario, email:garcom@pesqueirodourado.com.br -> , acesso:3 -> 3
+21/05/2025 04:09 admin@pesqueirodourado.com.br : Delecao de usuario, email:meugenia@pesqueirodourado.com.br -> , acesso:3 -> 3
+21/05/2025 04:09 admin@pesqueirodourado.com.br : Delecao de usuario, email:rebeca@pesqueirodourado.com.br -> , acesso:3 -> 3
+21/05/2025 04:09 admin@pesqueirodourado.com.br : Delecao de usuario, email:roger@pesqueirodourado.com.br -> , acesso:1 -> 1
+21/05/2025 04:09 admin@pesqueirodourado.com.br : Delecao de usuario, email:rogerio@pesqueirodourado.com.br -> , acesso:3 -> 3
+21/05/2025 04:11 celso@pesqueirodourado.com.br : Venda lancada -> Comanda:476, Valor:5, Modo:DIN
+21/05/2025 04:11 celso@pesqueirodourado.com.br : Venda lancada -> Comanda:476, Valor:5, Modo:PIX

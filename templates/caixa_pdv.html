@@ -124,7 +124,7 @@
                     </div>
                     <div class="inline">
                         <label for="edtValRec">Valor Recebido</label>
-                        <input type="text" id="edtValRec" onfocus="this.select();" onkeyup="valMoney(this)" onfocusout="troco('edtSaldo',this,'edtTroco')" onkeypress="return event.which== 13 ? troco('edtSaldo',this,'edtTroco') : null" inputmode="decimal" value="R$0.00" disabled>
+                        <input type="text" id="edtValRec" onfocus="this.select();" onkeyup="{valMoney(this);troco('edtSaldo',this,'edtTroco')}" onkeypress="return event.which== 13 ? troco('edtSaldo',this,'edtTroco') : null" inputmode="decimal" value="R$0.00" disabled>
                     </div>
                     <div class="inline">
                         <label for="edtTroco">Troco</label>
@@ -155,9 +155,9 @@
         pageScreen.querySelector('#btnAddItem').disabled = 1
         pageScreen.querySelector('#btnPrint').disabled = 1
         pageScreen.querySelector('#edtValRec').disabled = 1
-        pageScreen.querySelector('#edtValRec').value = 'R$0,00'
-        pageScreen.querySelector('#edtTroco').value = 'R$0,00'
-        pageScreen.querySelector('#edtSaldo').value = 'R$0,00'
+        pageScreen.querySelector('#edtValRec').value = 'R$0.00'
+        pageScreen.querySelector('#edtTroco').value = 'R$0.00'
+        pageScreen.querySelector('#edtSaldo').value = 'R$0.00'
         pageScreen.querySelector('#tblCliente').innerHTML = ''
         pageScreen.querySelector('#tblComanda').innerHTML = ''
         pageScreen.querySelector('#tbl_total').innerHTML = ''
@@ -170,7 +170,7 @@
         const myPromisse = queryDB(params,'CXA-5');
         myPromisse.then((resolve)=>{
             const json = JSON.parse(resolve)
-   
+
             pageData.comanda.itens = json
             const tbl = pageScreen.querySelector('#tblComanda')
             tbl.style.display = json.length > 0 ? 'inline-table' : 'none'
@@ -178,15 +178,18 @@
             let tot = 0
             for(let i=0; i<json.length;i++){
                 tbl.plot(json[i],'descricao|w70,und|mobiHide,qtd,preco|mobiHide,sub_total','Upp,Upp,str,R$.,R$.')
-                tot += !Number(json[i].pago) ? parseFloat(json[i].sub_total) : 0
+                tot += Number(json[i].sub_total)
             }
-            const saldo_dev = (tot - parseFloat(pageData.comanda.pago)).toFixed(2)
+            console.log(tot)
+            console.log(pageData.comanda.total)
+            pageData.comanda.saldo_dev = (tot - Number(pageData.comanda.pago)).toFixed(2)
+
             const tbl_total = pageScreen.querySelector('#tbl_total')
             tbl_total.head('Valor Comanda, Pago, Total')
-            tbl_total.plot({'total':tot.toFixed(2),'pago':pageData.comanda.pago,'saldo_dev':saldo_dev},'total,pago,saldo_dev','R$.,R$.,R$.')
+            tbl_total.plot({'total':tot.toFixed(2),'pago':pageData.comanda.pago,'saldo_dev':pageData.comanda.saldo_dev},'total,pago,saldo_dev','R$.,R$.,R$.')
 
-            pageScreen.querySelector('#edtSaldo').value = `R$${saldo_dev}`
-            pageScreen.querySelector('#edtValRec').value = `R$${saldo_dev}`
+            pageScreen.querySelector('#edtSaldo').value = `R$${pageData.comanda.saldo_dev}`
+            pageScreen.querySelector('#edtValRec').value = `R$${pageData.comanda.saldo_dev}`
             pageScreen.querySelector('#edtValRec').disabled = 0
             pageScreen.querySelector('#edtValRec').focus()
 
