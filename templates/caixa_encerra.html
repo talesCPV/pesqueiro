@@ -58,7 +58,7 @@
                     response.text()
                     .then((txt)=>{                    
                         pageData.dados = JSON.parse(txt) == null ? {} : JSON.parse(txt)
-                        const pix = new Pix(pageData.dados.chave_pix,pageData.saldo_dev,pageData.dados.pix_nome,pageData.dados.pix_cidade,'pesqdourado')
+                        const pix = new Pix(pageData.dados.chave_pix,pageData.saldo_dev,pageData.dados.pix_nome,pageData.dados.pix_cidade,pageData.dados.pix_cod)
                         pageData.pix = pix.payload()
 
                         const qrcode = new QRCode("qr_code", {

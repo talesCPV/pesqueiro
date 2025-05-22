@@ -22,26 +22,13 @@
         </div>
 
         <div class="inline">
-            <label for="edtSaldo">Saldo</label>
-            <input type="text" id="edtSaldo" value="0" readonly>
-        </div>
-
-        <div class="inline">
-            <label for="edtbtn">Receber</label>
-            <div class="edtbtn">                
-                <input type="text" id="edtAddSaldo" inputmode="numeric" value="0" onkeyup="valFloat(this)" onfocus="this.select();">
-                <button id="btnAddSaldo" class="btn-round"><span class="mdi mdi-currency-usd"></span></button>
-            </div>
-        </div>
-
-
-        <div class="inline">
             <label for="edtObs">Obs</label>
             <textarea id="edtObs" cols="30" rows="10" maxlength="255"></textarea>
         </div>        
 
         <div class="line">
             <button id="btnSave"><span class="mdi mdi-content-save-outline"></span> Salvar</button>
+            <button id="btnDel"><span class="mdi mdi-eraser"></span> Deletar</button>
         </div>
     </fieldset>
 
@@ -59,45 +46,44 @@
             pageScreen.querySelector('#edtNome').value = pageData.nome
             pageScreen.querySelector('#edtCPF').value = getCPF(pageData.cpf)
             pageScreen.querySelector('#edtCel').value = getFone(pageData.cel)
-            pageScreen.querySelector('#edtSaldo').value = pageData.saldo
             pageScreen.querySelector('#edtObs').value = pageData.obs
-        }else{
-            pageScreen.querySelector('#edtSaldo').disabled = true
         }
+    }
+
+    pageFunc.setCliente = (del=0)=>{
+        const params = new Object;
+            params.id = newCli ? 0 : pageData.id
+            params.nome = del ? '' : pageScreen.querySelector('#edtNome').value.trim()
+            params.cpf = getNum(pageScreen.querySelector('#edtCPF').value.trim())
+            params.cel = getNum(pageScreen.querySelector('#edtCel').value.trim())
+            params.obs = pageScreen.querySelector('#edtObs').value.trim()
+        
+        const myPromisse = queryDB(params,'CXA-2');
+        myPromisse.then((resolve)=>{
+            const resp = JSON.parse(resolve)[0]
+            setLog(`${newCli?'Novo': del ? 'Deleção de' : 'Edição de'} Cliente -> Nome: ${del ? pageData.nome : params.nome}, CPF: ${params.cpf}, Cel: ${params.cel}, Saldo: ${params.saldo}, Obs: ${params.obs}`)
+
+                if(main_data.hasOwnProperty(pageData.org)){
+                    params.id = resp.id_cliente
+                    main_data[pageData.org].func.newClient(params)
+                }else{
+                    console.error('Tela fechada pelo usuário!')
+                }
+
+            alert(resp.MESSAGE)
+            closeModal('adm_new_client')
+        })
     }
 
     document.querySelector('#btnSave').addEventListener('click',()=>{
         if(checkField(['edtNome','edtCPF'])){
-            const params = new Object;
-                params.id = newCli ? 0 : pageData.id
-                params.nome = pageScreen.querySelector('#edtNome').value.trim()
-                params.cpf = getNum(pageScreen.querySelector('#edtCPF').value.trim())
-                params.cel = getNum(pageScreen.querySelector('#edtCel').value.trim())
-                params.saldo = pageScreen.querySelector('#edtSaldo').value.trim()
-                params.obs = pageScreen.querySelector('#edtObs').value.trim()
-            
-            const myPromisse = queryDB(params,'CXA-2');
-            myPromisse.then((resolve)=>{
-                const resp = JSON.parse(resolve)[0]
-                setLog(`${newCli?'Novo Cliente':'Edição de Cliente'} Nome: ${params.nome}, CPF: ${params.cpf}, Cel: ${params.cel}, Saldo: ${params.saldo}, Obs: ${params.obs}`)
-
-                    if(main_data.hasOwnProperty(pageData.org)){
-                        params.id = resp.id_cliente
-                        main_data[pageData.org].func.newClient(params)
-                    }else{
-                        console.error('Tela fechada pelo usuário!')
-                    }
-
-                alert(resp.MESSAGE)
-                closeModal('adm_new_client')
-            })
+            pageFunc.setCliente()
         }
     })
 
-    pageScreen.querySelector('#btnAddSaldo').addEventListener('click',()=>{
-        const val = parseFloat(pageScreen.querySelector('#edtAddSaldo').value)
-        if(confirm(`Confirma a ${val<0 ?'Subtração':'Adição'} de R$${val.toFixed(2)} ao saldo do cliente?`)){
-
+    pageScreen.querySelector('#btnDel').addEventListener('click',()=>{
+        if(confirm(`Confirma a exclusão do cliente ${pageData.nome}?`)){
+            pageFunc.setCliente(1)
         }
     })
 

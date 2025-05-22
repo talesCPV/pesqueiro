@@ -36,3 +36,13 @@
 21/05/2025 04:09 admin@pesqueirodourado.com.br : Delecao de usuario, email:rogerio@pesqueirodourado.com.br -> , acesso:3 -> 3
 21/05/2025 04:11 celso@pesqueirodourado.com.br : Venda lancada -> Comanda:476, Valor:5, Modo:DIN
 21/05/2025 04:11 celso@pesqueirodourado.com.br : Venda lancada -> Comanda:476, Valor:5, Modo:PIX
+22/05/2025 02:28 admin@pesqueirodourado.com.br : Nova Comanda -> Cliente:0 Sem Cadastro, CPF:61520454791
+22/05/2025 02:50 admin@pesqueirodourado.com.br : Delecao de Cliente -> Nome: 0 Sem Cadastro, CPF: 61520454791, Cel: 129973664, Saldo: undefined, Obs: 
+22/05/2025 02:51 admin@pesqueirodourado.com.br : Novo Cliente -> Nome: teste, CPF: 12345678907, Cel: 12998745632, Saldo: undefined, Obs: teste
+22/05/2025 02:52 admin@pesqueirodourado.com.br : Nova Comanda -> Cliente:teste, CPF:12345678907
+22/05/2025 02:52 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:478, Prod:Blue Honey, Qtd.:1
+22/05/2025 02:53 admin@pesqueirodourado.com.br : Item Alterado -> Comanda:478, Prod:Cerveja Imperio (600ml) Lager, Qtd.:2
+22/05/2025 02:54 admin@pesqueirodourado.com.br : Venda lancada -> Comanda:478, Valor:38, Modo:PIX
+22/05/2025 02:57 admin@pesqueirodourado.com.br : Delecao de Cliente -> Nome: teste, CPF: 12345678907, Cel: 12998745632, Saldo: undefined, Obs: teste
+22/05/2025 03:01 admin@pesqueirodourado.com.br : COMPRA  :  Prod:BROWNIE V&V, Qtd:10, Custo Unit..:5.00
+22/05/2025 03:02 admin@pesqueirodourado.com.br : Produto Editado Brownie V&V -> Brownie V&V
