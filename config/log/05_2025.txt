@@ -46,3 +46,5 @@
 22/05/2025 02:57 admin@pesqueirodourado.com.br : Delecao de Cliente -> Nome: teste, CPF: 12345678907, Cel: 12998745632, Saldo: undefined, Obs: teste
 22/05/2025 03:01 admin@pesqueirodourado.com.br : COMPRA  :  Prod:BROWNIE V&V, Qtd:10, Custo Unit..:5.00
 22/05/2025 03:02 admin@pesqueirodourado.com.br : Produto Editado Brownie V&V -> Brownie V&V
+22/05/2025 03:38 admin@pesqueirodourado.com.br : Delecao de usuario, email:caixa@pesqueirodourado.com.br -> , acesso:1 -> 1
+22/05/2025 03:39 admin@pesqueirodourado.com.br : Alteracao de usuario, email:silmara@pesqueirodourado.com.br -> silmara@pesqueirodourado.com.br, acesso:3 -> 3
