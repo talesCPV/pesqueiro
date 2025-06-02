@@ -1,0 +1,7 @@
+02/06/2025 16:08 admin@pesqueirodourado.com.br : Novo Cliente Nome: teste, CPF: , Cel: , Saldo: undefined, Obs: 
+02/06/2025 16:08 admin@pesqueirodourado.com.br : Edicao de Cliente Nome: teste, CPF: 321, Cel: 123, Saldo: undefined, Obs: obs teste
+02/06/2025 16:09 admin@pesqueirodourado.com.br : Edicao de Cliente Nome: teste, CPF: 951357, Cel: 123, Saldo: undefined, Obs: obs teste
+02/06/2025 16:16 admin@pesqueirodourado.com.br : Edicao de Cliente Nome: teste, CPF: 321, Cel: , Saldo: undefined, Obs: 
+02/06/2025 16:16 admin@pesqueirodourado.com.br : Novo Cliente Nome: teste 2, CPF: 321, Cel: , Saldo: undefined, Obs: 
+02/06/2025 16:17 admin@pesqueirodourado.com.br : Edicao de Cliente Nome: teste, CPF: 321, Cel: 123, Saldo: undefined, Obs: obs
+02/06/2025 16:17 admin@pesqueirodourado.com.br : Delecao de Cliente Nome: teste, CPF: 321, Cel: 123, Saldo: undefined, Obs: obs

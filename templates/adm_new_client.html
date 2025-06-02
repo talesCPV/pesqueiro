@@ -10,7 +10,7 @@
         </div>
 
         <div class="inline">
-            <label for="edtCPF">CPF *</label>
+            <label for="edtCPF">CPF</label>
             <div class="edtbtn">
                 <input type="text" id="edtCPF" onkeyup="valCPF(this)" inputmode="numeric" maxlength="14" onfocus="this.select();">
             </div>
@@ -47,42 +47,43 @@
             pageScreen.querySelector('#edtCPF').value = getCPF(pageData.cpf)
             pageScreen.querySelector('#edtCel').value = getFone(pageData.cel)
             pageScreen.querySelector('#edtObs').value = pageData.obs
+        }else{
+            pageScreen.querySelector('#btnDel').disabled = true
         }
     }
 
-    pageFunc.setCliente = (del=0)=>{
+    pageFunc.setCliente = (del = 0)=>{
         const params = new Object;
-            params.id = newCli ? 0 : pageData.id
-            params.nome = del ? '' : pageScreen.querySelector('#edtNome').value.trim()
-            params.cpf = getNum(pageScreen.querySelector('#edtCPF').value.trim())
-            params.cel = getNum(pageScreen.querySelector('#edtCel').value.trim())
-            params.obs = pageScreen.querySelector('#edtObs').value.trim()
-        
-        const myPromisse = queryDB(params,'CXA-2');
-        myPromisse.then((resolve)=>{
-            const resp = JSON.parse(resolve)[0]
-            setLog(`${newCli?'Novo': del ? 'Deleção de' : 'Edição de'} Cliente -> Nome: ${del ? pageData.nome : params.nome}, CPF: ${params.cpf}, Cel: ${params.cel}, Saldo: ${params.saldo}, Obs: ${params.obs}`)
+                params.id = newCli ? 0 : pageData.id
+                params.nome = del ? '' : pageScreen.querySelector('#edtNome').value.trim()
+                params.cpf = getNum(pageScreen.querySelector('#edtCPF').value.trim())
+                params.cel = getNum(pageScreen.querySelector('#edtCel').value.trim())
+                params.obs = pageScreen.querySelector('#edtObs').value.trim()
+            
+            const myPromisse = queryDB(params,'CXA-2');
+            myPromisse.then((resolve)=>{
+                const resp = JSON.parse(resolve)[0]
+                setLog(`${del ? 'Deleção de Cliente' : newCli?'Novo Cliente':'Edição de Cliente'} Nome: ${del? pageScreen.querySelector('#edtNome').value.trim() : params.nome}, CPF: ${params.cpf}, Cel: ${params.cel}, Saldo: ${params.saldo}, Obs: ${params.obs}`)
+                    if(main_data.hasOwnProperty(pageData.org)){
+                        params.id = resp.id_cliente
+                        main_data[pageData.org].func.newClient(params)
+                    }else{
+                        console.error('Tela fechada pelo usuário!')
+                    }
 
-                if(main_data.hasOwnProperty(pageData.org)){
-                    params.id = resp.id_cliente
-                    main_data[pageData.org].func.newClient(params)
-                }else{
-                    console.error('Tela fechada pelo usuário!')
-                }
-
-            alert(resp.MESSAGE)
-            closeModal('adm_new_client')
-        })
+                alert(resp.MESSAGE)
+                closeModal('adm_new_client')
+            })
     }
 
-    document.querySelector('#btnSave').addEventListener('click',()=>{
-        if(checkField(['edtNome','edtCPF'])){
+    pageScreen.querySelector('#btnSave').addEventListener('click',()=>{
+        if(checkField(['edtNome'])){
             pageFunc.setCliente()
         }
     })
 
     pageScreen.querySelector('#btnDel').addEventListener('click',()=>{
-        if(confirm(`Confirma a exclusão do cliente ${pageData.nome}?`)){
+        if(confirm('Deseja deletar este cliente?')){
             pageFunc.setCliente(1)
         }
     })
