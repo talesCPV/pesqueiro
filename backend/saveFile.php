@@ -3,6 +3,7 @@
         $path = getcwd().$_POST["path"];
         $file = $_POST["file"];
 //echo $file;
+echo $path;
         $fp = fopen($path, "w");
         fwrite($fp,$file);
         fclose($fp); 

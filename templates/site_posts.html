@@ -49,6 +49,7 @@
         pageScreen.querySelector('#edtTitle').value = ''
         pageScreen.querySelector('#edtText').value = ''
         pageData.pick = -1
+        pageScreen.querySelector('#edtTitle').focus()
     }
 
     function saveForm(){
@@ -60,11 +61,10 @@
 
 
     function loadPosts(){
-        fetch( "../site/blog/post.json")
-        .then( stream => stream.text())
-        .then( text => {
-            pageData.posts = JSON.parse(text)
-//            console.log(pageData.posts)
+        loadFile('/../../site/blog/post.json')
+        .then((resolve)=>{
+            console.log(resolve)
+            pageData.posts = JSON.parse(resolve)
             const sel =  pageScreen.querySelector('#cmbPosts')
             sel.innerHTML = ''
 
@@ -75,7 +75,7 @@
                 sel.appendChild(opt)
             }
             clearForm()
-        })
+        })           
     }
 
 

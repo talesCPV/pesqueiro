@@ -38,7 +38,7 @@
     getConfig('colors')
     .then((response)=>{
         const json = response.trim() != '' ? JSON.parse(JSON.parse(response)) : new Object
-console.log(json)        
+// console.log(json)        
         pageData.colors = new Object
         pageData.colors.bar_back_color = json.hasOwnProperty('bar_back_color') ? json.bar_back_color : styleSheet.getPropertyValue('--top-bar')
         pageData.colors.bar_font_color = json.hasOwnProperty('bar_font_color') ? json.bar_font_color : styleSheet.getPropertyValue('--top-bar-font')
@@ -70,7 +70,7 @@ console.log(json)
     } 
 
     pageFunc.setBarStyle = ()=>{
-        console.log(main_data.dashboard.data.colors.bar_back_color)
+//        console.log(main_data.dashboard.data.colors.bar_back_color)
         styleSheet.setProperty('--top-bar', main_data.dashboard.data.colors.bar_back_color)
         styleSheet.setProperty('--top-bar-font', main_data.dashboard.data.colors.bar_font_color)
         styleSheet.setProperty('--top-bar-hover', main_data.dashboard.data.colors.bar_mouse_color)
