@@ -63,7 +63,6 @@
     function loadPosts(){
         loadFile('/../../site/blog/post.json')
         .then((resolve)=>{
-            console.log(resolve)
             pageData.posts = JSON.parse(resolve)
             const sel =  pageScreen.querySelector('#cmbPosts')
             sel.innerHTML = ''
